@@ -1,0 +1,39 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2016-07-01-22-38-52
+#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted
+#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string
+1407536946.058719	FOsDKpvaE4o77VWi7	192.168.56.101	192.168.57.110	Co7jdf1IergxdkVLj8	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407536946.250845	FZrQg1NzTvumR5iG	192.168.57.105	192.168.57.110	CuXBEZ1N3EwxNX5Frl	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407536946.253290	FsWWXv2NaAihisYjY	192.168.57.110	192.168.57.105	CuXBEZ1N3EwxNX5Frl	HTTP	0	(empty)	-	./files/config.dll	0.000263	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407536946.254009	Feh6Cp1NU1s3pjgjEj	192.168.57.110	192.168.56.101	Co7jdf1IergxdkVLj8	HTTP	0	(empty)	-	./files/config.dll	0.000390	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407536990.154407	FuHo2F4V5teo3hEpj	192.168.56.101	192.168.57.110	Co7jdf1IergxdkVLj8	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407536990.155901	FqtXJj4AX997Ihrpub	192.168.57.105	192.168.57.110	CqJz3v4MdKXveI6dXh	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537186.375625	FWYDEQ3VcoKrBfld4	192.168.56.101	192.168.57.110	CK4o834f5f2BmZbDw6	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537186.377389	FdMBch2lSSQZhC5u08	192.168.57.105	192.168.57.110	ChgNHa1KzpmAY2XeF8	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537186.379845	FpmC0t3blqIub0Vyvf	192.168.57.110	192.168.57.105	ChgNHa1KzpmAY2XeF8	HTTP	0	(empty)	-	./files/config.dll	0.000221	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537186.380674	FYTCvI1uZJxhuZ5qSc	192.168.57.110	192.168.56.101	CK4o834f5f2BmZbDw6	HTTP	0	(empty)	-	./files/config.dll	0.000478	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537258.847493	FjOxog1PQyqZY9GTR7	192.168.56.101	192.168.57.110	CXmY4V1Rx0IMf8SXj1	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537258.925828	Flmye11Z0nXArOZfEj	192.168.57.105	192.168.57.110	CksES3uscvtY1rAo3	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537426.503895	FiI9XtZ1Skaqi2Aid	192.168.56.101	192.168.57.110	CyUXoNz3jGZ1wyB1g	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537426.505264	FGokAk1kR7EnnWn3Wh	192.168.57.105	192.168.57.110	CHplnl3WTuaiUCouyc	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537426.507618	FcrSDm3P3oljYPk3fa	192.168.57.110	192.168.57.105	CHplnl3WTuaiUCouyc	HTTP	0	(empty)	-	./files/config.dll	0.000227	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537426.508341	FK2QdXN7Ajz5tIVI8	192.168.57.110	192.168.56.101	CyUXoNz3jGZ1wyB1g	HTTP	0	(empty)	-	./files/config.dll	0.000410	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537527.620627	FdYhb54ysJPgUs5A5j	192.168.56.101	192.168.57.110	CPCGJT2fKsQM67LQY	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537527.621911	FVOvhb1Ob4Npie0gQh	192.168.57.105	192.168.57.110	Criao8yy2LVxep733	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537666.635161	FoddVr4IlY1lipHR3a	192.168.56.101	192.168.57.110	C5uBYRZyqDrTQFImg	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537666.712709	Ftv2fL329U6kAtch3a	192.168.57.105	192.168.57.110	CwvPRg3ybGqIkJqXTc	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537666.714949	Fxf3DI2yxmJCd0ZNa9	192.168.57.110	192.168.57.105	CwvPRg3ybGqIkJqXTc	HTTP	0	(empty)	-	./files/config.dll	0.000196	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537666.715651	FN499W2HtGAeDu7C25	192.168.57.110	192.168.56.101	C5uBYRZyqDrTQFImg	HTTP	0	(empty)	-	./files/config.dll	0.000256	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537796.334702	F2v8hO60VNehkXljj	192.168.56.101	192.168.57.110	C6Z2aP2Pvs5xYafp65	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537796.335939	F0ktfA4ZbiGsEbZNLh	192.168.57.105	192.168.57.110	C0OUZ01AaQqMy4GjG1	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407537906.851761	FE84T94pBhxExkesed	192.168.56.101	192.168.57.110	CiktRzRr6ePFUpPfc	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537906.852746	F4uPyy4iQM8jLuQFr5	192.168.57.105	192.168.57.110	CxmSoo2M3weRxwqqhe	HTTP	0	(empty)	-	-	0.000000	-	T	122	122	0	0	F	-	-	-	-	-
+1407537906.854998	FspORg3wq3u1kzOSEk	192.168.57.110	192.168.57.105	CxmSoo2M3weRxwqqhe	HTTP	0	(empty)	-	./files/config.dll	0.000213	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407537906.855700	FnIxeN18otTKahaOJc	192.168.57.110	192.168.56.101	CiktRzRr6ePFUpPfc	HTTP	0	(empty)	-	./files/config.dll	0.000369	-	F	5280	5280	0	0	F	-	-	-	-	-
+1407538065.026392	FoIIjU1GWlbo195bx2	192.168.56.101	192.168.57.110	CD2Zp73R6XnMDkkSr5	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+1407538065.105862	FRmdCMWR2QpZ1ZuYi	192.168.57.105	192.168.57.110	C3ugqWEONhOWrQq12	HTTP	0	(empty)	-	-	0.000000	-	T	406	406	0	0	F	-	-	-	-	-
+#close	2016-07-01-22-38-52
