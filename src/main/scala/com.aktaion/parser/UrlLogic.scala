@@ -1,12 +1,3 @@
-/**
-  * Copyright 2016 - Caspida Inc., All rights reserved.
-  * This is Caspida proprietary and confidential material and its use
-  * is subject to license terms.
-  * Created on 7/6/16.
-  *
-  * @author joez
-  */
-
 package com.aktaion.parser
 
 import java.net._
@@ -14,6 +5,11 @@ import java.net._
 object UrlLogic {
 
 
+  /**
+    *
+     * @param inputString
+    * @return
+    */
   def getUrlFromString(inputString: String): Option[UrlDataVector] = {
 
     if (inputString.size < 5) {println("URL is too small: " + inputString); None}
