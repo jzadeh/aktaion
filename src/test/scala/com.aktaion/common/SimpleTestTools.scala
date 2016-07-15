@@ -1,8 +1,11 @@
 package com.aktaion.common
 
+import java.io.{BufferedReader, StringReader}
 import java.sql.Timestamp
 import java.text.SimpleDateFormat
-import org.scalatest.{FunSuite, BeforeAndAfter, Matchers}
+
+import org.scalatest.{BeforeAndAfter, FunSuite, Matchers}
+
 import scala.util.{Failure, Success, Try}
 
 class SimpleTestTools extends FunSuite with Matchers with BeforeAndAfter {
@@ -38,11 +41,27 @@ class SimpleTestTools extends FunSuite with Matchers with BeforeAndAfter {
     /**
       *
       * @param file
-      * @return string with end of line split using "\n"
+      * @return Array of string with end of line split using "\n"
       */
     def getLinesFromFile(file: String ): Array[String] = {
       scala.io.Source.fromFile(file).getLines().toArray
     }
+
+
+  /**
+    * Weka library needs to read in a file as a special type
+    *
+    * @param resourcePath
+    * @return our file as the type [[BufferedReader]] in compliance with older java parsing methods
+    */
+  def getWekaReaderFromResourcePath(resourcePath: String): BufferedReader = {
+    val file = getFileStringFromResourcePath(resourcePath)
+    val lines = scala.io.Source.fromFile(file).getLines().mkString("\n")
+
+    val br = new BufferedReader(new StringReader(lines))
+
+    return br
+  }
 
 
 }

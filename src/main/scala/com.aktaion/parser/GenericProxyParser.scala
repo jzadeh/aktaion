@@ -38,7 +38,7 @@ class GenericProxyParser extends GenericParser {
   }
 
 
-  def tokenizeData(rawInputString: String): Option[GenericProxyEvent] = {
+  def tokenizeData(rawInputString: String): Option[GenericProxyLogEvent] = {
 
     if (rawInputString.size < 5)  { println("Log line too small: " + rawInputString); return None}
 
@@ -84,7 +84,7 @@ class GenericProxyParser extends GenericParser {
     val bytesReceived = quoteSplit(10).split(" ")(2).toInt
 
         return Some(
-          GenericProxyEvent(convertedTime,
+          GenericProxyLogEvent(convertedTime,
             userName,
             sourceIp,
             destinationIp,
@@ -112,22 +112,22 @@ class GenericProxyParser extends GenericParser {
 
 
 
-case class GenericProxyEvent(ts: Timestamp, //0
-                             userName: String, //1
-                             sourceIp: String, //2
-                             destinationIp: String, //3
-                             unknownField1: String, //4
-                             statusCode: Int, //5
-                             cacheResult: String, //6
-                             httpMethod: String, //7
-                             urlRequested: String, //8
-                             httpVersion: String, //9
-                             domainClass: String, //10
-                             riskClass: String, //11
-                             mimeType: String, //12
-                          //   encodingFormat: String, //13
-                             bytesSent: Int, //14
-                             bytesReceived: Int, //15
-                             userAgent: String, //16
-                             webReferrer: String //17
+case class GenericProxyLogEvent(ts: Timestamp, //0
+                                userName: String, //1
+                                sourceIp: String, //2
+                                destinationIp: String, //3
+                                unknownField1: String, //4
+                                statusCode: Int, //5
+                                cacheResult: String, //6
+                                httpMethod: String, //7
+                                urlRequested: String, //8
+                                httpVersion: String, //9
+                                domainClass: String, //10
+                                riskClass: String, //11
+                                mimeType: String, //12
+                                //   encodingFormat: String, //13
+                                bytesSent: Int, //14
+                                bytesReceived: Int, //15
+                                userAgent: String, //16
+                                webReferrer: String //17
                             ) extends ParsedLogEvent("GenericProxyLog")

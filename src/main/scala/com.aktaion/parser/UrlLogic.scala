@@ -4,10 +4,9 @@ import java.net._
 
 object UrlLogic {
 
-
   /**
     *
-     * @param inputString
+    * @param inputString
     * @return
     */
   def getUrlFromString(inputString: String): Option[UrlDataVector] = {
@@ -23,7 +22,6 @@ object UrlLogic {
 
     return Some(UrlDataVector(host,file,path,port,query))
   }
-
 
 }
 

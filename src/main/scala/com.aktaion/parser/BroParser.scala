@@ -20,7 +20,20 @@ class BroHttpParser extends GenericParser {
 //      rd(19), rd(20), rd(21), rd(22),
 //      rd(23), rd(24), rd(25), rd(26)))
 
-    return Some( BroHttpLogEvent(rd(0).toDouble,
+
+    val tsString = rd(0)
+    val ts = rd(0).toDouble
+
+    val uid = rd(1)
+    val idOrigHost = rd(2)
+    val idOrigPort = rd(3)
+    val idRespHost = rd(4)
+    val idRespPort = rd(5)
+
+
+
+
+    return Some( BroHttpLogEvent(ts,
       rd(2), rd(3).toInt, rd(4), rd(5).toInt,
       rd(6).toInt, rd(7), rd(8), rd(9), rd(10),
       rd(11), rd(12), rd(13), rd(14).toInt,
