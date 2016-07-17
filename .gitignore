@@ -1,5 +1,9 @@
 *.class
 
+# Java Project Folders
+project/project/
+project/target/
+target/
 
 # InteliJ Related
 .idea/
