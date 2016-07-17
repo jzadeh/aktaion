@@ -17,7 +17,7 @@ lazy val commonSettings = Seq(
   test in assembly := {}
 )
 
-mainClass in assembly := Some("com.aktaion.UserInteractionLogic")
+mainClass in assembly := Some("com.aktaion.shell.UserInteractionLogic")
 
 //lazy val app = (project in file("app")).
 //  settings(commonSettings: _*).
