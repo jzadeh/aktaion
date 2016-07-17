@@ -9,6 +9,6 @@ trait GenericTransformLogic {
 }
 
 trait SequentialTransformLogic[A <: ParsedLogEvent] {
-  def transformSeqOfLogLines(parsedEvents: Seq[A]): Option[MicroBehaviorSet]
+  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[MicroBehaviorSet]
 }
 

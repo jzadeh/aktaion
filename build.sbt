@@ -45,6 +45,7 @@ libraryDependencies ++= Seq(
 //
 libraryDependencies ++=  Seq( ("org.apache.spark" %% "spark-mllib"  % "1.6.2").exclude("javax.xml", "bind").exclude("stax-api", "stax") )
 
+libraryDependencies += "com.rockymadden.stringmetric" %% "stringmetric-core" % "0.27.4"
 
 //libraryDependencies +=
 //  ("org.apache.spark" %% "spark-mllib" % "1.6.2" excludeAll (

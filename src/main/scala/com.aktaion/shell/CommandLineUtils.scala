@@ -1,34 +1,37 @@
 package com.aktaion.shell
 
-import sys.process._
+import java.io.File
+import com.aktaion.parser.BroHttpParser
 
-class CommandLineUtils {
+object CommandLineUtils {
 
-  val stdout = new StringBuilder
-  val stderr = new StringBuilder
-
-
-  /**
-    * Command line execution of bro against a pcap
-    *
-    * @param inputFile pcap file
-    * @return exit code status
-    */
-  def generateBroFiles(inputFile: String): Boolean = {
-
-    val broString = "bro -r " + inputFile
-    val exitCode = broString.!
-    val result = if (exitCode == 0) true else false
-
-    return result
-
+  def getFileFromFileSystemPath(fileName: String): Array[String] = {
+    scala.io.Source.fromFile(fileName).getLines().toArray
   }
 
-  //  val exitCode = status.!
-  ProcessLogger(stdout append _, stderr append _)
-  //  println(status)
-  println("stdout: " + stdout)
-  println("stderr: " + stderr)
+  def debugBroArray(array: Array[String]) = {
+    val httpParser = new BroHttpParser
+    for (logLine <- array) {
+      println(logLine)
+      val parsedLine = httpParser.tokenizeData(logLine)
+      println(parsedLine)
+    }
+  }
+
+  def executeBroLogic(file: String) = {
+    val broLogic: BroUserInputLogic = new BroUserInputLogic(file)
+
+    if (broLogic.output == true) {
+      val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
+      val broPath: String = jarPath.getParentFile.getAbsolutePath
+      val broHttpFile: String = broPath + "/http.log"
+      System.out.println(" Bro HTTP FilePath" + broPath)
+      val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
+      System.out.println(" File Length" + broHttpData.length)
+      CommandLineUtils.debugBroArray(broHttpData)
+    }
+
+  }
 
 
 }

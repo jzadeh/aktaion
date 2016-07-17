@@ -47,7 +47,6 @@ class SimpleTestTools extends FunSuite with Matchers with BeforeAndAfter {
       scala.io.Source.fromFile(file).getLines().toArray
     }
 
-
   /**
     * Weka library needs to read in a file as a special type
     *
@@ -57,9 +56,7 @@ class SimpleTestTools extends FunSuite with Matchers with BeforeAndAfter {
   def getWekaReaderFromResourcePath(resourcePath: String): BufferedReader = {
     val file = getFileStringFromResourcePath(resourcePath)
     val lines = scala.io.Source.fromFile(file).getLines().mkString("\n")
-
     val br = new BufferedReader(new StringReader(lines))
-
     return br
   }
 

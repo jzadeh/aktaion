@@ -15,7 +15,6 @@ class GenericProxyTests extends SimpleTestTools {
   }
 
 
-
   test("Single Line") {
     val myProxyParser = new GenericProxyParser
     val rawInputString = """[12/Dec/2014:13:43:09 -0800] "Nico Rosberg" 192.168.204.137 128.199.52.211 1500 200 TCP_HIT "GET http://yquesrerman.ga/AwoVG1ADAw4OUhlVDlRTBQoHRUJTXVYOUVYaAwtGXFRVVFxXVwBOVRtA HTTP/1.1" "Internet Services" "low risk" "application/octet-stream" 412 752 "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729)" "http://yquesrerman.ga/AkNVHkgGT0Q.html" "-" "0" "" "-""""
@@ -38,10 +37,6 @@ class GenericProxyTests extends SimpleTestTools {
 
       myHttpParser.tokenizeData(x)
     }
-
-    //    val parsed: Array[GenericProxyLogEvent] = lines.flatMap(singleLine => myHttpParser.tokenizeData(singleLine))
-    //
-    //    parsed.foreach(println)
 
   }
 
