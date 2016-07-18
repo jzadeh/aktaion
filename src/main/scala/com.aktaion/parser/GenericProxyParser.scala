@@ -130,4 +130,4 @@ case class GenericProxyLogEvent(ts: Timestamp, //0
                                 bytesReceived: Int, //15
                                 userAgent: String, //16
                                 webReferrer: String //17
-                            ) extends ParsedLogEvent("GenericProxyLog")
+                            ) extends ParsedLogEvent

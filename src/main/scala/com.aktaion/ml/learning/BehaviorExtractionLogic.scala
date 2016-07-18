@@ -2,7 +2,7 @@
 package com.aktaion.ml.learning
 
 import com.aktaion.ml.behaviors.MicroBehaviorSet
-import com.aktaion.parser.ParsedLogEvent
+import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, ParsedLogEvent}
 
 
 //class BehaviorExtractionProxyLogic extends SequentialTransformLogic[GenericProxyLogEvent] {
@@ -14,11 +14,6 @@ import com.aktaion.parser.ParsedLogEvent
 //
 //
 //    for (logLine <- parsedEvents) {
-//
-//
-//
-//
-//
 //
 //    }
 //
@@ -54,10 +49,17 @@ class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEven
       //step 1: extract a single entity
       //todo if we have mutiple IP's break the computation down into group by (source/destination pairs)
 
-      for (logLine <- parsedEvents) {
 
+//      parsedEvents.map { x =>
+//
+//        x match {
+//          case b: BroHttpLogEvent => BroHttpParser.tokenizeData(b)
+//
+//        }
+//
+//
+//      }
 
-      }
 
       //step 2:  compute individual microbehaviors per source
 

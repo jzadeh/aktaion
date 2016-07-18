@@ -4,12 +4,12 @@ package com.aktaion.ml.behaviors
 /**
   * Micro Behavior: Main abstraction for individual unit of behavior
   */
-trait MicroBehavior {
+trait  MicroBehavior {
   val behaviorName: String
   val behaviorDescription: String
 
   /**
-    *  Represents the primary abstraction
+    *  Represents the information
     *  for a single data point whose
     *  type can vary depending on
     *  which kind of behavior we want to study

@@ -54,7 +54,7 @@ class SimpleTestTools extends FunSuite with Matchers with BeforeAndAfter {
     * @return our file as the type [[BufferedReader]] in compliance with older java parsing methods
     */
   def getWekaReaderFromResourcePath(resourcePath: String): BufferedReader = {
-    val file = getFileStringFromResourcePath(resourcePath)
+    val file: String = getFileStringFromResourcePath(resourcePath)
     val lines = scala.io.Source.fromFile(file).getLines().mkString("\n")
     val br = new BufferedReader(new StringReader(lines))
     return br

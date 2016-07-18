@@ -1,0 +1,23 @@
+@relation weather-weka.filters.unsupervised.instance.Randomize-S42-weka.filters.supervised.instance.Resample-B0.5-S1-Z100.0
+
+@attribute outlook {sunny,overcast,rainy}
+@attribute temperature numeric
+@attribute humidity numeric
+@attribute windy {TRUE,FALSE}
+@attribute play {yes,no}
+
+@data
+overcast,81,75,FALSE,yes
+rainy,75,80,FALSE,yes
+rainy,68,80,FALSE,yes
+rainy,71,91,TRUE,no
+overcast,83,86,FALSE,yes
+rainy,75,80,FALSE,yes
+overcast,64,65,TRUE,yes
+rainy,71,91,TRUE,no
+rainy,65,70,TRUE,no
+sunny,80,90,TRUE,no
+rainy,68,80,FALSE,yes
+sunny,72,95,FALSE,no
+sunny,80,90,TRUE,no
+rainy,71,91,TRUE,no

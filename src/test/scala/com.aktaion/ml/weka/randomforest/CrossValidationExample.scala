@@ -1,36 +1,24 @@
-package com.aktaion.shell
+package com.aktaion.ml.weka.randomforest
 
-import java.io.{BufferedReader, File, StringReader}
+import java.io.File
 
-import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser}
-import weka.classifiers.{CostMatrix, Evaluation}
-import weka.classifiers.meta.CostSensitiveClassifier
-import weka.classifiers.trees.RandomForest
-import weka.core.Instances
-import weka.core.converters.ArffSaver
-import weka.filters.Filter
-import weka.filters.supervised.instance.Resample
-import weka.filters.unsupervised.instance.Randomize
+import _root_.weka.core.converters.ArffSaver
+import _root_.weka.core.Instances
+import _root_.weka.filters.unsupervised.instance.Randomize
+import _root_.weka.filters.supervised.instance.Resample
+import _root_.weka.classifiers.trees.RandomForest
+import _root_.weka.classifiers.meta.CostSensitiveClassifier
+import _root_.weka.classifiers.{CostMatrix, Evaluation}
+import _root_.weka.filters.Filter
+import com.aktaion.common.SimpleTestTools
 
-object CommandLineUtils {
+class CrossValidationExample extends SimpleTestTools {
 
-  def getFileFromFileSystemPath(fileName: String): Array[String] = {
-    scala.io.Source.fromFile(fileName).getLines().toArray
-  }
+  ignore("firstTest") {
 
-  def debugBroArray(array: Array[String]) = {
-    for (logLine <- array) {
-      println(logLine)
-      val parsedLine = BroHttpParser.tokenizeData(logLine)
-      println(parsedLine)
-    }
-  }
+    //code from http://www.codemiles.com/weka-examples/weka-java-code-for-random-forest-cross-validation-t11128.html
 
-
-
-  def crossValidationWekaRf(numFolds: Double, filePath: String) = {
-
-   // val numFolds: Double = 10.0d
+    val numFolds: Double = 10.0d
     var precisionOne: Double = 0.0d
     var recallOne: Double = 0.0d
     var fmeansureOne: Double = 0.0d
@@ -44,10 +32,7 @@ object CommandLineUtils {
 
     //   ArffSaver saverTets = new ArffSaver();
 
-    val lines = getFileFromFileSystemPath(filePath).mkString("\n")
-    val br = new BufferedReader(new StringReader(lines))
-
-    //val br = getWekaReaderFromResourcePath("/ml.weka/weather.arff")
+    val br = getWekaReaderFromResourcePath("/ml.weka/weather.arff")
 
     val saverTraining: ArffSaver = new ArffSaver
     var trainData: Instances = new Instances(br)
@@ -93,7 +78,7 @@ object CommandLineUtils {
         costSensitiveClassifier.setCostMatrix(costMatrix)
         costSensitiveClassifier.buildClassifier(resmapleTempTraining)
         saverTraining.setInstances(resmapleTempTraining)
-        saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
+        saverTraining.setFile(new File("/Users/User/Aktaion" + i + "_training.arff"))
         //    saverTets.setInstances(tempTesting)
         //   saverTets.setFile(new File("D:\\SumCost\\eclipse\\" + i + "_testing.arff"))
         saverTraining.writeBatch
@@ -149,31 +134,4 @@ object CommandLineUtils {
     System.out.println("PRC= " + PRCtwo / numFolds)
 
   }
-
-
-
-
-
-
-  def executeBroLogic(file: String) = {
-    val broLogic: BroUserInputLogic = new BroUserInputLogic(file)
-
-    if (broLogic.output == true) {
-      val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
-      val broPath: String = jarPath.getParentFile.getAbsolutePath
-      val broHttpFile: String = broPath + "/http.log"
-      System.out.println(" Bro HTTP FilePath" + broPath)
-      val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
-      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
-      System.out.println(" File Length" + broHttpData.length)
-      CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/weather.arff")
-
-
-    }
-
-  }
-
-
 }
-

@@ -10,6 +10,5 @@ trait GenericParser {
 
 /**
   * Represents a type of log
-  * @param logType name of the log type
   */
-abstract class ParsedLogEvent(logType: String)
+abstract class ParsedLogEvent
