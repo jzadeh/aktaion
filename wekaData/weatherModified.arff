@@ -1,0 +1,56 @@
+@relation weather
+
+@attribute outlook {sunny, overcast, rainy}
+@attribute temperature real
+@attribute humidity real
+@attribute windy {TRUE, FALSE}
+@attribute play {yes, no}
+
+@data
+sunny,85,85,FALSE,no
+sunny,80,90,TRUE,no
+overcast,83,86,FALSE,yes
+rainy,70,96,FALSE,yes
+rainy,68,80,FALSE,yes
+rainy,65,70,TRUE,no
+overcast,64,65,TRUE,yes
+sunny,72,95,FALSE,no
+sunny,69,70,FALSE,yes
+rainy,75,80,FALSE,yes
+sunny,75,70,TRUE,yes
+overcast,72,90,TRUE,yes
+overcast,81,75,FALSE,yes
+rainy,71,91,TRUE,no
+overcast,40,20,TRUE,yes
+sunny,10,60,FALSE,no
+sunny,70,00,FALSE,yes
+rainy,76,90,FALSE,yes
+sunny,55,85,TRUE,yes
+overcast,73,91,TRUE,yes
+overcast,82,76,FALSE,yes
+rainy,73,92,TRUE,no
+sunny,85,85,FALSE,no
+sunny,80,90,TRUE,no
+overcast,83,86,FALSE,yes
+rainy,70,96,FALSE,yes
+rainy,68,80,FALSE,yes
+rainy,65,70,TRUE,no
+overcast,64,65,TRUE,yes
+sunny,72,95,FALSE,no
+sunny,69,70,FALSE,yes
+rainy,75,80,FALSE,yes
+sunny,75,70,TRUE,yes
+overcast,72,90,TRUE,yes
+overcast,81,75,FALSE,yes
+rainy,71,91,TRUE,no
+overcast,40,20,TRUE,yes
+sunny,10,60,FALSE,no
+sunny,70,00,FALSE,yes
+rainy,76,90,FALSE,yes
+sunny,55,85,TRUE,yes
+overcast,73,91,TRUE,yes
+overcast,82,76,FALSE,yes
+rainy,73,92,TRUE,no
+
+
+

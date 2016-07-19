@@ -2,7 +2,7 @@ package com.aktaion.shell
 
 import java.io.{BufferedReader, File, StringReader}
 
-import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser}
+import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, GenericProxyLogEvent}
 import weka.classifiers.{CostMatrix, Evaluation}
 import weka.classifiers.meta.CostSensitiveClassifier
 import weka.classifiers.trees.RandomForest
@@ -13,6 +13,25 @@ import weka.filters.supervised.instance.Resample
 import weka.filters.unsupervised.instance.Randomize
 
 object CommandLineUtils {
+
+  def checkBroSortedLowToHigh(input: Array[BroHttpLogEvent]): Array[BroHttpLogEvent] = {
+
+    val firstTime = input.head.tsDouble
+    val reverseData = input.reverse
+    val lastTime = reverseData.head.tsDouble
+
+    if (firstTime< lastTime) return input else return reverseData
+  }
+
+
+  def checkProxySortedLowToHigh(input: Array[GenericProxyLogEvent]): Array[GenericProxyLogEvent] = {
+
+    val firstTime = input.head.tsJavaTime.getTime
+    val reverseData = input.reverse
+    val lastTime = reverseData.head.tsJavaTime.getTime
+
+    if (firstTime< lastTime) return input else return reverseData
+  }
 
   def getFileFromFileSystemPath(fileName: String): Array[String] = {
     scala.io.Source.fromFile(fileName).getLines().toArray
@@ -25,7 +44,6 @@ object CommandLineUtils {
       println(parsedLine)
     }
   }
-
 
 
   def crossValidationWekaRf(numFolds: Double, filePath: String) = {
@@ -131,7 +149,6 @@ object CommandLineUtils {
       })
     }
 
-
     System.out.println("####################################################")
     System.out.println("Results For Class -1- ")
     System.out.println("Precision=  " + precisionOne / numFolds)
@@ -139,7 +156,6 @@ object CommandLineUtils {
     System.out.println("F-measure=  " + fmeansureOne / numFolds)
     System.out.println("ROC=  " + ROCone / numFolds)
     System.out.println("PRC= " + PRCone / numFolds)
-
 
     System.out.println("Results For Class -2- ")
     System.out.println("Precision=  " + precisionTwo / numFolds)
@@ -149,9 +165,6 @@ object CommandLineUtils {
     System.out.println("PRC= " + PRCtwo / numFolds)
 
   }
-
-
-
 
 
 
@@ -167,7 +180,7 @@ object CommandLineUtils {
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/weather.arff")
+      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic.arff")
 
 
     }

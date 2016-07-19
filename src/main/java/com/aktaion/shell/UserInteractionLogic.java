@@ -1,6 +1,5 @@
 package com.aktaion.shell;
 
-import java.io.File;
 import java.util.Scanner;
 
 public class UserInteractionLogic {

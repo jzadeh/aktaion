@@ -85,6 +85,7 @@ class GenericProxyParser extends GenericParser {
 
         return Some(
           GenericProxyLogEvent(convertedTime,
+            timeString,
             userName,
             sourceIp,
             destinationIp,
@@ -110,9 +111,8 @@ class GenericProxyParser extends GenericParser {
 }
 
 
-
-
-case class GenericProxyLogEvent(ts: Timestamp, //0
+case class GenericProxyLogEvent(tsJavaTime: Timestamp, //0
+                                timeString: String, //extra field
                                 userName: String, //1
                                 sourceIp: String, //2
                                 destinationIp: String, //3
@@ -130,4 +130,9 @@ case class GenericProxyLogEvent(ts: Timestamp, //0
                                 bytesReceived: Int, //15
                                 userAgent: String, //16
                                 webReferrer: String //17
-                            ) extends ParsedLogEvent
+                            ) extends ParsedLogEvent with Ordered[GenericProxyLogEvent] {
+
+  //used for implicit sorting on the ts field
+  def compare(that: GenericProxyLogEvent) =
+    tsJavaTime.getTime.compareTo(that.tsJavaTime.getTime)
+}

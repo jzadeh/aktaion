@@ -32,7 +32,7 @@ class CrossValidationExample extends SimpleTestTools {
 
     //   ArffSaver saverTets = new ArffSaver();
 
-    val br = getWekaReaderFromResourcePath("/ml.weka/weather.arff")
+    val br = getWekaReaderFromResourcePath("/ml.weka/synthetic.arff")
 
     val saverTraining: ArffSaver = new ArffSaver
     var trainData: Instances = new Instances(br)
@@ -78,7 +78,7 @@ class CrossValidationExample extends SimpleTestTools {
         costSensitiveClassifier.setCostMatrix(costMatrix)
         costSensitiveClassifier.buildClassifier(resmapleTempTraining)
         saverTraining.setInstances(resmapleTempTraining)
-        saverTraining.setFile(new File("/Users/User/Aktaion" + i + "_training.arff"))
+        saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
         //    saverTets.setInstances(tempTesting)
         //   saverTets.setFile(new File("D:\\SumCost\\eclipse\\" + i + "_testing.arff"))
         saverTraining.writeBatch

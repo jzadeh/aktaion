@@ -38,7 +38,7 @@ object BroHttpParser extends GenericParser {
 //    #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	user_agent	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	filename	tags	username	password	proxied	orig_fuids	orig_mime_types	resp_fuids	resp_mime_types
 //    #types	time	string	addr	port	addr	port	count	string	string	string	string	string	count	count	count	string	count	string	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]
 // 27 fields
-case class BroHttpLogEvent(ts: Double, //0
+case class BroHttpLogEvent(tsDouble: Double, //0
                            uid: String, //1
                            id_orig_host: String, //2
                            id_orig_port: Int, //3
@@ -65,4 +65,9 @@ case class BroHttpLogEvent(ts: Double, //0
                            orig_mime_types: String, //24
                            resp_fuids: String, //25
                            resp_mime_types: String //26
-                          ) extends ParsedLogEvent
+                          ) extends ParsedLogEvent with Ordered[BroHttpLogEvent] {
+
+  //used for implicit sorting on the ts field
+  def compare(that: BroHttpLogEvent) =
+    tsDouble.compareTo(that.tsDouble)
+}

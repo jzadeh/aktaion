@@ -1,10 +1,11 @@
-
-
 package com.aktaion.parser
 
+import com.aktaion.LogLogic
 import com.aktaion.common.SimpleTestTools
 
-class BroParserTests extends SimpleTestTools {
+
+class BroParserTests extends SimpleTestTools with LogLogic {
+
 
   test("Basic Bro HTTP Parser") {
    // val myHttpParser = new BroHttpParser
@@ -23,7 +24,9 @@ class BroParserTests extends SimpleTestTools {
     val lines: Array[String] = getLinesFromFile(file)
     val parsed: Array[BroHttpLogEvent] = lines.flatMap(singleLine => BroHttpParser.tokenizeData(singleLine))
 
-    parsed.foreach(println)
+    logger.info("Hello from the Pizza class")
+
+    //    parsed.foreach(println)
   }
 
 
