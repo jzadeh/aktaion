@@ -2,6 +2,7 @@
 package com.aktaion.parser
 
 import com.aktaion.common.SimpleTestTools
+import com.aktaion.ml.learning.BehaviorExtractionGenericProxyLogic
 
 class GenericProxyTests extends SimpleTestTools {
 
@@ -14,7 +15,7 @@ class GenericProxyTests extends SimpleTestTools {
 
     val urlData = output.urlMetaData
 
-    urlData.port shouldBe -1  //defualt port value
+    urlData.port shouldBe -1  //default port value
     urlData.host shouldBe "www.christianforums.com"
     urlData.file shouldBe "/t7788258/"
     urlData.file shouldBe "/t7788258/"
@@ -29,18 +30,26 @@ class GenericProxyTests extends SimpleTestTools {
     val output = parsedData.get
     output.domainClass shouldBe "Internet Services"
 
+
    // println(parsedData)
   }
 
-  ignore("Generic Proxy File") {
+  test("Generic Proxy File") {
 
     val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-05-22-Fiesta-EK-traffic-03.webgateway")
     val lines: Array[String] = getLinesFromFile(file)
+
+    val parsedData =  lines.flatMap{ x=> GenericProxyParser.tokenizeData(x)}.toSeq
 
     for (x <- lines) {
       println(x)
       GenericProxyParser.tokenizeData(x)
     }
+
+    val myExtractor = new BehaviorExtractionGenericProxyLogic
+
+    myExtractor.transformSeqOfLogLines(parsedData)
+
 
   }
 

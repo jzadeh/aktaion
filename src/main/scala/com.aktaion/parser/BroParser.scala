@@ -12,7 +12,6 @@ object BroHttpParser extends GenericParser {
 
     val rd: Array[String] = rawData.split("\t")
 
-
     val tsString = rd(0)
     val ts = rd(0).toDouble
 

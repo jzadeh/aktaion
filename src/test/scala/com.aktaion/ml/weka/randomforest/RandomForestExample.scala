@@ -12,15 +12,11 @@ import _root_.weka.core.Instances
 
 class RandomForestExample extends SimpleTestTools {
 
-  ignore("Weka Random Forest Test Data Set") {
+  test("Weka Random Forest Test Data Set") {
 
     val numFolds: Int = 10
 
-    val br = getWekaReaderFromResourcePath("/ml.weka/weather.arff")
-  //  val br = getWekaReaderFromResourcePath("/ml.weka/contact-lenses.arff")
-
-  //weka.classifiers.trees.RandomTree: Cannot handle numeric class!
-    //val br = getWekaReaderFromResourcePath("/ml.weka/cpu.arff")
+    val br = getWekaReaderFromResourcePath("/ml.weka/synthetic.arff")
 
     val trainData: Instances = new Instances(br)
     trainData.setClassIndex(trainData.numAttributes - 1)
