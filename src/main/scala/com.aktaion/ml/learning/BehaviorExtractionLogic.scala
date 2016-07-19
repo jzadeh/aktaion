@@ -4,6 +4,7 @@ package com.aktaion.ml.learning
 import com.aktaion.LogLogic
 import com.aktaion.ml.behaviors.MicroBehaviorSet
 import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
+import com.aktaion.shell.CommandLineUtils
 
 
 //class BehaviorExtractionProxyLogic extends SequentialTransformLogic[GenericProxyLogEvent] {
@@ -35,13 +36,14 @@ import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent
 //
 
 
-class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[BroHttpLogEvent] with LogLogic{
+class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[GenericProxyLogEvent] with LogLogic {
 
 
-  def transformSeqOfLogLines(parsedEvents: Seq[BroHttpLogEvent]): Option[MicroBehaviorSet] = {
+  def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent]): Option[MicroBehaviorSet] = {
 
-    val sourceSet: Set[String] = parsedEvents.map{ x=>x.id_orig_host}.toSet
-    val destSet: Set[String] = parsedEvents.map{ x=>x.id_orig_host}.toSet
+    val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
+    val destIpSet: Set[String] = parsedEvents.map { x => x.destinationIp }.toSet
+    //  val destDomainSet: Set[String] = parsedEvents.map{ x=>x.}.toSet
 
 
     /**
@@ -49,17 +51,17 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
       * in this case we can have two types of computation 'strategies'
       *
       * //todo Implement a group by sourceIP/userKey to apply the scoring logic to each group
-      * //todo of source destiation pairs
-      *
+      * //todo of source destination pairs
       *
       */
-    lazy val isSourceUnique = if(sourceSet.size ==1) true else false
+    lazy val isSourceUnique = if (sourceIpSet.size == 1) true else false
 
-    if (isSourceUnique == false){
+    if (isSourceUnique == false) {
       logger.warn("Multiple Sources Detected in File: do group by our  ")
     }
 
-    //todo check data is sorted
+    //todo check data is sorted low to high by timestamp
+    val sortedData = CommandLineUtils.checkProxySortedLowToHigh(parsedEvents)
 
 
 
@@ -69,33 +71,29 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
 }
 
 
-
 class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEvent] {
 
-    def transformSeqOfLogLines[A<:ParsedLogEvent](parsedEvents: Seq[A]): Option[MicroBehaviorSet] = {
+  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[MicroBehaviorSet] = {
 
-      //step 1: extract a single entity
-      //todo if we have mutiple IP's break the computation down into group by (source/destination pairs)
-
-
+    //step 1: extract a single entity
+    //todo if we have mutiple IP's break the computation down into group by (source/destination pairs)
 
 
+    parsedEvents.map { x =>
 
-      parsedEvents.map { x =>
-
-        x match {
-          case b: BroHttpLogEvent =>
-          case p: GenericProxyLogEvent =>
-
-        }
+      x match {
+        case b: BroHttpLogEvent =>
+        case p: GenericProxyLogEvent =>
 
       }
 
-      //step 2:  compute individual microbehaviors per source
-      //step 3: score the feature vector with Mllib/weka
-
-      None
-
     }
+
+    //step 2:  compute individual microbehaviors per source
+    //step 3: score the feature vector with Mllib/weka
+
+    None
+
+  }
 
 }

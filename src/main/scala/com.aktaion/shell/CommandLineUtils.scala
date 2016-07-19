@@ -14,7 +14,28 @@ import weka.filters.unsupervised.instance.Randomize
 
 object CommandLineUtils {
 
-  def checkBroSortedLowToHigh(input: Array[BroHttpLogEvent]): Array[BroHttpLogEvent] = {
+
+  def executeBroLogic(file: String) = {
+    val broLogic: BroUserInputLogic = new BroUserInputLogic(file)
+
+    if (broLogic.output == true) {
+      val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
+      val broPath: String = jarPath.getParentFile.getAbsolutePath
+      val broHttpFile: String = broPath + "/http.log"
+      System.out.println(" Bro HTTP FilePath" + broPath)
+      val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
+      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
+      System.out.println(" File Length" + broHttpData.length)
+      CommandLineUtils.debugBroArray(broHttpData)
+      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic.arff")
+
+
+    }
+
+  }
+
+
+  def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
 
     val firstTime = input.head.tsDouble
     val reverseData = input.reverse
@@ -24,7 +45,7 @@ object CommandLineUtils {
   }
 
 
-  def checkProxySortedLowToHigh(input: Array[GenericProxyLogEvent]): Array[GenericProxyLogEvent] = {
+  def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
 
     val firstTime = input.head.tsJavaTime.getTime
     val reverseData = input.reverse
@@ -168,24 +189,6 @@ object CommandLineUtils {
 
 
 
-  def executeBroLogic(file: String) = {
-    val broLogic: BroUserInputLogic = new BroUserInputLogic(file)
-
-    if (broLogic.output == true) {
-      val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
-      val broPath: String = jarPath.getParentFile.getAbsolutePath
-      val broHttpFile: String = broPath + "/http.log"
-      System.out.println(" Bro HTTP FilePath" + broPath)
-      val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
-      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
-      System.out.println(" File Length" + broHttpData.length)
-      CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic.arff")
-
-
-    }
-
-  }
 
 
 }

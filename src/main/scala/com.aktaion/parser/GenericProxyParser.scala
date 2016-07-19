@@ -1,11 +1,11 @@
-
 package com.aktaion.parser
 
 import java.sql.Timestamp
+
 import scala.util.{Failure, Success, Try}
 
 
-class GenericProxyParser extends GenericParser {
+object GenericProxyParser extends GenericParser {
 
   /**
     * Take an input string of the format "12/Dec/2014:13:44:36-0800"
@@ -58,25 +58,25 @@ class GenericProxyParser extends GenericParser {
     //todo determine the name of this field
     val unknownField = ris(6)
 
-
-
     //Split by quote (") to recover user agent
     val quoteSplit = rawInputString.split('"')
     val userAgentString = quoteSplit(11)
     val webReferrerString = quoteSplit(13)
-
 
     //Layer 7 http data
     val statusCode = ris(7).toInt
     val cacheResult = ris(8)
     val httpMethod = ris(9).tail
     val urlRequested = ris(10)
+
+    val urlMeta = UrlLogic.
+      getUrlFromString(urlRequested).getOrElse(UrlDataVector("","","",0,""))
+
     val httpVersion = ris(11).dropRight(1)
     val domainClassification =  quoteSplit(5)//ris(12).tail + " " + ris(13).dropRight(1)
     val riskClassification = quoteSplit(7)// ris(14) + " " + ris(15)
     val mimeType = quoteSplit(9)
    //  val encodingFormat = ris(17).dropRight(1)
-
 
     //Byte related flow info
     //todo check this is correct direction
@@ -102,12 +102,11 @@ class GenericProxyParser extends GenericParser {
             bytesSent,
             bytesReceived,
             userAgentString,
-            webReferrerString
+            webReferrerString,
+            urlMeta
           )
-
         )
   }
-
 }
 
 
@@ -129,7 +128,8 @@ case class GenericProxyLogEvent(tsJavaTime: Timestamp, //0
                                 bytesSent: Int, //14
                                 bytesReceived: Int, //15
                                 userAgent: String, //16
-                                webReferrer: String //17
+                                webReferrer: String, //17
+                                urlMetaData: UrlDataVector
                             ) extends ParsedLogEvent with Ordered[GenericProxyLogEvent] {
 
   //used for implicit sorting on the ts field
