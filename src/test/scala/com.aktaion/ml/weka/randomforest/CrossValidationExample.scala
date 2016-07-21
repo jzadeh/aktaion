@@ -32,7 +32,7 @@ class CrossValidationExample extends SimpleTestTools {
 
     //   ArffSaver saverTets = new ArffSaver();
 
-    val br = getWekaReaderFromResourcePath("/ml.weka/synthetic.arff")
+    val br = getWekaReaderFromResourcePath("/ml.weka/synthetic_train.arff")
 
     val saverTraining: ArffSaver = new ArffSaver
     var trainData: Instances = new Instances(br)

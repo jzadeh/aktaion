@@ -1,0 +1,18 @@
+@relation synthetic
+
+@attribute outlook {sunny, overcast, rainy}
+@attribute maxrefchain real
+@attribute numips real
+@attribute timdelta1 real
+@attribute timedelta2 real
+@attribute timedelta3 real
+@attribute timedelta4 real
+@attribute nummimtype real
+@attribute numurls real
+@attribute agd {TRUE, FALSE}
+@attribute classlabel {yes, no}
+
+@data
+sunny,0.660299951,0.5232,0.332341,0.660299951,0.660299951,85,85,85,FALSE,no
+sunny,0.660299951,0.5232,0.332341,0.660299951,0.660299951,85,85,85,FALSE,no
+sunny,0.660299951,0.5232,0.332341,0.660299951,0.660299951,85,85,85,FALSE,no

@@ -48,10 +48,10 @@ trait MicroBehaviorSet {
 case class MicroBehaviorData(behaviorName: String,
                              behaviorDescription: String,
                              var numData: Double = 0.0,
-                             var catData: String = "") extends MicroBehaviorNumericLike with MicroBehaviorCategoricalLike {
+                             var catData: String = "")
+  extends MicroBehaviorNumericLike with MicroBehaviorCategoricalLike {
 
   def valueToCsv = behaviorName + "," + numData.toString + "," + catData
-
 }
 
 

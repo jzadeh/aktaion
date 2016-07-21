@@ -19,7 +19,7 @@ class BroParserTests extends SimpleTestTools with LogLogic {
     println(output)
   }
 
-  test("Bro HTTP File"){
+  ignore("Bro HTTP File"){
     val file: String = getFileStringFromResourcePath("/parser.bro/citadelsample/http.log")
     val lines: Array[String] = getLinesFromFile(file)
     val parsed: Array[BroHttpLogEvent] = lines.flatMap(singleLine => BroHttpParser.tokenizeData(singleLine))

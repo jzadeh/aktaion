@@ -43,9 +43,7 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
     val destIpSet: Set[String] = parsedEvents.map { x => x.destinationIp }.toSet
     val destDomainSet: Set[String] = parsedEvents.map{ x=>x.urlMetaData.host}.toSet
-
     val uriSet = parsedEvents.map{ x => x.urlRequested}
-
     val tsVector: Seq[Long] = parsedEvents.map{ x => x.tsJavaTime.getTime}
 
     /**
@@ -75,7 +73,6 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     urlIocs.uriMinPathDepth.numData = uriSet.map{ x => x.split("/").size }.max
 
     val masterBehaviorVector: List[MicroBehaviorData] = timingIocs.behaviorVector ++ urlIocs.behaviorVector
-
 
     val microBehaviors = new MicroBehaviorSet {
       override def behaviorVector: List[MicroBehaviorData] = masterBehaviorVector

@@ -27,7 +27,7 @@ object CommandLineUtils {
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic.arff")
+      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic_train.arff")
 
 
     }
