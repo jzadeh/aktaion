@@ -1,6 +1,7 @@
 package com.aktaion.shell
 
-import java.io.{BufferedReader, File, StringReader}
+import java.io._
+import java.util.zip.GZIPInputStream
 
 import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, GenericProxyLogEvent}
 import weka.classifiers.{CostMatrix, Evaluation}
@@ -12,7 +13,43 @@ import weka.filters.Filter
 import weka.filters.supervised.instance.Resample
 import weka.filters.unsupervised.instance.Randomize
 
+import scala.io.Source
+
 object CommandLineUtils {
+
+  //function to walk directory/list of files
+  def GetFileTree(f: File): Stream[File] =
+    f #:: (if (f.isDirectory) f.listFiles().toStream.flatMap(GetFileTree)
+    else Stream.empty)
+
+  val directoryname = "/Users/User/Aktaion/data/exploitData/"
+
+  val fileIterator =  GetFileTree(new File(directoryname)).filter(_.getName.endsWith(".pcap")).toIterator
+
+  for(file <- fileIterator ) {
+
+    val filenamestr = file.toString.split("/").last.dropRight(3) + ".pcap"
+      val directorynamestr = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
+
+      val outfilestr = directorynamestr + filenamestr
+      val fw = new FileWriter(outfilestr, true)
+      println("Crawling " + file + " for data...")
+
+      val rawfile = Source.fromInputStream(new GZIPInputStream(new BufferedInputStream(new FileInputStream(file)))).getLines
+
+      while (rawfile.hasNext) {
+        val line = rawfile.next
+          fw.write(line)
+
+//          println(.toJson(line))
+//          fw.write(.toJson(line) + "\n")
+        }
+
+      fw.close()
+
+
+  }
+
 
 
   def executeBroLogic(file: String) = {
@@ -27,10 +64,14 @@ object CommandLineUtils {
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic_train.arff")
+      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/data/wekaData/synthetic_train.arff")
+
+
+
+
+
     }
   }
-
 
   def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
     val firstTime = input.head.tsDouble
@@ -39,7 +80,6 @@ object CommandLineUtils {
 
     if (firstTime< lastTime) return input else return reverseData
   }
-
 
   def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
 

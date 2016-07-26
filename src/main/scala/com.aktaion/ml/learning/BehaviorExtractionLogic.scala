@@ -1,6 +1,8 @@
 
 package com.aktaion.ml.learning
 
+import java.io.{BufferedWriter, File, FileWriter}
+
 import com.aktaion.LogLogic
 import com.aktaion.ml.behaviors._
 import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
@@ -40,7 +42,7 @@ import scala.collection.mutable.ArrayBuffer
 
 class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[GenericProxyLogEvent] with LogLogic {
 
-  def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent], windowSize: Int): Option[Seq[WindowOfBehaviors]] = {
+  def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
 
     if (windowSize == 0 || windowSize > parsedEvents.size) return None
 
@@ -73,7 +75,7 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     //gives a window to score the behaviors over
     val dataBrokenIntoWindows: Iterator[Seq[GenericProxyLogEvent]] = parsedEvents.sliding(windowSize)
 
-    var microBehaviorsDetectedInEachWindow = ArrayBuffer[WindowOfBehaviors]()
+    var microBehaviorsDetectedInEachWindow = ArrayBuffer[List[MicroBehaviorData]]()
 
     for ((currentWindow, index) <- dataBrokenIntoWindows.zipWithIndex) {
 
@@ -125,27 +127,70 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
           urlIocs.behaviorVector ++ genericIocs.behaviorVector
       }
 
-      microBehaviorsDetectedInEachWindow += WindowOfBehaviors(microBehaviorsDetected, index)
+      microBehaviorsDetected.printBehaviorVector
+
+      microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
     }
 
-    microBehaviorsDetectedInEachWindow.foreach(x => x.microBehaviorSet.printBehaviorVector)
-
     if (microBehaviorsDetectedInEachWindow.size > 0) {
-      return Some(microBehaviorsDetectedInEachWindow.toSeq)
+
+      val finalOutput: Seq[List[MicroBehaviorData]] = microBehaviorsDetectedInEachWindow.toSeq
+      convertBehaviorVectorToWeka(finalOutput, "/Users/User/Aktaion/data/wekaData/testBehavior.arff")
+      return Some(finalOutput)
     } else {
       return None
     }
   }
+
+
+  /**
+    * Follows the weka .arff format to build a simple string
+    * for scoring the behaviors over a set of observations for a single file
+    * https://weka.wikispaces.com/ARFF+(stable+version)
+    *
+    * @param behaviorOverWindows
+    * @param fileName
+    */
+  def convertBehaviorVectorToWeka(behaviorOverWindows: Seq[List[MicroBehaviorData]],
+                                  fileName: String) = {
+    val title = "@relation microbehaviors\n\n"
+    var attributes = ""
+    var csvRows = "@data\n"
+    for ((window, ind) <- behaviorOverWindows.zipWithIndex) {
+      for ((data, index) <- window.zipWithIndex) {
+        //ONLY DO THE COMPUTATION ONCE
+        if (ind == 0) {
+          attributes = attributes + "@attribute " +
+            data.behaviorName.toLowerCase + " real\n"
+        }
+        if (index < window.size - 1) {
+          csvRows = csvRows + data.numData.toString + ","
+        } else {
+          csvRows = csvRows + data.numData.toString + "\n"
+        }
+      }
+    }
+
+    val fullText = title + attributes + "\n" + csvRows
+
+    println(fullText)
+
+    val file = new File(fileName)
+    val bw = new BufferedWriter(new FileWriter(file))
+    bw.write(fullText)
+    bw.close()
+  }
+
+
 }
 
 
 class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEvent] {
 
-  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[Seq[WindowOfBehaviors]] = {
+  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[Seq[List[MicroBehaviorData]]] = {
 
     //step 1: extract a single entity
     //todo if we have multiple IP's break the computation down into group by (source/destination pairs)
-
 
     parsedEvents.map { x =>
 

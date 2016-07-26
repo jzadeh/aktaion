@@ -45,33 +45,7 @@ trait MicroBehaviorSet {
 
   def printBehaviorVector = println(vectorToString)
 
-  def convertBehaviorVectorToWeka(behaviorOverWindows: Seq[List[MicroBehaviorData]],
-                                  fileName: String) = {
-    val title = "@relation microbehaviors\n\n"
-    var attributes = ""
-    var csvRows = "@data\n"
-    for ( (window,ind) <- behaviorOverWindows.zipWithIndex) {
-      for ((data, index) <- window.zipWithIndex) {
-        //ONLY DO THE COMPUTATION ONCE
-        if (ind == 0) {
-          attributes = attributes + "@attribute " +
-          data.behaviorName.toLowerCase + "real\n"
-        }
-        if (index < window.size ) {
-          csvRows = data.numData.toString + ","
-        } else {
-          csvRows = data.numData.toString + "\n"
-        }
-      }
-    }
 
-    val fullText = title + attributes + csvRows
-
-    val file = new File(fileName)
-    val bw = new BufferedWriter(new FileWriter(file))
-    bw.write(fullText)
-    bw.close()
-  }
 
 }
 
