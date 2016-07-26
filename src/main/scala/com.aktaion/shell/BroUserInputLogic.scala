@@ -3,7 +3,7 @@ package com.aktaion.shell
 
 import sys.process._
 
-class BroUserInputLogic(fileInputPath: String) {
+class BroUserInputLogic (fileInputPath: String) {
 
   val stdout = new StringBuilder
   val stderr = new StringBuilder

@@ -50,7 +50,7 @@ libraryDependencies ++= Seq("org.slf4j" % "slf4j-api" % "1.7.10",
 //libraryDependencies += "jline" % "jline" % "0.9.94"
 
 libraryDependencies ++= Seq(
-  ("org.apache.spark" %% "spark-mllib"  % "1.6.2").exclude("javax.xml", "bind").exclude("stax-api", "stax"),
+ // ("org.apache.spark" %% "spark-mllib"  % "1.6.2").exclude("javax.xml", "bind").exclude("stax-api", "stax"),
   "jline" % "jline" % "0.9.94",
   "com.rockymadden.stringmetric" %% "stringmetric-core" % "0.27.4",
   "org.apache.spark" %% "spark-core" % "1.6.2" % "provided",
@@ -111,6 +111,7 @@ assemblyMergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) => {
   case PathList("com", "google", xs@_*) => MergeStrategy.last
   case PathList("javax", "xml", xs@_*) => MergeStrategy.last
   case PathList("org", "slf4j", xs@_*) => MergeStrategy.last
+  case PathList("net", "sourceforge", xs@_*) => MergeStrategy.last
   //case PathList("javax", "servlet", xs @ _*) => MergeStrategy.last
   case "about.html" => MergeStrategy.rename
   case x => old(x)

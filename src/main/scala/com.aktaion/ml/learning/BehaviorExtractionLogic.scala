@@ -46,13 +46,11 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
 
     val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
 
-
     //    val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
     //    val destIpSet: Set[String] = parsedEvents.map { x => x.destinationIp }.toSet
     //    val destDomainSet: Set[String] = parsedEvents.map { x => x.urlMetaData.host }.toSet
     //    val uriSet = parsedEvents.map { x => x.urlRequested }
     //    val tsVector: Seq[Long] = parsedEvents.map { x => x.tsJavaTime.getTime }
-
 
     /**
       * pre-processing logic in case we do not have a unique source in the destination
@@ -119,14 +117,12 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
       urlIocs.uriMaxPathDepth.numData = uriSet.map { x => x.split("/").size }.max
       urlIocs.uriMinPathDepth.numData = uriSet.map { x => x.split("/").size }.max
 
-
-
-
       /**
         * Boiler plate to collect all the individual sets of information we computed above
         */
       val microBehaviorsDetected = new MicroBehaviorSet {
-        override def behaviorVector: List[MicroBehaviorData] = timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
+        override def behaviorVector: List[MicroBehaviorData] = timingIocs.behaviorVector ++
+          urlIocs.behaviorVector ++ genericIocs.behaviorVector
       }
 
       microBehaviorsDetectedInEachWindow += WindowOfBehaviors(microBehaviorsDetected, index)

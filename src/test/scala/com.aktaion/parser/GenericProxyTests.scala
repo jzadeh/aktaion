@@ -50,7 +50,6 @@ class GenericProxyTests extends SimpleTestTools {
 
     myExtractor.transformSeqOfLogLines(parsedData,5)
 
-
   }
 
 
