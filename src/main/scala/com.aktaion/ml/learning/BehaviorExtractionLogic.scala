@@ -144,7 +144,7 @@ class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEven
   def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[Seq[WindowOfBehaviors]] = {
 
     //step 1: extract a single entity
-    //todo if we have mutiple IP's break the computation down into group by (source/destination pairs)
+    //todo if we have multiple IP's break the computation down into group by (source/destination pairs)
 
 
     parsedEvents.map { x =>
