@@ -48,7 +48,7 @@ class GenericProxyTests extends SimpleTestTools {
 
     val myExtractor = new BehaviorExtractionGenericProxyLogic
 
-    myExtractor.transformSeqOfLogLines(parsedData)
+    myExtractor.transformSeqOfLogLines(parsedData,5)
 
 
   }

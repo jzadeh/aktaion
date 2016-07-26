@@ -28,15 +28,11 @@ object CommandLineUtils {
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
       CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/wekaData/synthetic_train.arff")
-
-
     }
-
   }
 
 
   def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
-
     val firstTime = input.head.tsDouble
     val reverseData = input.reverse
     val lastTime = reverseData.head.tsDouble
