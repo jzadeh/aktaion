@@ -30,7 +30,7 @@ public class UserInteractionLogic {
             String fileInputPath = scanner.next();
             CommandLineUtils.executeBroLogic(fileInputPath);
         } else if (userChoice == 3) {
-            CommandLineUtils.executeBroLogic("/Users/rosoto/Aktaion/test.pcap");
+            CommandLineUtils.executeBroLogic("/Users/rsoto/Aktaion/test.pcap");
         }
 
     }
