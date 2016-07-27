@@ -54,7 +54,7 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     //    val uriSet = parsedEvents.map { x => x.urlRequested }
     //    val tsVector: Seq[Long] = parsedEvents.map { x => x.tsJavaTime.getTime }
 
-    /**
+    /** Step 1:
       * pre-processing logic in case we do not have a unique source in the destination
       * in this case we can have two types of computation 'strategies'
       *
@@ -193,18 +193,13 @@ class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEven
     //todo if we have multiple IP's break the computation down into group by (source/destination pairs)
 
     parsedEvents.map { x =>
-
       x match {
         case b: BroHttpLogEvent =>
         case p: GenericProxyLogEvent =>
-
       }
-
     }
-
     //step 2:  compute individual microbehaviors per source
     //step 3: score the feature vector with Mllib/weka
-
     None
 
   }

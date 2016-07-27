@@ -31,7 +31,7 @@ public class UserInteractionLogic {
             CommandLineUtils.executeBroLogic(fileInputPath);
         } else if (userChoice == 3) {
             CommandLineUtils.executeBroLogic("/Users/User/Aktaion/test.pcap");
-        }
+        } 
 
     }
 }

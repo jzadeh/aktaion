@@ -13,47 +13,66 @@ import weka.filters.Filter
 import weka.filters.supervised.instance.Resample
 import weka.filters.unsupervised.instance.Randomize
 
-import scala.io.Source
+import scala.io.{BufferedSource, Source}
 
 object CommandLineUtils {
 
-  //function to walk directory/list of files
+  /**
+    * Recursively walk a directory and get a list of files
+    *
+    * @param f
+    * @return
+    */
   def GetFileTree(f: File): Stream[File] =
     f #:: (if (f.isDirectory) f.listFiles().toStream.flatMap(GetFileTree)
     else Stream.empty)
 
   val directoryname = "/Users/User/Aktaion/data/exploitData/"
 
-  val fileIterator =  GetFileTree(new File(directoryname)).filter(_.getName.endsWith(".pcap")).toIterator
+  /**
+    *
+    * @param readDirectory input read path
+    * @param writeFile     ouput filename
+    * @param format        "pcap" or "gzip"
+    */
+  def extractPcapDataFromDirectory(readDirectory: String,
+                                   writeFile: String,
+                                   format: String) = {
 
-  for(file <- fileIterator ) {
+    val fileIterator = GetFileTree(new File(directoryname)).filter(_.getName.endsWith(format)).toIterator
 
-    val filenamestr = file.toString.split("/").last.dropRight(3) + ".pcap"
-      val directorynamestr = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
-
-      val outfilestr = directorynamestr + filenamestr
-      val fw = new FileWriter(outfilestr, true)
+    for (file <- fileIterator) {
+      val fileName = file.toString.split("/").last.dropRight(3) + format
+      println(fileName)
+      val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
+      println(directoryName)
+      val totalStr = directoryName + fileName
+      println(totalStr)
+      val fw = new FileWriter(totalStr, true)
       println("Crawling " + file + " for data...")
 
-      val rawfile = Source.fromInputStream(new GZIPInputStream(new BufferedInputStream(new FileInputStream(file)))).getLines
+      var rawFile: BufferedSource = null
+      if (format == "gzip") {
+        rawFile = Source.fromInputStream(new GZIPInputStream(new BufferedInputStream(new FileInputStream(file))))
+      } else {
+        rawFile = Source.fromInputStream(new BufferedInputStream(new FileInputStream(file)))
+      }
 
-      while (rawfile.hasNext) {
-        val line = rawfile.next
-          fw.write(line)
-
-//          println(.toJson(line))
-//          fw.write(.toJson(line) + "\n")
-        }
-
+      while (rawFile.hasNext) {
+        val line = rawFile.next
+        fw.write(line)
+        //          println(.toJson(line))
+        //          fw.write(.toJson(line) + "\n")
+      }
       fw.close()
+    }
 
 
   }
 
 
-
   def executeBroLogic(file: String) = {
-    val broLogic: BroUserInputLogic = new BroUserInputLogic(file)
+    val broLogic: BroCommandLineInteractionLogic = new BroCommandLineInteractionLogic(file)
 
     if (broLogic.output == true) {
       val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
@@ -61,14 +80,10 @@ object CommandLineUtils {
       val broHttpFile: String = broPath + "/http.log"
       System.out.println(" Bro HTTP FilePath" + broPath)
       val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
-      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap{ x=> BroHttpParser.tokenizeData(x)}
+      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d,"/Users/User/Aktaion/data/wekaData/synthetic_train.arff")
-
-
-
-
+      CommandLineUtils.crossValidationWekaRf(10.0d, "/Users/User/Aktaion/data/wekaData/synthetic_train.arff")
 
     }
   }
@@ -78,7 +93,7 @@ object CommandLineUtils {
     val reverseData = input.reverse
     val lastTime = reverseData.head.tsDouble
 
-    if (firstTime< lastTime) return input else return reverseData
+    if (firstTime < lastTime) return input else return reverseData
   }
 
   def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
@@ -87,7 +102,7 @@ object CommandLineUtils {
     val reverseData = input.reverse
     val lastTime = reverseData.head.tsJavaTime.getTime
 
-    if (firstTime< lastTime) return input else return reverseData
+    if (firstTime < lastTime) return input else return reverseData
   }
 
   def getFileFromFileSystemPath(fileName: String): Array[String] = {
@@ -105,7 +120,7 @@ object CommandLineUtils {
 
   def crossValidationWekaRf(numFolds: Double, filePath: String) = {
 
-   // val numFolds: Double = 10.0d
+    // val numFolds: Double = 10.0d
     var precisionOne: Double = 0.0d
     var recallOne: Double = 0.0d
     var fmeansureOne: Double = 0.0d
@@ -145,8 +160,13 @@ object CommandLineUtils {
         var j: Int = 0
 
         while (j < (end - begin)) {
-          {tempTraining.delete(begin)}
-          ({j += 1;j - 1})
+          {
+            tempTraining.delete(begin)
+          }
+          ({
+            j += 1;
+            j - 1
+          })
         }
 
         val resample: Resample = new Resample
@@ -222,9 +242,6 @@ object CommandLineUtils {
     System.out.println("PRC= " + PRCtwo / numFolds)
 
   }
-
-
-
 
 
 }
