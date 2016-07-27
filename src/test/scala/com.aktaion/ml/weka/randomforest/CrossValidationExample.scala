@@ -13,6 +13,8 @@ import _root_.weka.filters.Filter
 import com.aktaion.common.SimpleTestTools
 
 class CrossValidationExample extends SimpleTestTools {
+//use https://weka.wikispaces.com/Use+Weka+in+your+Java+code
+
 
   ignore("firstTest") {
 

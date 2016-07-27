@@ -73,35 +73,55 @@ object CommandLineUtils {
 
   def executeBroLogic(file: String) = {
     val broLogic: BroCommandLineInteractionLogic = new BroCommandLineInteractionLogic(file)
-
     if (broLogic.output == true) {
-      val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
-      val broPath: String = jarPath.getParentFile.getAbsolutePath
+      val broPath = findFilePathRelativeToJar()
+
+      //file is generated in same directory as the jar
       val broHttpFile: String = broPath + "/http.log"
       System.out.println(" Bro HTTP FilePath" + broPath)
       val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
-      CommandLineUtils.crossValidationWekaRf(10.0d, "/Users/User/Aktaion/data/wekaData/synthetic_train.arff")
 
+      //guess where the weka data is
+      val dataPath = tryToFindPathToDataInSourceCode(4)
+      val trainData = dataPath + "/wekaData/synthetic_train.arff"
+
+      CommandLineUtils.crossValidationWekaRf(10.0d, trainData)
     }
   }
+
+  def findFilePathRelativeToJar(): String = {
+    val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
+    val absolutePath: String = jarPath.getParentFile.getAbsolutePath
+    return absolutePath
+  }
+
+  /**
+    * Only will work on unix type paths
+    *
+    * @return
+    */
+  def tryToFindPathToDataInSourceCode(numOfSubDirs: Int = 4): String = {
+    val pathStr = findFilePathRelativeToJar()
+    val splitStr = pathStr.split("/").take(numOfSubDirs).mkString("/")
+    val dataPath = splitStr + "/data/"
+    return dataPath
+  }
+
 
   def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
     val firstTime = input.head.tsDouble
     val reverseData = input.reverse
     val lastTime = reverseData.head.tsDouble
-
     if (firstTime < lastTime) return input else return reverseData
   }
 
   def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
-
     val firstTime = input.head.tsJavaTime.getTime
     val reverseData = input.reverse
     val lastTime = reverseData.head.tsJavaTime.getTime
-
     if (firstTime < lastTime) return input else return reverseData
   }
 

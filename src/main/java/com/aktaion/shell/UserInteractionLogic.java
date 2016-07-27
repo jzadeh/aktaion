@@ -14,8 +14,7 @@ public class UserInteractionLogic {
         System.out.println("*************************");
         System.out.println("1: Analyze Bro HTTP Sample");
         System.out.println("2: Analyze PCAP Sample (Bro must be installed)");
-        System.out.println("3: Demo");
-
+        System.out.println("3: Demo (Unix/OS X System)");
         System.out.print("Enter Execution Choice [1-3]: ");
 
         int userChoice = scanner.nextInt();
@@ -30,8 +29,13 @@ public class UserInteractionLogic {
             String fileInputPath = scanner.next();
             CommandLineUtils.executeBroLogic(fileInputPath);
         } else if (userChoice == 3) {
-            CommandLineUtils.executeBroLogic("/Users/rsoto/Aktaion/test.pcap");
-        }
+            //does not work on windows
+            String localPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
+            String testFile = localPath + "test.pcap";
 
+
+            System.out.println(testFile);
+            CommandLineUtils.executeBroLogic(testFile);
+        }
     }
 }

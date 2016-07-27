@@ -25,6 +25,4 @@ class BroCommandLineInteractionLogic(fileInputPath: String) {
   val output = generateBroFiles(fileInputPath)
   println(output)
 
-
-
 }

@@ -1,0 +1,22 @@
+@relation microbehaviors
+
+@attribute maxtimeintervala real
+@attribute maxtimeintervalb real
+@attribute maxtimeintervalc real
+@attribute maxtimeintervald real
+@attribute mintimeintervala real
+@attribute mintimeintervalb real
+@attribute mintimeintervalc real
+@attribute mintimeintervald real
+@attribute timelengthinwindow real
+@attribute maxpathdepth real
+@attribute minpathdepth real
+@attribute windowsize real
+
+@data
+6000.0,2000.0,1000.0,0.0,0.0,1000.0,2000.0,6000.0,6000.0,5.0,5.0,0.0
+13000.0,6000.0,1000.0,0.0,0.0,1000.0,6000.0,13000.0,13000.0,5.0,5.0,0.0
+13000.0,6000.0,0.0,0.0,0.0,0.0,6000.0,13000.0,13000.0,5.0,5.0,0.0
+13000.0,0.0,0.0,0.0,0.0,0.0,0.0,13000.0,13000.0,5.0,5.0,0.0
+13000.0,1000.0,0.0,0.0,0.0,0.0,1000.0,13000.0,13000.0,5.0,5.0,0.0
+1000.0,1000.0,0.0,0.0,0.0,0.0,1000.0,1000.0,1000.0,5.0,5.0,0.0
