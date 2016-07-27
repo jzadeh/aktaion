@@ -27,15 +27,14 @@ public class UserInteractionLogic {
         } else if (userChoice == 2) {
             System.out.print("Specify Input PCAP Path: ");
             String fileInputPath = scanner.next();
-            CommandLineUtils.executeBroLogic(fileInputPath);
+            CommandLineUtils.executeBroSimpleDebugLogic(fileInputPath);
         } else if (userChoice == 3) {
             //does not work on windows
             String localPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
             String testFile = localPath + "test.pcap";
 
-
             System.out.println(testFile);
-            CommandLineUtils.executeBroLogic(testFile);
+            CommandLineUtils.executeBroSimpleDebugLogic(testFile);
         }
     }
 }

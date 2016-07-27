@@ -2,6 +2,7 @@ package com.aktaion.parser
 
 import com.aktaion.LogLogic
 import com.aktaion.common.SimpleTestTools
+import com.aktaion.shell.CommandLineUtils
 
 
 class BroParserTests extends SimpleTestTools with LogLogic {
@@ -19,9 +20,9 @@ class BroParserTests extends SimpleTestTools with LogLogic {
     println(output)
   }
 
-  ignore("Bro HTTP File"){
+  test("Bro HTTP File"){
     val file: String = getFileStringFromResourcePath("/parser.bro/citadelsample/http.log")
-    val lines: Array[String] = getLinesFromFile(file)
+    val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(file)
     val parsed: Array[BroHttpLogEvent] = lines.flatMap(singleLine => BroHttpParser.tokenizeData(singleLine))
 
     logger.info("Hello from the Pizza class")

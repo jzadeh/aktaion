@@ -152,7 +152,7 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     * @param fileName
     */
   def convertBehaviorVectorToWeka(behaviorOverWindows: Seq[List[MicroBehaviorData]],
-                                  fileName: String) = {
+                                  fileName: String): String = {
     val title = "@relation microbehaviors\n\n"
     var attributes = ""
     var csvRows = "@data\n"
@@ -175,10 +175,11 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
 
     println(fullText)
 
-    val file = new File(fileName)
-    val bw = new BufferedWriter(new FileWriter(file))
-    bw.write(fullText)
-    bw.close()
+    return fullText
+//    val file = new File(fileName)
+//    val bw = new BufferedWriter(new FileWriter(file))
+//    bw.write(fullText)
+//    bw.close()
   }
 
 

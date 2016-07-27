@@ -38,14 +38,14 @@ class SimpleTestTools extends FunSuite with Matchers with BeforeAndAfter {
     def getFileStringFromResourcePath(resourcePath: String) =
       getClass.getResource(resourcePath).getFile
 
-    /**
-      *
-      * @param file
-      * @return Array of string with end of line split using "\n"
-      */
-    def getLinesFromFile(file: String ): Array[String] = {
-      scala.io.Source.fromFile(file).getLines().toArray
-    }
+//    /**
+//      *
+//      * @param file
+//      * @return Array of string with end of line split using "\n"
+//      */
+//    def getLinesFromFile(file: String ): Array[String] = {
+//      scala.io.Source.fromFile(file).getLines().toArray
+//    }
 
   /**
     * Weka library needs to read in a file as a special type
