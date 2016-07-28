@@ -62,8 +62,7 @@ object CommandLineUtils {
       while (rawFile.hasNext) {
         val line = rawFile.next
         fw.write(line)
-        //          println(.toJson(line))
-        //          fw.write(.toJson(line) + "\n")
+
       }
       fw.close()
     }
@@ -76,7 +75,6 @@ object CommandLineUtils {
                                            format: String) = {
 
     val fileIterator = GetFileTree(new File(readDirectory)).filter(_.getName.endsWith(format)).toIterator
-
 
     var wekaHeader = ""
     var wekaDataAcrossAllFiles = ""
@@ -98,27 +96,18 @@ object CommandLineUtils {
 
         val proxyTransformer = new BehaviorExtractionGenericProxyLogic
         val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
-
         val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
 
         //ONLY DO ONCE
-        if (wekaHeader == "") {
-          wekaHeader = wekaData.split("@data")(0) + "@data\n"
-        }
-
-        val stripHeader = wekaData.split("\n").filter(x => !x.startsWith("@")).mkString("\n")
-
-        println(stripHeader)
-
-        println(wekaData)
-
-        wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + wekaData
+        if (wekaHeader.size < 2) {wekaHeader = wekaData.split("@data")(0) + "@data"}
+        val stripHeader = wekaData.split("@data")(1)
+        val dropLastNewline = stripHeader.reverse.tail.reverse
+        wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + dropLastNewline
 
         //      val fw = new FileWriter(writeStr, true)
         //
         //      wekaData.foreach(line => fw.write(line))
         //      fw.close()
-
       }
     } catch {
       case e: java.util.NoSuchElementException => System.out.println("Exception " + e + " at fileIterator " + fileIterator)
@@ -130,8 +119,6 @@ object CommandLineUtils {
     fw.write(wekaHeader)
     wekaDataAcrossAllFiles.foreach(line => fw.write(line))
     fw.close()
-
-
   }
 
   def executeBroSimpleDebugLogic(file: String) = {
