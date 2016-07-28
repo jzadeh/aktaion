@@ -50,5 +50,22 @@ class GenericProxyTests extends SimpleTestTools {
 
   }
 
+  test("Generic Proxy File 2") {
+
+    val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-02-19-Goon-EK-traffic.webgateway")
+    val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(file)
+    val parsedData =  lines.flatMap{ x=> GenericProxyParser.tokenizeData(x)}.toSeq
+    for (x <- lines) {
+      println(x)
+      GenericProxyParser.tokenizeData(x)
+    }
+
+    val myExtractor = new BehaviorExtractionGenericProxyLogic
+
+    myExtractor.transformSeqOfLogLines(parsedData,5)
+
+  }
+
+
 
 }

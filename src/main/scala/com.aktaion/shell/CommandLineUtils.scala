@@ -100,12 +100,8 @@ object CommandLineUtils {
 
       val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
 
-      val header = wekaData.split("\n")
-
       //ONLY DO ONCE
-      if (wekaHeader == "") { wekaHeader = header}
-
-      println(header)
+      if (wekaHeader == "") { wekaHeader = wekaData.split("@data")(0) + "@data\n"}
 
       val stripHeader = wekaData.split("\n").filter(x => !x.startsWith("@")).mkString("\n")
 
@@ -115,18 +111,18 @@ object CommandLineUtils {
 
       wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + wekaData
 
-      val fw = new FileWriter(writeStr, true)
+//      val fw = new FileWriter(writeStr, true)
+//
+//      wekaData.foreach(line => fw.write(line))
+//      fw.close()
 
-      wekaData.foreach(line => fw.write(line))
-      fw.close()
-      
     }
 
+    val fw = new FileWriter("/Users/User/Aktaion/test.output", true)
 
-
-
-
-
+    fw.write(wekaHeader)
+    wekaDataAcrossAllFiles.foreach(line => fw.write(line))
+    fw.close()
 
 
   }
