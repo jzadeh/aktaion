@@ -34,6 +34,8 @@ class GenericProxyTests extends SimpleTestTools {
    // println(parsedData)
   }
 
+
+
   ignore("Generic Proxy File") {
 
     val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-05-22-Fiesta-EK-traffic-03.webgateway")
@@ -50,21 +52,34 @@ class GenericProxyTests extends SimpleTestTools {
 
   }
 
-  test("Generic Proxy File 2") {
+  ignore("Generic Proxy File 2") {
 
-    val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-02-19-Goon-EK-traffic.webgateway")
+    val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-03-09-Fiesta-EK-traffic-failed-attempt.webgateway")
     val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(file)
-    val parsedData =  lines.flatMap{ x=> GenericProxyParser.tokenizeData(x)}.toSeq
-    for (x <- lines) {
-      println(x)
+
+
+   // val parsedData =  lines.flatMap{ x=> GenericProxyParser.tokenizeData(x)}.toSeq
+    for ((x,i) <- lines.zipWithIndex) {
+      println("Line " + i)
       GenericProxyParser.tokenizeData(x)
     }
 
     val myExtractor = new BehaviorExtractionGenericProxyLogic
 
-    myExtractor.transformSeqOfLogLines(parsedData,5)
+  //  myExtractor.transformSeqOfLogLines(parsedData,5)
 
   }
+
+
+  ignore("Single Line 2") {
+    val rawInputString = """[19/Feb/2014:11:02:43 -0800] "Nico Rosberg" 172.16.2.159 82.223.150.54 1500 302 TCP_HIT "POST http://interysoft.com/ HTTP/1.1" "Internet Services" "low risk " "text/html" 390 492 "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)" "" "-" "0" "" "-" """
+    val parsedData: Option[GenericProxyLogEvent] = GenericProxyParser.tokenizeData(rawInputString)
+    val output = parsedData.get
+    output.domainClass shouldBe "Internet Services"
+
+    // println(parsedData)
+  }
+
 
 
 

@@ -81,43 +81,50 @@ object CommandLineUtils {
     var wekaHeader = ""
     var wekaDataAcrossAllFiles = ""
 
-    for (file <- fileIterator) {
-      val fileName = file.toString.split("/").last
+    try {
+      for (file <- fileIterator) {
+        val fileName = file.toString.split("/").last
         println(fileName)
-      val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
-       println(directoryName)
-      val totalStr = directoryName + fileName
+        val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
+        println(directoryName)
+        val totalStr = directoryName + fileName
 
-      val writeStr = totalStr.replace(".webgateway", ".arff")
-      println(totalStr)
-      println("Crawling " + totalStr + " for data...")
-      val lines: Array[String] = getFileFromFileSystemPath(totalStr)
-      val parsedData: Seq[GenericProxyLogEvent] = lines.flatMap { x => GenericProxyParser.tokenizeData(x) }.toSeq
-      parsedData.foreach(println)
+        val writeStr = totalStr.replace(".webgateway", ".arff")
+        println(totalStr)
+        println("Crawling " + totalStr + " for data...")
+        val lines: Array[String] = getFileFromFileSystemPath(totalStr)
+        val parsedData: Seq[GenericProxyLogEvent] = lines.flatMap { x => GenericProxyParser.tokenizeData(x) }.toSeq
+        parsedData.foreach(println)
 
-      val proxyTransformer = new BehaviorExtractionGenericProxyLogic
-      val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
+        val proxyTransformer = new BehaviorExtractionGenericProxyLogic
+        val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
 
-      val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
+        val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
 
-      //ONLY DO ONCE
-      if (wekaHeader == "") { wekaHeader = wekaData.split("@data")(0) + "@data\n"}
+        //ONLY DO ONCE
+        if (wekaHeader == "") {
+          wekaHeader = wekaData.split("@data")(0) + "@data\n"
+        }
 
-      val stripHeader = wekaData.split("\n").filter(x => !x.startsWith("@")).mkString("\n")
+        val stripHeader = wekaData.split("\n").filter(x => !x.startsWith("@")).mkString("\n")
 
-      println(stripHeader)
+        println(stripHeader)
 
-      println(wekaData)
+        println(wekaData)
 
-      wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + wekaData
+        wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + wekaData
 
-//      val fw = new FileWriter(writeStr, true)
-//
-//      wekaData.foreach(line => fw.write(line))
-//      fw.close()
+        //      val fw = new FileWriter(writeStr, true)
+        //
+        //      wekaData.foreach(line => fw.write(line))
+        //      fw.close()
 
+      }
+    } catch {
+      case e: java.util.NoSuchElementException => System.out.println("Exception " + e + " at fileIterator " + fileIterator)
     }
 
+    println("writing file")
     val fw = new FileWriter("/Users/User/Aktaion/test.output", true)
 
     fw.write(wekaHeader)

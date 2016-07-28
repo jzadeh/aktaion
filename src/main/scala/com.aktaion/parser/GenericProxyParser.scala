@@ -80,8 +80,8 @@ object GenericProxyParser extends GenericParser {
 
     //Byte related flow info
     //todo check this is correct direction
-    val bytesSent = quoteSplit(10).split(" ")(1).toInt
-    val bytesReceived = quoteSplit(10).split(" ")(2).toInt
+    val bytesSent = Try(quoteSplit(10).split(" ")(1).toInt).getOrElse(0)
+    val bytesReceived = Try(quoteSplit(10).split(" ")(2).toInt).getOrElse(0)
 
         return Some(
           GenericProxyLogEvent(convertedTime,
