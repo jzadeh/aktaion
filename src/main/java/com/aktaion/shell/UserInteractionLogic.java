@@ -31,10 +31,28 @@ public class UserInteractionLogic {
         } else if (userChoice == 3) {
             //does not work on windows
             String localPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
-            String testFile = localPath + "test.pcap";
 
+            String demoFileName = "test.pcap";
+
+            String testFile = localPath + demoFileName;
             System.out.println(testFile);
+
+            String proxyDataPath = "proxyData/exploitData/";
+
             CommandLineUtils.executeBroSimpleDebugLogic(testFile);
+
+            //guess where the weka data is
+            String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
+            String trainData = dataPath + "wekaData/synthetic_train.arff";
+
+            CommandLineUtils.crossValidationWekaRf(10.0d, trainData);
+
+            System.out.println(trainData);
+            String trainDirectory = dataPath + "proxyData/exploitData/";
+            System.out.println(trainDirectory);
+
+            CommandLineUtils.extractGenericProxyDataFromDirectory(trainDirectory, "", "webgateway");
+
         }
     }
 }

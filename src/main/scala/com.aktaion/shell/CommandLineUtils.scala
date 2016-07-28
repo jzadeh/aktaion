@@ -2,7 +2,6 @@ package com.aktaion.shell
 
 import java.io._
 import java.util.zip.GZIPInputStream
-
 import com.aktaion.ml.behaviors.MicroBehaviorData
 import com.aktaion.ml.learning.BehaviorExtractionGenericProxyLogic
 import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, GenericProxyLogEvent, GenericProxyParser}
@@ -73,14 +72,20 @@ object CommandLineUtils {
 
 
   def extractGenericProxyDataFromDirectory(readDirectory: String,
-                                   writeFile: String,
-                                   format: String) = {
-    val fileIterator = GetFileTree(new File(directoryname)).filter(_.getName.endsWith(format)).toIterator
+                                           writeFile: String,
+                                           format: String) = {
+
+    val fileIterator = GetFileTree(new File(readDirectory)).filter(_.getName.endsWith(format)).toIterator
+
+
+    var wekaHeader = ""
+    var wekaDataAcrossAllFiles = ""
+
     for (file <- fileIterator) {
       val fileName = file.toString.split("/").last
-      //  println(fileName)
+        println(fileName)
       val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
-      //println(directoryName)
+       println(directoryName)
       val totalStr = directoryName + fileName
 
       val writeStr = totalStr.replace(".webgateway", ".arff")
@@ -91,15 +96,39 @@ object CommandLineUtils {
       parsedData.foreach(println)
 
       val proxyTransformer = new BehaviorExtractionGenericProxyLogic
-      val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData,5).get
+      val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
 
-      val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData,totalStr)
+      val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
 
-      val fw = new FileWriter(totalStr, true)
+      val header = wekaData.split("\n")
 
-      wekaData.foreach( line=> fw.write(line))
+      //ONLY DO ONCE
+      if (wekaHeader == "") { wekaHeader = header}
 
+      println(header)
+
+      val stripHeader = wekaData.split("\n").filter(x => !x.startsWith("@")).mkString("\n")
+
+      println(stripHeader)
+
+      println(wekaData)
+
+      wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + wekaData
+
+      val fw = new FileWriter(writeStr, true)
+
+      wekaData.foreach(line => fw.write(line))
+      fw.close()
+      
     }
+
+
+
+
+
+
+
+
   }
 
   def executeBroSimpleDebugLogic(file: String) = {
@@ -114,37 +143,8 @@ object CommandLineUtils {
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
       System.out.println(" File Length" + broHttpData.length)
       CommandLineUtils.debugBroArray(broHttpData)
-
-      //guess where the weka data is
-      val dataPath = tryToFindPathToDataInSourceCode(4)
-      val trainData = dataPath + "/wekaData/synthetic_train.arff"
-
-      CommandLineUtils.crossValidationWekaRf(10.0d, trainData)
-
-      val trainDirecotry = dataPath + "/exploitData/"
-      extractGenericProxyDataFromDirectory(trainDirecotry,"","webgateway")
     }
   }
-
-
-//  def executeDirectoryWalkSimpleDebugLogic(file: String) = {
-//
-//      val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
-//      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
-//      System.out.println(" File Length" + broHttpData.length)
-//      CommandLineUtils.debugBroArray(broHttpData)
-//
-//      //guess where the weka data is
-//      val dataPath = tryToFindPathToDataInSourceCode(4)
-//      val trainData = dataPath + "/wekaData/synthetic_train.arff"
-//
-//      CommandLineUtils.crossValidationWekaRf(10.0d, trainData)
-//
-//  }
-
-
-
-
 
   def findFilePathRelativeToJar(): String = {
     val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
