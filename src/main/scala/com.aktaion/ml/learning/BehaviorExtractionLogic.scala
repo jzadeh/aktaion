@@ -1,47 +1,14 @@
 
 package com.aktaion.ml.learning
 
-import java.io.{BufferedWriter, File, FileWriter}
-
 import com.aktaion.LogLogic
 import com.aktaion.ml.algorithms.EntropyUtils
 import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors._
 import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
 import com.aktaion.shell.CommandLineUtils
-import org.apache.spark.mllib.tree.impurity.Entropy
-
 import scala.collection.JavaConverters._
 import scala.collection.mutable.ArrayBuffer
-
-
-//class BehaviorExtractionProxyLogic extends SequentialTransformLogic[GenericProxyLogEvent] {
-//
-//  def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent]): Option[MicroBehaviorSet] = {
-//
-//    //step 1: extract a single entity
-//    //todo if we have mutiple IP's break the computation down into group by (source/destination pairs)
-//
-//
-//    for (logLine <- parsedEvents) {
-//
-//    }
-//
-//
-//    //step 2:  compute individual microbehaviors per source
-//
-//    //step 3: score the feature vector with Mllib/weka
-//
-//
-//
-//    None
-//
-//  }
-//
-//}
-//
-//
-//
 
 
 object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[GenericProxyLogEvent] with LogLogic {
