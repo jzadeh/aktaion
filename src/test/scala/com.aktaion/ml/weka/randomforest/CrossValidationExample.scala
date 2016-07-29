@@ -15,7 +15,6 @@ import com.aktaion.common.SimpleTestTools
 class CrossValidationExample extends SimpleTestTools {
 //use https://weka.wikispaces.com/Use+Weka+in+your+Java+code
 
-
   ignore("firstTest") {
 
     //code from http://www.codemiles.com/weka-examples/weka-java-code-for-random-forest-cross-validation-t11128.html
@@ -126,7 +125,6 @@ class CrossValidationExample extends SimpleTestTools {
     System.out.println("F-measure=  " + fmeansureOne / numFolds)
     System.out.println("ROC=  " + ROCone / numFolds)
     System.out.println("PRC= " + PRCone / numFolds)
-
 
     System.out.println("Results For Class -2- ")
     System.out.println("Precision=  " + precisionTwo / numFolds)

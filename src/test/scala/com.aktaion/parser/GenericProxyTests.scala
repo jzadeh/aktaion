@@ -35,7 +35,6 @@ class GenericProxyTests extends SimpleTestTools {
   }
 
 
-
   ignore("Generic Proxy File") {
 
     val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-05-22-Fiesta-EK-traffic-03.webgateway")
@@ -56,7 +55,6 @@ class GenericProxyTests extends SimpleTestTools {
 
     val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-03-09-Fiesta-EK-traffic-failed-attempt.webgateway")
     val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(file)
-
 
    // val parsedData =  lines.flatMap{ x=> GenericProxyParser.tokenizeData(x)}.toSeq
     for ((x,i) <- lines.zipWithIndex) {

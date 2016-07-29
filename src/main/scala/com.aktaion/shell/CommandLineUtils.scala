@@ -71,9 +71,9 @@ object CommandLineUtils {
 
 
   def extractGenericProxyDataFromDirectory(readDirectory: String,
-                                           writeFile: String,
+                                           writeIndividualFiles: Boolean,
+                                           singleFilePath: String,
                                            format: String) = {
-
     val fileIterator = GetFileTree(new File(readDirectory)).filter(_.getName.endsWith(format)).toIterator
 
     var wekaHeader = ""
@@ -81,40 +81,42 @@ object CommandLineUtils {
 
     try {
       for (file <- fileIterator) {
+        //Logic to build full path (unix style) for writing individual .arff files
         val fileName = file.toString.split("/").last
-        println(fileName)
         val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
-        println(directoryName)
         val totalStr = directoryName + fileName
-
         val writeStr = totalStr.replace(".webgateway", ".arff")
-        println(totalStr)
         println("Crawling " + totalStr + " for data...")
+
         val lines: Array[String] = getFileFromFileSystemPath(totalStr)
+
+        println("Found " + lines.length + " lines in file.  Attempting to parse.")
         val parsedData: Seq[GenericProxyLogEvent] = lines.flatMap { x => GenericProxyParser.tokenizeData(x) }.toSeq
-        parsedData.foreach(println)
+        println("Parsed " + parsedData.length + " total lines.")
 
         val proxyTransformer = new BehaviorExtractionGenericProxyLogic
         val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
         val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
 
-        //ONLY DO ONCE
         if (wekaHeader.size < 2) {wekaHeader = wekaData.split("@data")(0) + "@data"}
         val stripHeader = wekaData.split("@data")(1)
         val dropLastNewline = stripHeader.reverse.tail.reverse
         wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + dropLastNewline
 
-        //      val fw = new FileWriter(writeStr, true)
-        //
-        //      wekaData.foreach(line => fw.write(line))
-        //      fw.close()
+        if(writeIndividualFiles == true){
+          val fw = new FileWriter(writeStr, true)
+          fw.write(wekaHeader)
+          wekaDataAcrossAllFiles.foreach(line => fw.write(line))
+          fw.close()
+        }
+
       }
     } catch {
-      case e: java.util.NoSuchElementException => System.out.println("Exception " + e + " at fileIterator " + fileIterator)
+      case e: java.util.NoSuchElementException => //System.out.println("Exception " + e + " at fileIterator " + fileIterator)
     }
 
     println("writing file")
-    val fw = new FileWriter("/Users/User/Aktaion/test.output", true)
+    val fw = new FileWriter(singleFilePath, true)
 
     fw.write(wekaHeader)
     wekaDataAcrossAllFiles.foreach(line => fw.write(line))

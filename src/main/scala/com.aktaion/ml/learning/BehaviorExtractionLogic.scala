@@ -92,7 +92,8 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
       val timingIocs = new ExploitationTimingBehaviors
 
       val tsVector: Seq[Long] = currentWindow.map { x => x.tsJavaTime.getTime }
-      val differenceOfTimeStamps = tsVector.slice(0, windowSize) zip tsVector.slice(1, windowSize) map (x => x._2 - x._1)
+      val differenceOfTimeStamps =
+        tsVector.slice(0, windowSize) zip tsVector.slice(1, windowSize) map (x => x._2 - x._1)
 
       val mins = differenceOfTimeStamps.sorted
 
@@ -128,14 +129,13 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
       }
 
       microBehaviorsDetected.printBehaviorVector
-
       microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
     }
 
     if (microBehaviorsDetectedInEachWindow.size > 0) {
 
       val finalOutput: Seq[List[MicroBehaviorData]] = microBehaviorsDetectedInEachWindow.toSeq
-      convertBehaviorVectorToWeka(finalOutput, "/Users/User/Aktaion/data/wekaData/testBehavior.arff")
+  //    convertBehaviorVectorToWeka(finalOutput, "/Users/User/Aktaion/data/wekaData/testBehavior.arff")
       return Some(finalOutput)
     } else {
       return None
@@ -173,13 +173,9 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
 
     val fullText = title + attributes + "\n" + csvRows
 
-    println(fullText)
+ //   println(fullText)
 
     return fullText
-//    val file = new File(fileName)
-//    val bw = new BufferedWriter(new FileWriter(file))
-//    bw.write(fullText)
-//    bw.close()
   }
 
 
