@@ -62,4 +62,11 @@ case class MicroBehaviorData(behaviorName: String,
 }
 
 
-
+/**
+  * Used as a way for the compiler to verify if we are using the right labels in the machine
+  * learning step of the program workflow
+  */
+object ClassLabel extends Enumeration {
+  type ClassLabel = Value
+  val EXPLOIT, BENIGN = Value
+}

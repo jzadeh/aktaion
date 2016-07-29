@@ -1,10 +1,11 @@
 package com.aktaion.shell
 
 import com.aktaion.common.SimpleTestTools
+import com.aktaion.ml.behaviors.ClassLabel
 
 class JarEndToEndTests extends SimpleTestTools {
 
-  test("Debug The Command Line Workflow") {
+  ignore("Debug The Command Line Workflow") {
     val localPath: String = CommandLineUtils.tryToFindPathToDataInSourceCode(4)
     val demoFileName: String = "test.pcap"
     val testFile: String = localPath + demoFileName
@@ -14,13 +15,18 @@ class JarEndToEndTests extends SimpleTestTools {
     //guess where the weka data is
     val dataPath: String = CommandLineUtils.tryToFindPathToDataInSourceCode(4)
     val trainData: String = dataPath + "wekaData/synthetic_train.arff"
-    CommandLineUtils.crossValidationWekaRf(10.0d, trainData)
+    CommandLineUtils.crossValidationWekaRf(10.0d, "/Users/User/Aktaion/data/", trainData)
 
     //    System.out.println(trainData)
     val trainDirectory: String = dataPath + "proxyData/exploitData/"
     //    System.out.println(trainDirectory)
 
-    CommandLineUtils.extractGenericProxyDataFromDirectory(trainDirectory, false, "/Users/User/Aktaion/test.output", "webgateway")
+    CommandLineUtils.
+      extractGenericProxyDataFromDirectory(trainDirectory,
+        "/Users/User/Aktaion/test.output",
+        ".webgateway",
+        ClassLabel.EXPLOIT,
+        false)
   }
 
 

@@ -1,5 +1,6 @@
 package com.aktaion.shell;
 
+import com.aktaion.ml.behaviors.ClassLabel;
 import com.aktaion.ml.weka.randomforest.RandomForestLogic;
 
 import java.util.Scanner;
@@ -35,28 +36,25 @@ public class UserInteractionLogic {
             String localPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
 
             String demoFileName = "test.pcap";
-
             String testFile = localPath + demoFileName;
-            System.out.println(testFile);
-
             CommandLineUtils.executeBroSimpleDebugLogic(testFile);
 
             //guess where the weka data is
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
             String trainData = dataPath + "wekaData/synthetic_train.arff";
 
-            CommandLineUtils.crossValidationWekaRf(10.0d, trainData);
+            CommandLineUtils.crossValidationWekaRf(10.0d,
+                    trainData, "/Users/User/Aktaion/data/");
 
-            System.out.println(trainData);
             String trainDirectory = dataPath + "proxyData/exploitData/";
-            System.out.println(trainDirectory);
 
-            String  outputData = "/Users/User/Aktaion/exploitData.arff";
+            String outputData = "/Users/User/Aktaion/data/exploitData.arff";
 
             CommandLineUtils.extractGenericProxyDataFromDirectory(trainDirectory,
-                            false,
-                            outputData,
-                            "webgateway");
+                    outputData,
+                    ".webgateway",
+                    ClassLabel.EXPLOIT(),
+                    false);
 
             RandomForestLogic.trainWekaRandomForest(outputData, 10);
 

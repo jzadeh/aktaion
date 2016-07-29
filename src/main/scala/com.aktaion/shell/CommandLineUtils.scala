@@ -2,6 +2,8 @@ package com.aktaion.shell
 
 import java.io._
 import java.util.zip.GZIPInputStream
+
+import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors.MicroBehaviorData
 import com.aktaion.ml.learning.BehaviorExtractionGenericProxyLogic
 import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, GenericProxyLogEvent, GenericProxyParser}
@@ -70,10 +72,19 @@ object CommandLineUtils {
   }
 
 
+  /**
+    *
+    * @param readDirectory
+    * @param singleFilePath
+    * @param format
+    * @param classLabel
+    * @param writeIndividualFiles
+    */
   def extractGenericProxyDataFromDirectory(readDirectory: String,
-                                           writeIndividualFiles: Boolean,
                                            singleFilePath: String,
-                                           format: String) = {
+                                           format: String,
+                                           classLabel: ClassLabel,
+                                           writeIndividualFiles: Boolean) = {
     val fileIterator = GetFileTree(new File(readDirectory)).filter(_.getName.endsWith(format)).toIterator
 
     var wekaHeader = ""
@@ -85,7 +96,7 @@ object CommandLineUtils {
         val fileName = file.toString.split("/").last
         val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
         val totalStr = directoryName + fileName
-        val writeStr = totalStr.replace(".webgateway", ".arff")
+        val writeStr = totalStr.replace(format, ".arff")
         println("Crawling " + totalStr + " for data...")
 
         val lines: Array[String] = getFileFromFileSystemPath(totalStr)
@@ -96,7 +107,7 @@ object CommandLineUtils {
 
         val proxyTransformer = new BehaviorExtractionGenericProxyLogic
         val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
-        val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr)
+        val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr, classLabel)
 
         if (wekaHeader.size < 2) {wekaHeader = wekaData.split("@data")(0) + "@data"}
         val stripHeader = wekaData.split("@data")(1)
@@ -123,6 +134,10 @@ object CommandLineUtils {
     fw.close()
   }
 
+  /**
+    *
+    * @param file
+    */
   def executeBroSimpleDebugLogic(file: String) = {
     val broLogic: BroCommandLineInteractionLogic = new BroCommandLineInteractionLogic(file)
     if (broLogic.output == true) {
@@ -130,14 +145,18 @@ object CommandLineUtils {
 
       //file is generated in same directory as the jar
       val broHttpFile: String = broPath + "/http.log"
-      System.out.println(" Bro HTTP FilePath" + broPath)
+    //  System.out.println(" Bro HTTP FilePath" + broPath)
       val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
-      System.out.println(" File Length" + broHttpData.length)
-      CommandLineUtils.debugBroArray(broHttpData)
+    //  System.out.println(" File Length" + broHttpData.length)
+     // CommandLineUtils.debugBroArray(broHttpData)
     }
   }
 
+  /**
+    *
+    * @return
+    */
   def findFilePathRelativeToJar(): String = {
     val jarPath: File = new File(classOf[UserInteractionLogic].getProtectionDomain.getCodeSource.getLocation.getPath)
     val absolutePath: String = jarPath.getParentFile.getAbsolutePath
@@ -157,6 +176,11 @@ object CommandLineUtils {
   }
 
 
+  /**
+    *
+    * @param input
+    * @return
+    */
   def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
     val firstTime = input.head.tsDouble
     val reverseData = input.reverse
@@ -164,6 +188,11 @@ object CommandLineUtils {
     if (firstTime < lastTime) return input else return reverseData
   }
 
+  /**
+    *
+    * @param input
+    * @return
+    */
   def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
     val firstTime = input.head.tsJavaTime.getTime
     val reverseData = input.reverse
@@ -171,10 +200,19 @@ object CommandLineUtils {
     if (firstTime < lastTime) return input else return reverseData
   }
 
+  /**
+    *
+    * @param fileName
+    * @return
+    */
   def getFileFromFileSystemPath(fileName: String): Array[String] = {
     scala.io.Source.fromFile(fileName).getLines().toArray
   }
 
+  /**
+    *
+    * @param array
+    */
   def debugBroArray(array: Array[String]) = {
     for (logLine <- array) {
       println(logLine)
@@ -184,7 +222,7 @@ object CommandLineUtils {
   }
 
 
-  def crossValidationWekaRf(numFolds: Double, filePath: String) = {
+  def crossValidationWekaRf(numFolds: Double, inputFilePath: String, outputPath: String) = {
 
     // val numFolds: Double = 10.0d
     var precisionOne: Double = 0.0d
@@ -200,7 +238,7 @@ object CommandLineUtils {
 
     //   ArffSaver saverTets = new ArffSaver();
 
-    val lines = getFileFromFileSystemPath(filePath).mkString("\n")
+    val lines = getFileFromFileSystemPath(inputFilePath).mkString("\n")
     val br = new BufferedReader(new StringReader(lines))
 
     //val br = getWekaReaderFromResourcePath("/ml.weka/weather.arff")
@@ -254,7 +292,9 @@ object CommandLineUtils {
         costSensitiveClassifier.setCostMatrix(costMatrix)
         costSensitiveClassifier.buildClassifier(resmapleTempTraining)
         saverTraining.setInstances(resmapleTempTraining)
-        saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
+        saverTraining.setFile(new File(outputPath + i + "_training.arff"))
+
+      //  saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
         //    saverTets.setInstances(tempTesting)
         //   saverTets.setFile(new File("D:\\SumCost\\eclipse\\" + i + "_testing.arff"))
         saverTraining.writeBatch

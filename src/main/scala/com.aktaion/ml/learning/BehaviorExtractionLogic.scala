@@ -4,6 +4,7 @@ package com.aktaion.ml.learning
 import java.io.{BufferedWriter, File, FileWriter}
 
 import com.aktaion.LogLogic
+import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors._
 import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
 import com.aktaion.shell.CommandLineUtils
@@ -150,9 +151,12 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     *
     * @param behaviorOverWindows
     * @param fileName
+    * @param classLabel
+    * @return
     */
   def convertBehaviorVectorToWeka(behaviorOverWindows: Seq[List[MicroBehaviorData]],
-                                  fileName: String): String = {
+                                  fileName: String,
+                                  classLabel: ClassLabel): String = {
     val title = "@relation microbehaviors\n\n"
     var attributes = ""
     var csvRows = "@data\n"
@@ -160,21 +164,21 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
       for ((data, index) <- window.zipWithIndex) {
         //ONLY DO THE COMPUTATION ONCE
         if (ind == 0) {
-          attributes = attributes + "@attribute " +
-            data.behaviorName.toLowerCase + " real\n"
+          attributes = attributes + "@attribute " + "," + data.behaviorName.toLowerCase + " real\n"
         }
         if (index < window.size - 1) {
           csvRows = csvRows + data.numData.toString + ","
         } else {
-          csvRows = csvRows + data.numData.toString + "\n"
+          csvRows = csvRows + data.numData.toString +  "," + classLabel.toString.toLowerCase + "\n"
         }
       }
     }
 
+    attributes = attributes + "\n" + "@attribute classlabel {" +
+      ClassLabel.BENIGN.toString.toLowerCase + "," +
+      ClassLabel.EXPLOIT.toString.toLowerCase + "}" + "\n"
+
     val fullText = title + attributes + "\n" + csvRows
-
- //   println(fullText)
-
     return fullText
   }
 
