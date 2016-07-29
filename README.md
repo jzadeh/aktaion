@@ -1,4 +1,4 @@
-# Aktaion: POC for singatureless exploit detection an
+# Aktaion: Open Source Tool For "Singatureless" Exploit Detection 
 
 Aktaion is a lightweight JVM based project for detecting exploits (and more generally attack behaviors).  The project is meant to be a learning/teaching tool on how to blend multiple sectuirty singals and behaviors into an expressive framework for intrusion detection.  	
 
@@ -14,7 +14,7 @@ This README file only contains basic setup instructions.
 
 ## Building Atkaion
 
-Atkaion is built using [Simple Build Tool](http://maven.apache.org/).
+Atkaion is built using [Simple Build Tool](http://www.scala-sbt.org//).
 To build Atkaion use the assembly command via:
 
     sbt assembly
