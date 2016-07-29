@@ -42,6 +42,7 @@ object CommandLineUtils {
                                    format: String) = {
 
     val directoryname = "/Users/User/Aktaion/data/exploitData/"
+
     val fileIterator = GetFileTree(new File(directoryname)).filter(_.getName.endsWith(format)).toIterator
 
     for (file <- fileIterator) {
@@ -108,12 +109,14 @@ object CommandLineUtils {
         val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData, 5).get
         val wekaData: String = BehaviorExtractionGenericProxyLogic.convertBehaviorVectorToWeka(mbData, totalStr, classLabel)
 
-        if (wekaHeader.size < 2) {wekaHeader = wekaData.split("@data")(0) + "@data"}
+        if (wekaHeader.size < 2) {
+          wekaHeader = wekaData.split("@data")(0) + "@data"
+        }
         val stripHeader = wekaData.split("@data")(1)
         val dropLastNewline = stripHeader.reverse.tail.reverse
         wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + dropLastNewline
 
-        if(writeIndividualFiles == true){
+        if (writeIndividualFiles == true) {
           val fw = new FileWriter(writeStr, true)
           fw.write(wekaHeader)
           wekaDataAcrossAllFiles.foreach(line => fw.write(line))
@@ -125,7 +128,12 @@ object CommandLineUtils {
       case e: java.util.NoSuchElementException => //System.out.println("Exception " + e + " at fileIterator " + fileIterator)
     }
 
-    println("writing file")
+
+    println("Removing old scoring data: " + singleFilePath)
+    val oldFile = new java.io.File(singleFilePath)
+    oldFile.delete()
+
+    println("Writing new scoring data: " + singleFilePath)
     val fw = new FileWriter(singleFilePath, true)
 
     fw.write(wekaHeader)
@@ -144,11 +152,11 @@ object CommandLineUtils {
 
       //file is generated in same directory as the jar
       val broHttpFile: String = broPath + "/http.log"
-    //  System.out.println(" Bro HTTP FilePath" + broPath)
+      //  System.out.println(" Bro HTTP FilePath" + broPath)
       val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
       val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
-    //  System.out.println(" File Length" + broHttpData.length)
-     // CommandLineUtils.debugBroArray(broHttpData)
+      //  System.out.println(" File Length" + broHttpData.length)
+      // CommandLineUtils.debugBroArray(broHttpData)
     }
   }
 
@@ -293,7 +301,7 @@ object CommandLineUtils {
         saverTraining.setInstances(resmapleTempTraining)
         saverTraining.setFile(new File(outputPath + i + "_training.arff"))
 
-      //  saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
+        //  saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
         //    saverTets.setInstances(tempTesting)
         //   saverTets.setFile(new File("D:\\SumCost\\eclipse\\" + i + "_testing.arff"))
         saverTraining.writeBatch

@@ -67,13 +67,12 @@ object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogi
         tsVector.slice(0, windowSize) zip tsVector.slice(1, windowSize) map (x => x._2 - x._1)
 
       val mins = differenceOfTimeStamps.sorted
+      val maxes = mins.reverse
 
       timingIocs.minTimeIntervalA.numData = mins.head
       timingIocs.minTimeIntervalB.numData = mins.tail.head
       timingIocs.minTimeIntervalC.numData = mins.tail.tail.head
       timingIocs.minTimeIntervalD.numData = mins.tail.tail.tail.head
-
-      val maxes = mins.reverse
 
       timingIocs.maxTimeIntervalA.numData = maxes.head
       timingIocs.maxTimeIntervalB.numData = maxes.tail.head
@@ -106,7 +105,7 @@ object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogi
 
       microBehaviorsDetected.printBehaviorVector
       microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
-    }.asJava
+    }
 
     if (microBehaviorsDetectedInEachWindow.size > 0) {
 
