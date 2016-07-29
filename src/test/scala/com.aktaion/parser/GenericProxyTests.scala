@@ -45,9 +45,7 @@ class GenericProxyTests extends SimpleTestTools {
       GenericProxyParser.tokenizeData(x)
     }
 
-    val myExtractor = new BehaviorExtractionGenericProxyLogic
-
-    myExtractor.transformSeqOfLogLines(parsedData,5)
+    BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData,5)
 
   }
 
@@ -62,9 +60,8 @@ class GenericProxyTests extends SimpleTestTools {
       GenericProxyParser.tokenizeData(x)
     }
 
-    val myExtractor = new BehaviorExtractionGenericProxyLogic
 
-  //  myExtractor.transformSeqOfLogLines(parsedData,5)
+  //  BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData,5)
 
   }
 

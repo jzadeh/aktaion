@@ -4,11 +4,14 @@ package com.aktaion.ml.learning
 import java.io.{BufferedWriter, File, FileWriter}
 
 import com.aktaion.LogLogic
+import com.aktaion.ml.algorithms.EntropyUtils
 import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors._
 import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
 import com.aktaion.shell.CommandLineUtils
+import org.apache.spark.mllib.tree.impurity.Entropy
 
+import scala.collection.JavaConverters._
 import scala.collection.mutable.ArrayBuffer
 
 
@@ -41,7 +44,7 @@ import scala.collection.mutable.ArrayBuffer
 //
 
 
-class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[GenericProxyLogEvent] with LogLogic {
+object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[GenericProxyLogEvent] with LogLogic {
 
   def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
 
@@ -116,22 +119,27 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
         * URI specific behaviors
         */
       val urlIocs = new ExploitationUriBehaviors
+      val uriSet: Seq[String] = currentWindow.map { x => x.urlRequested }
 
-      val uriSet = currentWindow.map { x => x.urlRequested }
       urlIocs.uriMaxPathDepth.numData = uriSet.map { x => x.split("/").size }.max
-      urlIocs.uriMinPathDepth.numData = uriSet.map { x => x.split("/").size }.max
+      urlIocs.uriMinPathDepth.numData = uriSet.map { x => x.split("/").size }.min
+      urlIocs.uriDistinct.numData = uriSet.distinct.length
+      urlIocs.uriMaxEntropy.numData = uriSet.map { x => EntropyUtils.charDistribution(x) }.max
+      urlIocs.uriMinEntropy.numData = uriSet.map { x => EntropyUtils.charDistribution(x) }.min
+      urlIocs.uriMaxLength.numData = uriSet.map { x => x.size }.max
+      urlIocs.uriMinLength.numData = uriSet.map { x => x.size }.min
 
       /**
         * Boiler plate to collect all the individual sets of information we computed above
         */
       val microBehaviorsDetected = new MicroBehaviorSet {
-        override def behaviorVector: List[MicroBehaviorData] = timingIocs.behaviorVector ++
-          urlIocs.behaviorVector ++ genericIocs.behaviorVector
+        override def behaviorVector: List[MicroBehaviorData] =
+          timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
       }
 
       microBehaviorsDetected.printBehaviorVector
       microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
-    }
+    }.asJava
 
     if (microBehaviorsDetectedInEachWindow.size > 0) {
 
@@ -181,7 +189,6 @@ class BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic
     val fullText = title + attributes + "\n" + csvRows
     return fullText
   }
-
 
 }
 

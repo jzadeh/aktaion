@@ -30,7 +30,6 @@ object CommandLineUtils {
     f #:: (if (f.isDirectory) f.listFiles().toStream.flatMap(GetFileTree)
     else Stream.empty)
 
-  val directoryname = "/Users/User/Aktaion/data/exploitData/"
 
   /**
     *
@@ -42,6 +41,7 @@ object CommandLineUtils {
                                    writeFile: String,
                                    format: String) = {
 
+    val directoryname = "/Users/User/Aktaion/data/exploitData/"
     val fileIterator = GetFileTree(new File(directoryname)).filter(_.getName.endsWith(format)).toIterator
 
     for (file <- fileIterator) {
@@ -105,9 +105,8 @@ object CommandLineUtils {
         val parsedData: Seq[GenericProxyLogEvent] = lines.flatMap { x => GenericProxyParser.tokenizeData(x) }.toSeq
         println("Parsed " + parsedData.length + " total lines.")
 
-        val proxyTransformer = new BehaviorExtractionGenericProxyLogic
-        val mbData: Seq[List[MicroBehaviorData]] = proxyTransformer.transformSeqOfLogLines(parsedData, 5).get
-        val wekaData: String = proxyTransformer.convertBehaviorVectorToWeka(mbData, totalStr, classLabel)
+        val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData, 5).get
+        val wekaData: String = BehaviorExtractionGenericProxyLogic.convertBehaviorVectorToWeka(mbData, totalStr, classLabel)
 
         if (wekaHeader.size < 2) {wekaHeader = wekaData.split("@data")(0) + "@data"}
         val stripHeader = wekaData.split("@data")(1)
