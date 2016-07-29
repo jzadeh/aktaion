@@ -43,8 +43,8 @@ public class UserInteractionLogic {
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
             String trainData = dataPath + "wekaData/synthetic_train.arff";
 
-            CommandLineUtils.crossValidationWekaRf(10.0d,
-                    trainData, "/Users/User/Aktaion/data/");
+//            CommandLineUtils.crossValidationWekaRf(10.0d,
+//                    trainData, "/Users/User/Aktaion/data/");
 
             String trainDirectory = dataPath + "proxyData/exploitData/";
 
@@ -56,7 +56,7 @@ public class UserInteractionLogic {
                     ClassLabel.EXPLOIT(),
                     false);
 
-            RandomForestLogic.trainWekaRandomForest(outputData, 10);
+            RandomForestLogic.trainWekaRandomForest(outputData, 10, 100);
 
         }
     }

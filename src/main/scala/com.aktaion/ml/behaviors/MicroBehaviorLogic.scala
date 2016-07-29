@@ -40,13 +40,8 @@ trait MicroBehaviorCategoricalLike {
 
 trait MicroBehaviorSet {
   def behaviorVector: List[MicroBehaviorData]
-
   def vectorToString = behaviorVector.map(x => x.valueToCsv).mkString(",")
-
   def printBehaviorVector = println(vectorToString)
-
-
-
 }
 
 

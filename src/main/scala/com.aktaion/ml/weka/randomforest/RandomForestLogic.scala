@@ -10,10 +10,9 @@ import weka.core.Instances
 
 object RandomForestLogic {
 
-  def trainWekaRandomForest(trainingSet: String, numFolds: Int) = {
-
-   // trainingSet = "/Users/User/Aktaion/exploitData.arff"
-
+  def trainWekaRandomForest(trainingSet: String,
+                            numFolds: Int,
+                            numTrees: Int = 100) = {
     val lines = CommandLineUtils.getFileFromFileSystemPath(trainingSet).mkString("\n")
     val br = new BufferedReader(new StringReader(lines))
     val trainData: Instances = new Instances(br)
@@ -23,7 +22,7 @@ object RandomForestLogic {
     br.close
 
     val rf: RandomForest = new RandomForest
-    rf.setNumTrees(100)
+    rf.setNumTrees(numTrees)
     val evaluation: Evaluation = new Evaluation(trainData)
 
     //is this needed for training?
@@ -31,18 +30,20 @@ object RandomForestLogic {
 
     val myClassifier = rf.buildClassifier(trainData)
 
-    //    val testBr = getWekaReaderFromResourcePath("/ml.weka/synthetic_test.arff")
-    //    val testData: Instances = new Instances(testBr)
-    //    testBr.close
-    //
-    //    testData.setClassIndex(trainData.numAttributes - 1)
-    //
-    //    val scored = new Evaluation(testData)
-    //    val predictions: Array[Double] = scored.evaluateModel(rf, testData)
-    //
-    //    for (x<- predictions){
-    //      println("Value of Predicted Label: " + x)
-    //    }
+    val testLines = CommandLineUtils.getFileFromFileSystemPath("/Users/User/Aktaion/data/exploitData.arff").mkString("\n")
+    val testBr = new BufferedReader(new StringReader(testLines))
+
+    val testData: Instances = new Instances(testBr)
+    testBr.close
+
+    testData.setClassIndex(trainData.numAttributes - 1)
+
+    val scored = new Evaluation(testData)
+    val predictions: Array[Double] = scored.evaluateModel(rf, testData)
+
+    for (x<- predictions){
+      println("Value of Predicted Label: " + x)
+    }
 
   }
 

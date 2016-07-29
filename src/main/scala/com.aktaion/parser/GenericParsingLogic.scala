@@ -7,7 +7,6 @@ trait GenericParser {
   def tokenizeData(rawInput: String): Option[ParsedLogEvent]
 }
 
-
 /**
   * Represents a type of log
   */
