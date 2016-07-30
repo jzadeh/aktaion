@@ -110,29 +110,3 @@ object GenericProxyParser extends GenericParser {
 }
 
 
-case class GenericProxyLogEvent(tsJavaTime: Timestamp, //0
-                                timeString: String, //extra field
-                                userName: String, //1
-                                sourceIp: String, //2
-                                destinationIp: String, //3
-                                unknownField1: String, //4
-                                statusCode: Int, //5
-                                cacheResult: String, //6
-                                httpMethod: String, //7
-                                urlRequested: String, //8
-                                httpVersion: String, //9
-                                domainClass: String, //10
-                                riskClass: String, //11
-                                mimeType: String, //12
-                                //   encodingFormat: String, //13
-                                bytesSent: Int, //14
-                                bytesReceived: Int, //15
-                                userAgent: String, //16
-                                webReferrer: String, //17
-                                urlMetaData: UrlDataVector
-                            ) extends ParsedLogEvent with Ordered[GenericProxyLogEvent] {
-
-  //used for implicit sorting on the ts field
-  def compare(that: GenericProxyLogEvent) =
-    tsJavaTime.getTime.compareTo(that.tsJavaTime.getTime)
-}
