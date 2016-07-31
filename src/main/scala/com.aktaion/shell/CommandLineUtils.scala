@@ -3,10 +3,7 @@ package com.aktaion.shell
 import java.io._
 import java.util.zip.GZIPInputStream
 
-import com.aktaion.ml.behaviors.MicroBehaviorData
-import com.aktaion.ml.learning.BehaviorExtractionGenericProxyLogic
-import com.aktaion.ml.weka.randomforest.ClassLabel.ClassLabel
-import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, GenericProxyLogEvent, GenericProxyParser}
+import com.aktaion.parser._
 import weka.classifiers.{CostMatrix, Evaluation}
 import weka.classifiers.meta.CostSensitiveClassifier
 import weka.classifiers.trees.RandomForest
@@ -29,7 +26,6 @@ object CommandLineUtils {
   def GetFileTree(f: File): Stream[File] =
     f #:: (if (f.isDirectory) f.listFiles().toStream.flatMap(GetFileTree)
     else Stream.empty)
-
 
   /**
     *
@@ -75,74 +71,6 @@ object CommandLineUtils {
 
   /**
     *
-    * @param readDirectory
-    * @param singleFilePath
-    * @param format
-    * @param classLabel
-    * @param writeIndividualFiles
-    */
-  def extractGenericProxyDataFromDirectory(readDirectory: String,
-                                           singleFilePath: String,
-                                           format: String,
-                                           classLabel: ClassLabel,
-                                           writeIndividualFiles: Boolean) = {
-    val fileIterator = GetFileTree(new File(readDirectory)).filter(_.getName.endsWith(format)).toIterator
-
-    var wekaHeader = ""
-    var wekaDataAcrossAllFiles = ""
-
-    try {
-      for (file <- fileIterator) {
-        //Logic to build full path (unix style) for writing individual .arff files
-        val fileName = file.toString.split("/").last
-        val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
-        val totalStr = directoryName + fileName
-        val writeStr = totalStr.replace(format, ".arff")
-        println("Crawling " + totalStr + " for data...")
-
-        val lines: Array[String] = getFileFromFileSystemPath(totalStr)
-
-        println("Found " + lines.length + " lines in file.  Attempting to parse.")
-        val parsedData: Seq[GenericProxyLogEvent] = lines.flatMap { x => GenericProxyParser.tokenizeData(x) }.toSeq
-        println("Parsed " + parsedData.length + " total lines.")
-
-        val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData, 5).get
-        val wekaData: String = BehaviorExtractionGenericProxyLogic.convertBehaviorVectorToWeka(mbData, totalStr, classLabel)
-
-        if (wekaHeader.size < 2) {
-          wekaHeader = wekaData.split("@data")(0) + "@data"
-        }
-        val stripHeader = wekaData.split("@data")(1)
-        val dropLastNewline = stripHeader.reverse.tail.reverse
-        wekaDataAcrossAllFiles = wekaDataAcrossAllFiles + dropLastNewline
-
-        if (writeIndividualFiles == true) {
-          val fw = new FileWriter(writeStr, true)
-          fw.write(wekaHeader)
-          wekaDataAcrossAllFiles.foreach(line => fw.write(line))
-          fw.close()
-        }
-
-      }
-    } catch {
-      case e: java.util.NoSuchElementException => //System.out.println("Exception " + e + " at fileIterator " + fileIterator)
-    }
-
-
-    println("Removing old scoring data: " + singleFilePath)
-    val oldFile = new java.io.File(singleFilePath)
-    oldFile.delete()
-
-    println("Writing new scoring data: " + singleFilePath)
-    val fw = new FileWriter(singleFilePath, true)
-
-    fw.write(wekaHeader)
-    wekaDataAcrossAllFiles.foreach(line => fw.write(line))
-    fw.close()
-  }
-
-  /**
-    *
     * @param file
     */
   def executeBroSimpleDebugLogic(file: String) = {
@@ -183,29 +111,38 @@ object CommandLineUtils {
   }
 
 
-  /**
-    *
-    * @param input
-    * @return
-    */
-  def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
-    val firstTime = input.head.tsDouble
-    val reverseData = input.reverse
-    val lastTime = reverseData.head.tsDouble
-    if (firstTime < lastTime) return input else return reverseData
-  }
+//  /**
+//    *
+//    * @param input
+//    * @return
+//    */
+//  def checkBroSortedLowToHigh(input: Seq[BroHttpLogEvent]): Seq[BroHttpLogEvent] = {
+//    val firstTime = input.head.tsDouble
+//    val reverseData = input.reverse
+//    val lastTime = reverseData.head.tsDouble
+//    if (firstTime < lastTime) return input else return reverseData
+//  }
+//
+//  /**
+//    *
+//    * @param input
+//    * @return
+//    */
+//  def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
+//    val firstTime = input.head.tsJavaTime.getTime
+//    val reverseData = input.reverse
+//    val lastTime = reverseData.head.tsJavaTime.getTime
+//    if (firstTime < lastTime) return input else return reverseData
+//  }
 
-  /**
-    *
-    * @param input
-    * @return
-    */
-  def checkProxySortedLowToHigh(input: Seq[GenericProxyLogEvent]): Seq[GenericProxyLogEvent] = {
+  def checkTimeSortedLowToHigh(input: Seq[NormalizedLogEvent]): Seq[NormalizedLogEvent] = {
     val firstTime = input.head.tsJavaTime.getTime
     val reverseData = input.reverse
     val lastTime = reverseData.head.tsJavaTime.getTime
     if (firstTime < lastTime) return input else return reverseData
   }
+
+
 
   /**
     *

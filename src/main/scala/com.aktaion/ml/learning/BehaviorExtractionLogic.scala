@@ -6,25 +6,18 @@ import com.aktaion.ml.algorithms.EntropyUtils
 import com.aktaion.ml.behaviors._
 import com.aktaion.ml.weka.randomforest.ClassLabel
 import com.aktaion.ml.weka.randomforest.ClassLabel.ClassLabel
-import com.aktaion.parser.GenericProxyLogEvent
+import com.aktaion.parser.{GenericProxyLogEvent, NormalizedLogEvent}
 import com.aktaion.shell.CommandLineUtils
 
 import scala.collection.mutable.ArrayBuffer
 
+object BehaviorExtractionLogic extends DebugLoggingLogic {
 
-object BehaviorExtractionGenericProxyLogic extends DebugLoggingLogic {
-
-  def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
+  def transformSeqOfLogLines(parsedEvents: Seq[NormalizedLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
 
     if (windowSize == 0 || windowSize > parsedEvents.size) return None
 
     val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
-
-    //    val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
-    //    val destIpSet: Set[String] = parsedEvents.map { x => x.destinationIp }.toSet
-    //    val destDomainSet: Set[String] = parsedEvents.map { x => x.urlMetaData.host }.toSet
-    //    val uriSet = parsedEvents.map { x => x.urlRequested }
-    //    val tsVector: Seq[Long] = parsedEvents.map { x => x.tsJavaTime.getTime }
 
     /** Step 1:
       * pre-processing logic in case we do not have a unique source in the destination
@@ -42,13 +35,17 @@ object BehaviorExtractionGenericProxyLogic extends DebugLoggingLogic {
 
     /** Main sorted data set we want to work with disable and sort offline for faster processing **/
     //todo this does not scale to large files!!
-    val sortedData = CommandLineUtils.checkProxySortedLowToHigh(parsedEvents)
+    val sortedData = CommandLineUtils.checkTimeSortedLowToHigh(parsedEvents)
 
     //gives a window to score the behaviors over
-    val dataBrokenIntoWindows: Iterator[Seq[GenericProxyLogEvent]] = parsedEvents.sliding(windowSize)
-
+    val dataBrokenIntoWindows: Iterator[Seq[NormalizedLogEvent]] = parsedEvents.sliding(windowSize)
     var microBehaviorsDetectedInEachWindow = ArrayBuffer[List[MicroBehaviorData]]()
 
+
+    /**
+      * Step 2:  Main computation loop for extracting micro behaviors
+      * on a per window basis
+      */
     for ((currentWindow, index) <- dataBrokenIntoWindows.zipWithIndex) {
 
       //Compute some basic stats
@@ -86,7 +83,7 @@ object BehaviorExtractionGenericProxyLogic extends DebugLoggingLogic {
         * URI specific behaviors
         */
       val urlIocs = new ExploitationUriBehaviors
-      val uriSet: Seq[String] = currentWindow.map { x => x.urlRequested }
+      val uriSet: Seq[String] = currentWindow.map { x => x.uri }
 
       urlIocs.uriMaxPathDepth.numData = uriSet.map { x => x.split("/").size }.max
       urlIocs.uriMinPathDepth.numData = uriSet.map { x => x.split("/").size }.min
@@ -96,26 +93,21 @@ object BehaviorExtractionGenericProxyLogic extends DebugLoggingLogic {
       urlIocs.uriMaxLength.numData = uriSet.map { x => x.size }.max
       urlIocs.uriMinLength.numData = uriSet.map { x => x.size }.min
 
-      /**
-        * Boiler plate to collect all the individual sets of information we computed above
-        */
-  //    val microBehaviorsDetected = new MicroBehaviorSet {
-      //  override def behaviorVector:
 
       val behaviors: List[MicroBehaviorData] =
           timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
-    //  }
 
       val microBehaviorsDetected: MicroBehaviorWindow = MicroBehaviorWindow(behaviors, windowSize)
 
-      //microBehaviorsDetected.printBehaviorVector
+      microBehaviorsDetected.printBehaviorVector
       microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
     }
 
+    /**
+      * Pass the set of computed microbeahaviors to a
+      */
     if (microBehaviorsDetectedInEachWindow.size > 0) {
-
       val finalOutput= microBehaviorsDetectedInEachWindow.toSeq
-  //    convertBehaviorVectorToWeka(finalOutput, "/Users/User/Aktaion/data/wekaData/testBehavior.arff")
       return Some(finalOutput)
     } else {
       return None
@@ -162,24 +154,3 @@ object BehaviorExtractionGenericProxyLogic extends DebugLoggingLogic {
   }
 
 }
-
-
-//class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEvent] {
-//
-//  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[Seq[List[MicroBehaviorData]]] = {
-//    //step 1: extract a single entity
-//    //todo if we have multiple IP's break the computation down into group by (source/destination pairs)
-//
-//    parsedEvents.map { x =>
-//      x match {
-//        case b: BroHttpLogEvent =>
-//        case p: GenericProxyLogEvent =>
-//      }
-//    }
-//    //step 2:  compute individual microbehaviors per source
-//    //step 3: score the feature vector with Mllib/weka
-//    None
-//
-//  }
-//
-//}

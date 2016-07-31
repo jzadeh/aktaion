@@ -91,21 +91,45 @@ case class NormalizedLogEvent(tsJavaTime: Timestamp,
 }
 
 object ParsingNormalizationLogic {
-  def normalizeProxyLog(inputLog: GenericProxyLogEvent): NormalizedLogEvent = {
-    val normData = NormalizedLogEvent(inputLog.tsJavaTime, inputLog.timeString,
-      inputLog.sourceIp, inputLog.destinationIp, inputLog.urlRequested, inputLog.httpVersion,
-      inputLog.mimeType, inputLog.userAgent,
-      inputLog.statusCode, inputLog.webReferrer,
-      inputLog.urlMetaData)
-    return normData
+
+
+  /**
+    *
+    * @param inputDataLog
+    * @return
+    */
+  def normalizeProxyLog(inputDataLog: Option[GenericProxyLogEvent]): Option[NormalizedLogEvent] = {
+    if (inputDataLog == None) {
+      return None
+    }
+    else {
+      val inputLog = inputDataLog.get
+      val normData = NormalizedLogEvent(inputLog.tsJavaTime, inputLog.timeString,
+        inputLog.sourceIp, inputLog.destinationIp, inputLog.urlRequested, inputLog.httpVersion,
+        inputLog.mimeType, inputLog.userAgent,
+        inputLog.statusCode, inputLog.webReferrer,
+        inputLog.urlMetaData)
+      return Some(normData)
+    }
   }
 
-  def normalizeBroLog(inputLog: BroHttpLogEvent): NormalizedLogEvent = {
-    val normData = NormalizedLogEvent(inputLog.tsJavaTime, inputLog.tsDouble.toString,
-      inputLog.id_orig_host, inputLog.id_resp_host,
-      inputLog.uri, "", inputLog.orig_mime_types,
-      inputLog.user_agent, inputLog.status_code,
-      inputLog.referrer, inputLog.urlMetaData)
-    return normData
+  /**
+    *
+    * @param inputDataLog
+    * @return
+    */
+  def normalizeBroLog(inputDataLog: Option[BroHttpLogEvent]): Option[NormalizedLogEvent] = {
+    if (inputDataLog == None) {
+      return None
+    }
+    else {
+      val inputLog = inputDataLog.get
+      val normData = NormalizedLogEvent(inputLog.tsJavaTime, inputLog.tsDouble.toString,
+        inputLog.id_orig_host, inputLog.id_resp_host,
+        inputLog.uri, "", inputLog.orig_mime_types,
+        inputLog.user_agent, inputLog.status_code,
+        inputLog.referrer, inputLog.urlMetaData)
+      return Some(normData)
+    }
   }
 }

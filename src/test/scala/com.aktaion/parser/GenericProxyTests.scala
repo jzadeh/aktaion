@@ -2,7 +2,7 @@
 package com.aktaion.parser
 
 import com.aktaion.common.SimpleTestTools
-import com.aktaion.ml.learning.BehaviorExtractionGenericProxyLogic
+import com.aktaion.ml.learning.BehaviorExtractionLogic
 import com.aktaion.shell.CommandLineUtils
 
 class GenericProxyTests extends SimpleTestTools {
@@ -39,13 +39,17 @@ class GenericProxyTests extends SimpleTestTools {
 
     val file: String = getFileStringFromResourcePath("/parser/genericproxy/2014-05-22-Fiesta-EK-traffic-03.webgateway")
     val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(file)
-    val parsedData =  lines.flatMap{ x=> GenericProxyParser.tokenizeData(x)}.toSeq
+    val parsedData: Array[Option[GenericProxyLogEvent]] =  lines.map{ x => GenericProxyParser.tokenizeData(x)}
+    val normData: Seq[Option[NormalizedLogEvent]] =
+      parsedData.map{ x => ParsingNormalizationLogic.normalizeProxyLog(x)}.toSeq
+
+    val dropErros: Seq[NormalizedLogEvent] = normData.flatMap(x=>x)
     for (x <- lines) {
       println(x)
-      GenericProxyParser.tokenizeData(x)
+//      GenericProxyParser.tokenizeData(x)
     }
 
-    BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData,5)
+    BehaviorExtractionLogic.transformSeqOfLogLines(dropErros,5)
 
   }
 
@@ -61,7 +65,7 @@ class GenericProxyTests extends SimpleTestTools {
     }
 
 
-  //  BehaviorExtractionGenericProxyLogic.transformSeqOfLogLines(parsedData,5)
+  //  BehaviorExtractionLogic.transformSeqOfLogLines(parsedData,5)
 
   }
 
