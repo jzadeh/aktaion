@@ -11,7 +11,7 @@ trait GenericParser {
   * Represents a type of log
   */
 abstract class ParsedLogEvent {
-  def normalizeLogType[T<:ParsedLogEvent](inputLog: T): Option[NormalizedLogEvent]
+ // def normalizeLogType[T<:ParsedLogEvent](inputLog: T): Option[NormalizedLogEvent]
 }
 
 //

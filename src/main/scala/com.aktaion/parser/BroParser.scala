@@ -17,34 +17,50 @@ object BroHttpParser extends GenericParser {
 
     val tsString = rd(0)
     val epochTime = tsString.toDouble
-
     //have to round off the seconds here we just drop the digits as a hack
     val ts = rd(0).toDouble.toLong
-
     val tsJavaTime = new Timestamp(ts)
 
     val uid = rd(1)
     val idOrigHost = rd(2)
-    val idOrigPort = rd(3).toInt
+    val idOrigPort = rd(3).toInt //source port
     val idRespHost = rd(4)
-    val idRespPort = rd(5)
+    val idRespPort = rd(5).toInt
+    val transDepth = rd(6).toInt //port on the webserver (usually 80 or 443)
+    val method = rd(7)
+    val host = rd(8)
+    val uri = rd(9)
+    val referrer = rd(10)
+    val userAgent = rd(11)
+    val requestBodyLen = rd(12)
+
+    val fullUrl = if (idRespPort == 443) {
+      "https://" + host + uri
+    }
+    else {
+      "http://" + host + uri
+    }
+
+    //get a vector of meta data about a class if we have a parsing
+    //issue return the null vector of meta data
+    val urlData = UrlLogic.
+      getUrlFromString(fullUrl).getOrElse(UrlDataVector("", "", "", 0, ""))
 
 
     return Some(BroHttpLogEvent(
-      tsJavaTime,
       epochTime,
       uid,
       idOrigHost,
       idOrigPort,
-      rd(4),
-      rd(5).toInt,
-      rd(6).toInt,
-      rd(7),
-      rd(8),
-      rd(9),
-      rd(10),
-      rd(11),
-      rd(12),
+      idRespHost,
+      idRespPort,
+      transDepth,
+      method,
+      host,
+      uri,
+      referrer,
+      userAgent,
+      requestBodyLen,
       rd(13),
       rd(14).toInt,
       rd(15),
@@ -58,7 +74,10 @@ object BroHttpParser extends GenericParser {
       rd(23),
       rd(24),
       rd(25),
-      rd(26))
+      rd(26),
+      urlData,
+      tsJavaTime
+    )
     )
 
   }

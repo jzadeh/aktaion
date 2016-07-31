@@ -69,6 +69,8 @@ object GenericProxyParser extends GenericParser {
     val httpMethod = ris(9).tail
     val urlRequested = ris(10)
 
+    //get a vector of meta data about a class if we have a parsing
+    //issue return the null vector of meta data
     val urlMeta = UrlLogic.
       getUrlFromString(urlRequested).getOrElse(UrlDataVector("","","",0,""))
 

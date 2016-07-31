@@ -7,7 +7,6 @@ import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors._
 import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
 import com.aktaion.shell.CommandLineUtils
-import scala.collection.JavaConverters._
 import scala.collection.mutable.ArrayBuffer
 
 
