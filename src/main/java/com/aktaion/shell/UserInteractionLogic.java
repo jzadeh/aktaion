@@ -43,9 +43,6 @@ public class UserInteractionLogic {
             //guess where the weka data is
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
 
-//            CommandLineUtils.crossValidationWekaRf(10.0d,
-//                    trainData, "/Users/User/Aktaion/data/");
-
             String trainDirectory = dataPath + "proxyData/exploitData/";
             String trainData = "/Users/User/Aktaion/data/exploitData.arff";
 

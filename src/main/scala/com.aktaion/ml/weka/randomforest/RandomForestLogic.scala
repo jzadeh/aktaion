@@ -71,6 +71,11 @@ object RandomForestLogic {
       */
     rf.buildClassifier(trainData)
 
+     weka.core.SerializationHelper.write("/Users/User/Aktaion/model.test",rf)
+    //load model
+   // String rootPath="/some/where/";
+   // Classifier cls = (Classifier) weka.core.SerializationHelper.read(rootPath+"tree.model");
+
     val scoreNewLines = CommandLineUtils.getFileFromFileSystemPath(scoringSet).mkString("\n")
     val scoreBr = new BufferedReader(new StringReader(scoreNewLines))
 
@@ -91,6 +96,15 @@ object RandomForestLogic {
     }
 
   }
+
+//
+//  def saveModel: ???
+//
+//  def loadModel:  ???
+//
+//  def scoreBroHttpFile: ???
+//
+//  def scoreGenericProxyFile: ???
 
 
 

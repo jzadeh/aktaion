@@ -99,4 +99,13 @@ object WekaUtilities {
   }
 
 
+
+//  def extractBroLogToWekaFormat(readDirectory: String,
+//                                            singleFilePath: String,
+//                                            format: String,
+//                                            classLabel: ClassLabel,
+//                                            writeIndividualFiles: Boolean,
+//                                            windowSize: Int) = {
+
+
 }
