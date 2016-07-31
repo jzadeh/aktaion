@@ -22,7 +22,8 @@ object WekaUtilities {
                                             singleFilePath: String,
                                             format: String,
                                             classLabel: ClassLabel,
-                                            writeIndividualFiles: Boolean) = {
+                                            writeIndividualFiles: Boolean,
+                                            windowSize: Int) = {
     /**
       * Iterate over a list of file names from a directory or list of sub directories
       */
@@ -41,11 +42,9 @@ object WekaUtilities {
         val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
         val totalStr = directoryName + fileName
         val writeStr = totalStr.replace(format, ".arff")
-
         println("Crawling " + totalStr + " for data...")
 
         val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(totalStr)
-
         println("Found " + lines.length + " lines in file.  Attempting to parse.")
 
         /**
@@ -63,10 +62,8 @@ object WekaUtilities {
         }
 
         val parsedData: Seq[NormalizedLogEvent] = normData.flatMap(x => x)
-
         println("Parsed " + parsedData.length + " total lines.")
-
-        val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionLogic.transformSeqOfLogLines(parsedData, 5).get
+        val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionLogic.transformSeqOfLogLines(parsedData, windowSize).get
         val wekaData: String = BehaviorExtractionLogic.convertBehaviorVectorToWeka(mbData, totalStr, classLabel)
 
         if (wekaHeader.size < 2) {

@@ -56,7 +56,7 @@ public class UserInteractionLogic {
                     scoringData,
                     ".webgateway",
                     ClassLabel.EXPLOIT(),
-                    false);
+                    false, 5);
 
             RandomForestLogic.trainWekaRandomForest(trainData, scoringData, 10, 100);
 
