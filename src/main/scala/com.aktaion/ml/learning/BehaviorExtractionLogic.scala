@@ -1,7 +1,7 @@
 
 package com.aktaion.ml.learning
 
-import com.aktaion.LogLogic
+import com.aktaion.DebugLoggingLogic
 import com.aktaion.ml.algorithms.EntropyUtils
 import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors._
@@ -10,7 +10,7 @@ import com.aktaion.shell.CommandLineUtils
 import scala.collection.mutable.ArrayBuffer
 
 
-object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogic[GenericProxyLogEvent] with LogLogic {
+object BehaviorExtractionGenericProxyLogic extends DebugLoggingLogic {
 
   def transformSeqOfLogLines(parsedEvents: Seq[GenericProxyLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
 
@@ -97,18 +97,22 @@ object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogi
       /**
         * Boiler plate to collect all the individual sets of information we computed above
         */
-      val microBehaviorsDetected = new MicroBehaviorSet {
-        override def behaviorVector: List[MicroBehaviorData] =
-          timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
-      }
+  //    val microBehaviorsDetected = new MicroBehaviorSet {
+      //  override def behaviorVector:
 
-      microBehaviorsDetected.printBehaviorVector
+      val behaviors: List[MicroBehaviorData] =
+          timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
+    //  }
+
+      val microBehaviorsDetected: MicroBehaviorWindow = MicroBehaviorWindow(behaviors, windowSize)
+
+      //microBehaviorsDetected.printBehaviorVector
       microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
     }
 
     if (microBehaviorsDetectedInEachWindow.size > 0) {
 
-      val finalOutput: Seq[List[MicroBehaviorData]] = microBehaviorsDetectedInEachWindow.toSeq
+      val finalOutput= microBehaviorsDetectedInEachWindow.toSeq
   //    convertBehaviorVectorToWeka(finalOutput, "/Users/User/Aktaion/data/wekaData/testBehavior.arff")
       return Some(finalOutput)
     } else {
@@ -158,22 +162,22 @@ object BehaviorExtractionGenericProxyLogic extends SimpleSequentialTransformLogi
 }
 
 
-class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEvent] {
-
-  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[Seq[List[MicroBehaviorData]]] = {
-    //step 1: extract a single entity
-    //todo if we have multiple IP's break the computation down into group by (source/destination pairs)
-
-    parsedEvents.map { x =>
-      x match {
-        case b: BroHttpLogEvent =>
-        case p: GenericProxyLogEvent =>
-      }
-    }
-    //step 2:  compute individual microbehaviors per source
-    //step 3: score the feature vector with Mllib/weka
-    None
-
-  }
-
-}
+//class BehaviorExtractionHttpLogic extends SequentialTransformLogic[ParsedLogEvent] {
+//
+//  def transformSeqOfLogLines[A <: ParsedLogEvent](parsedEvents: Seq[A]): Option[Seq[List[MicroBehaviorData]]] = {
+//    //step 1: extract a single entity
+//    //todo if we have multiple IP's break the computation down into group by (source/destination pairs)
+//
+//    parsedEvents.map { x =>
+//      x match {
+//        case b: BroHttpLogEvent =>
+//        case p: GenericProxyLogEvent =>
+//      }
+//    }
+//    //step 2:  compute individual microbehaviors per source
+//    //step 3: score the feature vector with Mllib/weka
+//    None
+//
+//  }
+//
+//}

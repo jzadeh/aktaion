@@ -1,11 +1,8 @@
 package com.aktaion.ml.behaviors
 
-
-
 trait MicroBehaviorNumericLike {
   //just a nicer way to reference the generic value we rename data below
   var numData: Double
-
 }
 
 trait MicroBehaviorCategoricalLike {
@@ -21,7 +18,6 @@ case class MicroBehaviorData(behaviorName: String,
                              var numData: Double = 0.0,
                              var catData: String = "")
   extends MicroBehaviorNumericLike with MicroBehaviorCategoricalLike {
-
   def valueToCsv = behaviorName + "," + numData.toString + "," + catData
 }
 
@@ -33,9 +29,9 @@ trait MicroBehaviorSet {
   def printBehaviorVector = println(vectorToString)
 }
 
+//case class WindowOfBehaviors(microBehaviorSet: MicroBehaviorSet, windowNumber: Int)
 
-case class MicroBehaviorWindow(behaviorVector: List[MicroBehaviorData]) extends MicroBehaviorSet
-
+case class MicroBehaviorWindow(behaviorVector: List[MicroBehaviorData], windowSize: Int) extends MicroBehaviorSet
 
 /**
   * Used as a way for the compiler to verify
@@ -46,3 +42,4 @@ object ClassLabel extends Enumeration {
   type ClassLabel = Value
   val EXPLOIT, BENIGN = Value
 }
+

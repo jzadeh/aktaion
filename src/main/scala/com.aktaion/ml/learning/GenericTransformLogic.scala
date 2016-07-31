@@ -14,8 +14,12 @@ trait SequentialTransformLogic[A <: ParsedLogEvent] {
 }
 
 
-trait SimpleSequentialTransformLogic[ParsedLogEvent] {
-  def transformSeqOfLogLines(parsedEvents: Seq[ParsedLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]]
+//trait SimpleSequentialTransformLogic {
+//  def transformSeqOfLogLines(parsedEvents: Seq[ParsedLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]]
+//}
+
+trait NormalizedTransformLogic {
+
 }
 
-case class WindowOfBehaviors(microBehaviorSet: MicroBehaviorSet, windowNumber: Int)
+

@@ -46,7 +46,6 @@ object BroHttpParser extends GenericParser {
     val urlData = UrlLogic.
       getUrlFromString(fullUrl).getOrElse(UrlDataVector("", "", "", 0, ""))
 
-
     return Some(BroHttpLogEvent(
       epochTime,
       uid,
@@ -76,8 +75,7 @@ object BroHttpParser extends GenericParser {
       rd(25),
       rd(26),
       urlData,
-      tsJavaTime
-    )
+      tsJavaTime)
     )
 
   }

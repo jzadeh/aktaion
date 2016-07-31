@@ -1,11 +1,11 @@
 package com.aktaion.parser
 
-import com.aktaion.LogLogic
+import com.aktaion.DebugLoggingLogic
 import com.aktaion.common.SimpleTestTools
 import com.aktaion.shell.CommandLineUtils
 
 
-class BroParserTests extends SimpleTestTools with LogLogic {
+class BroParserTests extends SimpleTestTools with DebugLoggingLogic {
 
 
   test("Basic Bro HTTP Parser") {

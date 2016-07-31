@@ -7,7 +7,7 @@ import org.slf4j.{Logger, LoggerFactory}
   *
   * This is just boiler plate for adding logging facility to the project.
   */
-trait LogLogic {
+trait DebugLoggingLogic {
   lazy val logger = LoggerFactory.getLogger(getClass)
-  implicit def log2Logger(anything: LogLogic): Logger = anything.logger
+  implicit def log2Logger(anything: DebugLoggingLogic): Logger = anything.logger
 }
