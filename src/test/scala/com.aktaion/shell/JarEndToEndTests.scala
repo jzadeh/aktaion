@@ -1,7 +1,7 @@
 package com.aktaion.shell
 
 import com.aktaion.common.SimpleTestTools
-import com.aktaion.ml.behaviors.ClassLabel
+import com.aktaion.ml.weka.randomforest.ClassLabel
 
 class JarEndToEndTests extends SimpleTestTools {
 

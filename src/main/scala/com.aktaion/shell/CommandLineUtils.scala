@@ -3,9 +3,9 @@ package com.aktaion.shell
 import java.io._
 import java.util.zip.GZIPInputStream
 
-import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors.MicroBehaviorData
 import com.aktaion.ml.learning.BehaviorExtractionGenericProxyLogic
+import com.aktaion.ml.weka.randomforest.ClassLabel.ClassLabel
 import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, GenericProxyLogEvent, GenericProxyParser}
 import weka.classifiers.{CostMatrix, Evaluation}
 import weka.classifiers.meta.CostSensitiveClassifier

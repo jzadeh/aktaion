@@ -3,10 +3,12 @@ package com.aktaion.ml.learning
 
 import com.aktaion.DebugLoggingLogic
 import com.aktaion.ml.algorithms.EntropyUtils
-import com.aktaion.ml.behaviors.ClassLabel.ClassLabel
 import com.aktaion.ml.behaviors._
-import com.aktaion.parser.{BroHttpLogEvent, GenericProxyLogEvent, ParsedLogEvent}
+import com.aktaion.ml.weka.randomforest.ClassLabel
+import com.aktaion.ml.weka.randomforest.ClassLabel.ClassLabel
+import com.aktaion.parser.GenericProxyLogEvent
 import com.aktaion.shell.CommandLineUtils
+
 import scala.collection.mutable.ArrayBuffer
 
 

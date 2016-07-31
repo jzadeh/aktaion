@@ -1,6 +1,6 @@
 package com.aktaion.shell;
 
-import com.aktaion.ml.behaviors.ClassLabel;
+import com.aktaion.ml.weka.randomforest.ClassLabel;
 import com.aktaion.ml.weka.randomforest.RandomForestLogic;
 
 import java.util.Scanner;
@@ -41,22 +41,27 @@ public class UserInteractionLogic {
 
             //guess where the weka data is
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
-            String trainData = dataPath + "wekaData/synthetic_train.arff";
+        //    String trainData = dataPath + "wekaData/synthetic_train.arff";
 
 //            CommandLineUtils.crossValidationWekaRf(10.0d,
 //                    trainData, "/Users/User/Aktaion/data/");
 
             String trainDirectory = dataPath + "proxyData/exploitData/";
 
-            String outputData = "/Users/User/Aktaion/data/exploitData.arff";
+            String trainData = "/Users/User/Aktaion/data/exploitData.arff";
+
+            //Todo change to a seperate set of files to score
+            String scoringData = "/Users/User/Aktaion/data/exploitData.arff";
 
             CommandLineUtils.extractGenericProxyDataFromDirectory(trainDirectory,
-                    outputData,
+                    scoringData,
                     ".webgateway",
                     ClassLabel.EXPLOIT(),
                     false);
 
-            RandomForestLogic.trainWekaRandomForest(outputData, 10, 100);
+            RandomForestLogic.trainWekaRandomForest(trainData, scoringData, 10, 100);
+
+            //   RandomForestLogic.scoreWekaRandomForest(outputData,10, 1000)
 
         }
     }

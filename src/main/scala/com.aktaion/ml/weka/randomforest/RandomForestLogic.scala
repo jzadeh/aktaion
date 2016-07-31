@@ -2,15 +2,47 @@ package com.aktaion.ml.weka.randomforest
 
 import java.io.{BufferedReader, StringReader}
 import java.util.Random
-
 import com.aktaion.shell.CommandLineUtils
 import weka.classifiers.Evaluation
 import weka.classifiers.trees.RandomForest
 import weka.core.Instances
 
+
+/**
+  * Used as a way for the compiler to verify
+  * if we are using the right labels in the machine
+  * learning step of the program workflow
+  */
+object ClassLabel extends Enumeration {
+  type ClassLabel = Value
+  val EXPLOIT, BENIGN = Value
+}
+
+
+/**
+  * Simple entry point into running a basic machine learning
+  * algorithm called Random Forest
+  *
+  * For more information on building models in Weka see:
+  * https://weka.wikispaces.com/Use+Weka+in+your+Java+code
+  *
+  *
+  */
 object RandomForestLogic {
 
+
+  /**
+    * This simple prototype trains and scores two sets of data. The input data
+    * is what we build the machine learning classifier against
+    * (in this case a random forest model see for more info https://en.wikipedia.org/wiki/Random_forest )
+    *
+    * @param trainingSet input file in .arff format to train the model
+    * @param scoringSet file to score once we have built the model
+    * @param numFolds number of folds in the random forest algorithm (cross validation?)
+    * @param numTrees number of trees in each iteration of the random sampling of the micro behaviors
+    */
   def trainWekaRandomForest(trainingSet: String,
+                            scoringSet: String,
                             numFolds: Int,
                             numTrees: Int = 100) = {
     val lines = CommandLineUtils.getFileFromFileSystemPath(trainingSet).mkString("\n")
@@ -25,24 +57,31 @@ object RandomForestLogic {
     rf.setNumTrees(numTrees)
     val evaluation: Evaluation = new Evaluation(trainData)
 
-    //is this needed for training?
     evaluation.crossValidateModel(rf, trainData, numFolds, new Random(1))
 
-    val myClassifier = rf.buildClassifier(trainData)
+    /**
+      * This builds the actual machine learning model we will use
+      * to predict if the set of micro behaviors has an exploit or not
+      */
+    rf.buildClassifier(trainData)
 
-    val testLines = CommandLineUtils.getFileFromFileSystemPath("/Users/User/Aktaion/data/exploitData.arff").mkString("\n")
-    val testBr = new BufferedReader(new StringReader(testLines))
+    val scoreNewLines = CommandLineUtils.getFileFromFileSystemPath(scoringSet).mkString("\n")
+    val scoreBr = new BufferedReader(new StringReader(scoreNewLines))
 
-    val testData: Instances = new Instances(testBr)
-    testBr.close
+    val scoreData: Instances = new Instances(scoreBr)
+    scoreBr.close
 
-    testData.setClassIndex(trainData.numAttributes - 1)
+    scoreData.setClassIndex(trainData.numAttributes - 1)
 
-    val scored = new Evaluation(testData)
-    val predictions: Array[Double] = scored.evaluateModel(rf, testData)
+    val scored = new Evaluation(scoreData)
+    val predictedOutput: Array[Double] = scored.evaluateModel(rf, scoreData)
 
-    for (x<- predictions){
-      println("Value of Predicted Label: " + x)
+    for (x <- predictedOutput) {
+
+      if (x == 1.0)
+        println("Exploit detected in window")
+      else
+        println("Benign window assoicated to behavior vector ")
     }
 
   }
