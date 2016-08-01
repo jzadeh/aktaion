@@ -10,12 +10,20 @@ import com.aktaion.parser.{GenericProxyLogEvent, NormalizedLogEvent}
 import com.aktaion.shell.CommandLineUtils
 
 import scala.collection.mutable.ArrayBuffer
+import scala.util.Try
 
 object BehaviorExtractionLogic extends DebugLoggingLogic {
 
-  def transformSeqOfLogLines(parsedEvents: Seq[NormalizedLogEvent], windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
+  /**
+    *
+    * @param parsedEvents
+    * @param windowSize
+    * @return
+    */
+  def transformSeqOfLogLines(parsedEvents: Seq[NormalizedLogEvent],
+                             windowSize: Int): Option[Seq[List[MicroBehaviorData]]] = {
 
-    if (windowSize == 0 || windowSize > parsedEvents.size) return None
+    if (windowSize < 1) return None
 
     val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
 
@@ -37,8 +45,17 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
     //todo this does not scale to large files!!
     val sortedData = CommandLineUtils.checkTimeSortedLowToHigh(parsedEvents)
 
-    //gives a window to score the behaviors over
-    val dataBrokenIntoWindows: Iterator[Seq[NormalizedLogEvent]] = parsedEvents.sliding(windowSize)
+    /**
+      * Main logic to extract a window of data using a sliding method for collections
+      * we have to check the case if we have less data then the window size we just use the size of the data provided
+      * to create a single window
+      */
+    val dataBrokenIntoWindows: Iterator[Seq[NormalizedLogEvent]] = if (windowSize >= parsedEvents.size) {
+      parsedEvents.sliding(windowSize)
+    } else {
+      parsedEvents.sliding(parsedEvents.size)
+    }
+
     var microBehaviorsDetectedInEachWindow = ArrayBuffer[List[MicroBehaviorData]]()
 
 
@@ -67,15 +84,15 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
       val mins = differenceOfTimeStamps.sorted
       val maxes = mins.reverse
 
-      timingIocs.minTimeIntervalA.numData = mins.head
-      timingIocs.minTimeIntervalB.numData = mins.tail.head
-      timingIocs.minTimeIntervalC.numData = mins.tail.tail.head
-      timingIocs.minTimeIntervalD.numData = mins.tail.tail.tail.head
+      timingIocs.minTimeIntervalA.numData = if (mins.size > 0) mins.head else -1
+      timingIocs.minTimeIntervalB.numData = if (mins.size > 1) mins.tail.head else -1
+      timingIocs.minTimeIntervalC.numData = if (mins.size > 2 )mins.tail.tail.head else -1
+      timingIocs.minTimeIntervalD.numData = if (mins.size > 3) maxes.tail.tail.tail.head else -1
 
-      timingIocs.maxTimeIntervalA.numData = maxes.head
-      timingIocs.maxTimeIntervalB.numData = maxes.tail.head
-      timingIocs.maxTimeIntervalC.numData = maxes.tail.tail.head
-      timingIocs.maxTimeIntervalD.numData = maxes.tail.tail.tail.head
+      timingIocs.maxTimeIntervalA.numData = if (maxes.size > 0) maxes.head else -1
+      timingIocs.maxTimeIntervalB.numData = if (maxes.size > 1) maxes.tail.head else -1
+      timingIocs.maxTimeIntervalC.numData = if (maxes.size > 2) maxes.tail.tail.head else -1
+      timingIocs.maxTimeIntervalD.numData = if (maxes.size > 3) maxes.tail.tail.tail.head else -1
 
       timingIocs.intervalLength.numData = maxes.head - mins.head
 
@@ -95,7 +112,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
 
 
       val behaviors: List[MicroBehaviorData] =
-          timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
+        timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
 
       val microBehaviorsDetected: MicroBehaviorWindow = MicroBehaviorWindow(behaviors, windowSize)
 
@@ -107,7 +124,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
       * Pass the set of computed microbeahaviors to a
       */
     if (microBehaviorsDetectedInEachWindow.size > 0) {
-      val finalOutput= microBehaviorsDetectedInEachWindow.toSeq
+      val finalOutput = microBehaviorsDetectedInEachWindow.toSeq
       return Some(finalOutput)
     } else {
       return None
@@ -120,13 +137,12 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
     * for scoring the behaviors over a set of observations for a single file
     * https://weka.wikispaces.com/ARFF+(stable+version)
     *
-    * @param behaviorOverWindows
-    * @param fileName
-    * @param classLabel
-    * @return
+    * @param behaviorOverWindows the computed sequence of behaviors for a single file
+    * @param classLabel          Represents the colun we are trying to predict (either we determine the window is malicious
+    *                            in which case we call it an exploit or benign)
+    * @return the weka format as a string usually to write upstream as a .arff file
     */
   def convertBehaviorVectorToWeka(behaviorOverWindows: Seq[List[MicroBehaviorData]],
-                                  fileName: String,
                                   classLabel: ClassLabel): String = {
     val title = "@relation microbehaviors\n\n"
     var attributes = ""
@@ -140,7 +156,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
         if (index < window.size - 1) {
           csvRows = csvRows + data.numData.toString + ","
         } else {
-          csvRows = csvRows + data.numData.toString +  "," + classLabel.toString.toLowerCase + "\n"
+          csvRows = csvRows + data.numData.toString + "," + classLabel.toString.toLowerCase + "\n"
         }
       }
     }

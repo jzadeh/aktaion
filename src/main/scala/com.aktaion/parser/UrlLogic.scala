@@ -11,7 +11,7 @@ object UrlLogic {
     */
   def getUrlFromString(inputString: String): Option[UrlDataVector] = {
 
-    if (inputString.size < 5) {println("URL is too small: " + inputString); None}
+    if (inputString.size < 5) {println("URL is too small: " + inputString); return None}
     val url = new URL(inputString)
 
     val host: String =  url.getHost

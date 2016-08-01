@@ -4,7 +4,7 @@ import java.io.{BufferedReader, File, StringReader}
 import java.util.Random
 
 import com.aktaion.shell.CommandLineUtils
-import weka.classifiers.{CostMatrix, Evaluation}
+import weka.classifiers.{Classifier, CostMatrix, Evaluation}
 import weka.classifiers.meta.CostSensitiveClassifier
 import weka.classifiers.trees.RandomForest
 import weka.core.Instances
@@ -36,26 +36,52 @@ object ClassLabel extends Enumeration {
   */
 object RandomForestLogic {
 
+  /**
+    * serialize the trained model to a file
+    *
+    * @param rf the random forest model
+    * @param fileName
+    */
+  def saveRandomForestToFile(rf: RandomForest, fileName: String) = {
+    weka.core.SerializationHelper.write(fileName, rf)
+  }
+
+
+  /**
+    *
+    * @param fileName
+    * @return
+    */
+  def loadRandomForestFromFile(fileName: String): Classifier = {
+    var cls: Classifier = null
+    try {
+      cls = weka.core.SerializationHelper.read("/Users/User/Aktaion/model.test").asInstanceOf[Classifier]
+    } catch {
+      case e1: Exception => e1.printStackTrace
+    }
+    return cls
+  }
 
   /**
     * This simple prototype trains and scores two sets of data. The input data
     * is what we build the machine learning classifier against
     * (in this case a random forest model see for more info https://en.wikipedia.org/wiki/Random_forest )
     *
-    * @param trainingSet input file in .arff format to train the model
-    * @param scoringSet file to score once we have built the model
-    * @param numFolds number of folds in the random forest algorithm (cross validation?)
-    * @param numTrees number of trees in each iteration of the random sampling of the micro behaviors
+    * @param trainingFileName input file in .arff format to train the model
+    * @param outputModelFileName  file to score once we have built the model
+    * @param numFolds    number of folds in the random forest algorithm (cross validation?)
+    * @param numTrees    number of trees in each iteration of the random sampling of the micro behaviors
     */
-  def trainWekaRandomForest(trainingSet: String,
-                            scoringSet: String,
+  def trainWekaRandomForest(trainingFileName: String,
+                            outputModelFileName: String,
                             numFolds: Int,
                             numTrees: Int = 100) = {
-    val lines = CommandLineUtils.getFileFromFileSystemPath(trainingSet).mkString("\n")
+
+    val lines = CommandLineUtils.getFileFromFileSystemPath(trainingFileName).mkString("\n")
     val br = new BufferedReader(new StringReader(lines))
     val trainData: Instances = new Instances(br)
 
-    //set the index of the class we are predicting
+    //set the index of the class we are predicting (Benign, Exploit)
     trainData.setClassIndex(trainData.numAttributes - 1)
     br.close
 
@@ -71,46 +97,46 @@ object RandomForestLogic {
       */
     rf.buildClassifier(trainData)
 
-     weka.core.SerializationHelper.write("/Users/User/Aktaion/model.test",rf)
-    //load model
-   // String rootPath="/some/where/";
-   // Classifier cls = (Classifier) weka.core.SerializationHelper.read(rootPath+"tree.model");
+    println("Writing random forest model to file "+ outputModelFileName)
+    saveRandomForestToFile(rf, outputModelFileName)
+  }
 
-    val scoreNewLines = CommandLineUtils.getFileFromFileSystemPath(scoringSet).mkString("\n")
-    val scoreBr = new BufferedReader(new StringReader(scoreNewLines))
 
+  /**
+    *
+    * @param fileNameToScore bro http.log file
+    * @param fileNameOfModel .model (serialized java object)
+    */
+  def scoreBroHttpFile(fileNameToScore: String,
+                       fileNameOfModel: String) = {
+
+    val myClassifier = loadRandomForestFromFile(fileNameOfModel)
+    val wekaData: String = WekaUtilities.extractBroHttpLogToWekaFormat(fileNameToScore,ClassLabel.BENIGN, 5)
+    val scoreBr: BufferedReader = new BufferedReader(new StringReader(wekaData))
     val scoreData: Instances = new Instances(scoreBr)
     scoreBr.close
 
-    scoreData.setClassIndex(trainData.numAttributes - 1)
+    scoreData.setClassIndex(scoreData.numAttributes - 1)
 
     val scored = new Evaluation(scoreData)
-    val predictedOutput: Array[Double] = scored.evaluateModel(rf, scoreData)
+    val predictedOutput: Array[Double] = scored.evaluateModel(myClassifier, scoreData)
 
     for (x <- predictedOutput) {
-
       if (x == 1.0)
         println("Exploit detected in window")
       else
         println("Benign window assoicated to behavior vector ")
     }
-
   }
 
-//
-//  def saveModel: ???
-//
-//  def loadModel:  ???
-//
-//  def scoreBroHttpFile: ???
-//
-//  def scoreGenericProxyFile: ???
+  //
+  //  def scoreGenericProxyFile: ???
 
+  //  def scorePcapFile
 
 
   def crossValidationWekaRf(numFolds: Double, inputFilePath: String, outputPath: String) = {
 
-    // val numFolds: Double = 10.0d
     var precisionOne: Double = 0.0d
     var recallOne: Double = 0.0d
     var fmeansureOne: Double = 0.0d
@@ -122,13 +148,8 @@ object RandomForestLogic {
     val PRCone: Double = 0.0d
     val PRCtwo: Double = 0.0d
 
-    //   ArffSaver saverTets = new ArffSaver();
-
     val lines = CommandLineUtils.getFileFromFileSystemPath(inputFilePath).mkString("\n")
     val br = new BufferedReader(new StringReader(lines))
-
-    //val br = getWekaReaderFromResourcePath("/ml.weka/weather.arff")
-
     val saverTraining: ArffSaver = new ArffSaver
     var trainData: Instances = new Instances(br)
     trainData.setClassIndex(trainData.numAttributes - 1)
@@ -180,11 +201,7 @@ object RandomForestLogic {
         saverTraining.setInstances(resmapleTempTraining)
         saverTraining.setFile(new File(outputPath + i + "_training.arff"))
 
-        //  saverTraining.setFile(new File("/Users/User/Aktaion/wekaData/" + i + "_training.arff"))
-        //    saverTets.setInstances(tempTesting)
-        //   saverTets.setFile(new File("D:\\SumCost\\eclipse\\" + i + "_testing.arff"))
         saverTraining.writeBatch
-        // saverTets.writeBatch
         System.out.println("Done with building the model")
         val evaluation: Evaluation = new Evaluation(tempTesting)
         evaluation.evaluateModel(costSensitiveClassifier, tempTesting)

@@ -45,20 +45,16 @@ public class UserInteractionLogic {
 
             String trainDirectory = dataPath + "proxyData/exploitData/";
             String trainData = "/Users/User/Aktaion/data/exploitData.arff";
+            String modelFileName = "/Users/User/Aktaion/model.test";
 
-            //Todo change to a seperate set of files to score
-            String scoringData = "/Users/User/Aktaion/data/exploitData.arff";
-
-            WekaUtilities.extractAndNormalizeDataIntoWekaFormat(trainDirectory,
-                    scoringData,
+            WekaUtilities.extractDirectoryToWekaFormat(trainDirectory,
+                    trainData,
                     ".webgateway",
-                    ClassLabel.EXPLOIT(),
-                    false, 5);
+                    ClassLabel.EXPLOIT(), 5);
 
-            RandomForestLogic.trainWekaRandomForest(trainData, scoringData, 10, 100);
-
-            //   RandomForestLogic.scoreWekaRandomForest(outputData,10, 1000)
-
+            RandomForestLogic.trainWekaRandomForest(trainData, modelFileName, 10, 100);
+            String broExploitExample = "/Users/User/Aktaion/data/broData/ExploitExample/http.log";
+            RandomForestLogic.scoreBroHttpFile(broExploitExample, modelFileName);
         }
     }
 }

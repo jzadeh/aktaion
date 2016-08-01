@@ -22,7 +22,7 @@ class JarEndToEndTests extends SimpleTestTools {
 //    //    System.out.println(trainDirectory)
 //
 //    CommandLineUtils.
-//      extractAndNormalizeDataIntoWekaFormat(trainDirectory,
+//      extractDirectoryToWekaFormat(trainDirectory,
 //        "/Users/User/Aktaion/test.output",
 //        ".webgateway",
 //        ClassLabel.EXPLOIT,
