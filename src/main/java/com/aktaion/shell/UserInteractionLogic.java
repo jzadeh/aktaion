@@ -3,6 +3,7 @@ package com.aktaion.shell;
 import com.aktaion.ml.weka.randomforest.ClassLabel;
 import com.aktaion.ml.weka.randomforest.RandomForestLogic;
 import com.aktaion.ml.weka.randomforest.WekaUtilities;
+import scala.Option;
 
 import java.util.Scanner;
 
@@ -38,7 +39,7 @@ public class UserInteractionLogic {
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
 
             /**
-             * Step 1 (Only Need to Perform Once)
+             * Step 1: (Only Need to Perform Once)
              *
              * Train a model by scoring a whole directory of files
              * in this case we have extracts from 300+ exploit samples
@@ -56,18 +57,32 @@ public class UserInteractionLogic {
 
 
             /**
-             * Step 2 get a PCAP file to score and convert it to bro logs
+             * Step 2: get a PCAP file to score and convert it to bro logs
              */
-
-            String demoInputFileName = "demoData/demoExploitPcap.pcap"; //change to whatever pcap we want to score
-
-            //   Comm.generateBroFiles(demoInputFileName);
-            String broExploitExample = dataPath + "demoData/http.log";
-            RandomForestLogic.scoreBroHttpFile(broExploitExample, saveModelFileName,5);
+            String demoInputFileName = dataPath + "demoData/demoExploitPcap.pcap"; //change to whatever pcap we want to score
+            String extractedFile = CommandLineUtils.extractBroFilesFromPcap(demoInputFileName);
 
             /**
-             * Step 3 extract a JSON to pass to GPO creation step
+             *  Step 3a: Score Malicious File Extract the IOCs from the scored file
              */
+            Option<RandomForestLogic.IocsExtracted> output = RandomForestLogic.scoreBroHttpFile(extractedFile, saveModelFileName, 5);
+
+            /**
+             * Step 3b: Score Benign Traffic File
+             */
+              //  RandomForestLogic.scoreBroHttpFile(dataPath + "demoData/BENIGNEATOhttp.log", saveModelFileName,5);
+                //todo train the model on benign traffic
+
+
+            /**
+             *  Step 4: Pass the ioc data to an active defense script for
+             *  automated Group Policy Object generation in Active Directory
+             *  (see https://technet.microsoft.com/en-us/library/hh147307(v=ws.10).aspx for an intro)
+             */
+
+                PythonCommandLineLogic.passIocsToActiveDefenseScript(output,4);
+
+
         }
     }
 }

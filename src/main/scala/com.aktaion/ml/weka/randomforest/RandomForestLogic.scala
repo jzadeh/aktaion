@@ -104,17 +104,16 @@ object RandomForestLogic extends DebugLoggingLogic {
     saveRandomForestToFile(rf, outputModelFileName)
   }
 
-
   /**
     *
     * @param fileNameToScore bro http.log file path
     * @param fileNameOfModel .model (serialized java object) file path
     * @param windowSize
-    * @return json
+    * @return list of malicious indicators if model predicts exploit behavior
     */
   def scoreBroHttpFile(fileNameToScore: String,
                        fileNameOfModel: String,
-                       windowSize: Int): Option[String] = {
+                       windowSize: Int): Option[IocsExtracted] = {
 
     val myClassifier = loadRandomForestFromFile(fileNameOfModel)
 
@@ -166,8 +165,8 @@ object RandomForestLogic extends DebugLoggingLogic {
 
     if (domains.size > 0 || ips.size > 0 || files.size > 0) {
       val fullIocData = IocsExtracted(ips,domains,files)
-      val jsonData = convertIocsToJson(fullIocData)
-      return Some(jsonData)
+   //   val jsonData = convertIocsToJson(fullIocData)
+      return Some(fullIocData)
     } else {
       return None
     }
@@ -199,14 +198,12 @@ object RandomForestLogic extends DebugLoggingLogic {
       parsedEvents.sliding(parsedEvents.size).toList
     }
 
-
     val iocsInWindow: Seq[NormalizedLogEvent] = dataBrokenIntoWindows(indexOfEvil)
-
     val ips: Set[String] = iocsInWindow.map(x => x.destinationIp).toSet
     val domains: Set[String] = iocsInWindow.map(x => x.urlMetaData.host).toSet
     val files: Set[String] = iocsInWindow.map(x => x.urlMetaData.file).toSet
 
-    //todo some hackey logichere
+    //todo some hackey logic here to filter out lon files
     val filterFiles: Set[String] = files.filter{x=> (x.contains('.') && Try(x.split('?').tail.head.length).getOrElse(0) < 20)  }
 
     val data = IocsExtracted(ips, domains, filterFiles)
@@ -214,7 +211,12 @@ object RandomForestLogic extends DebugLoggingLogic {
 
   }
 
-
+  /**
+    * take a case class of data and turn into a json
+    *
+    * @param iocs
+    * @return
+    */
   def convertIocsToJson(iocs: IocsExtracted): String = {
     import net.liftweb.json._
     import net.liftweb.json.Serialization.write
@@ -224,6 +226,13 @@ object RandomForestLogic extends DebugLoggingLogic {
     return jsonString
   }
 
+  /**
+    * used to write the output of the bad iocs to a json file
+    *
+    * @param suspiciousIps
+    * @param suspiciousDomains
+    * @param suspiciousFileNames
+    */
   case class IocsExtracted(suspiciousIps: Set[String], suspiciousDomains: Set[String], suspiciousFileNames: Set[String])
 
 

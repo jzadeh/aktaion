@@ -9,9 +9,10 @@ object CommandLineUtils {
 
   /**
     *
-    * @param fileName Pcap input file
+    * @param fileName
+    * @return fileName of the bro path data created
     */
-  def extractBroFilesFromPcap(fileName: String) = {
+  def extractBroFilesFromPcap(fileName: String): String  = {
     val broLogic = BroCommandLineLogic.generateBroFiles(fileName)
     if (broLogic == true) {
       val broPath = findFilePathRelativeToJar()
@@ -20,9 +21,14 @@ object CommandLineUtils {
       val broHttpFile: String = broPath + "/http.log"
 
       System.out.println(" Bro HTTP FilePath" + broPath)
-      val broHttpData: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
-      val parsedData: Array[BroHttpLogEvent] = broHttpData.flatMap { x => BroHttpParser.tokenizeData(x) }
+//      val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
+//      val broHttpData: Seq[Option[BroHttpLogEvent]] = lines.map { x => BroHttpParser.tokenizeData(x) }.toSeq
+//      val normData: Seq[Option[NormalizedLogEvent]] = broHttpData.map(x => ParsingNormalizationLogic.normalizeBroLog(x))
+//      val parsedEvents: Seq[NormalizedLogEvent] = normData.flatMap(x => x)
+
+      return broHttpFile
     }
+    else ""
   }
 
   /**

@@ -4,6 +4,8 @@ package com.aktaion.parser
 import java.sql.Timestamp
 import java.time.{Instant, LocalDateTime, ZoneId}
 
+import scala.util.Try
+
 /**
   * Used for Bro HTTP log events
   */
@@ -33,6 +35,9 @@ object BroHttpParser extends GenericParser {
     val referrer = rd(10)
     val userAgent = rd(11)
     val requestBodyLen = rd(12)
+    val responseBodyLen = rd(13)
+    val statusCode =  Try(rd(14).toInt).getOrElse(-1)
+
 
     val fullUrl = if (idRespPort == 443) {
       "https://" + host + uri
@@ -61,7 +66,7 @@ object BroHttpParser extends GenericParser {
       userAgent,
       requestBodyLen,
       rd(13),
-      rd(14).toInt,
+      statusCode,
       rd(15),
       rd(16),
       rd(17),

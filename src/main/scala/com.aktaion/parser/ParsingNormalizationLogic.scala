@@ -44,11 +44,11 @@ case class BroHttpLogEvent(tsDouble: Double, //0
                            host: String, //8
                            uri: String, //9
                            referrer: String, //10
-                           user_agent: String,
-                           request_body_len: String,
-                           response_body_len: String,
-                           status_code: Int,
-                           status_msg: String,
+                           user_agent: String, //11
+                           request_body_len: String, //12
+                           response_body_len: String, //13
+                           status_code: Int, //14
+                           status_msg: String, //15
                            info_code: String,
                            info_msg: String,
                            filename: String,
