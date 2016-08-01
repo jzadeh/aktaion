@@ -9,6 +9,14 @@ import java.util.Scanner;
 
 public class UserInteractionLogic {
 
+    private static void pressAnyKeyToContinue() {
+        System.out.println("Press any key to continue...");
+        try {
+            System.in.read();
+        } catch (Exception e) {
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -32,9 +40,7 @@ public class UserInteractionLogic {
         } else if (userChoice == 2) {
             System.out.print("Specify Input PCAP Path: ");
             String fileInputPath = scanner.next();
-            //CommandLineUtils.executeBroSimpleDebugLogic(fileInputPath);
         } else if (userChoice == 3) {
-
             //does not work on windows determines where the path to the Jar is
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
 
@@ -54,35 +60,35 @@ public class UserInteractionLogic {
                     ".webgateway",
                     ClassLabel.EXPLOIT(), 5);
             RandomForestLogic.trainWekaRandomForest(trainDataOutFileName, saveModelFileName, 10, 100);
-
+            pressAnyKeyToContinue();
 
             /**
              * Step 2: get a PCAP file to score and convert it to bro logs
              */
             String demoInputFileName = dataPath + "demoData/demoExploitPcap.pcap"; //change to whatever pcap we want to score
             String extractedFile = CommandLineUtils.extractBroFilesFromPcap(demoInputFileName);
+            pressAnyKeyToContinue();
 
             /**
              *  Step 3a: Score Malicious File Extract the IOCs from the scored file
              */
             Option<RandomForestLogic.IocsExtracted> output = RandomForestLogic.scoreBroHttpFile(extractedFile, saveModelFileName, 5);
+            pressAnyKeyToContinue();
 
             /**
              * Step 3b: Score Benign Traffic File
              */
-              //  RandomForestLogic.scoreBroHttpFile(dataPath + "demoData/BENIGNEATOhttp.log", saveModelFileName,5);
-                //todo train the model on benign traffic
-
+            //  RandomForestLogic.scoreBroHttpFile(dataPath + "demoData/BENIGNEATOhttp.log", saveModelFileName,5);
+            //todo train the model on benign traffic
 
             /**
              *  Step 4: Pass the ioc data to an active defense script for
              *  automated Group Policy Object generation in Active Directory
              *  (see https://technet.microsoft.com/en-us/library/hh147307(v=ws.10).aspx for an intro)
              */
-
-                PythonCommandLineLogic.passIocsToActiveDefenseScript(output,4);
-
-
+            PythonCommandLineLogic.passIocsToActiveDefenseScript(output, 4);
         }
     }
+
+
 }
