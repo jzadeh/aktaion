@@ -2,7 +2,9 @@ package com.aktaion.parser
 
 import java.net._
 
-object UrlLogic {
+import com.aktaion.DebugLoggingLogic
+
+object UrlLogic extends DebugLoggingLogic {
 
   /**
     *
@@ -11,7 +13,7 @@ object UrlLogic {
     */
   def getUrlFromString(inputString: String): Option[UrlDataVector] = {
 
-    if (inputString.size < 5) {println("URL is too small: " + inputString); return None}
+    if (inputString.size < 5) {logger.info("URL is too small: " + inputString); return None}
     val url = new URL(inputString)
 
     val host: String =  url.getHost

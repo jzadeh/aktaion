@@ -6,11 +6,10 @@ import com.aktaion.ml.algorithms.EntropyUtils
 import com.aktaion.ml.behaviors._
 import com.aktaion.ml.weka.randomforest.ClassLabel
 import com.aktaion.ml.weka.randomforest.ClassLabel.ClassLabel
-import com.aktaion.parser.{GenericProxyLogEvent, NormalizedLogEvent}
+import com.aktaion.parser.NormalizedLogEvent
 import com.aktaion.shell.CommandLineUtils
 
 import scala.collection.mutable.ArrayBuffer
-import scala.util.Try
 
 object BehaviorExtractionLogic extends DebugLoggingLogic {
 
@@ -86,7 +85,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
 
       timingIocs.minTimeIntervalA.numData = if (mins.size > 0) mins.head else -1
       timingIocs.minTimeIntervalB.numData = if (mins.size > 1) mins.tail.head else -1
-      timingIocs.minTimeIntervalC.numData = if (mins.size > 2 )mins.tail.tail.head else -1
+      timingIocs.minTimeIntervalC.numData = if (mins.size > 2) mins.tail.tail.head else -1
       timingIocs.minTimeIntervalD.numData = if (mins.size > 3) maxes.tail.tail.tail.head else -1
 
       timingIocs.maxTimeIntervalA.numData = if (maxes.size > 0) maxes.head else -1
@@ -110,18 +109,17 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
       urlIocs.uriMaxLength.numData = uriSet.map { x => x.size }.max
       urlIocs.uriMinLength.numData = uriSet.map { x => x.size }.min
 
-
       val behaviors: List[MicroBehaviorData] =
         timingIocs.behaviorVector ++ urlIocs.behaviorVector ++ genericIocs.behaviorVector
 
       val microBehaviorsDetected: MicroBehaviorWindow = MicroBehaviorWindow(behaviors, windowSize)
 
-      microBehaviorsDetected.printBehaviorVector
+      logger.debug(microBehaviorsDetected.vectorToString)
       microBehaviorsDetectedInEachWindow += microBehaviorsDetected.behaviorVector
     }
 
     /**
-      * Pass the set of computed microbeahaviors to a
+      * Pass the set of computed micro behaviors to the next step in the scoring logic
       */
     if (microBehaviorsDetectedInEachWindow.size > 0) {
       val finalOutput = microBehaviorsDetectedInEachWindow.toSeq
@@ -144,6 +142,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
     */
   def convertBehaviorVectorToWeka(behaviorOverWindows: Seq[List[MicroBehaviorData]],
                                   classLabel: ClassLabel): String = {
+
     val title = "@relation microbehaviors\n\n"
     var attributes = ""
     var csvRows = "@data\n"
@@ -168,5 +167,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
     val fullText = title + attributes + "\n" + csvRows
     return fullText
   }
+
+
 
 }

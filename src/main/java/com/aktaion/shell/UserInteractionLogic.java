@@ -31,30 +31,43 @@ public class UserInteractionLogic {
         } else if (userChoice == 2) {
             System.out.print("Specify Input PCAP Path: ");
             String fileInputPath = scanner.next();
-            CommandLineUtils.executeBroSimpleDebugLogic(fileInputPath);
+            //CommandLineUtils.executeBroSimpleDebugLogic(fileInputPath);
         } else if (userChoice == 3) {
-            //does not work on windows
-            String localPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
 
-            String demoFileName = "test.pcap";
-            String testFile = localPath + demoFileName;
-            CommandLineUtils.executeBroSimpleDebugLogic(testFile);
-
-            //guess where the weka data is
+            //does not work on windows determines where the path to the Jar is
             String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
 
+            /**
+             * Step 1 (Only Need to Perform Once)
+             *
+             * Train a model by scoring a whole directory of files
+             * in this case we have extracts from 300+ exploit samples
+             * with a .webgateway extension
+             */
             String trainDirectory = dataPath + "proxyData/exploitData/";
-            String trainData = "/Users/User/Aktaion/data/exploitData.arff";
-            String modelFileName = "/Users/User/Aktaion/model.test";
+            String trainDataOutFileName = dataPath + "demoData/demoExploitData.arff";
+            String saveModelFileName = dataPath + "demoData/model.test";
 
             WekaUtilities.extractDirectoryToWekaFormat(trainDirectory,
-                    trainData,
+                    trainDataOutFileName,
                     ".webgateway",
                     ClassLabel.EXPLOIT(), 5);
+            RandomForestLogic.trainWekaRandomForest(trainDataOutFileName, saveModelFileName, 10, 100);
 
-            RandomForestLogic.trainWekaRandomForest(trainData, modelFileName, 10, 100);
-            String broExploitExample = "/Users/User/Aktaion/data/broData/ExploitExample/http.log";
-            RandomForestLogic.scoreBroHttpFile(broExploitExample, modelFileName);
+
+            /**
+             * Step 2 get a PCAP file to score and convert it to bro logs
+             */
+
+            String demoInputFileName = "demoData/demoExploitPcap.pcap"; //change to whatever pcap we want to score
+
+            //   Comm.generateBroFiles(demoInputFileName);
+            String broExploitExample = dataPath + "demoData/http.log";
+            RandomForestLogic.scoreBroHttpFile(broExploitExample, saveModelFileName,5);
+
+            /**
+             * Step 3 extract a JSON to pass to GPO creation step
+             */
         }
     }
 }

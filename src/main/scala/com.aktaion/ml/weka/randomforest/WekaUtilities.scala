@@ -2,13 +2,14 @@ package com.aktaion.ml.weka.randomforest
 
 import java.io.{File, FileWriter}
 
+import com.aktaion.DebugLoggingLogic
 import com.aktaion.ml.behaviors.MicroBehaviorData
 import com.aktaion.ml.learning.BehaviorExtractionLogic
 import com.aktaion.ml.weka.randomforest.ClassLabel.ClassLabel
 import com.aktaion.parser._
 import com.aktaion.shell.CommandLineUtils
 
-object WekaUtilities {
+object WekaUtilities extends DebugLoggingLogic{
 
   /**
     *
@@ -40,10 +41,10 @@ object WekaUtilities {
         val directoryName = file.toString.split("/").reverse.tail.reverse.mkString("/") + "/"
         val totalStr = directoryName + fileName
         val writeStr = totalStr.replace(format, ".arff")
-        println("Crawling " + totalStr + " for data...")
+        logger.info("Crawling " + totalStr + " for data...")
 
         val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(totalStr)
-        println("Found " + lines.length + " lines in file.  Attempting to parse.")
+        logger.info("Found " + lines.length + " lines in file.  Attempting to parse.")
 
         /**
           * Start normalization logic here
@@ -60,7 +61,7 @@ object WekaUtilities {
         }
 
         val parsedData: Seq[NormalizedLogEvent] = normData.flatMap(x => x)
-        println("Parsed " + parsedData.length + " total lines.")
+        logger.info("Parsed " + parsedData.length + " total lines.")
         val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionLogic.transformSeqOfLogLines(parsedData, windowSize).get
         val wekaData: String = BehaviorExtractionLogic.convertBehaviorVectorToWeka(mbData, classLabel)
 
@@ -75,11 +76,11 @@ object WekaUtilities {
       case e: java.util.NoSuchElementException => //System.out.println("Exception " + e + " at fileIterator " + fileIterator)
     }
 
-    println("Removing old weka data: " + outputFileName)
+    logger.info("Removing old weka data: " + outputFileName)
     val oldFile = new java.io.File(outputFileName)
     oldFile.delete()
 
-    println("Writing new weka data: " + outputFileName)
+    logger.info("Writing new weka data: " + outputFileName)
     val fw = new FileWriter(outputFileName, true)
 
     fw.write(wekaHeader)
@@ -92,12 +93,12 @@ object WekaUtilities {
                                     windowSize: Int): String = {
 
     val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(inputFileName)
-    println("Found " + lines.length + " lines in file.  Attempting to parse.")
+    logger.info("Found " + lines.length + " lines in file.  Attempting to parse.")
 
     val broHttpData: Seq[Option[BroHttpLogEvent]] = lines.map { x => BroHttpParser.tokenizeData(x) }.toSeq
     val normData: Seq[Option[NormalizedLogEvent]] = broHttpData.map(x => ParsingNormalizationLogic.normalizeBroLog(x))
     val parsedData: Seq[NormalizedLogEvent] = normData.flatMap(x => x)
-    println("Parsed " + parsedData.length + " total lines.")
+    logger.info("Parsed " + parsedData.length + " total lines.")
     val mbData: Seq[List[MicroBehaviorData]] = BehaviorExtractionLogic.transformSeqOfLogLines(parsedData, windowSize).getOrElse(return "")
     val wekaData: String = BehaviorExtractionLogic.convertBehaviorVectorToWeka(mbData, classLabel)
 
@@ -108,17 +109,15 @@ object WekaUtilities {
   def writeBroHttpLogToWekaFile(wekaString: String,
                                 outputFileName: String
                                ) = {
-
-    println("Removing old weka data: " + outputFileName)
+    logger.info("Removing old weka data: " + outputFileName)
     val oldFile = new java.io.File(outputFileName)
     oldFile.delete()
 
-    println("Writing new weka data: " + outputFileName)
+    logger.info("Writing new weka data: " + outputFileName)
     val fw = new FileWriter(outputFileName, true)
 
     fw.write(wekaString)
     fw.close
-
   }
 
 

@@ -1,5 +1,7 @@
 package com.aktaion.ml.behaviors
 
+import com.aktaion.DebugLoggingLogic
+
 /**
   * Simple abstraction for numeric data associated to
   * some statistic we are computing about a behavior for example
@@ -38,10 +40,10 @@ case class MicroBehaviorData(behaviorName: String,
   * this can be a single log line or multiple log lines
   * depending on how we implement the upstream logic
   */
-trait MicroBehaviorSet {
+trait MicroBehaviorSet extends DebugLoggingLogic {
   def behaviorVector: List[MicroBehaviorData]
   def vectorToString = behaviorVector.map(x => x.valueToCsv).mkString(",")
-  def printBehaviorVector = println(vectorToString)
+  def printBehaviorVector = logger.debug(vectorToString)
 }
 
 /**

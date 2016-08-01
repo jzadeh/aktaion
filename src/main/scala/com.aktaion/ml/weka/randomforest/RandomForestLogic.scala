@@ -3,6 +3,8 @@ package com.aktaion.ml.weka.randomforest
 import java.io.{BufferedReader, File, StringReader}
 import java.util.Random
 
+import com.aktaion.DebugLoggingLogic
+import com.aktaion.parser.{BroHttpLogEvent, BroHttpParser, NormalizedLogEvent, ParsingNormalizationLogic}
 import com.aktaion.shell.CommandLineUtils
 import weka.classifiers.{Classifier, CostMatrix, Evaluation}
 import weka.classifiers.meta.CostSensitiveClassifier
@@ -12,6 +14,8 @@ import weka.core.converters.ArffSaver
 import weka.filters.Filter
 import weka.filters.supervised.instance.Resample
 import weka.filters.unsupervised.instance.Randomize
+
+import scala.util.Try
 
 
 /**
@@ -34,7 +38,7 @@ object ClassLabel extends Enumeration {
   *
   *
   */
-object RandomForestLogic {
+object RandomForestLogic extends DebugLoggingLogic {
 
   /**
     * serialize the trained model to a file
@@ -46,7 +50,6 @@ object RandomForestLogic {
     weka.core.SerializationHelper.write(fileName, rf)
   }
 
-
   /**
     *
     * @param fileName
@@ -55,7 +58,7 @@ object RandomForestLogic {
   def loadRandomForestFromFile(fileName: String): Classifier = {
     var cls: Classifier = null
     try {
-      cls = weka.core.SerializationHelper.read("/Users/User/Aktaion/model.test").asInstanceOf[Classifier]
+      cls = weka.core.SerializationHelper.read(fileName).asInstanceOf[Classifier]
     } catch {
       case e1: Exception => e1.printStackTrace
     }
@@ -67,10 +70,10 @@ object RandomForestLogic {
     * is what we build the machine learning classifier against
     * (in this case a random forest model see for more info https://en.wikipedia.org/wiki/Random_forest )
     *
-    * @param trainingFileName input file in .arff format to train the model
-    * @param outputModelFileName  file to score once we have built the model
-    * @param numFolds    number of folds in the random forest algorithm (cross validation?)
-    * @param numTrees    number of trees in each iteration of the random sampling of the micro behaviors
+    * @param trainingFileName    input file in .arff format to train the model
+    * @param outputModelFileName file to score once we have built the model
+    * @param numFolds            number of folds in the random forest algorithm (cross validation?)
+    * @param numTrees            number of trees in each iteration of the random sampling of the micro behaviors
     */
   def trainWekaRandomForest(trainingFileName: String,
                             outputModelFileName: String,
@@ -97,42 +100,131 @@ object RandomForestLogic {
       */
     rf.buildClassifier(trainData)
 
-    println("Writing random forest model to file "+ outputModelFileName)
+    println("Writing random forest model to file " + outputModelFileName)
     saveRandomForestToFile(rf, outputModelFileName)
   }
 
 
   /**
     *
-    * @param fileNameToScore bro http.log file
-    * @param fileNameOfModel .model (serialized java object)
+    * @param fileNameToScore bro http.log file path
+    * @param fileNameOfModel .model (serialized java object) file path
+    * @param windowSize
+    * @return json
     */
   def scoreBroHttpFile(fileNameToScore: String,
-                       fileNameOfModel: String) = {
+                       fileNameOfModel: String,
+                       windowSize: Int): Option[String] = {
 
     val myClassifier = loadRandomForestFromFile(fileNameOfModel)
-    val wekaData: String = WekaUtilities.extractBroHttpLogToWekaFormat(fileNameToScore,ClassLabel.BENIGN, 5)
+
+    //we set the class label to a dummy variable because it is not used in the prediction step
+    val wekaData: String = WekaUtilities.extractBroHttpLogToWekaFormat(fileNameToScore, ClassLabel.BENIGN, windowSize)
     val scoreBr: BufferedReader = new BufferedReader(new StringReader(wekaData))
     val scoreData: Instances = new Instances(scoreBr)
     scoreBr.close
 
+    //remove the last column on the right (the class label) since the model will predict its value instead
     scoreData.setClassIndex(scoreData.numAttributes - 1)
-
     val scored = new Evaluation(scoreData)
     val predictedOutput: Array[Double] = scored.evaluateModel(myClassifier, scoreData)
 
-    for (x <- predictedOutput) {
-      if (x == 1.0)
-        println("Exploit detected in window")
-      else
-        println("Benign window assoicated to behavior vector ")
+    //cheap way to initialize IOC data across multiple windows
+    var domains = Set[String]()
+    var ips = Set[String]()
+    var files = Set[String]()
+
+    for ((x, index) <- predictedOutput.zipWithIndex) {
+      if (x == 1.0) {
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!! The Presence of Evil is Near !!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!! Exploit Behavior Detected In Window Number " + index + "!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!! Evil Is Confirmed JSON For the IOCs Below!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        val iocs: IocsExtracted = extractIocsFromMaliciousWindow(fileNameToScore, index, windowSize)
+        val jsonOutput: String = convertIocsToJson(iocs)
+
+        domains = domains ++ iocs.suspiciousDomains
+        ips = ips ++ iocs.suspiciousIps
+        files = files ++ iocs.suspiciousFileNames
+
+        println(jsonOutput)
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      }
+      else {
+        println("Benign window associated to behavior vector in window number " + index)
+      }
     }
+
+    if (domains.size > 0 || ips.size > 0 || files.size > 0) {
+      val fullIocData = IocsExtracted(ips,domains,files)
+      val jsonData = convertIocsToJson(fullIocData)
+      return Some(jsonData)
+    } else {
+      return None
+    }
+
+
   }
 
-  //
-  //  def scoreGenericProxyFile: ???
+  /**
+    * If we score a .arff file as malicious then we recover the original data by doing one more pass
+    * (expensive) and building a list of IOCs out of that window
+    *
+    * @param inputFileName
+    * @param indexOfEvil
+    * @return
+    */
+  def extractIocsFromMaliciousWindow(inputFileName: String,
+                                     indexOfEvil: Int,
+                                     windowSize: Int): IocsExtracted = {
 
-  //  def scorePcapFile
+    val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(inputFileName)
+
+    val broHttpData: Seq[Option[BroHttpLogEvent]] = lines.map { x => BroHttpParser.tokenizeData(x) }.toSeq
+    val normData: Seq[Option[NormalizedLogEvent]] = broHttpData.map(x => ParsingNormalizationLogic.normalizeBroLog(x))
+    val parsedEvents: Seq[NormalizedLogEvent] = normData.flatMap(x => x)
+
+    val dataBrokenIntoWindows: List[Seq[NormalizedLogEvent]] = if (windowSize >= parsedEvents.size) {
+      parsedEvents.sliding(windowSize).toList
+    } else {
+      parsedEvents.sliding(parsedEvents.size).toList
+    }
+
+
+    val iocsInWindow: Seq[NormalizedLogEvent] = dataBrokenIntoWindows(indexOfEvil)
+
+    val ips: Set[String] = iocsInWindow.map(x => x.destinationIp).toSet
+    val domains: Set[String] = iocsInWindow.map(x => x.urlMetaData.host).toSet
+    val files: Set[String] = iocsInWindow.map(x => x.urlMetaData.file).toSet
+
+    //todo some hackey logichere
+    val filterFiles: Set[String] = files.filter{x=> (x.contains('.') && Try(x.split('?').tail.head.length).getOrElse(0) < 20)  }
+
+    val data = IocsExtracted(ips, domains, filterFiles)
+    return IocsExtracted(ips, domains, filterFiles)
+
+  }
+
+
+  def convertIocsToJson(iocs: IocsExtracted): String = {
+    import net.liftweb.json._
+    import net.liftweb.json.Serialization.write
+    implicit val formats = DefaultFormats
+    val jsonString: String = write(iocs)
+
+    return jsonString
+  }
+
+  case class IocsExtracted(suspiciousIps: Set[String], suspiciousDomains: Set[String], suspiciousFileNames: Set[String])
 
 
   def crossValidationWekaRf(numFolds: Double, inputFilePath: String, outputPath: String) = {
