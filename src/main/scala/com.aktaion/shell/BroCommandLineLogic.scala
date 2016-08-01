@@ -3,10 +3,7 @@ package com.aktaion.shell
 
 import sys.process._
 
-class BroCommandLineInteractionLogic(fileInputPath: String) {
-
-  val stdout = new StringBuilder
-  val stderr = new StringBuilder
+object BroCommandLineLogic {
 
   /**
     * Command line execution of bro against a pcap
@@ -21,8 +18,4 @@ class BroCommandLineInteractionLogic(fileInputPath: String) {
     val result = if (exitCode == 0) true else false
     return result
   }
-
-  val output = generateBroFiles(fileInputPath)
-  println(output)
-
 }
