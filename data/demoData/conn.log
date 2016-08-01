@@ -1,0 +1,17 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2016-08-01-01-37-54
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]
+1450372295.398101	C4yL0T2R1YWwH1D4Hh	172.16.25.128	49159	5.178.71.10	80	tcp	http	2.002923	288	385838	RSTO	-	-	0	ShADadR	215	8900	281	397082	(empty)
+1450372295.258960	C52Z6P2IOGZUeHlhD3	172.16.25.128	59328	172.16.8.8	53	udp	dns	0.129886	38	54	SF	-	-	0	Dd	1	66	1	82	(empty)
+1450372300.520232	CeKWne2nv535UBAMih	172.16.25.128	57331	172.16.8.8	53	udp	dns	0.028051	34	50	SF	-	-	0	Dd	1	62	1	78	(empty)
+1450372300.963019	CMdZy94myiWV5PT967	172.16.25.128	53417	172.16.8.8	53	udp	dns	0.166384	36	52	SF	-	-	0	Dd	1	64	1	80	(empty)
+1450372291.129978	C5il91buoriPHRoef	172.16.25.128	64037	172.16.8.8	53	udp	dns	3.080185	70	35	SF	-	-	0	Dd	2	126	1	63	(empty)
+1450372292.142672	Cijas745b1kMvRyV3	172.16.25.128	64037	172.16.4.4	53	udp	dns	3.112623	70	35	SF	-	-	0	Dd	2	126	1	63	(empty)
+1450372301.135843	CRPblc4856NLVpjKkd	172.16.25.128	49161	182.50.130.156	80	tcp	http	22.360585	1834	466	RSTO	-	-	0	ShADadR	7	2126	5	670	(empty)
+1450372300.552362	C3Sbzj20QNQDeldbj7	172.16.25.128	49160	78.47.139.102	80	tcp	http	22.944016	134	259	RSTO	-	-	0	ShADadR	5	346	3	383	(empty)
+#close	2016-08-01-01-37-54

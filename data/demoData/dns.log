@@ -1,0 +1,16 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2016-08-01-01-37-54
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+#types	time	string	addr	port	addr	port	enum	count	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+1450372291.129978	C5il91buoriPHRoef	172.16.25.128	64037	172.16.8.8	53	udp	27840	whatdidyaysay.com	1	C_INTERNET	1	A	2	SERVFAIL	F	F	T	F	0	-	-	T
+1450372292.142672	Cijas745b1kMvRyV3	172.16.25.128	64037	172.16.4.4	53	udp	27840	whatdidyaysay.com	1	C_INTERNET	1	A	2	SERVFAIL	F	F	T	F	0	-	-	T
+1450372295.258960	C52Z6P2IOGZUeHlhD3	172.16.25.128	59328	172.16.8.8	53	udp	10594	iamthewinnerhere.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	5.178.71.10	59.000000	F
+1450372300.520232	CeKWne2nv535UBAMih	172.16.25.128	57331	172.16.8.8	53	udp	40908	myexternalip.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	78.47.139.102	3551.000000	F
+1450372300.963019	CMdZy94myiWV5PT967	172.16.25.128	53417	172.16.8.8	53	udp	2296	graphicstreeme.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	182.50.130.156	599.000000	F
+1450372293.156750	C5il91buoriPHRoef	172.16.25.128	64037	172.16.8.8	53	udp	27840	whatdidyaysay.com	1	C_INTERNET	1	A	-	-	F	F	T	F	0	-	-	F
+1450372294.210427	Cijas745b1kMvRyV3	172.16.25.128	64037	172.16.4.4	53	udp	27840	whatdidyaysay.com	1	C_INTERNET	1	A	-	-	F	F	T	F	0	-	-	F
+#close	2016-08-01-01-37-54
