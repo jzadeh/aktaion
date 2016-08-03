@@ -1,6 +1,6 @@
 package com.aktaion.ml.weka.randomforest
 
-import java.io.{BufferedReader, File, StringReader}
+import java.io.{BufferedReader, File, FileWriter, StringReader}
 import java.util.Random
 
 import com.aktaion.DebugLoggingLogic
@@ -223,6 +223,21 @@ object RandomForestLogic extends DebugLoggingLogic {
     val jsonString: String = write(iocs)
 
     return jsonString
+  }
+
+  def writeIocsToDisk(iocsData: Option[IocsExtracted], outputPath: String) = {
+
+    val iocs = iocsData.getOrElse("")
+
+    val singleFile = convertIocsToJson(IocsExtracted(Set[String](), Set[String](), Set[String]()))
+
+    if (singleFile.length > 0) {
+
+      val fw = new FileWriter(outputPath, true)
+      fw.write(singleFile)
+      fw.close()
+    }
+
   }
 
   /**

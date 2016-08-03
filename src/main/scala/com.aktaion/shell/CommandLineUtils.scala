@@ -8,23 +8,18 @@ import scala.io.{BufferedSource, Source}
 object CommandLineUtils {
 
   /**
+    * Used to run the command line Bro -r command against a input PCAP
     *
-    * @param fileName
-    * @return fileName of the bro path data created
+    * @param fileName input PCAP
+    * @return output is the fileName of the bro file extracted from the PCAP
     */
   def extractBroFilesFromPcap(fileName: String): String  = {
     val broLogic = BroCommandLineLogic.generateBroFiles(fileName)
     if (broLogic == true) {
       val broPath = findFilePathRelativeToJar()
-
       //file is generated in same directory as the jar
       val broHttpFile: String = broPath + "/http.log"
-
       System.out.println(" Bro HTTP FilePath" + broPath)
-//      val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(broHttpFile)
-//      val broHttpData: Seq[Option[BroHttpLogEvent]] = lines.map { x => BroHttpParser.tokenizeData(x) }.toSeq
-//      val normData: Seq[Option[NormalizedLogEvent]] = broHttpData.map(x => ParsingNormalizationLogic.normalizeBroLog(x))
-//      val parsedEvents: Seq[NormalizedLogEvent] = normData.flatMap(x => x)
 
       return broHttpFile
     }

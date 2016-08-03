@@ -20,6 +20,9 @@ public class UserInteractionLogic {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // determines where the path to the Jar is (does not work on windows)
+        String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
+
         System.out.println("*************************");
         System.out.println("*************************");
         System.out.println("** Aktaion Version 0.1 **");
@@ -33,20 +36,44 @@ public class UserInteractionLogic {
         int userChoice = scanner.nextInt();
 
         if (userChoice == 1) {
-            System.out.print("Specify Input Path: ");
+            System.out.print("Specify Input Path (Bro http.log): ");
             String fileInputPath = scanner.next();
-            System.out.print("Specify Output Path: ");
+            System.out.print("Specify Window Size For Analysis: ");
+            int inputWindowSize = scanner.nextInt();
+
+
+            String modelFileName = dataPath + "demoData/model.test";
+
+            Option<RandomForestLogic.IocsExtracted> output = RandomForestLogic.
+                    scoreBroHttpFile(fileInputPath, modelFileName, inputWindowSize);
+
+            System.out.print("Specify Output Path For Predicted IOC's ");
             String fileOutputPath = scanner.next();
 
-
-
-
+            RandomForestLogic.writeIocsToDisk(output, fileOutputPath);
 
         } else if (userChoice == 2) {
-            System.out.print("Specify Input PCAP Path: ");
+            System.out.print("Specify Input Path (Bro http.log): ");
             String fileInputPath = scanner.next();
-        } else if (userChoice == 3) {
+            System.out.print("Specify Window Size For Analysis: ");
+            int inputWindowSize = scanner.nextInt();
 
+            String modelFileName = dataPath + "demoData/model.test";
+
+            String extractedFile = CommandLineUtils.extractBroFilesFromPcap(fileInputPath);
+            pressAnyKeyToContinue();
+
+            Option<RandomForestLogic.IocsExtracted> output = RandomForestLogic.
+                    scoreBroHttpFile(extractedFile, modelFileName, inputWindowSize);
+
+
+            System.out.print("Specify Output Path For Predicted IOC's ");
+            String fileOutputPath = scanner.next();
+
+            RandomForestLogic.writeIocsToDisk(output, fileOutputPath);
+
+
+        } else if (userChoice == 3) {
 
             /**
              * Step 1a:  Train on Malicious Exploit Traffic
@@ -56,19 +83,17 @@ public class UserInteractionLogic {
              * in this case we have extracts from 300+ exploit samples
              * with a .webgateway extension
              */
-            String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);  //does not work on windows determines where the path to the Jar is
             String exploitDataDirectory = dataPath + "proxyData/exploitData/";
             String exploitDataOutputFileName = dataPath + "demoData/demoExploitData.arff";
-           // String exploitModel = dataPath + "demoData/model.test";
             int windowSizeForDemo = 5;
 
             String maliciousWekaData = WekaUtilities.
                     extractDirectoryToWekaFormat(exploitDataDirectory,
-                    ".webgateway",
-                    ClassLabel.EXPLOIT(),
-                    windowSizeForDemo);
+                            ".webgateway",
+                            ClassLabel.EXPLOIT(),
+                            windowSizeForDemo);
 
-            WekaUtilities.writeWekaDataToFile(maliciousWekaData,exploitDataOutputFileName);
+            WekaUtilities.writeWekaDataToFile(maliciousWekaData, exploitDataOutputFileName);
 
             pressAnyKeyToContinue();
 
@@ -82,22 +107,23 @@ public class UserInteractionLogic {
 
             String benignWekaData = WekaUtilities.
                     extractDirectoryToWekaFormat(benignDataDirectory,
-                    "http.log",
-                    ClassLabel.BENIGN(),
-                    windowSizeForDemo);
+                            "http.log",
+                            ClassLabel.BENIGN(),
+                            windowSizeForDemo);
 
-            WekaUtilities.writeWekaDataToFile(benignWekaData,benignDataOutputFileName);
+            WekaUtilities.writeWekaDataToFile(benignWekaData, benignDataOutputFileName);
 
             pressAnyKeyToContinue();
 
             String mergedFileName = dataPath + "demoData/demoBenignAndExploitData.test";
 
             //mix the malicious and benign labels into a single data set
-            String mergedWekaData = WekaUtilities.mergeTwoWekaFiles(exploitDataOutputFileName,benignDataOutputFileName);
+            String mergedWekaData = WekaUtilities.mergeTwoWekaFiles(exploitDataOutputFileName, benignDataOutputFileName);
 
             //write final set of behaviors to disk
-            WekaUtilities.writeWekaDataToFile(mergedWekaData,mergedFileName);
+            WekaUtilities.writeWekaDataToFile(mergedWekaData, mergedFileName);
 
+            //ouput of the serialized random forest
             String modelFileName = dataPath + "demoData/model.test";
 
             //train a random forest on the file we wrote in the previous line
@@ -121,15 +147,15 @@ public class UserInteractionLogic {
             /**
              * Step 3b: Score Benign Traffic File
              */
-              RandomForestLogic.
-                      scoreBroHttpFile(dataPath + "demoData/BENIGNEATOhttp.log", modelFileName,windowSizeForDemo);
+            RandomForestLogic.
+                    scoreBroHttpFile(dataPath + "demoData/BENIGNEATOhttp.log", modelFileName, windowSizeForDemo);
 
             /**
              *  Step 4: Pass the ioc data to an active defense script for
              *  automated Group Policy Object generation in Active Directory
              *  (see https://technet.microsoft.com/en-us/library/hh147307(v=ws.10).aspx for an intro)
              */
-          //  PythonCommandLineLogic.passIocsToActiveDefenseScript(output, 4);
+            PythonCommandLineLogic.passIocsToActiveDefenseScript(output, 4);
         }
     }
 
