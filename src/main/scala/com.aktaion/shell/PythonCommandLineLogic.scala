@@ -27,7 +27,7 @@ object PythonCommandLineLogic {
 
     val singleFile: String = iocs.suspiciousFileNames.head
 
-    val pythonString: String = "python " + pythonScriptPath + " -n " + singleFile
+    val pythonString: String = "python " + pythonScriptPath + " -n " + "'" + singleFile + "'"
     println(pythonString)
     val exitCode = pythonString.!
     val result = if (exitCode == 0) true else false

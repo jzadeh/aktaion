@@ -26,7 +26,7 @@ object BehaviorExtractionLogic extends DebugLoggingLogic {
 
     val sourceIpSet: Set[String] = parsedEvents.map { x => x.sourceIp }.toSet
 
-    /** Step 1:
+    /**
       * pre-processing logic in case we do not have a unique source in the destination
       * in this case we can have two types of computation 'strategies'
       *

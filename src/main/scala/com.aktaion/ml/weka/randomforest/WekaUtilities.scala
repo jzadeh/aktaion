@@ -14,15 +14,16 @@ object WekaUtilities extends DebugLoggingLogic{
   /**
     *
     * @param inputDirectoryName
-    * @param outputFileName
     * @param format extension to look for either .webgatewayy or .log
     * @param classLabel
+    *
+    * @return string that is in .arff format (usually written to disk)
     */
   def extractDirectoryToWekaFormat(inputDirectoryName: String,
-                                   outputFileName: String,
+                           //        outputFileName: String,
                                    format: String,
                                    classLabel: ClassLabel,
-                                   windowSize: Int) = {
+                                   windowSize: Int): String = {
     /**
       * Iterate over a list of file names from a directory or list of sub directories
       */
@@ -76,17 +77,45 @@ object WekaUtilities extends DebugLoggingLogic{
       case e: java.util.NoSuchElementException => //System.out.println("Exception " + e + " at fileIterator " + fileIterator)
     }
 
-    logger.info("Removing old weka data: " + outputFileName)
+    return wekaHeader + wekaDataAcrossAllFiles
+
+//    logger.info("Removing old weka data: " + outputFileName)
+//    val oldFile = new java.io.File(outputFileName)
+//    oldFile.delete()
+//
+//    logger.info("Writing new weka data: " + outputFileName)
+//    val fw = new FileWriter(outputFileName, true)
+//
+//    fw.write(wekaHeader)
+//    wekaDataAcrossAllFiles.foreach(line => fw.write(line))
+//    fw.close()
+  }
+
+  def writeWekaDataToFile(inputString: String, outputFileName: String) = {
+
     val oldFile = new java.io.File(outputFileName)
     oldFile.delete()
 
     logger.info("Writing new weka data: " + outputFileName)
     val fw = new FileWriter(outputFileName, true)
 
-    fw.write(wekaHeader)
-    wekaDataAcrossAllFiles.foreach(line => fw.write(line))
+    inputString.foreach(line => fw.write(line))
     fw.close()
+
   }
+
+
+
+  def mergeTwoWekaFiles(file1: String, file2: String): String = {
+    val firstDataset: String = CommandLineUtils.getFileFromFileSystemPath(file1).mkString("\n")
+    val secondDataset: String = CommandLineUtils.getFileFromFileSystemPath(file2).mkString("\n")
+    val appendToBottomOfFile: String = secondDataset.split("@data")(1)
+    val mergedFile = firstDataset + appendToBottomOfFile
+    return mergedFile
+  }
+
+
+
 
   def extractBroHttpLogToWekaFormat(inputFileName: String,
                                     classLabel: ClassLabel,
@@ -119,6 +148,9 @@ object WekaUtilities extends DebugLoggingLogic{
     fw.write(wekaString)
     fw.close
   }
+
+
+
 
 
 }

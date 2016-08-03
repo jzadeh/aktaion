@@ -144,7 +144,7 @@ object RandomForestLogic extends DebugLoggingLogic {
         println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         println("!!!!!!!!!! Evil Is Confirmed JSON For the IOCs Below!!!!!!!!!!!!!!!!")
         println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        val iocs: IocsExtracted = extractIocsFromMaliciousWindow(fileNameToScore, index, windowSize)
+        val iocs: IocsExtracted = extractBroIocsFromMaliciousWindow(fileNameToScore, index, windowSize)
         val jsonOutput: String = convertIocsToJson(iocs)
 
         domains = domains ++ iocs.suspiciousDomains
@@ -159,32 +159,31 @@ object RandomForestLogic extends DebugLoggingLogic {
         println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
       }
       else {
-        println("Benign window associated to behavior vector in window number " + index)
+        val myData: String = wekaData
+
+        logger.info("Benign window associated to behavior vector in window number " + index)
       }
     }
 
     if (domains.size > 0 || ips.size > 0 || files.size > 0) {
       val fullIocData = IocsExtracted(ips,domains,files)
-   //   val jsonData = convertIocsToJson(fullIocData)
       return Some(fullIocData)
     } else {
       return None
     }
-
-
   }
 
   /**
     * If we score a .arff file as malicious then we recover the original data by doing one more pass
     * (expensive) and building a list of IOCs out of that window
     *
-    * @param inputFileName
+    * @param inputFileName Bro filename (this method only works with bro files so far) //todo change to normalized event
     * @param indexOfEvil
     * @return
     */
-  def extractIocsFromMaliciousWindow(inputFileName: String,
-                                     indexOfEvil: Int,
-                                     windowSize: Int): IocsExtracted = {
+  def extractBroIocsFromMaliciousWindow(inputFileName: String,
+                                        indexOfEvil: Int,
+                                        windowSize: Int): IocsExtracted = {
 
     val lines: Array[String] = CommandLineUtils.getFileFromFileSystemPath(inputFileName)
 
