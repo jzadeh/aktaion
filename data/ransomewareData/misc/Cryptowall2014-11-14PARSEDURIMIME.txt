@@ -1,0 +1,520 @@
+[172.16.165.164:49159] -- -- --> [117.55.227.125:80] 
+GET /wp-content/themes/lightweight/hlka9j81f HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+Host: danielferris.com.au
+Cache-Control: no-cache
+
+HTTP/1.1 200 OK
+Date: Fri, 14 Nov 2014 22:33:23 GMT
+Server: Apache
+Last-Modified: Tue, 04 Nov 2014 13:01:31 GMT
+Accept-Ranges: bytes
+Content-Length: 564456
+X-Cnection: close
+Vary: Accept-Encoding, User-Agent
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /1j7xbUs HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:35 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Content-Length: 3289
+X-Powered-By: PHP/5.4.34-0+deb7u1
+Set-Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /img/flags/us.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 825
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80a01-339-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/flags/fr.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 694
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c8096b-2b6-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/flags/de.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 534
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80959-216-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /img/flags/it.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 552
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c8098c-228-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49312] -- -- --> [194.58.103.250:80] 
+GET /img/style.css HTTP/1.1
+Accept: text/css, */*
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: text/css
+Connection: keep-alive
+Content-Length: 4492
+Last-Modified: Wed, 24 Sep 2014 20:32:44 GMT
+ETag: "c808fe-118c-503d5960e7300"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /img/rb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 237
+Last-Modified: Thu, 12 Dec 2013 05:21:52 GMT
+ETag: "c808fc-ed-4ed4f85eddc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /favicon.ico HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:42 GMT
+Content-Type: image/vnd.microsoft.icon
+Connection: keep-alive
+Content-Length: 318
+Last-Modified: Tue, 06 May 2014 17:10:40 GMT
+ETag: "c808c4-13e-4f8be53c90400"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/lb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 239
+Last-Modified: Thu, 12 Dec 2013 05:22:48 GMT
+ETag: "c808d1-ef-4ed4f89445a00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/rt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 242
+Last-Modified: Thu, 12 Dec 2013 05:21:36 GMT
+ETag: "c808fd-f2-4ed4f84f9b800"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /img/lt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 240
+Last-Modified: Thu, 12 Dec 2013 03:32:50 GMT
+ETag: "c808d5-f0-4ed4dfffedc80"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/style.css HTTP/1.1
+Accept: text/css, */*
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:19 GMT
+Content-Type: text/css
+Connection: keep-alive
+Content-Length: 4492
+Last-Modified: Wed, 24 Sep 2014 20:32:44 GMT
+ETag: "c808fe-118c-503d5960e7300"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+POST /1j7xbUs HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Content-Length: 14
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:17 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Content-Length: 14415
+X-Powered-By: PHP/5.4.34-0+deb7u1
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+
+
+[172.16.165.164:49317] -- -- --> [194.58.103.250:80] 
+GET /picture.php?k=1j7xbus&8724a3c6340a2712d7ebf0aa0d802782 HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:38 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 1899
+X-Powered-By: PHP/5.4.34-0+deb7u1
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+
+
+[172.16.165.164:49315] -- -- --> [194.58.103.250:80] 
+GET /img/flags/es.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 634
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80963-27a-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/flags/us.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:19 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 825
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80a01-339-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/button_pay.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:21 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 727
+Last-Modified: Thu, 19 Dec 2013 05:25:56 GMT
+ETag: "c808cc-2d7-4eddc655ca100"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /favicon.ico HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:23 GMT
+Content-Type: image/vnd.microsoft.icon
+Connection: keep-alive
+Content-Length: 318
+Last-Modified: Tue, 06 May 2014 17:10:40 GMT
+ETag: "c808c4-13e-4f8be53c90400"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49315] -- -- --> [194.58.103.250:80] 
+GET /img/lt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:21 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 240
+Last-Modified: Thu, 12 Dec 2013 03:32:50 GMT
+ETag: "c808d5-f0-4ed4dfffedc80"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /img/lb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:21 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 239
+Last-Modified: Thu, 12 Dec 2013 05:22:48 GMT
+ETag: "c808d1-ef-4ed4f89445a00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49317] -- -- --> [194.58.103.250:80] 
+GET /img/rt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:20 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 242
+Last-Modified: Thu, 12 Dec 2013 05:21:36 GMT
+ETag: "c808fd-f2-4ed4f84f9b800"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/rb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:20 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 237
+Last-Modified: Thu, 12 Dec 2013 05:21:52 GMT
+ETag: "c808fc-ed-4ed4f85eddc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /img/bitcoin.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:19 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 5523
+Last-Modified: Tue, 17 Dec 2013 03:05:00 GMT
+ETag: "c808c8-1593-4edb231a98f00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49257] -- -- --> [54.200.182.206:80] 
+GET /text HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+Host: wtfismyip.com
+Cache-Control: no-cache
+
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Length: 15
+Date: Fri, 14 Nov 2014 22:36:40 GMT
+Connection: keep-alive

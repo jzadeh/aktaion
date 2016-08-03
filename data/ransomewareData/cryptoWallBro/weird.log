@@ -1,0 +1,13 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	weird
+#open	2016-04-05-20-07-59
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
+#types	time	string	addr	port	addr	port	string	string	bool	string
+1416004607.282282	Cem5691luOSz3bRMCk	172.16.165.164	49197	91.237.88.107	8080	bad_HTTP_request	-	F	bro
+1416004607.282282	Cem5691luOSz3bRMCk	172.16.165.164	49197	91.237.88.107	8080	line_terminated_with_single_CR	-	F	bro
+1416004607.283907	Cvb3Kz2JC9dM68E8P9	172.16.165.164	49184	5.135.59.74	80	bad_HTTP_request	-	F	bro
+1416004607.283907	Cvb3Kz2JC9dM68E8P9	172.16.165.164	49184	5.135.59.74	80	line_terminated_with_single_CR	-	F	bro
+#close	2016-04-05-20-07-59

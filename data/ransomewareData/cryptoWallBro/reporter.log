@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	reporter
+#open	2016-04-05-20-07-59
+#fields	ts	level	message	location
+#types	time	enum	string	string
+1416004421.580470	Reporter::ERROR	/etc/nsm/sensortab/Input::READER_RAW: Init: cannot open /etc/nsm/sensortab	(empty)
+1416004421.580470	Reporter::ERROR	/etc/nsm/sensortab/Input::READER_RAW: Init failed	(empty)
+1416004421.580470	Reporter::ERROR	/etc/nsm/sensortab/Input::READER_RAW: terminating thread	(empty)
+1416004431.714867	Reporter::INFO	Failed to open GeoIP City database: /usr/share/GeoIP/GeoIPCity.dat	(empty)
+1416004431.714867	Reporter::INFO	Fell back to GeoIP Country database	(empty)
+1416004431.714867	Reporter::INFO	Failed to open GeoIP Cityv6 database: /usr/share/GeoIP/GeoIPCityv6.dat	(empty)
+#close	2016-04-05-20-07-59

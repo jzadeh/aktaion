@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2016-04-05-20-07-59
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+#types	time	string	addr	port	addr	port	enum	count	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+1416004421.580470	CEwnTR1jsNe85tKl7d	172.16.165.164	57225	172.16.165.2	53	udp	63116	danielferris.com.au	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	117.55.227.125	5.000000	F
+1416004621.231348	Cq5pY02qzLBJq6ejb5	172.16.165.164	58549	172.16.165.2	53	udp	35012	wtfismyip.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	54.200.182.206	5.000000	F
+1416004794.149694	CAODN91DUWvrv4aaKk	172.16.165.164	53264	172.16.165.2	53	udp	21254	paytordmbdekmizq.torpacho.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	194.58.103.250,87.121.52.178	5.000000,5.000000	F
+#close	2016-04-05-20-07-59

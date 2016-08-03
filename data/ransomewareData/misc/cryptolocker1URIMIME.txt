@@ -1,0 +1,48 @@
+[192.168.1.52:49360] -- -- --> [168.62.21.207:80] 
+GET /vmhome?IEVersion=8&GuestOS=Win7&VirtPlatform=VirtualBox&VirtOS=Windows&VMBuild=20141027 HTTP/1.1
+Accept: */*
+Accept-Language: en-us
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)
+Accept-Encoding: gzip, deflate
+Host: www.modern.ie
+Connection: Keep-Alive
+Cookie: optimizelySegments=%7B%22565080043%22%3A%22none%22%2C%22565080044%22%3A%22false%22%2C%22557412819%22%3A%22direct%22%2C%22557412820%22%3A%22ie%22%2C%22673421505%22%3A%22Windows%22%2C%22675987104%22%3A%22Windows%207%22%7D; optimizelyEndUserId=oeu1417031087551r0.2588127219917071; optimizelyBuckets=%7B%7D; _ga=GA1.2.1662454955.1417031088
+
+
+HTTP/1.1 302 Redirect
+Content-Length: 202
+Content-Type: text/html; charset=UTF-8
+Location: https://developer.microsoft.com/en-us/microsoft-edge/welcome/Win7/ie8/20141027/
+Server: Microsoft-IIS/8.0
+X-UA-Compatible: IE=Edge
+Strict-Transport-Security: max-age=10886400; includeSubDomains; preload
+Date: Thu, 23 Jun 2016 19:27:42 GMT
+
+<head><title>Document Moved</title></head>
+<body><h1>Object Moved</h1>This document may be found <a HREF="https://developer.microsoft.com/en-us/microsoft-edge/welcome/Win7/ie8/20141027/">here</a></body>
+
+
+[192.168.56.101:49360] -- -- --> [168.62.21.207:80] 
+GET /vmhome?IEVersion=8&GuestOS=Win7&VirtPlatform=VirtualBox&VirtOS=Windows&VMBuild=20141027 HTTP/1.1
+Accept: */*
+Accept-Language: en-us
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)
+Accept-Encoding: gzip, deflate
+Host: www.modern.ie
+Connection: Keep-Alive
+Cookie: optimizelySegments=%7B%22565080043%22%3A%22none%22%2C%22565080044%22%3A%22false%22%2C%22557412819%22%3A%22direct%22%2C%22557412820%22%3A%22ie%22%2C%22673421505%22%3A%22Windows%22%2C%22675987104%22%3A%22Windows%207%22%7D; optimizelyEndUserId=oeu1417031087551r0.2588127219917071; optimizelyBuckets=%7B%7D; _ga=GA1.2.1662454955.1417031088
+
+
+HTTP/1.1 302 Redirect
+Content-Length: 202
+Content-Type: text/html; charset=UTF-8
+Location: https://developer.microsoft.com/en-us/microsoft-edge/welcome/Win7/ie8/20141027/
+Server: Microsoft-IIS/8.0
+X-UA-Compatible: IE=Edge
+Strict-Transport-Security: max-age=10886400; includeSubDomains; preload
+Date: Thu, 23 Jun 2016 19:27:42 GMT
+
+<head><title>Document Moved</title></head>
+<body><h1>Object Moved</h1>This document may be found <a HREF="https://developer.microsoft.com/en-us/microsoft-edge/welcome/Win7/ie8/20141027/">here</a></body>
+
+

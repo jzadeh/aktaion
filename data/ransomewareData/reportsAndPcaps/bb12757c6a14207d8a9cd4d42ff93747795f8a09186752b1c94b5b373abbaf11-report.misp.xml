@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<response uuid="java:java.util.UUID" xmlns="http://www.misp-project.org/">
+  <Event>
+    <Attribute>
+      <category>External analysis</category>
+      <type>link</type>
+      <value><![CDATA[https://www.hybrid-analysis.com/search?query=bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>External analysis</category>
+      <type>comment</type>
+      <value><![CDATA[VxStream v4.30 Copyright 2016 Payload Security UG (haftungsbeschrnkt), All Rights Reserved, www.payload-security.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <id>162f6926-dec4-4840-8d05-144f00e8be82</id>
+    <date>2016-06-22</date>
+    <info><![CDATA[VxStream Sandbox auto-generated for "bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe"]]></info>
+    <analysis>2</analysis>
+    <distribution>1</distribution>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|md5</type>
+      <value><![CDATA[bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe|9cbb128e8211a7cd00729c159815cb1c]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe|870a3d5d18501795e242c4579419f65e17ac8dbf]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe|bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe|b72eb446430e499954bfe2dd14b9504e3a9af18e983215718d40a8f9b388acd53f9911cf3d10de78a55b753c562fe2e41636f67d6139bec0c52333c4d66a6ae4]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%APPDATA%\Kcbzfqoyibwbvvrdt.exe|9cbb128e8211a7cd00729c159815cb1c]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%APPDATA%\Kcbzfqoyibwbvvrdt.exe|870a3d5d18501795e242c4579419f65e17ac8dbf]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%APPDATA%\Kcbzfqoyibwbvvrdt.exe|bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%APPDATA%\Kcbzfqoyibwbvvrdt.exe|b72eb446430e499954bfe2dd14b9504e3a9af18e983215718d40a8f9b388acd53f9911cf3d10de78a55b753c562fe2e41636f67d6139bec0c52333c4d66a6ae4]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\Rigpssczawhnxzdb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\Sfnhvqzdqjmnrnbrv]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\RUN\CRYPTOLOCKER|43003A005C00550073006500720073005C0050005300500055004200570053005C0041007000700044006100740061005C0052006F0061006D0069006E0067005C004B00630062007A00660071006F0079006900620077006200760076007200640074002E006500780065000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\PROXYENABLE|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\CONNECTIONS\SAVEDLEGACYSETTINGS|460000003F00000009000000000000000000000000000000040000000000000010E586515E97D101000000000000000000000000020000001700000000000000FE8000000000000059CE787BEE728C290B000000000000001700000000000000FE80000000000000FDDF49A450AADFC20B000000000000001C00000000000000000000000000000000000000000000000000000000000000170000000000000000000000000000000000FFFFC0A8380A000000000000000002000000C0A8380A0000000000000000000000000000000000000000000000000C00000CC09E0000181D450040114900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000003CB9E000010B64A00C01449000000000000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32\ENABLEFILETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32\ENABLECONSOLETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32\FILETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32\CONSOLETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32\MAXFILESIZE|00001000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32\FILEDIRECTORY|2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS\ENABLEFILETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS\ENABLECONSOLETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS\FILETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS\CONSOLETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS\MAXFILESIZE|00001000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS\FILEDIRECTORY|2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\Rigpssczawhnxzdb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\Gikvjykeqdchlfl]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetStartupMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetConnectionMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetProxyRegistryMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\RasPbFile]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\Rigpssczawhnxzdb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\Gikvjykeqdchlfl]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[pxlwjhroywachhe.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wjequabridumhaf.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ipaaibtemelm.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[koksmcqcssvgti.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wpkdyaigjsnwloh.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tbhmteoimbwtqkb.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[piehvqhddryyrr.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[nytvymsxipdkrqo.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tkthvrtmrjhdre.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[guuxvgjkhviyofr.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[srjqtkjpjsykeek.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vrjqxfvkspsjcqa.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[axnkgxyhrwevcdr.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[hmdopmfgvpqd.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[skatmeobbhywppf.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[gocdrrydftgr.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tmlbjvtxvlflact.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[xinswkuhhgfoctm.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[nrdaqlulrbxdesb.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vjvrmsmntlkqmma.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[xwpjcoejscniljb.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ujrbqutupqeqnlf.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rvuisagiqwwvqcy.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[olfwlrgpegqoomg.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vcfveifjwnflysh.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rnlosboxmksjefk.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[uixeknhhhqixhxs.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[qvmjkynnsumxqpi.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[loiwfrekdysg.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[dsaaxkrqsknmfje.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rcrxsrfbthqbosp.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[bjxbwshmvcoiaa.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[xfydcqmqabtoowj.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[eqbmyfemjniaoop.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[btiynsldftdjlby.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[hwuhyjnrpyylsl.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[qcjykwfmswdtosc.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[jsjylchqqnynock.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rconumuppvqgna.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tnvtwcoaubwjje.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wkwsmoxxxwbuhrf.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[dcmvpvxwgfsrqr.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[skydhciqvnpfnp.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[mmnvbjxxbieveiy.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[jmarhdpwkmddabg.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[oxprtgcygepflwk.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[eankkntkeheeqx.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[liptatkahibenjc.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[bkiquatoyewrewj.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[xblspwbeforsum.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[toxvntcyuhcogat.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[nhwjskkwxmdkpbm.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[maqlaaklopqpjrl.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[yxemslnmqypt.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[gcwxecifbmyboct.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[huksrcimcvgxppl.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ihqspfdmjdfmiwm.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[qrsodigtlfmsaxp.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[cgvxumjwsoxrvej.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[mypfdxjwewqksyx.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[drduxxgjxpffsr.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[brcytbwstpwyopn.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vfcxmybvjxotrhb.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[whxqbvaujxybopk.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[criqjiunctnhqn.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[gwadktcvtdhnfc.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ckqpdbmmwekbdrr.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wfkwutbkkicbgak.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ovbcrupdojeeegj.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[jnblgvahdavx.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[hodxcrtevdioscq.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ndnheheobfwlsmg.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[qvyacpejjypabqe.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ijanumduksrtvy.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tixqidydxdqtfpd.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[uomcukuvnktalkb.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[nibrqpxopvjnysb.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[aklhduuycoohbtw.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[mrfixgsitnnp.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[pyftpuwlemvskpu.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[swwbgfrtfhjwrec.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[uffoutcggbalhup.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ndhgaiemptkmsbm.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[hlcqdtuylrmpafp.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rrbnlpuxawwogeq.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[odrxacgvcpgcpou.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[okdsbvuvqjrqrv.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[dbxikbknobesayt.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[xvrpctylvxpudtn.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[yivrffusispomik.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[sitamlywqvndwdg.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[kmufscobdfxmebx.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[npgtvbylkjxb.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[pdawijudqftfanp.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[klwtycfrrsvhloj.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vrloswwgniyajlu.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[isbadhhcpdlgacw.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vvbnxhnwwongnm.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[iffwlybsvqxkqg.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[gbutthexifbwrx.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ivsyapeigqymobi.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[sasktjbanfdwogx.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wvjqtmkehicrhus.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[yskxjjqfgymvlqa.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[yteovuurknkmalc.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[bpofnyxiuaaykrk.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vbmutkgsnavaikt.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[kqhlhwxhmdiu.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rcoxshllfoldxie.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tdewbwqldsdpcdj.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[raklloblmuppono.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[jlouquqkddiepws.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[umtpflycmfryspb.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[viogggljvxrdcya.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[fopnxeounliooa.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ctcgdgkvantsju.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[cpdluvjoksrmoeq.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[bucpakicgvejaba.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[oycuhaaltwnecjq.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[cbpjcndwdvqntxa.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[obomepxvkxkmatr.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[eloqhkhkvybokmr.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tqlptpiawhymldc.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[smdcbimhkgrgfie.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[jhyrxskaukpgeik.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[oqunyssjpwsvcds.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[nxhslfjbiecvmux.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[uigpqqgtjieyaqw.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[lqshtrcywfbeenm.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[bcxvtdofvgrqfhj.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[mdyhruwyemasipo.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vmvglwcyeyoyhws.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[kdsdsapurvgf.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vgyqlfdgboutqgw.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rrtojkqfwvonbfh.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[gqmqqmuoivdgpoo.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ofihltoqeeasxbr.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[rlvpylyhmgiw.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[fxyvdmuhhmvjobw.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[dlgryphyumqolfx.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ubevljnxpxlctxd.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tnefbcfonvccers.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[sjgdaskwqnvbngk.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[nhhukcsrkgnwoar.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[iolwksmytfsmhvl.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[pjgjmjcoxedkoao.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wfqetptscbgfecb.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[qynsxpwwfygsjes.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[agwegahoyvkcvgr.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[lhdqmaketnpqiqu.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[qxtvrikjwykahby.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ygofxfhdxjaclyx.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[pqdmhgaabcgbiwi.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vhprsuhwlxlrenx.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vnjcnfovugvyxut.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ohfibryemcqnasd.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[fcvjokflnvughtt.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[vsgyorchdbbvjf.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[alqdmpdqxrtxtuk.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tsrpnaepseikbjn.info]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tbhuayklxsoxiki.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[igfylwrfqffjii.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[bthcoqyaercuqo.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[alwmcblyxadvqk.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[ecnkgdqhyekkbgo.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[unbdfxargolddos.biz]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[wrtnbketypjtfew.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[cljihkijxwiebju.co.uk]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[usewihhnxbgcym.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <threat_level_id>1</threat_level_id>
+  </Event></response>

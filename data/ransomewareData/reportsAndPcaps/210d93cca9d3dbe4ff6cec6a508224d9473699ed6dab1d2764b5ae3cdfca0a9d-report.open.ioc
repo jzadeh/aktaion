@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<OpenIOC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="39a979c7-ea85-406f-8180-33038e407ba8" last-modified="2016-06-22T03:24:05" published-date="0001-01-01T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1">
+  <metadata>
+    <short_description></short_description>
+    <description><![CDATA[VxStream Sandbox v4.30 auto-generated IOC for 210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d.exe (SHA256: 210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d)]]></description>
+    <keywords></keywords>
+    <authored_by>Payload Security</authored_by>
+    <authored_date>2016-06-22T03:24:05</authored_date>
+    <links></links>
+  </metadata>
+  <criteria>
+    <Indicator operator="OR" id="86a7a887-224d-4a60-8a16-d62023326e91">
+      <Indicator operator="OR" id="4191f4cc-c83c-4636-9dbc-b392f9657ad0">
+        <IndicatorItem id="a29da788-cc9c-4a97-8672-bf5a42cf9056" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[hhcbnaff.exe]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="9f71baf6-3ec2-4bcc-a307-643902f30f72" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[pauba.exe]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c01c4a8b-5603-4e94-9b51-2982d012cc19" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[hhgnddkjee.exe]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e870f164-2910-4b10-af95-a39ce75fc76d" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[do6[1].exe]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="5c963b58-beda-40da-bdfc-0f6900b8224c" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[TFJE4C3.bat]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1b66613a-cf88-41a9-aeba-4aa2a743cbb6" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Tar9EB0.tmp]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c46bba2c-399c-4188-a861-4b2945c7740d" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[94308059B57B3142E455B38A6EB92015]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="45bb7d11-8610-492a-9ec0-c1f56ed68b8a" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Cab8174.tmp]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="8b4e2246-7d1d-48cd-96c0-9e051cfb8436" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Cab7F6A.tmp]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="570c42c5-31a6-4987-a7c1-42010595941e" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Cab9EAF.tmp]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="3b9a2a14-0cf6-42bd-ae90-35203c2fafb3" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Tar8175.tmp]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="337cf957-4a1c-40e9-a81c-df249ae2df26" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Tar7F75.tmp]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="f80d1f43-50e9-459d-b443-da692ea2b0cb">
+        <Indicator operator="AND" id="bdf21b44-a341-41fc-ada4-bc6b7558e328">
+          <IndicatorItem id="b5a1077c-b79e-473f-b0df-ffab627a6a4b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9b268135-c0cc-4656-a5c7-ae38ea687a43" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="faae0e28-4dea-45af-b346-87397278d931">
+          <IndicatorItem id="adbcfbe5-0a32-4d50-b80e-a249c0d8315e" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="598882e8-59dc-4df2-8d88-7db260c89d87" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="8aad4f96-3d4c-470f-ba81-51a33ca7bc1c">
+          <IndicatorItem id="eb517b2b-392a-4631-918a-e60575d035cd" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4506a413-8e9b-4e78-a61d-8fd7e10c9298" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="cbf65860-c623-42a5-b682-5d8cccd49839">
+          <IndicatorItem id="475f39c4-a0c8-4aeb-8447-c574d2a27cf5" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f779ed2a-9cf4-4d1e-838e-be6941669651" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="6053558f-91b8-4d9e-b39f-f6a0015191e7">
+          <IndicatorItem id="54b316e8-df4e-4604-afe1-11e1b3c9280e" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="dd1a9197-d367-417d-9c8a-957dc113502c" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[UNCASINTRANET]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="faad22c2-6bda-445b-9d74-2ad2be9efaff" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="01ecbb6b-ac65-4178-ab05-060421188ffb">
+          <IndicatorItem id="114610e6-b8aa-45e6-b180-07dd96653573" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4a4d9a37-be79-4c0c-a90f-6422bbd6791b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[AUTODETECT]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f27dd831-e647-4971-aeff-3b8a2c68e3f7" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[01000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="f3879d14-a6f2-4cff-8c1e-4364719009d4">
+          <IndicatorItem id="da0539ce-10bb-4362-bc13-c4e99957ce2f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0b62990c-5923-415d-bf5e-fdd22e17c154" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="6ec32d8c-7d0e-4461-bdc3-e8eff5f8445d">
+          <IndicatorItem id="0f670be4-72a7-431b-b3e8-17708b8e8246" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e2250024-85d5-46b2-a609-86e3fdfb5dc4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="09254197-7e5f-4250-b370-c812252624d4">
+          <IndicatorItem id="676d089d-983e-42ad-bf45-177176b15011" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="67c7fdcc-e4c0-43f5-a42b-35af13cefee5" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="4df2f884-61ad-4919-a7be-ef7020cc2876">
+          <IndicatorItem id="25001614-689a-4ca5-9866-ab041c1e8812" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="dab8818e-0c51-487e-8dc5-44913eb7f14f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="0393622b-bd58-4ff5-bfed-ed1f519bbf8f">
+          <IndicatorItem id="67904fe0-d376-4d37-a28a-b8470851a28f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1bd30b39-39cd-4039-ab45-92a396fc2847" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[UNCASINTRANET]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d656aa78-e745-41ef-8bda-e672c1556cff" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="f04218e7-fc01-4c0f-8105-3bc9c80b94ad">
+          <IndicatorItem id="70c649f1-d7f3-4013-9c09-ce5ca355f0d9" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2abeb8a7-db4f-402b-8585-6cda79137328" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[AUTODETECT]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="99782e65-2eec-4a34-b78c-52a1b41b4ddb" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[01000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="AND" id="38f188fd-0123-450b-988c-f300a9adede1">
+        <Indicator operator="AND" id="8b22f6f7-fa30-450a-94e9-3fe797adf321">
+          <IndicatorItem id="50b84e99-818c-4535-878e-eae5c4dadb3f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4783311a-0cb5-406c-bf1b-66b7aa30a447" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLEFILETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6056504f-f5da-4d49-9bc8-17f3b42dd295" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="6dbc71b4-cc76-4f20-b647-64ab1b82056f">
+          <IndicatorItem id="4881b6a7-5069-408e-96cb-142795539593" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="df877f51-d82b-46b2-8b03-92c09480ec15" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLECONSOLETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="bea8277a-7b8d-4c3a-966b-475a671762ec" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="df7f0c36-c144-491c-aedd-16c59434500b">
+          <IndicatorItem id="d0e2273d-f668-4257-be01-d7ff08b1a5be" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="311fb8a7-8187-4647-abf4-05716ad0c635" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="913d3c4e-8f6f-4a3f-b489-6edb9ab4f856" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="274dad20-1d18-44fb-9d10-f5d717e8da54">
+          <IndicatorItem id="731d5377-d23d-4d6c-a5bd-29116aa6adef" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c29e0871-b450-4789-80e5-c54fee14a17b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[CONSOLETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="96cd0293-4d26-4c08-83f3-166c02fd8fa1" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="640e20b6-ee9b-4977-ab0d-486cb18d3d32">
+          <IndicatorItem id="a92ab679-1bf2-4a49-95dc-af8d3a65aa21" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e58ee63d-641c-461f-8bae-275912092741" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[MAXFILESIZE]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1ab848a0-10f0-4c0d-9a91-a8a8025ee30a" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00001000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="24a5d883-fe30-4a83-b4ac-32ac613540d5">
+          <IndicatorItem id="1d332061-f053-425c-941f-129756b3995b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e1b3c575-b129-42be-b33e-0e1e992cc6f2" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILEDIRECTORY]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="5fc583c7-f032-4091-b8bd-5c7cf7574ee4" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="06582338-098b-4599-893c-3371e9ea2873">
+          <IndicatorItem id="6d7d99e6-03ba-4388-b0c0-3e84a77b4751" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="add3c28b-468f-4514-b421-dc021b4c5dc4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLEFILETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b20dda97-872d-4085-96ba-0e8cc9929578" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="cb4b50af-fa9a-4425-9535-ed8f06d959cf">
+          <IndicatorItem id="00187ece-0c58-4a54-be51-bd9db4f711e7" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="80e75eaa-a62b-4923-a110-af0876552679" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLECONSOLETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ed387bc2-2905-449b-906f-0626d3443eeb" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="168ce950-9e61-4692-9bba-c73fd2bc674b">
+          <IndicatorItem id="ed2add64-66fe-4167-86d6-9c6cf98c3225" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="5bf9531d-7d5c-4f1e-9def-e5f0897293d4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="de40fa62-4469-4dbd-ba1e-0193687a9bec" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="059f87f7-50af-4ef5-a855-6c41e93b556f">
+          <IndicatorItem id="891af0d4-2480-4a62-970a-c81cb8b7d212" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="214f129b-f53f-4a62-8896-f37c998fd882" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[CONSOLETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7398d16c-828e-4726-a3cc-630a9ac69a95" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="56dfefbe-3c05-46a4-8197-e7e6daa4ac55">
+          <IndicatorItem id="af438dd8-31d1-494b-9bed-ce3ca7b8f5c5" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b56f8695-450e-4f23-8980-eccf329eab0a" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[MAXFILESIZE]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="37aec66a-5ced-4ed1-8339-6c78040ad300" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00001000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="893f4652-75d5-4b5b-bf40-8058cae97d59">
+          <IndicatorItem id="c9cbc812-dc29-472e-9810-c75bee11a553" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3b4bac64-30ec-4b1a-8892-27e51e16876b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILEDIRECTORY]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="952f8ba6-2a9c-482b-9df7-91447e1d6c36" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="7611a056-9e14-4a5b-ab68-8ebdd59bc8b3">
+          <IndicatorItem id="14891b26-fc72-4982-90bf-26112384fa55" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3a7d6196-0665-4345-82b2-cc2c40f78aaf" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYENABLE]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b0d928a3-a682-4a8c-80c2-a3fe4b69bba7" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="732fbeef-151a-4c70-a11d-9bfd704de20b">
+          <IndicatorItem id="87ee728c-23fe-44c9-93cf-f13dd8dc3bfd" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="98118e9e-bfb6-4c78-8f06-7a1af04980b5" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYSERVER]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="d07f5b70-b8d1-41c6-9d0c-d072151141c2">
+          <IndicatorItem id="30d307ff-4a36-47b1-9368-4e29c260f542" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="af15fb9a-87ff-40bc-8755-2fde12b0f116" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYOVERRIDE]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="818bc8c8-d772-4d70-bbf3-c3f3222215d7">
+          <IndicatorItem id="9e1826d2-bc09-490d-8873-68a3ccea3384" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="bf92d1c4-76d3-495b-ac55-473ca6703a65" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[AUTOCONFIGURL]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="9cfb402e-a5da-49d7-be15-179b543837da">
+          <IndicatorItem id="71ba44fa-e2a2-4e7e-9abf-332758db2f45" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\CONNECTIONS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a64c649a-83d8-4f87-8e9d-54fc17931d67" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[SAVEDLEGACYSETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e7779cdc-0402-4bac-89e7-92ea3be53b72" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[460000003F00000009000000000000000000000000000000040000000000000010E586515E97D101000000000000000000000000020000001700000000000000FE8000000000000059CE787BEE728C290B000000000000001700000000000000FE80000000000000FDDF49A450AADFC20B000000000000001C00000000000000000000000000000000000000000000000000000000000000170000000000000000000000000000000000FFFFC0A8380A000000000000000002000000C0A8380A0000000000000000000000000000000000000000000000000C00000CC09E0000181D450040114900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000003CB9E000010B64A00C01449000000000000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="fdc2e5e6-1838-4983-b562-6dbc9b9f43da">
+          <IndicatorItem id="8ab89140-20f3-4afc-8077-789a90c23df4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="abd1d241-4219-42f8-a514-1084a19b7691" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="76327a76-9ed9-4ac8-816d-2c609c42a96b">
+          <IndicatorItem id="414823ff-33e5-4088-bed3-da06dbfbf4e0" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e668d10b-d1aa-4575-a88e-b9010779f833" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="09dacd82-80b3-4008-a620-37313fd8b8df">
+          <IndicatorItem id="d9a2d1ab-093e-4e8e-9341-871e991c46c0" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="11d7e60e-0e8f-495c-a4fa-fff646386dd4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="c7f1c7c3-e48c-47c4-9a9c-4c1f62093e5f">
+          <IndicatorItem id="890910d3-3ead-471d-8581-150d23abc73f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="30ce79e6-263c-4d7c-8720-a4296291426a" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="249ff156-4742-471d-9f59-b05dca63e9af">
+          <IndicatorItem id="464e3cb3-7937-44f9-88d3-3ae72488032d" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="426a4ae1-7316-4901-a76f-854b0fb312c5" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[UNCASINTRANET]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="bd41768d-5906-4640-80b3-fad7a23ce8d3" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="659ad4fe-36b7-48a9-aaf4-57adb88033ba">
+          <IndicatorItem id="34337ce8-be74-46f3-9272-3f8c91f60a24" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="76eb5631-2f37-4b60-8dad-f77a83c4df33" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[AUTODETECT]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d4652ccf-f011-4281-98ad-04bc02bfa936" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[01000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="65d77a32-9a32-4603-8322-43636f9fe3a7">
+          <IndicatorItem id="72045bc3-32a4-465d-9612-4038efedfd3e" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0d0837d0-1b52-4427-957f-8861fe45946b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="c22ea618-9cdf-4302-9056-3a922f752d86">
+          <IndicatorItem id="c4e21953-3319-4e1e-8fbb-3d2992ddf6e2" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="12e5ccc2-29fa-490c-9261-f746a8ee8b55" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYBYPASS]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="b892135b-ef32-4455-9744-8a95ecb56402">
+          <IndicatorItem id="5ba8edea-a5d9-4406-9bc0-ff992132b58e" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a367367a-8535-40c7-8eac-8615865d1eed" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="aab9c534-684e-444f-bfe8-cc7a69d37593">
+          <IndicatorItem id="bd612bd0-b6f6-496c-917d-5b89abcb1603" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e2ef44c3-7ad3-40ed-9742-dc95f22bfe13" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[INTRANETNAME]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="13079561-0b12-4a87-98d1-19ffa49ba19c">
+          <IndicatorItem id="9480a304-47d6-4a40-acfe-1013e12b7fde" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="446fdfda-2eb6-4586-929c-5016f720d5bf" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[UNCASINTRANET]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1ccd4885-c5a2-4f54-9a3c-fc4f80d8afee" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="a01b2eaa-cbf0-41b2-820a-347b9b1fdf57">
+          <IndicatorItem id="aa4fdb61-e3a0-47ae-849f-0b6bc1f08780" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6f564f3e-8f78-44ea-a3cd-4dbe185354e9" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[AUTODETECT]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="5de262b6-0c3a-4f6a-ad51-2c0af6c51ebb" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[01000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="499e6717-48d3-4290-a186-05a930ab1084">
+          <IndicatorItem id="c667f816-44a1-48b8-986c-c91181c41306" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3c1826cc-8922-454f-bc95-f0209a92f890" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[LANGUAGELIST]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="cba20c2e-2fdc-4b57-8466-a1d730b556c5" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[65006E002D0055005300000065006E0000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="7b1d25d6-ef36-435f-8f2b-f9ba74c1c3c0">
+          <IndicatorItem id="d4e0fc15-03af-45de-b966-43c59ed7af74" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6ef58224-9cb9-4770-a272-7f8844eed92c" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[LANGUAGELIST]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f38c69fc-fdf6-466d-92c0-96c8b63fa4b2" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[65006E002D0055005300000065006E0000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="05acbcf7-813c-45b1-bee2-ec9e8c312d05">
+          <IndicatorItem id="798853d5-654a-4b3f-a13a-5345cefc7743" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="825f3d7f-072c-458b-b9f9-935c175e5ba9" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[LANGUAGELIST]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="040b1e09-7435-4779-8761-79565e85f4ab" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[65006E002D0055005300000065006E0000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="cf1e4d59-fd9e-4e4a-a093-d36d051b1fa9">
+          <IndicatorItem id="6c20f245-93e4-470f-a6cd-3c1e98d1d8ef" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="60c45b8c-c4a6-41ad-82c0-54aa1faab342" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[LANGUAGELIST]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e06e4251-e967-4925-883f-765a0d0fe4e3" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[65006E002D0055005300000065006E0000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="39d1afda-253e-479d-bbe8-c3aa8c99aaa6">
+          <IndicatorItem id="5efd06f0-fbd2-47d6-bd96-0d1d7f4e90d1" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="70bc9960-8662-49fc-a72d-453388c8638a" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[LANGUAGELIST]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e25c7b09-d2b7-46c6-a32f-caf6da6ebde3" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[65006E002D0055005300000065006E0000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="AND" id="84ff2a3e-e2fc-4e5f-8af0-92124fe152a5">
+        <Indicator operator="AND" id="6ac9092e-f969-4539-8e4c-700859ae4538">
+          <IndicatorItem id="e539b602-9457-47b3-b040-00101fa38c9f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\LEUGHOY]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ddd4947d-820e-4d85-986a-4b7d6ab0ebf7" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[17AH4E9C]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e58ac456-da9d-4331-8687-0ac201a622bf" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[550033004A00480077004D006B005300560030004A0046006700680039005400]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="OR" id="25540381-c5d6-485e-b1cd-7610a808fae7">
+        <IndicatorItem id="c35888d8-2b49-43e8-9d37-b64009f7b8f6" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[www.google.de]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="9305fff5-2344-4ed1-bfd5-e761199fa4ed" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[www.c3dsolutions.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0db3e961-09e9-46a7-a14e-c7eb8077dcb2" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[njgqjbxmvbenfligyxzhfwgeuy.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="2af0fc61-aeba-4f47-b01a-bf9982e092ed" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[naujvdmlfpjaecycahtdmxocy.com]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="OR" id="93466caa-b5a9-4fd2-b300-3365285ffbff">
+        <IndicatorItem id="5834a3bd-fe3b-48ed-b430-2a32c15a7681" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[173.229.1.92443]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a5eec482-6772-49c9-8099-f1f19bf612c0" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[72.175.204.1581302]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="cbfe128b-4180-4af9-9d3f-4fcb0e5ac730" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[213.123.176.2059861]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="db364224-6050-4357-b085-fd56d45da2a8" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[213.219.135.1079179]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="7ce388cc-3585-4afa-8c91-815c398ef334" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[108.200.63.461503]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1d994bf3-3f70-4b87-bd9d-67b0887ca2ae" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[99.21.49.323779]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d9371b20-ab99-40b3-b5a6-e2eb19adc7f2" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[46.223.150.1324361]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="9fa3917c-14a7-4acd-a6df-e2fcdfefbce9" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[107.193.222.1083981]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a50399ee-ba4a-4b8d-a898-beaac6ee1570" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[200.84.149.847746]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="dd735f56-582a-4f6c-ad08-884c01b16fdf" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[207.47.212.1466322]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="42f655c7-54ce-45ac-9e02-c312d3e29efa" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[88.247.80.1404951]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d1a85fc9-63e7-464f-9dab-5a737bf83298" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[86.179.220.431831]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="447aed5a-8e09-4463-9560-5d308aaab14c" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[75.32.154.1021376]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1efaa3d4-f69e-41a8-ae09-baf205d5bc22" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[190.73.70.736822]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="acfc88b0-57e3-4e11-89c8-48ae21b28f32" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[108.240.232.2125071]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ecab04db-1b65-4d4a-813e-c8f7a9db5b2c" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[81.130.51.1256824]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0189099f-397d-46cd-b08e-5b1e9217eade" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[70.175.13.1684850]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="488806ec-54bc-45b1-b4d5-7c6ec67ce286" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[85.100.41.98835]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ee4eea7a-7363-4408-9e77-413f85fdb0b8" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[54.83.43.6980]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="fd93e81f-4557-4971-99e0-ba0e9f2751b8">
+        <IndicatorItem id="033e0c92-f040-4ebc-96b8-ac6aa187c31c" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[del /F "C:\Users\PSPUBWS\AppData\Local\Temp\TFJE4C3.bat"]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="8ffbe6b6-4214-437c-826e-14ce92e5b0b3" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[http://www.bing.com/]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4ade5d97-7d05-4f2d-bd32-7e359c964f3c" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[http://www.google.com/]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="43e69490-79b5-4bba-822f-b8fd7c9800c8" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[www.c3dsolutions.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="5d59ba9a-3d34-45b4-a4cb-2973bb08a016" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[www.google.de]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="OR" id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de">
+        <Indicator operator="AND" id="13069b37-cd52-4774-87c1-f6e18b299caf">
+          <IndicatorItem id="2832c05f-a7b1-4657-9570-346ec1df9f66" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[explorer.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9eb928fd-bb16-4772-94b4-56731a23b975" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\explorer.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="cd0b5baf-93b5-42b2-a371-a6d35d140420" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\Explorer.EXE]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="cd24ed21-22b4-46db-927a-b95a7736682b">
+          <IndicatorItem id="db59bc09-e5dc-46de-a9c8-b6b7b08aebb3" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[pauba.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="46df7bcf-d71e-4c49-a9a9-f0d35915645b" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%APPDATA%\Amusob\pauba.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f1a26c36-9e9e-4a34-bd40-601fe5899d71" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\{5734127A-F941-6AF6-C3D8-CA5DC881E940}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="40c6e5b5-97bf-4c3d-95ee-ec8b82707a86" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3553-B06E3E0A9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="21ea80e4-301c-408f-8214-7838571ee98a" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3D52-B06E360B9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ab492105-9d23-40b3-9602-cda45e209daf" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-5552-B06E5E0B9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="784b76ce-c809-4222-b716-feb453f2e0a1" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-A552-B06EAE0B9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8252f30e-aafb-44ab-b6cc-24d43dfcb5ea" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-AD52-B06EA60B9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8f55782e-57e2-4318-a6dd-de487e22e429" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-F552-B06EFE0B9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c0cadf84-c613-4087-92b2-a70311fd766b" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-D552-B06EDE0B9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="30d04f89-7b54-4ed0-8629-b2696d642f1e" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3151-B06E3A089373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d48a31d8-373d-45ab-995e-369b28a84922" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3951-B06E32089373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="43e0b43b-6843-4bcd-b591-100837d628a0" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-4151-B06E4A089373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0938ad6f-194e-440e-8312-4430eafc3159" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-D551-B06EDE089373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="bc07c082-595b-4439-ad18-54387933e1f0" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-2950-B06E22099373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6a2bb7ae-940a-4cde-9ebb-11063c3f3190" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-4D50-B06E46099373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6e181ffc-1a14-4722-80cc-6d6f5840c881" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-A950-B06EA2099373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="022f0d9a-0ffb-464f-bbd4-98ca04b0f987" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-ED50-B06EE6099373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8230f192-39d4-4562-949c-7110c39cd7d1" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3D57-B06E360E9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d3008f6e-80f3-4913-a854-d03b9a489a3c" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-7D57-B06E760E9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7b0a61c1-0561-4f73-b8de-cd835dde8448" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-C557-B06ECE0E9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="25f98885-3491-43a8-8b50-9540fe96bd83" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-2556-B06E2E0F9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="5cbac10a-501f-42a1-9e31-0485a159d552" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-5156-B06E5A0F9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9d1287b7-f7db-48a8-bbab-5c9612c260ad" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-BD56-B06EB60F9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="44e71d82-d2ec-4653-a945-69c4a2832edc" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-A956-B06EA20F9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8f676ed0-9876-4d86-8285-b393b1cfe7ce" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-AD55-B06EA60C9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b4f4f2a6-673e-452c-8c95-9af1e1eaee70" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-7954-B06E720D9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b82a0c07-257c-47e9-b2cc-d07bf6d9b6ee" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-BD54-B06EB60D9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ebd53d35-52dd-4400-841e-8b0428280e2e" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-AD54-B06EA60D9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="568ef063-3c8a-4e5d-9cf4-c8e03d38e9e2" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-F153-B06EFA0A9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6025c970-8c87-457e-b1d5-5ebb1f533c9f" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-E550-B06EEE099373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="833a071f-60a1-4393-aaf6-a6457794d5bb" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-6D51-B06E66089373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="10ba4301-b6b6-48e7-8162-8f6b7dbf2604" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-6D55-B06E660C9373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8d6b32bb-35d3-421e-a9d1-7cf4f1a19aa0" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-255D-B06E2E049373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="47a13edf-14bc-48a5-87ec-aac27dce59ee" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-F55C-B06EFE059373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d247c58d-d10b-4bc1-b803-8ea80e0d894f" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-1D51-B06E16089373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3980ec0e-808d-4199-a8ae-7bba368a4abf" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-1158-B06E1A019373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b0af798b-7fa6-4342-acb1-184f39ec5fcd" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-855E-B06E8E079373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8e42b211-10d3-4816-ad7b-b9fd303bfcb8" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-595F-B06E52069373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1db53d55-c8e7-4ef8-aa27-8d834db44c95" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[NSI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="47507753-bf10-4aac-8876-72a97c064817" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1973030912]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="02b12b0f-0221-472d-bb09-72f104c26ab5">
+          <IndicatorItem id="bd8a0e28-b46a-443c-8f61-f8f1b6a8f2a3" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[hhgnddkjee.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="465ded05-1a18-4cfb-b2a3-8cb86ca614b8" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%TEMP%\hhgnddkjee.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ca80646b-fcd0-44e7-9078-78e22182d4d7" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{E82D3731-DC0A-D5EF-C3D8-CA5DC881E940}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2b1155f4-fc31-46f0-b2ec-d31443f5acfe" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-9D5C-B06E96059373}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="496050f4-efcf-4983-ad72-67ee68208895" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7D4C2273-C948-408E-C3D8-CA5DC881E940}]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="83a4c96f-6191-4ada-a01b-ade9d7cfd50a" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[NtCreateUserProcess]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="68c788e8-9f9a-451d-b80f-bbde55bd1f9d" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[NTDLL.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4b6b69d0-80ff-4d48-881b-d72039b0e850" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1997035384]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="98dc7e41-f1ae-4a52-989a-3e5147052677" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[GetAddrInfoW]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4131fe2f-f7d9-4ed1-8cb8-b686b5ff25ac" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c84f066f-7ad5-460e-afd7-fa3a6d74fb11" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974814857]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1fbe6d12-d7ae-41ff-a0d0-b21102643245" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[DeleteSecurityContext]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="54859acd-a977-4b09-84ca-fe37411740f8" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[SSPICLI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e0da44d2-9dff-41de-bcf2-b3cbe8773a5a" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1963406115]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="036e2807-23be-4da3-8833-2e9bb432f249" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[NSI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1a4dd2c4-40a3-4bbb-888f-43029b9e3e8b" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1973030912]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f1ba013f-0029-46a3-b76c-70b4854c4562" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[FreeAddrInfoW]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9f08cea7-c238-4dc6-919d-59fe25363bd2" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="923a33db-06a4-47eb-8f0f-80ae0c225fb7" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974815515]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="05a5dc89-65e5-485e-8837-607128c6a209" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[closesocket]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a9e63c0e-4b82-4c50-9bae-f3df4d93be93" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="565b11f2-6193-403a-b788-6a9ba958638d" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974810904]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8db40240-ad0c-48d7-8821-b29bbed26a51" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[getaddrinfo]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e8e70f4e-af21-497e-86ef-2493cad6f176" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c648da2d-cf8a-4686-b899-3e3ea2cdb1a0" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974813334]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="676b17de-bea0-45cf-a02f-cacb0645afd0" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[WSARecv]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="49c1353f-e3a8-4ca4-aad0-f46629df5834" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0cd61c30-72f0-448c-92e9-d9fe914a172c" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974825097]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0941b7f3-2a8b-4102-bfa4-6c624d7fe1e1" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[LdrLoadDll]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8e7d2049-87a8-40bd-96db-ec31b057780f" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[NTDLL.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a1916f5a-6fcb-4601-9f0c-74f0a7f6771b" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1997152952]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="69f9d4e0-6aa0-42a6-a16b-eece034bd130" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[EncryptMessage]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b670e548-9f2d-4c3d-96de-07e9f913890b" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[SSPICLI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="cc9c8351-87ba-45d9-b4c0-810d2b33fd09" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1963414244]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="447b32d0-f6f1-4004-9c8c-af53b881cbed" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[DecryptMessage]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8cc838f1-4b2d-4548-ae0e-2efbaa40489d" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[SSPICLI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d2f0fafe-4537-45b3-94f4-aa6f34f0df16" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1963414450]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2c1be21e-c76a-4620-ad2b-841a1a1e213b" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[WSASend]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7f57ab83-8f99-45dd-85e6-b4efcc2991a5" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0bb7c22a-6217-49f2-85eb-edba7f6e9042" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974813702]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="fdeacdb9-705e-46bc-97e8-dcec625c8488" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[send]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0124db8e-f5a3-43f6-a035-7aa88807c21e" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="cc4b32b4-faad-4bb9-a937-c8b852b8ef6f" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974824705]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="cb72004d-d013-4c76-ada6-c0cf8e049755" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[PFXImportCertStore]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="92aab604-7b8b-4ac9-b6ed-e4a49b941462" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[CRYPT32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1a2a9f3f-bcf8-4e88-bf34-fe468549f330" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1965690332]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3b3de79e-adb0-443a-8985-4b1e21643da5" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[WSAGetOverlappedResult]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="aac95465-1647-4bb0-b4cc-51872d1a9b42" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d3658c56-4d32-4624-bc65-0db91cf4a99c" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974826121]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b81fa26d-5e8e-4d08-830a-07e70c306a76" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[TranslateMessage]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a0307a2a-b4e8-4fab-9802-625bee95a9a1" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[USER32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="34381753-e7cd-4982-a84c-4a9c3739fa9b" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1991206087]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="78bf3edb-18a0-4a9b-a2ce-23bb1dc015a5" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[recv]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ab52ebd2-032d-4715-8b98-53b1cdbbef44" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="fe228b5b-940d-4554-8ac1-f022a7d5d5fa" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974823694]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f1aa16c9-cc20-48a2-8327-41d3f9432179" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[GetClipboardData]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="469240b7-e079-450e-95f3-404ad90e1f56" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[USER32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d5fc22bf-23ae-4f73-8205-f3321740c217" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1991256999]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="eb34a125-4b50-4fc2-8c63-eb8a23bba833" condition="is">
+            <Context document="HookItem" search="HookItem/HookedFunction" type="vxs"></Context>
+            <Content type="string"><![CDATA[gethostbyname]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="70646371-7edb-4ff8-bab6-2aabb0a384a9" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WS2_32.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="bb76483f-7b4d-4023-8750-4d751d7d20e1" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1974892147]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="7db10588-3d00-42bc-890c-d89994b80b58">
+          <IndicatorItem id="74a8813a-970b-4c67-b8e6-472b46bf3c82" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b8efd39d-cd67-4c24-b191-e9a42665ca92" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="da75abb9-373b-4f86-85ca-db198919930d" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\system32\conhost.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="b7a390dc-b0e2-4fa9-aa23-3d69cf50aede">
+          <IndicatorItem id="219f82ef-ad80-4fad-8ee6-98de7fdaad05" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[cmd.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0cdcabb0-0ce4-47ea-9477-451b89bdf073" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\cmd.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="e811caae-3831-48e9-a1ac-6e744bade77c">
+          <IndicatorItem id="faa36789-d50e-4ef6-9a2d-299c08298b8f" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="76f406fc-4e5c-4455-bce1-acaef49ce9ed" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2cb048bd-ac09-4713-8e41-44a59c3b2f95" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\system32\conhost.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="ce519f65-889e-4c0e-87f7-a04074c18223">
+          <IndicatorItem id="3df126f5-a64c-43b5-b537-ee8906614726" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7379a8fb-904f-4f86-9f42-c6071daeb4eb" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f5ecc6e3-8a38-4084-813a-ff3dd8e5540d" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\system32\conhost.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="24731edf-b999-4267-8378-b1c95f7cf062">
+          <IndicatorItem id="434f5181-49c9-4226-9eb0-3a18deda11ea" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[taskhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4d622b72-3942-43b4-9626-d9d640c9a0a2" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\taskhost.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="c75e8c9b-d1dd-4a9e-9422-d97557734a4b">
+          <IndicatorItem id="80fce442-0308-425c-8fde-32f311897094" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[cmd.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3937ddf8-3cd0-41ac-ac91-94d28572606e" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\cmd.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7b03816a-4dfa-4bd6-95ba-581bb71b8d06" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[/c "%TEMP%\TFJE4C3.bat"]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="a08942a5-741b-4062-ba23-0b75a48c104e">
+          <IndicatorItem id="8c6ad3b4-8e2c-4e8b-8217-284d373fc60b" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[dwm.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f13ff684-e3ab-4534-8658-01281d31b10a" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\dwm.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="a6e36ef1-e35e-429b-9749-445561e01719">
+          <IndicatorItem id="89ef4472-1620-4d07-990e-08c59d699ef6" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d0ab168e-d553-4321-a993-88cbc4da8446" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\conhost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9c2c6609-b672-4ad2-bb6c-f4fd60683bc6" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\system32\conhost.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="a81efdcf-5106-4872-bbfa-974382b3211b">
+          <IndicatorItem id="95e598ad-f25e-4674-846f-3c15500d6430" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[hhcbnaff.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c09a92ee-532e-40bc-85cf-eeaa73dd9cd7" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%TEMP%\hhcbnaff.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="11dad3f2-2ae6-46bd-8331-44df0090dd4d" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetStartupMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="087d9711-6e1b-4060-aca9-a25b7ee9b448" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetConnectionMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d0a4b22c-91c6-45e6-8c48-6b04c2423779" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetProxyRegistryMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="0d817422-ae66-4d12-8d27-b2aac0aaf54a" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\RasPbFile]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1ad36208-2272-49ec-b9ff-98bc2f2003e3" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesCounterMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2a83e237-8ab3-4fef-b352-64536e1a1fe3" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZoneAttributeCacheCounterMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3e1c7674-daee-4404-a992-45ae8bac1db6" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesCacheCounterMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b0e93935-9671-43f4-8a90-2fd1ee133836" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesLockedCacheCounterMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="dad37d80-09fe-49a5-88c7-071f117752df" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\IESQMMUTEX_0_208]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f5143fb1-21dc-4f52-9ab1-608725453c8e" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WSHTCPIP.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e3f0db5e-00c3-48ce-9890-7ea1c732692c" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1953107968]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d29c47f4-de81-44a3-b4d4-1edacd179ab6" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[NSI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e5264113-d13b-4ead-8399-2eb82231c6a9" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1973030912]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a9c97ccd-14fb-4e41-a35c-eb60497e3ad9" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[WSHIP6.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e65e96c7-430f-4534-99fe-3933a4a0a981" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1958481920]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </criteria>
+  <parameters>
+    <param id="bfc34b67-fbfa-4b5b-bd74-63d21f2ed3a9" ref-id="0189099f-397d-46cd-b08e-5b1e9217eade" name="asn">
+      <value type="string"><![CDATA[22773]]></value>
+    </param>
+    <param id="a274391c-2b9a-4444-8f8b-8ec87016b6a7" ref-id="0189099f-397d-46cd-b08e-5b1e9217eade" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="27862901-c769-45ad-88e8-0f1ad8e89dde" ref-id="0189099f-397d-46cd-b08e-5b1e9217eade" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="31e790bd-0de1-45cc-bc5d-bb60d4d8b7ab" ref-id="040b1e09-7435-4779-8761-79565e85f4ab" name="converted_value">
+      <value type="string"><![CDATA[en-US]]></value>
+    </param>
+    <param id="5c51b866-ffe1-404b-ac4f-e9e36de6f28e" ref-id="1b66613a-cf88-41a9-aeba-4aa2a743cbb6" name="filetype">
+      <value type="string"><![CDATA[data]]></value>
+    </param>
+    <param id="7bf59fe1-ace9-4fd2-9727-6ad648b18280" ref-id="1b66613a-cf88-41a9-aeba-4aa2a743cbb6" name="md5">
+      <value type="string"><![CDATA[2432087060d478113b7befb4b3591898]]></value>
+    </param>
+    <param id="06c6ffbe-c64c-477f-96c2-01d187892395" ref-id="1b66613a-cf88-41a9-aeba-4aa2a743cbb6" name="sha256">
+      <value type="string"><![CDATA[81e9664c71a6d19c53203bee8e1afe09a9304e1b520d92b3d3fd5519da88d541]]></value>
+    </param>
+    <param id="e0c173a7-e2e1-4dbe-9ade-9b85480d9a14" ref-id="1d994bf3-3f70-4b87-bd9d-67b0887ca2ae" name="asn">
+      <value type="string"><![CDATA[7018]]></value>
+    </param>
+    <param id="1bd79bc1-55d8-49c8-b3d7-a739c19445c9" ref-id="1d994bf3-3f70-4b87-bd9d-67b0887ca2ae" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="20b0ad41-7cc2-4546-b8da-b080e3e64c9a" ref-id="1d994bf3-3f70-4b87-bd9d-67b0887ca2ae" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="566f3d8e-a7ba-46d1-9360-3dbd64dc46f3" ref-id="1efaa3d4-f69e-41a8-ae09-baf205d5bc22" name="asn">
+      <value type="string"><![CDATA[8048]]></value>
+    </param>
+    <param id="74cc4460-e429-49c7-a8d7-26949ca3fe16" ref-id="1efaa3d4-f69e-41a8-ae09-baf205d5bc22" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="b0ebbcf0-da86-4cd1-b83d-d99a67481a31" ref-id="1efaa3d4-f69e-41a8-ae09-baf205d5bc22" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="96658ea0-088c-4e1b-bc1f-225238a57aa2" ref-id="337cf957-4a1c-40e9-a81c-df249ae2df26" name="filetype">
+      <value type="string"><![CDATA[data]]></value>
+    </param>
+    <param id="7357ae09-4406-4ed2-9b92-859791073ec1" ref-id="337cf957-4a1c-40e9-a81c-df249ae2df26" name="md5">
+      <value type="string"><![CDATA[2432087060d478113b7befb4b3591898]]></value>
+    </param>
+    <param id="00008663-102c-4d5f-929f-df3ba5e11ef3" ref-id="337cf957-4a1c-40e9-a81c-df249ae2df26" name="sha256">
+      <value type="string"><![CDATA[81e9664c71a6d19c53203bee8e1afe09a9304e1b520d92b3d3fd5519da88d541]]></value>
+    </param>
+    <param id="c42b9174-fb79-4282-be91-2830f4851cc8" ref-id="3b9a2a14-0cf6-42bd-ae90-35203c2fafb3" name="filetype">
+      <value type="string"><![CDATA[data]]></value>
+    </param>
+    <param id="3c3cd37f-0a3a-4332-891e-fec6072ab719" ref-id="3b9a2a14-0cf6-42bd-ae90-35203c2fafb3" name="md5">
+      <value type="string"><![CDATA[2432087060d478113b7befb4b3591898]]></value>
+    </param>
+    <param id="fd649e70-e7a9-496f-8520-5841a5440f99" ref-id="3b9a2a14-0cf6-42bd-ae90-35203c2fafb3" name="sha256">
+      <value type="string"><![CDATA[81e9664c71a6d19c53203bee8e1afe09a9304e1b520d92b3d3fd5519da88d541]]></value>
+    </param>
+    <param id="9d9e8694-69a1-4680-9348-a5ecede08d9e" ref-id="42f655c7-54ce-45ac-9e02-c312d3e29efa" name="asn">
+      <value type="string"><![CDATA[9121]]></value>
+    </param>
+    <param id="3b14bd97-ed04-42b7-a1ba-d3945ac89d87" ref-id="42f655c7-54ce-45ac-9e02-c312d3e29efa" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="99f68256-98e7-49b6-9523-08c00e013e02" ref-id="42f655c7-54ce-45ac-9e02-c312d3e29efa" name="latitude">
+      <value type="string"><![CDATA[40.996]]></value>
+    </param>
+    <param id="3726d171-a228-4f6a-bc6f-30554c1c11ec" ref-id="42f655c7-54ce-45ac-9e02-c312d3e29efa" name="longitude">
+      <value type="string"><![CDATA[28.7748]]></value>
+    </param>
+    <param id="62344bcc-3a34-4556-a6e3-10bad69a1a35" ref-id="42f655c7-54ce-45ac-9e02-c312d3e29efa" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="0fd057a3-9423-4368-9802-3bbe3d102786" ref-id="447aed5a-8e09-4463-9560-5d308aaab14c" name="asn">
+      <value type="string"><![CDATA[7018]]></value>
+    </param>
+    <param id="fdeb44d6-5388-4d99-8d05-89e62a696326" ref-id="447aed5a-8e09-4463-9560-5d308aaab14c" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="2b2f75bb-5be6-4280-ad5a-4f130fbc0c77" ref-id="447aed5a-8e09-4463-9560-5d308aaab14c" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="abcd7582-49ec-4695-94eb-a38c8d7a57a2" ref-id="45bb7d11-8610-492a-9ec0-c1f56ed68b8a" name="filetype">
+      <value type="string"><![CDATA[Microsoft Cabinet archive data, 49640 bytes, 1 file]]></value>
+    </param>
+    <param id="44d18d4a-575f-4ad5-99f0-ea0b0a9dcb36" ref-id="45bb7d11-8610-492a-9ec0-c1f56ed68b8a" name="md5">
+      <value type="string"><![CDATA[70261c7ccaba59ee02485d9e052b3222]]></value>
+    </param>
+    <param id="e0d2465d-1110-4227-a924-4e4b13788aaf" ref-id="45bb7d11-8610-492a-9ec0-c1f56ed68b8a" name="sha256">
+      <value type="string"><![CDATA[3900d716c8c7f96277858c205f813331cd34e23b005eb4039c2061bbe7340226]]></value>
+    </param>
+    <param id="e34421a6-26f1-4a5b-bcb0-8720ec4c0e9c" ref-id="488806ec-54bc-45b1-b4d5-7c6ec67ce286" name="asn">
+      <value type="string"><![CDATA[9121]]></value>
+    </param>
+    <param id="e61f819b-6ef0-44da-9f65-2a1625efe09a" ref-id="488806ec-54bc-45b1-b4d5-7c6ec67ce286" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="59c692d3-6e63-4cbe-89c7-d878c786bbee" ref-id="488806ec-54bc-45b1-b4d5-7c6ec67ce286" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="246baed7-00ae-4404-bef0-22542fecd2cb" ref-id="570c42c5-31a6-4987-a7c1-42010595941e" name="filetype">
+      <value type="string"><![CDATA[Microsoft Cabinet archive data, 49640 bytes, 1 file]]></value>
+    </param>
+    <param id="dc388f98-f0d1-4755-8496-91251496d981" ref-id="570c42c5-31a6-4987-a7c1-42010595941e" name="md5">
+      <value type="string"><![CDATA[70261c7ccaba59ee02485d9e052b3222]]></value>
+    </param>
+    <param id="e91538a1-4e97-45b6-ad14-8f750abc2f74" ref-id="570c42c5-31a6-4987-a7c1-42010595941e" name="sha256">
+      <value type="string"><![CDATA[3900d716c8c7f96277858c205f813331cd34e23b005eb4039c2061bbe7340226]]></value>
+    </param>
+    <param id="cbced2f9-ddfd-48c7-9365-91586bc1741a" ref-id="5834a3bd-fe3b-48ed-b430-2a32c15a7681" name="asn">
+      <value type="string"><![CDATA[16842]]></value>
+    </param>
+    <param id="41c9c370-8fae-4be4-8196-697a80c984c4" ref-id="5834a3bd-fe3b-48ed-b430-2a32c15a7681" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="2438e9b6-fec9-4d75-86e2-1b4e0fcbe99e" ref-id="5834a3bd-fe3b-48ed-b430-2a32c15a7681" name="latitude">
+      <value type="string"><![CDATA[43.0796]]></value>
+    </param>
+    <param id="4180d87e-11a3-4fef-bd38-7df370620ab0" ref-id="5834a3bd-fe3b-48ed-b430-2a32c15a7681" name="longitude">
+      <value type="string"><![CDATA[-89.3758]]></value>
+    </param>
+    <param id="b4014338-efa4-4cab-9235-e532c1a0f0f1" ref-id="5834a3bd-fe3b-48ed-b430-2a32c15a7681" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="0463669a-f248-4b49-976d-84142dc617bf" ref-id="5c963b58-beda-40da-bdfc-0f6900b8224c" name="filetype">
+      <value type="string"><![CDATA[DOS batch file, ASCII text, with CRLF line terminators]]></value>
+    </param>
+    <param id="eca0b52a-d909-44c2-ab3e-2c9aca8052df" ref-id="5c963b58-beda-40da-bdfc-0f6900b8224c" name="md5">
+      <value type="string"><![CDATA[38344d9973ec3802ac13711620427098]]></value>
+    </param>
+    <param id="fe95b0ac-2d8f-40bc-b267-29c5ec3b81bf" ref-id="5c963b58-beda-40da-bdfc-0f6900b8224c" name="sha256">
+      <value type="string"><![CDATA[6e348c8cdba61bc34a1774a9e9170f252151d2fc9070e34d1d7e73277e9ffff2]]></value>
+    </param>
+    <param id="7b4391db-2677-47bc-a146-4c386df19bc8" ref-id="5fc583c7-f032-4091-b8bd-5c7cf7574ee4" name="converted_value">
+      <value type="string"><![CDATA[%windir%\tracing]]></value>
+    </param>
+    <param id="41cd843c-63a2-4151-867e-49aed0c9763d" ref-id="7ce388cc-3585-4afa-8c91-815c398ef334" name="asn">
+      <value type="string"><![CDATA[7018]]></value>
+    </param>
+    <param id="302acc16-9301-4864-a59d-01d8fdcb92c8" ref-id="7ce388cc-3585-4afa-8c91-815c398ef334" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="f28cf790-3d9f-42e3-acee-9ac8b3914130" ref-id="7ce388cc-3585-4afa-8c91-815c398ef334" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="26ca69d0-4481-4a8e-a71d-a595980a6088" ref-id="8b4e2246-7d1d-48cd-96c0-9e051cfb8436" name="filetype">
+      <value type="string"><![CDATA[Microsoft Cabinet archive data, 49640 bytes, 1 file]]></value>
+    </param>
+    <param id="1260003f-25a8-4638-be4b-7c076ea2de2c" ref-id="8b4e2246-7d1d-48cd-96c0-9e051cfb8436" name="md5">
+      <value type="string"><![CDATA[70261c7ccaba59ee02485d9e052b3222]]></value>
+    </param>
+    <param id="0f16e67b-650e-432e-8e00-2ba570310f8a" ref-id="8b4e2246-7d1d-48cd-96c0-9e051cfb8436" name="sha256">
+      <value type="string"><![CDATA[3900d716c8c7f96277858c205f813331cd34e23b005eb4039c2061bbe7340226]]></value>
+    </param>
+    <param id="7a8a06f2-5f3e-415b-9b59-35c449fbecf9" ref-id="952f8ba6-2a9c-482b-9df7-91447e1d6c36" name="converted_value">
+      <value type="string"><![CDATA[%windir%\tracing]]></value>
+    </param>
+    <param id="9b91a4a9-25d3-41ae-b309-c7c73df0a3e3" ref-id="9f71baf6-3ec2-4bcc-a307-643902f30f72" name="filetype">
+      <value type="string"><![CDATA[PE32 executable (GUI) Intel 80386, for MS Windows]]></value>
+    </param>
+    <param id="9d4e442d-55fb-42f0-952d-2685db80f73f" ref-id="9f71baf6-3ec2-4bcc-a307-643902f30f72" name="md5">
+      <value type="string"><![CDATA[8ef60843b653c2882a4794d7182dadfb]]></value>
+    </param>
+    <param id="9f4c0d3f-9123-44dd-abbb-7cfc7f0358b4" ref-id="9f71baf6-3ec2-4bcc-a307-643902f30f72" name="sha256">
+      <value type="string"><![CDATA[d8fb652b4c700e7c929a1a99b0d90e1a7899f5c93df3bbceb3e12a922eb09669]]></value>
+    </param>
+    <param id="25674263-9c79-4ee8-b86d-a6020c0083f2" ref-id="9fa3917c-14a7-4acd-a6df-e2fcdfefbce9" name="asn">
+      <value type="string"><![CDATA[7018]]></value>
+    </param>
+    <param id="f4c424b5-100b-4e1a-a444-7d4245c50149" ref-id="9fa3917c-14a7-4acd-a6df-e2fcdfefbce9" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="48e7ed8e-91a3-4f7e-bba9-575ae113d074" ref-id="9fa3917c-14a7-4acd-a6df-e2fcdfefbce9" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="0cb1fe53-ba74-47ad-b627-6dd865dcaff4" ref-id="a29da788-cc9c-4a97-8672-bf5a42cf9056" name="filetype">
+      <value type="string"><![CDATA[PE32 executable (GUI) Intel 80386, for MS Windows]]></value>
+    </param>
+    <param id="ced0a570-48e0-4041-9c92-b069f0268ed9" ref-id="a29da788-cc9c-4a97-8672-bf5a42cf9056" name="md5">
+      <value type="string"><![CDATA[0f7a417195068b7ff941d2367d477529]]></value>
+    </param>
+    <param id="211bdb6e-6b9a-4610-9588-b3e340daeb41" ref-id="a29da788-cc9c-4a97-8672-bf5a42cf9056" name="sha256">
+      <value type="string"><![CDATA[29a89e9e0de0cc64619f0e30f710c47c61deb488dfc10f8448f7bc84a893b1e4]]></value>
+    </param>
+    <param id="c5355f78-f424-4abf-b754-6e054ea00c3c" ref-id="a50399ee-ba4a-4b8d-a898-beaac6ee1570" name="asn">
+      <value type="string"><![CDATA[8048]]></value>
+    </param>
+    <param id="833dc269-8dea-44e0-b53e-222a4d0a6238" ref-id="a50399ee-ba4a-4b8d-a898-beaac6ee1570" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="677e765e-9b4f-4be7-97ae-cea77dabbee4" ref-id="a50399ee-ba4a-4b8d-a898-beaac6ee1570" name="latitude">
+      <value type="string"><![CDATA[10.1806]]></value>
+    </param>
+    <param id="1d37f4c0-45bd-4eaa-9002-c8c9ede46d8d" ref-id="a50399ee-ba4a-4b8d-a898-beaac6ee1570" name="longitude">
+      <value type="string"><![CDATA[-68.0039]]></value>
+    </param>
+    <param id="b3dee7a2-9ff1-49fb-a41f-1150230ccb65" ref-id="a50399ee-ba4a-4b8d-a898-beaac6ee1570" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="7a8ca832-63f6-4969-81d4-562d4994bfc9" ref-id="a5eec482-6772-49c9-8099-f1f19bf612c0" name="asn">
+      <value type="string"><![CDATA[33588]]></value>
+    </param>
+    <param id="74a6fd47-945c-43f0-8762-beab12e5cb0e" ref-id="a5eec482-6772-49c9-8099-f1f19bf612c0" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="7526e46d-06e6-42b2-a520-4fce16cdd226" ref-id="a5eec482-6772-49c9-8099-f1f19bf612c0" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="3fa6b379-1f4c-4ae6-8620-7388b8040d56" ref-id="acfc88b0-57e3-4e11-89c8-48ae21b28f32" name="asn">
+      <value type="string"><![CDATA[7018]]></value>
+    </param>
+    <param id="27258c86-962a-4142-9c38-9d7cf06b791a" ref-id="acfc88b0-57e3-4e11-89c8-48ae21b28f32" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="88e891cd-a6e3-4395-b573-816041ddae58" ref-id="acfc88b0-57e3-4e11-89c8-48ae21b28f32" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="5d5cb63d-a13f-4c26-bae7-aa8842ef560d" ref-id="c01c4a8b-5603-4e94-9b51-2982d012cc19" name="detectionrate">
+      <value type="string"><![CDATA[82]]></value>
+    </param>
+    <param id="3d070914-15c1-4331-ad65-3c938410313d" ref-id="c01c4a8b-5603-4e94-9b51-2982d012cc19" name="detectiontotal">
+      <value type="string"><![CDATA[46]]></value>
+    </param>
+    <param id="e067972b-b670-4041-a27a-4aef63e11a55" ref-id="c01c4a8b-5603-4e94-9b51-2982d012cc19" name="filetype">
+      <value type="string"><![CDATA[PE32 executable (GUI) Intel 80386, for MS Windows]]></value>
+    </param>
+    <param id="ec519b30-7a2e-4e2c-a5cf-aebcd1440031" ref-id="c01c4a8b-5603-4e94-9b51-2982d012cc19" name="md5">
+      <value type="string"><![CDATA[00c42b9713b332949e609584a3f75026]]></value>
+    </param>
+    <param id="6cab3e7b-f3b9-4f99-bcaa-48ad7211f209" ref-id="c01c4a8b-5603-4e94-9b51-2982d012cc19" name="sha256">
+      <value type="string"><![CDATA[fd64c79c70532e6469136d2384e43b0ae608d5e3ee284b0d77e222d7ae9e74a7]]></value>
+    </param>
+    <param id="6d5e1cd4-c239-436e-ba1e-c3ffb650c9e1" ref-id="c01c4a8b-5603-4e94-9b51-2982d012cc19" name="total">
+      <value type="string"><![CDATA[56]]></value>
+    </param>
+    <param id="e2bf0ac8-28ff-4860-935c-f03f81e1ec47" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00039954-00001932]]></value>
+    </param>
+    <param id="b183936c-ac90-4930-8e9a-01f9cc4c99e1" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00041095-00004036]]></value>
+    </param>
+    <param id="915ebbb0-ce78-42db-8181-c7806932e999" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00041051-00001628]]></value>
+    </param>
+    <param id="6d41af2c-2eed-4496-a719-065e4c6f5d75" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00041074-00003604]]></value>
+    </param>
+    <param id="d4db7f5a-cbea-4dee-8dc3-0acd8bde70d3" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00041185-00004012]]></value>
+    </param>
+    <param id="c8c0682a-40f6-4972-a2b6-beb276d9bfe6" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00041120-00003508]]></value>
+    </param>
+    <param id="3bba1961-714f-489a-a242-a6e3a1ee9ce5" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00038326-00003176]]></value>
+    </param>
+    <param id="22a24a74-8c16-4f44-94b5-056cbc5e33c6" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00039978-00001948]]></value>
+    </param>
+    <param id="a72f259a-41f6-49b5-860f-a6005de84465" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00040987-00000604]]></value>
+    </param>
+    <param id="1b8021aa-174a-4a73-a88d-48ed955e214e" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00039140-00002652]]></value>
+    </param>
+    <param id="3b53b021-ab12-4d0e-a88c-f52b6934b213" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00039917-00001864]]></value>
+    </param>
+    <param id="852239e6-0cee-4386-8c80-5d03028dabf8" ref-id="c2ae30f3-4ddc-43c7-b22e-1b129d29f5de" name="targetuid">
+      <value type="string"><![CDATA[00029598-00002588]]></value>
+    </param>
+    <param id="ff4b9213-3436-4124-b1c7-9b9659a7a7f4" ref-id="c46bba2c-399c-4188-a861-4b2945c7740d" name="filetype">
+      <value type="string"><![CDATA[data]]></value>
+    </param>
+    <param id="68799b2f-a2aa-48dd-89a6-2dc094335ea1" ref-id="c46bba2c-399c-4188-a861-4b2945c7740d" name="md5">
+      <value type="string"><![CDATA[b83511abac0a995f91f31974a950aa41]]></value>
+    </param>
+    <param id="abff9989-8ee7-4f90-a2c8-e0a5398e8913" ref-id="c46bba2c-399c-4188-a861-4b2945c7740d" name="sha256">
+      <value type="string"><![CDATA[399835d03f79b04afb80da9af044388f8ad1326a39b36ff31785a0345351646d]]></value>
+    </param>
+    <param id="d8d0bd93-fb80-4082-a4d8-95e84480e8ea" ref-id="cba20c2e-2fdc-4b57-8466-a1d730b556c5" name="converted_value">
+      <value type="string"><![CDATA[en-US]]></value>
+    </param>
+    <param id="b04171fe-3d4b-40fe-8cfe-d0312de2b971" ref-id="cbfe128b-4180-4af9-9d3f-4fcb0e5ac730" name="asn">
+      <value type="string"><![CDATA[2856]]></value>
+    </param>
+    <param id="e1bd3e0a-12d3-4cb8-9897-4efa08a46624" ref-id="cbfe128b-4180-4af9-9d3f-4fcb0e5ac730" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="0d00564e-6802-41a6-b292-ba8890e3cb84" ref-id="cbfe128b-4180-4af9-9d3f-4fcb0e5ac730" name="latitude">
+      <value type="string"><![CDATA[51.4964]]></value>
+    </param>
+    <param id="7231e01f-765d-49e0-9ba5-5864847cec35" ref-id="cbfe128b-4180-4af9-9d3f-4fcb0e5ac730" name="longitude">
+      <value type="string"><![CDATA[-0.1224]]></value>
+    </param>
+    <param id="e8b791cb-7319-43d5-9761-5a625c6f8b80" ref-id="cbfe128b-4180-4af9-9d3f-4fcb0e5ac730" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="70869f45-75a3-493d-bd37-61fd2e8daa57" ref-id="d1a85fc9-63e7-464f-9dab-5a737bf83298" name="asn">
+      <value type="string"><![CDATA[2856]]></value>
+    </param>
+    <param id="7583320e-aa8e-4dcf-b3c5-16443a5d3449" ref-id="d1a85fc9-63e7-464f-9dab-5a737bf83298" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="193f0d63-390a-4555-a50c-a092ea68b92c" ref-id="d1a85fc9-63e7-464f-9dab-5a737bf83298" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="2a9679ec-126b-4059-aaad-aceab1ed5cd1" ref-id="d9371b20-ab99-40b3-b5a6-e2eb19adc7f2" name="asn">
+      <value type="string"><![CDATA[29562]]></value>
+    </param>
+    <param id="8f324c48-5eb3-4190-a966-a3f3104914ea" ref-id="d9371b20-ab99-40b3-b5a6-e2eb19adc7f2" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="b31fcf5f-eef3-4e7e-a239-e8494c621dfe" ref-id="d9371b20-ab99-40b3-b5a6-e2eb19adc7f2" name="latitude">
+      <value type="string"><![CDATA[48.7667]]></value>
+    </param>
+    <param id="6d1dbbf6-7690-47c7-8de0-83f45f58f709" ref-id="d9371b20-ab99-40b3-b5a6-e2eb19adc7f2" name="longitude">
+      <value type="string"><![CDATA[9.1833]]></value>
+    </param>
+    <param id="02ac4a0d-99e8-42bb-9451-5c60ea29fc49" ref-id="d9371b20-ab99-40b3-b5a6-e2eb19adc7f2" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="098a7636-9608-4416-b658-c1907a03edf9" ref-id="db364224-6050-4357-b085-fd56d45da2a8" name="asn">
+      <value type="string"><![CDATA[9031]]></value>
+    </param>
+    <param id="512918de-06e8-4daa-895e-da738084591e" ref-id="db364224-6050-4357-b085-fd56d45da2a8" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="e5ff6196-4097-4d04-93a4-55dc0e75badd" ref-id="db364224-6050-4357-b085-fd56d45da2a8" name="latitude">
+      <value type="string"><![CDATA[50.85]]></value>
+    </param>
+    <param id="1d915f4d-6768-4a87-b728-1d463b317e55" ref-id="db364224-6050-4357-b085-fd56d45da2a8" name="longitude">
+      <value type="string"><![CDATA[4.35]]></value>
+    </param>
+    <param id="61f49ec9-b4a5-4070-addb-872eba453583" ref-id="db364224-6050-4357-b085-fd56d45da2a8" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="68fd42b3-de59-482a-aeaa-18e1bc7d804f" ref-id="dd735f56-582a-4f6c-ad08-884c01b16fdf" name="asn">
+      <value type="string"><![CDATA[803]]></value>
+    </param>
+    <param id="e9caacf4-1217-49f7-a9dc-901cdac3980f" ref-id="dd735f56-582a-4f6c-ad08-884c01b16fdf" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="f3d23c53-64ce-443e-8c26-9d91f7e65cc3" ref-id="dd735f56-582a-4f6c-ad08-884c01b16fdf" name="latitude">
+      <value type="string"><![CDATA[52.1526]]></value>
+    </param>
+    <param id="14d528f7-6fc1-4069-b872-ae3bcf16a5ae" ref-id="dd735f56-582a-4f6c-ad08-884c01b16fdf" name="longitude">
+      <value type="string"><![CDATA[-106.7066]]></value>
+    </param>
+    <param id="81355161-4730-4fc1-abef-20b529a70ca9" ref-id="dd735f56-582a-4f6c-ad08-884c01b16fdf" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="03e52fc0-5992-467a-a259-f304f106ce33" ref-id="e06e4251-e967-4925-883f-765a0d0fe4e3" name="converted_value">
+      <value type="string"><![CDATA[en-US]]></value>
+    </param>
+    <param id="f1cd2cc8-3931-4a51-8c9b-b789ce248b05" ref-id="e25c7b09-d2b7-46c6-a32f-caf6da6ebde3" name="converted_value">
+      <value type="string"><![CDATA[en-US]]></value>
+    </param>
+    <param id="5020c244-354e-418c-87cb-e2e9f053b7af" ref-id="e58ac456-da9d-4331-8687-0ac201a622bf" name="converted_value">
+      <value type="string"><![CDATA[U3JHwMkSV0JFgh9T]]></value>
+    </param>
+    <param id="25d0e6a3-c31d-4148-8ecd-8f04de4014aa" ref-id="e870f164-2910-4b10-af95-a39ce75fc76d" name="detectionrate">
+      <value type="string"><![CDATA[82]]></value>
+    </param>
+    <param id="08953d1a-1245-45c3-a16e-e49acc394bcc" ref-id="e870f164-2910-4b10-af95-a39ce75fc76d" name="detectiontotal">
+      <value type="string"><![CDATA[46]]></value>
+    </param>
+    <param id="2c511f80-1f9c-435f-8615-91f1e0021cf4" ref-id="e870f164-2910-4b10-af95-a39ce75fc76d" name="filetype">
+      <value type="string"><![CDATA[PE32 executable (GUI) Intel 80386, for MS Windows]]></value>
+    </param>
+    <param id="bdf77503-1d09-440d-8ee3-82eef605f310" ref-id="e870f164-2910-4b10-af95-a39ce75fc76d" name="md5">
+      <value type="string"><![CDATA[00c42b9713b332949e609584a3f75026]]></value>
+    </param>
+    <param id="53514f87-865f-470d-8cb7-ceadd8b07052" ref-id="e870f164-2910-4b10-af95-a39ce75fc76d" name="sha256">
+      <value type="string"><![CDATA[fd64c79c70532e6469136d2384e43b0ae608d5e3ee284b0d77e222d7ae9e74a7]]></value>
+    </param>
+    <param id="2d92b9f7-1364-448f-88ec-05e8611ad044" ref-id="e870f164-2910-4b10-af95-a39ce75fc76d" name="total">
+      <value type="string"><![CDATA[56]]></value>
+    </param>
+    <param id="b5c42bc7-b4fa-4f4e-a182-a269f99b7ebf" ref-id="ecab04db-1b65-4d4a-813e-c8f7a9db5b2c" name="asn">
+      <value type="string"><![CDATA[2856]]></value>
+    </param>
+    <param id="cad97356-1cd0-49bd-90af-022323588b56" ref-id="ecab04db-1b65-4d4a-813e-c8f7a9db5b2c" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="9c4d3101-27c6-497e-9081-717ab5a4c62d" ref-id="ecab04db-1b65-4d4a-813e-c8f7a9db5b2c" name="protocol">
+      <value type="string"><![CDATA[UDP]]></value>
+    </param>
+    <param id="fc5d2fe2-5985-43fa-a022-6b35b68b5d82" ref-id="ee4eea7a-7363-4408-9e77-413f85fdb0b8" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="2b7c4a44-4ff7-46a0-b6d0-099bb89afc0c" ref-id="f38c69fc-fdf6-466d-92c0-96c8b63fa4b2" name="converted_value">
+      <value type="string"><![CDATA[en-US]]></value>
+    </param>
+  </parameters>
+</OpenIOC>

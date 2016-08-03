@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<response uuid="java:java.util.UUID" xmlns="http://www.misp-project.org/">
+  <Event>
+    <Attribute>
+      <category>External analysis</category>
+      <type>link</type>
+      <value><![CDATA[https://www.hybrid-analysis.com/search?query=0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>External analysis</category>
+      <type>comment</type>
+      <value><![CDATA[VxStream v4.30 Copyright 2016 Payload Security UG (haftungsbeschrnkt), All Rights Reserved, www.payload-security.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <id>4166e12c-fa5c-40b5-8c4a-33aea0738912</id>
+    <date>2016-06-22</date>
+    <info><![CDATA[VxStream Sandbox auto-generated for "0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe"]]></info>
+    <analysis>2</analysis>
+    <distribution>1</distribution>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|md5</type>
+      <value><![CDATA[0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe|7329ed264ceb1a5fe0044844c82d6446]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe|70a05638f179eea53b4b18940bc9b6628bd4e0c7]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe|0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe|819a4b736022355b3b85d17ab5f58d66ad13bf7b6dc032cb1b4927376b6de889b0d8f5139d518a6850a4fa9315b407687ab26689670a98d1904ee60722dd579a]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>user-agent</type>
+      <value><![CDATA[Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[evidentis.tv]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tgp.my]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[terreal.com.my]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[blessedcode.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[macrobiotics-japan.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[aquionics.net]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[futbolenelbar.com|46.105.249.216]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[mlmsoftware.com.my|43.252.215.197]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[amaru.me]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[fleep.jp|219.94.235.33]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[ip-addr.es|216.146.38.70]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[tgp.com.my]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[fleep.com|219.94.235.33]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[entramuntanats.org]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[myexternalip.com|78.47.139.102]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[formagrafic.com|185.37.228.16]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[216.146.38.70]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[78.47.139.102]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[43.252.215.197]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[185.37.228.16]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[173.230.130.167]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[103.18.247.250]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[128.199.87.80]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[219.94.235.33]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[46.105.249.216]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[103.18.247.250]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[219.94.235.33]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[94.247.28.29]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[185.37.228.16]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[5.199.165.160]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[91.121.12.127]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <threat_level_id>1</threat_level_id>
+  </Event></response>

@@ -1,0 +1,36 @@
+[192.168.248.165:1112] -- -- --> [176.119.0.216:80] 
+POST /home/ HTTP/1.1
+Accept: */*
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
+Host: rwyngtbvunfpk.org
+Content-Length: 192
+Connection: Close
+
+{decode content failed, unknown charset}
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.2
+Date: Tue, 15 Oct 2013 20:11:06 GMT
+Content-Type: application/octet-stream
+Transfer-Encoding: chunked
+Connection: close
+
+
+[192.168.248.165:1113] -- -- --> [176.119.0.216:80] 
+POST /home/ HTTP/1.1
+Accept: */*
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
+Host: rwyngtbvunfpk.org
+Content-Length: 192
+Connection: Close
+
+{decode content failed, unknown charset}
+
+HTTP/1.1 200 OK
+Server: nginx/1.4.2
+Date: Tue, 15 Oct 2013 20:11:52 GMT
+Content-Type: application/octet-stream
+Transfer-Encoding: chunked
+Connection: close
+
+

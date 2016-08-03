@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<OpenIOC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="bfa8c6ed-b961-4290-bf55-9b62f2224e5b" last-modified="2016-06-22T03:16:48" published-date="0001-01-01T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1">
+  <metadata>
+    <short_description></short_description>
+    <description><![CDATA[VxStream Sandbox v4.30 auto-generated IOC for 0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe (SHA256: 0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb)]]></description>
+    <keywords></keywords>
+    <authored_by>Payload Security</authored_by>
+    <authored_date>2016-06-22T03:16:48</authored_date>
+    <links></links>
+  </metadata>
+  <criteria>
+    <Indicator operator="OR" id="99e7eb79-a1fc-473e-b056-c2f26fc5db4e">
+      <Indicator operator="OR" id="a09f7082-dc6e-4474-a2d6-72f71bb7a696">
+        <IndicatorItem id="1afa230e-cc68-42ef-bb4b-1971d047232d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[evidentis.tv]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0803d470-0d80-4703-b021-36114e5555ce" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tgp.my]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="5c413641-0cf2-43dd-b8c2-84d3da93777b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[terreal.com.my]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b65f1dfa-536c-480f-8187-4068f7e9d047" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[blessedcode.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="84b96cd6-6d03-4426-92a3-970631d0ff2f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[macrobiotics-japan.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="dcb7faa7-3174-41cd-a8b8-f0228affe8ce" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[aquionics.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b772ed97-ca2a-49e5-81e6-f8ea2ca1207d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[futbolenelbar.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="271f84fe-b712-4641-8048-4df9ca56ac56" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[mlmsoftware.com.my]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ebf3da09-5ade-4dd2-89d1-c4b2f16d2dd8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[amaru.me]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a515420b-8498-4e8d-8656-5be293639c11" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[fleep.jp]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="03be7680-e1c0-4e1a-ac35-db5104d6a8f9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ip-addr.es]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f6c0f848-8cb8-4297-b4c6-8b1ee5bb1970" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tgp.com.my]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="728478e9-e2c3-4ca4-a0af-7fecf8955cd5" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[fleep.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="84f9241e-be6e-43df-a034-ff38e39938e8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[entramuntanats.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="82005ca1-9e59-4925-928e-c173ef322b4a" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[myexternalip.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="58218862-5623-406d-8ca3-15ac5fb5731b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[formagrafic.com]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="OR" id="27c37eb7-6cbf-4eee-b42c-3eec13144edc">
+        <IndicatorItem id="619c78d9-f396-4543-b835-f6c28f7f4a55" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[216.146.38.7080]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="232efb00-85c2-4c76-bb71-d6d9ec33c050" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[78.47.139.10280]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="3e39d7a4-bbf4-4392-b34b-0a5c11f08e5b" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[43.252.215.19765535]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e7a5d1b7-48aa-48b3-ba9e-b7949b7c34f1" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[185.37.228.1665535]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d6d12666-2462-428b-b804-0cb47a40a00f" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[173.230.130.1678080]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="68e369e8-2d3a-48d1-8a80-c9b79ca2ce03" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[103.18.247.25065535]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="28384037-02e4-4512-a573-b4fae0339916" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[128.199.87.8065535]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4a5dee20-5d24-4006-84b6-d6fbde68f48a" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[219.94.235.3365535]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="82044553-fc98-4dc2-930f-2f6d727a4cb9" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[46.105.249.21665535]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="62b02945-e595-4a3f-b0b1-1b7bf12b9f6e" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[103.18.247.2502525]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="bddb3d73-c094-4d07-81bc-487439163170" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[219.94.235.338081]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="634ef315-7916-4b4b-b9f4-e5438f193678" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[94.247.28.298080]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="08300dfe-162f-40d7-a439-7bc7269fa9a0" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[185.37.228.168585]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="cce28a12-e590-4fec-86a8-8d8edc22208e" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[5.199.165.1602525]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="05c3bdb3-c4d0-4992-bcd9-7c1e92dcbec6" condition="is">
+          <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="network"></Context>
+          <Content type="IP"><![CDATA[91.121.12.12781]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="72741236-ee4f-47c9-9d2a-d897acc1c718">
+        <IndicatorItem id="cb7e6154-5afb-4237-bf43-0abc7605f8e5" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[myexternalip.com]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="OR" id="94d86135-9145-4d19-9b77-31d88ab36a1d">
+        <Indicator operator="AND" id="c0c209da-56e0-49c1-bee2-04e1b988b8ed">
+          <IndicatorItem id="93dc2530-defb-447a-b076-5452f3f79654" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[vssadmin.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b006d5fc-81af-4d3a-b6fb-909d95af35cf" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\vssadmin.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c78bd6b7-9f1e-4f6f-9bb1-c1ca068486a2" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[Delete Shadows /All /Quiet]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="4a15b6d2-476f-4fd7-b250-32bf6c3e68d2">
+          <IndicatorItem id="962e967f-e550-4390-8984-61778e0e0938" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[bcdedit.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="fb5da8ca-799d-4295-830d-55c4dd9fcdb5" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\bcdedit.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1632f1e0-b375-41bd-82a6-dba7b50bcac0" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[bcdedit /set {default} recoveryenabled No]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="fd1365cf-7b82-46be-8a25-2ee4c5aabe29">
+          <IndicatorItem id="2e1086e4-ec9f-43d9-9197-261491cd2e05" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[bcdedit.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3309b4d4-0e13-4214-abda-75366a2ea143" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\bcdedit.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4f36220c-419e-4651-8927-bc69c335d988" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[bcdedit /set {default} bootstatuspolicy ignoreallfailures]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="1ef134ec-ea92-48dd-b556-6f71c9e59fbc">
+          <IndicatorItem id="ee22d2a1-9df1-46b2-999b-b8778b3fad27" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[svchost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="6cd63241-ed68-4026-89e5-0e5af37fb319" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\System32\svchost.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="14f522c8-e80a-4a71-bd23-7f22849a55b7" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[-k netsvcs]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="d4f08862-9725-4f44-8d81-10ae52a6dfe7">
+          <IndicatorItem id="c8b0a1bd-d786-4fbd-9cfb-0a46d36d5d88" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[<Input Sample>]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9d8c7d90-5fbf-4021-bba1-3886a13fdff0" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[C:\0c36ecacb0439cff598645700127a0d93cdfc350db3ac64ce215f4b692b7c2bb.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b6756367-7b61-4837-8286-e4b010f6c625" condition="is">
+            <Context document="HookItem" search="HookItem/HookedModule" type="vxs"></Context>
+            <Content type="string"><![CDATA[NSI.DLL]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c71483ad-ceb8-4df0-87a6-4e266947254a" condition="is">
+            <Context document="HookItem" search="HookItem/HookingAddress" type="vxs"></Context>
+            <Content type="int"><![CDATA[1980633088]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="efb9e276-f867-4114-bc57-d4f892fbc1d8">
+          <IndicatorItem id="62eaa0c8-8023-41b4-bf09-08f64ecdce35" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[explorer.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a556a5c2-fada-41c1-9cb0-d2fb4ce20a33" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%WINDIR%\explorer.exe]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </criteria>
+  <parameters>
+    <param id="a87cbecf-f3e7-4b11-86c1-79eaada24480" ref-id="05c3bdb3-c4d0-4992-bcd9-7c1e92dcbec6" name="asn">
+      <value type="string"><![CDATA[16276]]></value>
+    </param>
+    <param id="83a811ca-9e1e-453b-9b34-9df7cf15ab7a" ref-id="05c3bdb3-c4d0-4992-bcd9-7c1e92dcbec6" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="6b5ed50e-29dc-4677-a97a-b8f9cef14aa3" ref-id="05c3bdb3-c4d0-4992-bcd9-7c1e92dcbec6" name="latitude">
+      <value type="string"><![CDATA[48.8582]]></value>
+    </param>
+    <param id="c38b3c95-cb68-4245-82f6-d4240562e099" ref-id="05c3bdb3-c4d0-4992-bcd9-7c1e92dcbec6" name="longitude">
+      <value type="string"><![CDATA[2.3387]]></value>
+    </param>
+    <param id="5ae1a161-99b2-42ef-96c4-d72463c9b11e" ref-id="05c3bdb3-c4d0-4992-bcd9-7c1e92dcbec6" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="697223f0-a259-4c97-a571-b88ca6b60a51" ref-id="08300dfe-162f-40d7-a439-7bc7269fa9a0" name="asn">
+      <value type="string"><![CDATA[60458]]></value>
+    </param>
+    <param id="b8ebd786-c223-4ec9-aa2a-f11e29c2bb6c" ref-id="08300dfe-162f-40d7-a439-7bc7269fa9a0" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="32490891-f8bf-4b1a-b338-1e02234ce10e" ref-id="08300dfe-162f-40d7-a439-7bc7269fa9a0" name="latitude">
+      <value type="string"><![CDATA[40.4172]]></value>
+    </param>
+    <param id="68385865-c662-41e8-a193-16921ffad207" ref-id="08300dfe-162f-40d7-a439-7bc7269fa9a0" name="longitude">
+      <value type="string"><![CDATA[-3.684]]></value>
+    </param>
+    <param id="1a7e9741-d41d-4ee1-8ef1-a5d084439b38" ref-id="08300dfe-162f-40d7-a439-7bc7269fa9a0" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="a6c1bea4-40da-4c0f-bcdb-eab43fd242f6" ref-id="232efb00-85c2-4c76-bb71-d6d9ec33c050" name="asn">
+      <value type="string"><![CDATA[24940]]></value>
+    </param>
+    <param id="7c6a9d27-6a68-4b64-aa3b-8102fef19d68" ref-id="232efb00-85c2-4c76-bb71-d6d9ec33c050" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="0cac2dfd-365e-4aa5-ba0b-de02654ea7b1" ref-id="232efb00-85c2-4c76-bb71-d6d9ec33c050" name="latitude">
+      <value type="string"><![CDATA[51.0]]></value>
+    </param>
+    <param id="4f9a8c6d-47bd-4419-8b85-0243b5c3fc63" ref-id="232efb00-85c2-4c76-bb71-d6d9ec33c050" name="longitude">
+      <value type="string"><![CDATA[9.0]]></value>
+    </param>
+    <param id="242ff179-d00b-436f-9201-2513ddb2524f" ref-id="232efb00-85c2-4c76-bb71-d6d9ec33c050" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="2639100f-38af-48ac-af24-a55154bc4678" ref-id="28384037-02e4-4512-a573-b4fae0339916" name="asn">
+      <value type="string"><![CDATA[]]></value>
+    </param>
+    <param id="ec7c8307-bdc5-4dc0-a622-07fdbce563d4" ref-id="28384037-02e4-4512-a573-b4fae0339916" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="786747f1-bacd-47e4-9710-4a229ce86900" ref-id="28384037-02e4-4512-a573-b4fae0339916" name="latitude">
+      <value type="string"><![CDATA[1.2931]]></value>
+    </param>
+    <param id="3b3cf47c-9f4e-431b-9184-1c9c885ae068" ref-id="28384037-02e4-4512-a573-b4fae0339916" name="longitude">
+      <value type="string"><![CDATA[103.8558]]></value>
+    </param>
+    <param id="82c89536-0340-4554-8c82-b4fd6edee6d7" ref-id="28384037-02e4-4512-a573-b4fae0339916" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="9a6e215a-71f2-48ff-92c5-bae0b12babde" ref-id="3e39d7a4-bbf4-4392-b34b-0a5c11f08e5b" name="asn">
+      <value type="string"><![CDATA[46015]]></value>
+    </param>
+    <param id="69b78326-8cc7-4ed0-b4d0-daadc4cba334" ref-id="3e39d7a4-bbf4-4392-b34b-0a5c11f08e5b" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="bcd67fc1-c726-4302-b475-e53f1defa109" ref-id="3e39d7a4-bbf4-4392-b34b-0a5c11f08e5b" name="latitude">
+      <value type="string"><![CDATA[19.25]]></value>
+    </param>
+    <param id="11ec8390-30af-443d-802d-28ff954e8388" ref-id="3e39d7a4-bbf4-4392-b34b-0a5c11f08e5b" name="longitude">
+      <value type="string"><![CDATA[73.15]]></value>
+    </param>
+    <param id="3d58e103-24e7-4969-9d21-76c075475e13" ref-id="3e39d7a4-bbf4-4392-b34b-0a5c11f08e5b" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="736dc9da-ec83-4d45-84a6-2ba6f91f9bae" ref-id="4a5dee20-5d24-4006-84b6-d6fbde68f48a" name="asn">
+      <value type="string"><![CDATA[9371]]></value>
+    </param>
+    <param id="4d4b3091-cb5a-41bf-a6db-d6145a71c394" ref-id="4a5dee20-5d24-4006-84b6-d6fbde68f48a" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="58ea0c2f-c54f-4627-a619-39eda88ce033" ref-id="4a5dee20-5d24-4006-84b6-d6fbde68f48a" name="latitude">
+      <value type="string"><![CDATA[34.6864]]></value>
+    </param>
+    <param id="cf184d10-1a67-4ea0-8b46-25193c9f5227" ref-id="4a5dee20-5d24-4006-84b6-d6fbde68f48a" name="longitude">
+      <value type="string"><![CDATA[135.52]]></value>
+    </param>
+    <param id="746fd072-9828-42e9-ba82-5c0ac687a6d2" ref-id="4a5dee20-5d24-4006-84b6-d6fbde68f48a" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="946b80bf-c692-4d0c-bc09-59f83e5ad115" ref-id="619c78d9-f396-4543-b835-f6c28f7f4a55" name="asn">
+      <value type="string"><![CDATA[33517]]></value>
+    </param>
+    <param id="5453aed0-7859-4b33-b684-0fb9d71c4930" ref-id="619c78d9-f396-4543-b835-f6c28f7f4a55" name="iscompromised">
+      <value type="string"><![CDATA[true]]></value>
+    </param>
+    <param id="274e29ff-6ac9-43e9-8641-fb12848c235a" ref-id="619c78d9-f396-4543-b835-f6c28f7f4a55" name="latitude">
+      <value type="string"><![CDATA[42.9885]]></value>
+    </param>
+    <param id="223e2739-7e07-493c-885a-9e50b2c27567" ref-id="619c78d9-f396-4543-b835-f6c28f7f4a55" name="longitude">
+      <value type="string"><![CDATA[-71.4652]]></value>
+    </param>
+    <param id="94b5f3a8-1044-4f3b-9524-e9a75c6f792e" ref-id="619c78d9-f396-4543-b835-f6c28f7f4a55" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="25a683f8-982c-4974-92fc-22b20a1f4e18" ref-id="62b02945-e595-4a3f-b0b1-1b7bf12b9f6e" name="asn">
+      <value type="string"><![CDATA[132704]]></value>
+    </param>
+    <param id="85753334-c639-41ce-9ce6-0915bb08d8de" ref-id="62b02945-e595-4a3f-b0b1-1b7bf12b9f6e" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="085f0b62-2866-4040-81b3-ee410e6004e2" ref-id="62b02945-e595-4a3f-b0b1-1b7bf12b9f6e" name="latitude">
+      <value type="string"><![CDATA[2.5]]></value>
+    </param>
+    <param id="407baa3e-5b39-4c83-b79b-e24691b90bc6" ref-id="62b02945-e595-4a3f-b0b1-1b7bf12b9f6e" name="longitude">
+      <value type="string"><![CDATA[112.5]]></value>
+    </param>
+    <param id="c11708b1-80f9-420d-970e-432ee95b0699" ref-id="62b02945-e595-4a3f-b0b1-1b7bf12b9f6e" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="7d776b84-fd88-4034-bfd7-95bbd1421827" ref-id="634ef315-7916-4b4b-b9f4-e5438f193678" name="asn">
+      <value type="string"><![CDATA[34274]]></value>
+    </param>
+    <param id="086bab90-71ad-4ca2-850f-d1348a495b98" ref-id="634ef315-7916-4b4b-b9f4-e5438f193678" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="0236dc09-175b-41a7-b043-ab53e5e53984" ref-id="634ef315-7916-4b4b-b9f4-e5438f193678" name="latitude">
+      <value type="string"><![CDATA[48.8582]]></value>
+    </param>
+    <param id="1861adcb-4a62-4042-81bf-19538cea4ab3" ref-id="634ef315-7916-4b4b-b9f4-e5438f193678" name="longitude">
+      <value type="string"><![CDATA[2.3387]]></value>
+    </param>
+    <param id="ab9e7821-d50f-495a-a1c9-4319918de3b5" ref-id="634ef315-7916-4b4b-b9f4-e5438f193678" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="d179c71a-2054-4ab0-9570-e0d0ee4d4d6b" ref-id="68e369e8-2d3a-48d1-8a80-c9b79ca2ce03" name="asn">
+      <value type="string"><![CDATA[132704]]></value>
+    </param>
+    <param id="36436345-174d-4e2c-853f-c776197706f2" ref-id="68e369e8-2d3a-48d1-8a80-c9b79ca2ce03" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="9afd0adc-c3a0-49e2-981d-ffafcb467a9f" ref-id="68e369e8-2d3a-48d1-8a80-c9b79ca2ce03" name="latitude">
+      <value type="string"><![CDATA[2.5]]></value>
+    </param>
+    <param id="8932537e-acdb-4a30-8449-9e1453c1b6c6" ref-id="68e369e8-2d3a-48d1-8a80-c9b79ca2ce03" name="longitude">
+      <value type="string"><![CDATA[112.5]]></value>
+    </param>
+    <param id="ad6da3f5-e45d-4bbd-865b-4a3a1faa7712" ref-id="68e369e8-2d3a-48d1-8a80-c9b79ca2ce03" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="2bce230b-4390-47fc-8b2f-effe56e86e63" ref-id="82044553-fc98-4dc2-930f-2f6d727a4cb9" name="asn">
+      <value type="string"><![CDATA[16276]]></value>
+    </param>
+    <param id="2e6399d0-63be-408c-a0df-b887f9b7ea10" ref-id="82044553-fc98-4dc2-930f-2f6d727a4cb9" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="212ab023-887f-4891-866a-6d0f9dc931c1" ref-id="82044553-fc98-4dc2-930f-2f6d727a4cb9" name="latitude">
+      <value type="string"><![CDATA[40.4172]]></value>
+    </param>
+    <param id="df2b0353-c18b-443f-a5d2-b86c22219a5c" ref-id="82044553-fc98-4dc2-930f-2f6d727a4cb9" name="longitude">
+      <value type="string"><![CDATA[-3.684]]></value>
+    </param>
+    <param id="ab15f2d1-375a-485f-b8fa-5ea269be9ae4" ref-id="82044553-fc98-4dc2-930f-2f6d727a4cb9" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="fe557b51-06df-4601-bdba-2accac83d321" ref-id="94d86135-9145-4d19-9b77-31d88ab36a1d" name="targetuid">
+      <value type="string"><![CDATA[00028474-00003116]]></value>
+    </param>
+    <param id="8ff67166-ad7a-4046-b63d-c46d709101d0" ref-id="94d86135-9145-4d19-9b77-31d88ab36a1d" name="targetuid">
+      <value type="string"><![CDATA[00029207-00003516]]></value>
+    </param>
+    <param id="a9cde3d7-1ceb-4913-991e-5deae37b3344" ref-id="94d86135-9145-4d19-9b77-31d88ab36a1d" name="targetuid">
+      <value type="string"><![CDATA[00028967-00003504]]></value>
+    </param>
+    <param id="4b0136ba-3e35-4b3a-b46d-342ad9a55b7a" ref-id="94d86135-9145-4d19-9b77-31d88ab36a1d" name="targetuid">
+      <value type="string"><![CDATA[00029233-00003188]]></value>
+    </param>
+    <param id="b19f1305-83fd-4bca-98db-c2fcae8befe8" ref-id="94d86135-9145-4d19-9b77-31d88ab36a1d" name="targetuid">
+      <value type="string"><![CDATA[00029264-00003532]]></value>
+    </param>
+    <param id="1f7ee63f-59f7-432d-8835-996709623d75" ref-id="94d86135-9145-4d19-9b77-31d88ab36a1d" name="targetuid">
+      <value type="string"><![CDATA[00029323-00003540]]></value>
+    </param>
+    <param id="1475cbec-1868-4a41-a3cc-9efeece580d5" ref-id="bddb3d73-c094-4d07-81bc-487439163170" name="asn">
+      <value type="string"><![CDATA[9371]]></value>
+    </param>
+    <param id="a82565d2-5c22-4a3c-99a9-1ff5189dc7ed" ref-id="bddb3d73-c094-4d07-81bc-487439163170" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="b7348e57-df11-4322-ada1-63c257bed046" ref-id="bddb3d73-c094-4d07-81bc-487439163170" name="latitude">
+      <value type="string"><![CDATA[34.6864]]></value>
+    </param>
+    <param id="d6d457a6-a934-45a9-ac73-a506214818fe" ref-id="bddb3d73-c094-4d07-81bc-487439163170" name="longitude">
+      <value type="string"><![CDATA[135.52]]></value>
+    </param>
+    <param id="c52dd9a7-472d-4701-bde1-30e989a803f9" ref-id="bddb3d73-c094-4d07-81bc-487439163170" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="a6d68df9-57a4-4077-beee-abbdbb51fbd3" ref-id="cce28a12-e590-4fec-86a8-8d8edc22208e" name="asn">
+      <value type="string"><![CDATA[59642]]></value>
+    </param>
+    <param id="525174d7-5d0d-4b5c-9c5f-f03057797bc7" ref-id="cce28a12-e590-4fec-86a8-8d8edc22208e" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="9ae817ed-4bf5-4448-ba87-c4f7487dbbb5" ref-id="cce28a12-e590-4fec-86a8-8d8edc22208e" name="latitude">
+      <value type="string"><![CDATA[56.0]]></value>
+    </param>
+    <param id="8e4bfeb8-0ed0-454d-b81c-bceb86df4555" ref-id="cce28a12-e590-4fec-86a8-8d8edc22208e" name="longitude">
+      <value type="string"><![CDATA[24.0]]></value>
+    </param>
+    <param id="4fba9028-6022-4294-be5f-b11382f75ab5" ref-id="cce28a12-e590-4fec-86a8-8d8edc22208e" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="c31557c7-6da2-4fd2-a485-b03d11f8b7be" ref-id="d6d12666-2462-428b-b804-0cb47a40a00f" name="asn">
+      <value type="string"><![CDATA[3595]]></value>
+    </param>
+    <param id="ab26346d-f225-4809-8ab5-df25acd2057b" ref-id="d6d12666-2462-428b-b804-0cb47a40a00f" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="9e9c94f6-4d70-44b9-92b1-1b574a684521" ref-id="d6d12666-2462-428b-b804-0cb47a40a00f" name="latitude">
+      <value type="string"><![CDATA[39.4899]]></value>
+    </param>
+    <param id="2b920d68-f076-48cb-93fe-a1e2fd813c41" ref-id="d6d12666-2462-428b-b804-0cb47a40a00f" name="longitude">
+      <value type="string"><![CDATA[-74.4773]]></value>
+    </param>
+    <param id="12169cd3-1490-42f2-afe9-4db11b7c764c" ref-id="d6d12666-2462-428b-b804-0cb47a40a00f" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+    <param id="e6d29142-e6da-476b-9e6c-e12a0b7217e1" ref-id="e7a5d1b7-48aa-48b3-ba9e-b7949b7c34f1" name="asn">
+      <value type="string"><![CDATA[60458]]></value>
+    </param>
+    <param id="37a492e5-1e4a-46f7-935c-69554eda7880" ref-id="e7a5d1b7-48aa-48b3-ba9e-b7949b7c34f1" name="iscompromised">
+      <value type="string"><![CDATA[false]]></value>
+    </param>
+    <param id="96b6c2f2-1371-43bb-a497-26bfdd3245cb" ref-id="e7a5d1b7-48aa-48b3-ba9e-b7949b7c34f1" name="latitude">
+      <value type="string"><![CDATA[40.4172]]></value>
+    </param>
+    <param id="4adba319-f41f-447d-b819-3fa24124eb99" ref-id="e7a5d1b7-48aa-48b3-ba9e-b7949b7c34f1" name="longitude">
+      <value type="string"><![CDATA[-3.684]]></value>
+    </param>
+    <param id="6b46109e-b3f8-4fdd-90e7-c7e73e517594" ref-id="e7a5d1b7-48aa-48b3-ba9e-b7949b7c34f1" name="protocol">
+      <value type="string"><![CDATA[TCP]]></value>
+    </param>
+  </parameters>
+</OpenIOC>

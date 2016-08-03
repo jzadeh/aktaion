@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<response uuid="java:java.util.UUID" xmlns="http://www.misp-project.org/">
+  <Event>
+    <Attribute>
+      <category>External analysis</category>
+      <type>link</type>
+      <value><![CDATA[https://www.hybrid-analysis.com/search?query=210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>External analysis</category>
+      <type>comment</type>
+      <value><![CDATA[VxStream v4.30 Copyright 2016 Payload Security UG (haftungsbeschrnkt), All Rights Reserved, www.payload-security.com]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <id>d21eec04-539c-4dd5-8435-6617d6394f09</id>
+    <date>2016-06-22</date>
+    <info><![CDATA[VxStream Sandbox auto-generated for "210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d.exe"]]></info>
+    <analysis>2</analysis>
+    <distribution>1</distribution>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|md5</type>
+      <value><![CDATA[210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d.exe|e1a64e6ac26b01d2c602856707447e03]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d.exe|61c363bda67d56a61b3c57805a5f6c6df7af1e8d]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d.exe|210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload delivery</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[210d93cca9d3dbe4ff6cec6a508224d9473699ed6dab1d2764b5ae3cdfca0a9d.exe|e8a71e6cee01209fe5b1c178542ad56efed58f76f4317af838f148161be0b4eac7e22953de4602be3ab173cd8230e98ca3bef1e3675e2cecff35b851c52d40c9]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\hhcbnaff.exe|0f7a417195068b7ff941d2367d477529]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\hhcbnaff.exe|01bb3aa6d7c5e1914b24296de1c33b46996b487a]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\hhcbnaff.exe|29a89e9e0de0cc64619f0e30f710c47c61deb488dfc10f8448f7bc84a893b1e4]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\hhcbnaff.exe|4ea60144b2f267827f319c7a2e89ec8e1d644ca559ff048f7de80e32151cacc7cec43321b263e045d1884006c3859df550fcb41c547dc4ef22820cb542831cab]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%APPDATA%\Amusob\pauba.exe|8ef60843b653c2882a4794d7182dadfb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%APPDATA%\Amusob\pauba.exe|ccd92b77511a0fb93b17382d37bf43d1bcd8bc96]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%APPDATA%\Amusob\pauba.exe|d8fb652b4c700e7c929a1a99b0d90e1a7899f5c93df3bbceb3e12a922eb09669]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%APPDATA%\Amusob\pauba.exe|ae79e9f967b191868ae1db59843161df0cbd424de11524aa175f7ac82a4ac9dcbb904ff3d6064268b17fcfc61c8d27067feff1b2cabbe8d2f4595e9690bf47ff]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\hhgnddkjee.exe|00c42b9713b332949e609584a3f75026]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\hhgnddkjee.exe|624f27485d181ecfc9f515cae03224c490c0a54c]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\hhgnddkjee.exe|fd64c79c70532e6469136d2384e43b0ae608d5e3ee284b0d77e222d7ae9e74a7]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\hhgnddkjee.exe|7acea71b90df4fd8c9e94f72c18c9991fb963d865fb903d264144eb1c882e07cb409096af983238441dc678798025e8afc4717ebea0639ba8857bbe0bacd9bfb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files\Content.IE5\IH37ZYJO\do6[1].exe|00c42b9713b332949e609584a3f75026]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files\Content.IE5\IH37ZYJO\do6[1].exe|624f27485d181ecfc9f515cae03224c490c0a54c]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files\Content.IE5\IH37ZYJO\do6[1].exe|fd64c79c70532e6469136d2384e43b0ae608d5e3ee284b0d77e222d7ae9e74a7]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files\Content.IE5\IH37ZYJO\do6[1].exe|7acea71b90df4fd8c9e94f72c18c9991fb963d865fb903d264144eb1c882e07cb409096af983238441dc678798025e8afc4717ebea0639ba8857bbe0bacd9bfb]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\TFJE4C3.bat|38344d9973ec3802ac13711620427098]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\TFJE4C3.bat|48d03cfe9627ac4d42c82224f17707d6ad28744f]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\TFJE4C3.bat|6e348c8cdba61bc34a1774a9e9170f252151d2fc9070e34d1d7e73277e9ffff2]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\TFJE4C3.bat|c5d2218b318e7bef29cd2201c2a818bf82a7970831acf0cd032715197dd80e91ae3ad912990e47cf175281a426ab61620fdb8c3e20db8da27e1ee53c52e99d32]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\Tar9EB0.tmp|2432087060d478113b7befb4b3591898]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\Tar9EB0.tmp|de47e18657cecfd99f2e076b06fb8392f12eca6e]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\Tar9EB0.tmp|81e9664c71a6d19c53203bee8e1afe09a9304e1b520d92b3d3fd5519da88d541]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\Tar9EB0.tmp|6724eef2995132298f30821381a8037548b23af6227207cfbcaa498e4efd8d3f496ee445331ece2ac1ee981c2fec16c0c9e28ab01c86b55eb0d66d26fecc8319]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%LOCALAPPDATA%\ow\Microsoft\CryptnetUrlCache\MetaData\94308059B57B3142E455B38A6EB92015|b83511abac0a995f91f31974a950aa41]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%LOCALAPPDATA%\ow\Microsoft\CryptnetUrlCache\MetaData\94308059B57B3142E455B38A6EB92015|3f7471ec849ba98667bf2bcfd0ad4e7ade973efc]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%LOCALAPPDATA%\ow\Microsoft\CryptnetUrlCache\MetaData\94308059B57B3142E455B38A6EB92015|399835d03f79b04afb80da9af044388f8ad1326a39b36ff31785a0345351646d]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%LOCALAPPDATA%\ow\Microsoft\CryptnetUrlCache\MetaData\94308059B57B3142E455B38A6EB92015|77a04c5561e37ab344a9e7c03ea2a486a2b1bd1c3938c1ef21a9fb8bd3de6343b6654d99a9efa6c7f24cea5393c2d20767b38ed380110f7c67f1607ebceea27f]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\Cab8174.tmp|70261c7ccaba59ee02485d9e052b3222]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\Cab8174.tmp|e59e82bbe39b34b3bbc2bed54a0336878d56993e]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\Cab8174.tmp|3900d716c8c7f96277858c205f813331cd34e23b005eb4039c2061bbe7340226]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\Cab8174.tmp|399a19e7e091ec068a5150db605ad56967e8ce3a666c8f73c4179d765369941cd1e2a55ece50a038c8ee36d3dd8d36e9937b36b971562bdc4408ee4f165401bf]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\Cab7F6A.tmp|70261c7ccaba59ee02485d9e052b3222]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\Cab7F6A.tmp|e59e82bbe39b34b3bbc2bed54a0336878d56993e]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\Cab7F6A.tmp|3900d716c8c7f96277858c205f813331cd34e23b005eb4039c2061bbe7340226]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\Cab7F6A.tmp|399a19e7e091ec068a5150db605ad56967e8ce3a666c8f73c4179d765369941cd1e2a55ece50a038c8ee36d3dd8d36e9937b36b971562bdc4408ee4f165401bf]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\Cab9EAF.tmp|70261c7ccaba59ee02485d9e052b3222]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\Cab9EAF.tmp|e59e82bbe39b34b3bbc2bed54a0336878d56993e]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\Cab9EAF.tmp|3900d716c8c7f96277858c205f813331cd34e23b005eb4039c2061bbe7340226]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\Cab9EAF.tmp|399a19e7e091ec068a5150db605ad56967e8ce3a666c8f73c4179d765369941cd1e2a55ece50a038c8ee36d3dd8d36e9937b36b971562bdc4408ee4f165401bf]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\Tar8175.tmp|2432087060d478113b7befb4b3591898]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\Tar8175.tmp|de47e18657cecfd99f2e076b06fb8392f12eca6e]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\Tar8175.tmp|81e9664c71a6d19c53203bee8e1afe09a9304e1b520d92b3d3fd5519da88d541]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\Tar8175.tmp|6724eef2995132298f30821381a8037548b23af6227207cfbcaa498e4efd8d3f496ee445331ece2ac1ee981c2fec16c0c9e28ab01c86b55eb0d66d26fecc8319]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|md5</type>
+      <value><![CDATA[%TEMP%\Tar7F75.tmp|2432087060d478113b7befb4b3591898]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha1</type>
+      <value><![CDATA[%TEMP%\Tar7F75.tmp|de47e18657cecfd99f2e076b06fb8392f12eca6e]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha256</type>
+      <value><![CDATA[%TEMP%\Tar7F75.tmp|81e9664c71a6d19c53203bee8e1afe09a9304e1b520d92b3d3fd5519da88d541]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Payload installation</category>
+      <type>filename|sha512</type>
+      <value><![CDATA[%TEMP%\Tar7F75.tmp|6724eef2995132298f30821381a8037548b23af6227207cfbcaa498e4efd8d3f496ee445331ece2ac1ee981c2fec16c0c9e28ab01c86b55eb0d66d26fecc8319]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\UNCASINTRANET|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\AUTODETECT|01000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\UNCASINTRANET|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\AUTODETECT|01000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZoneAttributeCacheCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesCacheCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesLockedCacheCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32\ENABLEFILETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32\ENABLECONSOLETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32\FILETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32\CONSOLETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32\MAXFILESIZE|00001000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASAPI32\FILEDIRECTORY|2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS\ENABLEFILETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS\ENABLECONSOLETRACING|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS\FILETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS\CONSOLETRACINGMASK|0000FFFF]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS\MAXFILESIZE|00001000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\HHCBNAFF_RASMANCS\FILEDIRECTORY|2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\PROXYENABLE|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\CONNECTIONS\SAVEDLEGACYSETTINGS|460000003F00000009000000000000000000000000000000040000000000000010E586515E97D101000000000000000000000000020000001700000000000000FE8000000000000059CE787BEE728C290B000000000000001700000000000000FE80000000000000FDDF49A450AADFC20B000000000000001C00000000000000000000000000000000000000000000000000000000000000170000000000000000000000000000000000FFFFC0A8380A000000000000000002000000C0A8380A0000000000000000000000000000000000000000000000000C00000CC09E0000181D450040114900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000003CB9E000010B64A00C01449000000000000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\UNCASINTRANET|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\AUTODETECT|01000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\UNCASINTRANET|00000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\ZONEMAP\AUTODETECT|01000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E\LANGUAGELIST|65006E002D0055005300000065006E0000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E\LANGUAGELIST|65006E002D0055005300000065006E0000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E\LANGUAGELIST|65006E002D0055005300000065006E0000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E\LANGUAGELIST|65006E002D0055005300000065006E0000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\LOCAL SETTINGS\MUICACHE\5B\52C64B7E\LANGUAGELIST|65006E002D0055005300000065006E0000000000]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetStartupMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetConnectionMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetProxyRegistryMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\RasPbFile]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZoneAttributeCacheCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesCacheCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\ZonesLockedCacheCounterMutex]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\IESQMMUTEX_0_208]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{E82D3731-DC0A-D5EF-C3D8-CA5DC881E940}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-9D5C-B06E96059373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7D4C2273-C948-408E-C3D8-CA5DC881E940}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Persistence mechanism</category>
+      <type>regkey|value</type>
+      <value><![CDATA[HKCU\SOFTWARE\MICROSOFT\LEUGHOY\17AH4E9C|550033004A00480077004D006B005300560030004A0046006700680039005400]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Local\{5734127A-F941-6AF6-C3D8-CA5DC881E940}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3553-B06E3E0A9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3D52-B06E360B9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-5552-B06E5E0B9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-A552-B06EAE0B9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-AD52-B06EA60B9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-F552-B06EFE0B9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-D552-B06EDE0B9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3151-B06E3A089373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3951-B06E32089373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-4151-B06E4A089373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-D551-B06EDE089373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-2950-B06E22099373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-4D50-B06E46099373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-A950-B06EA2099373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-ED50-B06EE6099373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-3D57-B06E360E9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-7D57-B06E760E9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-C557-B06ECE0E9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-2556-B06E2E0F9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-5156-B06E5A0F9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-BD56-B06EB60F9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-A956-B06EA20F9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-AD55-B06EA60C9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-7954-B06E720D9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-BD54-B06EB60D9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-AD54-B06EA60D9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-F153-B06EFA0A9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-E550-B06EEE099373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-6D51-B06E66089373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-6D55-B06E660C9373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-255D-B06E2E049373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-F55C-B06EFE059373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-1D51-B06E16089373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-1158-B06E1A019373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-855E-B06E8E079373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Artifacts dropped</category>
+      <type>mutex</type>
+      <value><![CDATA[\Sessions\1\BaseNamedObjects\Global\{7E52802B-6B10-4390-595F-B06E52069373}]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>user-agent</type>
+      <value><![CDATA[Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[www.google.de|172.217.21.131]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[www.c3dsolutions.com|173.229.1.92]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain</type>
+      <value><![CDATA[njgqjbxmvbenfligyxzhfwgeuy.ru]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>domain|ip</type>
+      <value><![CDATA[naujvdmlfpjaecycahtdmxocy.com|54.83.43.69]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[173.229.1.92]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[72.175.204.158]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[213.123.176.205]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[213.219.135.107]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[108.200.63.46]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[99.21.49.32]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[46.223.150.132]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[107.193.222.108]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[200.84.149.84]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[207.47.212.146]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[88.247.80.140]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[86.179.220.43]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[75.32.154.102]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[190.73.70.73]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[108.240.232.212]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[81.130.51.125]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[70.175.13.168]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[85.100.41.9]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <Attribute>
+      <category>Network activity</category>
+      <type>ip-dst</type>
+      <value><![CDATA[54.83.43.69]]></value>
+      <distribution>1</distribution>
+    </Attribute>
+    <threat_level_id>1</threat_level_id>
+  </Event></response>

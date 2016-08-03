@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<OpenIOC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="184c1a01-174e-48d9-ad98-db908c52899e" last-modified="2016-06-22T03:17:02" published-date="0001-01-01T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1">
+  <metadata>
+    <short_description></short_description>
+    <description><![CDATA[VxStream Sandbox v4.30 auto-generated IOC for bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe (SHA256: bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11)]]></description>
+    <keywords></keywords>
+    <authored_by>Payload Security</authored_by>
+    <authored_date>2016-06-22T03:17:02</authored_date>
+    <links></links>
+  </metadata>
+  <criteria>
+    <Indicator operator="OR" id="45f5543d-2595-4ce5-8fb8-aca940391bf8">
+      <Indicator operator="OR" id="1e53da80-6c6d-4fc7-a64a-26201e329511">
+        <IndicatorItem id="c3e10d7b-69fa-4717-bfd6-6bc240ebae86" condition="is">
+          <Context document="FileItem" search="FileItem/FileName" type="vxs"></Context>
+          <Content type="string"><![CDATA[Kcbzfqoyibwbvvrdt.exe]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="fecd16f0-7767-46cb-8c4e-6fb9419e39fe">
+        <Indicator operator="AND" id="6f872cff-e590-467c-8b33-3d833960ee77">
+          <IndicatorItem id="22a605b0-1a6c-4347-ba6c-f7f58dd887b4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\RUN]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b8c0eba6-1303-480b-ab61-968c53fb027c" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[CRYPTOLOCKER]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="daf453ca-7817-4518-9454-bdfc30701449" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[43003A005C00550073006500720073005C0050005300500055004200570053005C0041007000700044006100740061005C0052006F0061006D0069006E0067005C004B00630062007A00660071006F0079006900620077006200760076007200640074002E006500780065000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="22959ed9-1ca6-4892-929b-505547c2c569">
+          <IndicatorItem id="eb7836a0-dc68-47d1-b143-6c9ee4f93a46" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8aa77d0b-be91-4778-9479-cbe2c9f1cf73" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYENABLE]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="422c2ff9-cb34-435b-9b31-978f910cc405" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="3e15da13-0dc1-458a-93f2-4c1ea639cd1e">
+          <IndicatorItem id="99bf4191-0032-4377-9f1d-76e57a35d2a4" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="335aecd9-6e5b-4ad8-b3bb-008d32d4535b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYSERVER]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="b8f814f0-dbd8-4ea2-be3b-719001949131">
+          <IndicatorItem id="621c67c1-f060-4e65-8f66-ae0ce9ac3b07" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f7a9a039-f9ce-4f03-aca4-9f1a93b93dcc" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[PROXYOVERRIDE]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="cdb6a4ff-2ff3-4485-bd9b-e37ff6acdb49">
+          <IndicatorItem id="370c1747-28fb-4f80-8484-19d3b31813ba" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="b9324427-b4d5-402b-83d8-1632425d6c04" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[AUTOCONFIGURL]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="104e9340-6f15-4523-ab36-1ab1b474dd5e">
+          <IndicatorItem id="79e3c869-735d-411f-905c-3431752cbe42" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKCU\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\INTERNET SETTINGS\CONNECTIONS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="5f6f4e07-1652-4b51-b1d7-a019017b91e2" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[SAVEDLEGACYSETTINGS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="149456e9-7dd4-4d5f-b1be-63027d6177bd" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[460000003F00000009000000000000000000000000000000040000000000000010E586515E97D101000000000000000000000000020000001700000000000000FE8000000000000059CE787BEE728C290B000000000000001700000000000000FE80000000000000FDDF49A450AADFC20B000000000000001C00000000000000000000000000000000000000000000000000000000000000170000000000000000000000000000000000FFFFC0A8380A000000000000000002000000C0A8380A0000000000000000000000000000000000000000000000000C00000CC09E0000181D450040114900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000003CB9E000010B64A00C01449000000000000000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="a1bf3a8d-df51-493a-830e-f2f05119ec39">
+          <IndicatorItem id="f2925165-586d-4956-b84d-ec8af2c02846" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="aff6345a-7003-4f7a-ae5a-71dfa3e67661" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLEFILETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ad63ad39-e1bd-4dff-8aab-6d47e1c916e0" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="4388d5b0-dcfc-4f9d-836e-987ace69709c">
+          <IndicatorItem id="c8bad89a-6d41-4840-a4e6-4b0afcaa4091" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="1e26574d-8614-42f9-a5bc-c5fc0f6f6b3e" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLECONSOLETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="97da6885-4719-417a-9fa5-164ea72e82d5" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="0a4df5c5-cc80-44d3-b53c-1f24744f6092">
+          <IndicatorItem id="0104a2e5-f0ed-4561-ba1d-ea6f09395d71" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="3dc0a784-f727-4f87-a05e-1401c3e34fa8" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="67a16896-1685-4cef-8eb3-14fdd366ccb7" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="dc434f1d-1f0f-4385-bfb6-b09dd64fffeb">
+          <IndicatorItem id="cae0ea4f-26b5-49bb-bb29-de09421a23d3" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9966640d-8d6f-4a6b-b08a-d665329472d9" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[CONSOLETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="9fff66c8-e8ef-4af9-ac4c-774f5920f8f9" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="313f19c7-56b4-492d-8c71-8a847f3c3cce">
+          <IndicatorItem id="4400a071-8abe-4516-ab49-1b52b1b67fba" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f3372277-222d-4b17-aedb-5528cb268018" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[MAXFILESIZE]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="ad72568f-48a6-42e6-a96b-4da66380e694" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00001000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="9599ef05-6594-4528-a051-47b05d67eff3">
+          <IndicatorItem id="315b9c71-ecc4-44a9-b965-eff8c5e71a5f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASAPI32]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7ccaa1d6-f256-4e81-91a0-8ab0ebecf4e6" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILEDIRECTORY]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="e945149b-bf72-474f-85e6-59e87d4aa5b1" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="1f5b91f1-c4de-4d16-96ad-e92fb343442f">
+          <IndicatorItem id="577ddbca-ddd4-464b-b256-09df9a986a0f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="68a9f4d1-f45c-41dd-a34d-07b81a315705" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLEFILETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="a71577c8-4bdb-408d-a699-39461d473a16" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="0de381a6-4f73-43ea-b2d7-814eb49ba70e">
+          <IndicatorItem id="111a81ad-de92-4660-9719-959ac419640f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="c12e4f50-2c7a-4f57-afca-530998eae1b7" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[ENABLECONSOLETRACING]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8a3a2571-6111-4afb-aa7b-0751ea5639f6" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="5d4a2cad-8afc-4f6c-9b5c-e880edea5c2d">
+          <IndicatorItem id="6a7a5741-04be-4eec-a86a-0b6437efee38" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="41de685a-9764-4af4-8b6a-c377520e80e7" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="33402332-83ec-4bea-88e6-933922e49cf4" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="ab0bcdde-f993-4952-b02e-4c23e663fdbd">
+          <IndicatorItem id="12ca5ebc-7174-4bca-8fcf-713ecaac8565" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="385e187f-326b-49d4-8dfb-d1b9c08ecd62" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[CONSOLETRACINGMASK]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d676275e-b3b2-48fc-9106-d7b5ed98e89f" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[0000FFFF]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="105d1378-6893-4dbe-9f61-57f987aaccaf">
+          <IndicatorItem id="e89edfd8-f55d-407a-9635-9eab57ef7d8b" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="7a96b1ad-0c28-4cbc-8e6f-bf2cf15b0f8f" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[MAXFILESIZE]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="8d8c5fda-05e9-4351-9124-523853d3ed1c" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[00001000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="b2d56b79-414b-4370-9321-16655cf4a33a">
+          <IndicatorItem id="9024657f-1f65-46d9-9236-2315d7788bf2" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/Path" type="vxs"></Context>
+            <Content type="string"><![CDATA[HKLM\SOFTWARE\MICROSOFT\TRACING\KCBZFQOYIBWBVVRDT_RASMANCS]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="f5734068-85ac-400f-995b-ee306a5e6d69" condition="is">
+            <Context document="RegistryItem" search="RegistryItem/ValueName" type="vxs"></Context>
+            <Content type="string"><![CDATA[FILEDIRECTORY]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="66c26829-135d-402d-910f-026451c035db" condition="contains">
+            <Context document="RegistryItem" search="RegistryItem/Value" type="vxs"></Context>
+            <Content type="string"><![CDATA[2500770069006E0064006900720025005C00740072006100630069006E0067000000]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+      <Indicator operator="OR" id="3580a4d0-d574-44be-8605-22f36bdecb5e">
+        <IndicatorItem id="e8dccd55-2d73-459b-9d9f-44275b676c46" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[pxlwjhroywachhe.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c2564bc8-5c7a-45dc-894a-b852a5da9a1c" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wjequabridumhaf.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="3c3cce06-0aa2-4bc3-8b17-73bed32afdc6" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ipaaibtemelm.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="304866b7-820d-4c9f-a635-a209d84f3dc9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[koksmcqcssvgti.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="046b4e95-e0f2-403f-8ca0-96b982381e43" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wpkdyaigjsnwloh.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e6ffbeaa-d6aa-46f2-8539-fb1b2f0e2d0a" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tbhmteoimbwtqkb.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="de696e9b-19e7-42c4-b284-5f984764db51" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[piehvqhddryyrr.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="7337d374-e4f4-4e85-8b11-e08ab6cb51f7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[nytvymsxipdkrqo.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="132f2df2-8ccf-49d6-b830-040b3451f75b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tkthvrtmrjhdre.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="92e3a7e5-6f10-40d5-9acb-3be2366c02be" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[guuxvgjkhviyofr.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="803f5f97-6d08-45ad-b1b3-0b3a2ffe924a" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[srjqtkjpjsykeek.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="78415b1d-8412-4aa4-b24f-a74d56f428cc" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vrjqxfvkspsjcqa.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="387c7c57-cd6a-4465-8f0c-b54506994301" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[axnkgxyhrwevcdr.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="fad6c7fc-da1d-4ebc-9ab5-8ebb95810935" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[hmdopmfgvpqd.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="7211f0fc-b1a4-4752-b6d7-3067c81bad6f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[skatmeobbhywppf.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4f54c72a-2105-4feb-b509-247b62b4c7c9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[gocdrrydftgr.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="6985dab3-e23c-4d80-b1cc-8b19691b2c64" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tmlbjvtxvlflact.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="381244d8-11bd-4532-9467-b5c96340dbb5" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[xinswkuhhgfoctm.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f1390bd4-fa93-4548-b51c-dd498690290e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[nrdaqlulrbxdesb.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="8ce461e1-2c5b-4022-a37a-6719835c14d5" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vjvrmsmntlkqmma.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0b9cca2a-16f7-47af-bb83-ec04c6ccb523" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[xwpjcoejscniljb.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="63b5aefe-792a-45ab-acf6-9c20242151e1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ujrbqutupqeqnlf.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="26ecdf34-55ee-4d7c-acf9-583aa1affd2c" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rvuisagiqwwvqcy.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="7bbb6f2c-7b51-42c9-91e5-5cf0a0f5b1fa" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[olfwlrgpegqoomg.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ca7c98db-32c1-4b23-8af8-b6ea72d67757" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vcfveifjwnflysh.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a8d40579-d321-4fc5-82bf-45e283f12e6f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rnlosboxmksjefk.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a2ddc7cc-4c60-4d83-bef5-dfe8e743e677" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[uixeknhhhqixhxs.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="523ced73-ceeb-45a2-891d-bd41d87d9c2d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[qvmjkynnsumxqpi.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="2b9325a0-5bef-4017-a0cb-ab2361a3a8f8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[loiwfrekdysg.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f598ee59-d81d-47c4-84c2-fa0a44f4ab53" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[dsaaxkrqsknmfje.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="de22b81a-7a4f-4004-9f9c-718b448583e7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rcrxsrfbthqbosp.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b88f4fd9-8098-407a-9359-080748cff6fc" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[bjxbwshmvcoiaa.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="5b7d249b-4fa7-4054-b4be-1310855375aa" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[xfydcqmqabtoowj.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1baa9a32-7ba8-4297-bc4d-b4115a0556f8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[eqbmyfemjniaoop.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="2a011d93-e436-482d-926b-9b14a40c8605" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[btiynsldftdjlby.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="360cf32e-ad8c-44ec-bc43-bd2f26f3147f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[hwuhyjnrpyylsl.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="19b05986-3ee6-4b21-ba27-129b70051de7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[qcjykwfmswdtosc.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ca11482a-a770-4724-b635-4694fa403c47" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[jsjylchqqnynock.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a6147bf8-8f55-4898-82eb-9de27a65a0cf" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rconumuppvqgna.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="362732c5-808d-4d3e-b143-279ba0f596cc" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tnvtwcoaubwjje.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d6d1c324-9e60-4bd5-9db1-6bf5796f2769" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wkwsmoxxxwbuhrf.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="9b552414-65ad-41e3-97ba-57fba99c1fb9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[dcmvpvxwgfsrqr.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f8cf5bea-9197-4cb9-8b92-434f3bede433" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[skydhciqvnpfnp.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b5f08647-24d3-4f1f-97d6-d0c42df5f93e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[mmnvbjxxbieveiy.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="eaa82316-cdc9-4591-be81-7b5fa3f1f27a" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[jmarhdpwkmddabg.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="883a4a52-8497-4e89-a7e7-4a4217229e97" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[oxprtgcygepflwk.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c975b011-5aa3-4359-b1d4-32f3f66a0fe3" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[eankkntkeheeqx.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0532f199-aa16-4f41-b932-51ae9d49be24" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[liptatkahibenjc.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ba8efec8-8906-4e48-9d00-ae93c8285e8b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[bkiquatoyewrewj.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="411cef86-be3c-42dd-960d-d1ed71e889b4" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[xblspwbeforsum.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f06377c9-1fef-4a94-8b4e-76949889705f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[toxvntcyuhcogat.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="78d6723d-1401-4cf8-ae1a-403377aec8d7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[nhwjskkwxmdkpbm.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="51063d13-cce3-4623-beda-594000760e61" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[maqlaaklopqpjrl.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="cb2e2e54-e7da-4877-b2fa-6fb3ec8bae10" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[yxemslnmqypt.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d31bbaaf-5309-4217-9f53-3c269dfa8df6" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[gcwxecifbmyboct.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="17b50745-c919-49a8-a007-47eb388330d2" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[huksrcimcvgxppl.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="62abb478-87be-4bed-ad6e-d28a24dbc863" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ihqspfdmjdfmiwm.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="da29f21c-0289-4ea3-bf0e-ea58ef58283e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[qrsodigtlfmsaxp.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="efc683a2-844b-4bde-a1ef-b7a780ee63e4" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[cgvxumjwsoxrvej.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4bfc706f-e166-4cca-b4a8-12ee7c05ef51" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[mypfdxjwewqksyx.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b406dab0-4cf8-4465-96b2-2e7845dc9c65" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[drduxxgjxpffsr.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="fac94f74-5419-4182-90a6-5d9c2cbe2ee9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[brcytbwstpwyopn.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="bf1993ff-3267-43c1-9ffc-91e0e2f3daf2" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vfcxmybvjxotrhb.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="778b5199-cff7-4e4b-a3b9-19a4a28b355e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[whxqbvaujxybopk.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4af5a672-ca21-4843-8ad2-d8cb04111300" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[criqjiunctnhqn.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="67acc3f6-383c-438d-a5ba-4e8cb9303bd5" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[gwadktcvtdhnfc.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c5ba15e6-832b-44f5-97db-51013b55ad32" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ckqpdbmmwekbdrr.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b8cd47f1-0d16-4b24-b993-d18cb915b7be" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wfkwutbkkicbgak.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0a5a0fa1-8e52-483a-a789-3959754d546a" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ovbcrupdojeeegj.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e0cde49e-51c9-4edf-9154-4f5cb8bbf849" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[jnblgvahdavx.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="fdafe002-3afc-4e49-884a-a724e441604e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[hodxcrtevdioscq.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="04b4a2ef-77d1-4183-951f-81d6c72672ca" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ndnheheobfwlsmg.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c9041e04-3534-4bb9-b1a7-794f31e28685" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[qvyacpejjypabqe.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a8e762b9-1e4a-49dd-a8b1-f20c944cb36d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ijanumduksrtvy.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="5e5ec1d9-f89f-4750-8712-ce9f472e4822" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tixqidydxdqtfpd.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="489145da-3a5c-41bd-a483-dc3ae9756d8e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[uomcukuvnktalkb.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="fa2e805b-e863-4af7-909e-2851b1a345cb" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[nibrqpxopvjnysb.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d68ed8de-4513-480e-9ed1-cacb4b61e147" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[aklhduuycoohbtw.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="623bc3dc-b3f4-443d-9a48-f364a0cef5a3" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[mrfixgsitnnp.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b9d70dd1-7ea7-4d82-8071-28af6469c4de" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[pyftpuwlemvskpu.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="bf129973-eaee-4b48-8d3c-ab183357424e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[swwbgfrtfhjwrec.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e56b2c1c-e25d-4c94-af23-231d985dd3b7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[uffoutcggbalhup.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c4e49416-c977-40a0-88a2-faaa302e8211" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ndhgaiemptkmsbm.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a22de50e-1ca4-4d36-9947-7bff833f55ba" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[hlcqdtuylrmpafp.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e5a07a7c-12c5-4743-a552-8b84580e9f90" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rrbnlpuxawwogeq.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a139832f-1532-4ecc-814f-a906c133f27e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[odrxacgvcpgcpou.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="28ed1fe0-9646-4ab5-bd5d-521e29031207" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[okdsbvuvqjrqrv.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="eac212fb-7cb0-4aac-89af-e7b2e6379a21" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[dbxikbknobesayt.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="53639ea9-b8cc-4b20-8b7c-1d303ddd3536" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[xvrpctylvxpudtn.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="169800da-8da4-4869-95bf-f2d3eb9a2a38" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[yivrffusispomik.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="89ab75c8-3ff2-4498-9aa4-adb2c19d0771" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[sitamlywqvndwdg.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="53c377d2-93e8-43b0-a43f-eb0692c4540d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[kmufscobdfxmebx.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a360a6fc-5667-4e02-8ed5-6839d8825b00" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[npgtvbylkjxb.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="7868d33b-7dcf-4780-aeba-7af2c3aee1ce" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[pdawijudqftfanp.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f4284035-f1b9-4c4a-870b-8a256e032219" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[klwtycfrrsvhloj.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0f74cb8a-1e57-4abb-ab6c-b9c110690186" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vrloswwgniyajlu.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="8085ff93-6c32-46ea-91e0-7fb7998819a7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[isbadhhcpdlgacw.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="9b9b0cb8-5ca9-4b32-83de-c6eedeaad498" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vvbnxhnwwongnm.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="951fe65e-7473-4e64-b597-074409cf9b2f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[iffwlybsvqxkqg.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="421fa5c8-26f0-4716-a352-b54406b40d81" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[gbutthexifbwrx.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="fd897e14-2a65-4e9a-a7d8-cbc33d53d3f9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ivsyapeigqymobi.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f4066495-73e4-4c38-ae93-21bdc14387a9" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[sasktjbanfdwogx.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="897d6e28-d2f4-457c-b442-25460d360c08" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wvjqtmkehicrhus.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="13894206-4585-4a2e-849c-6645e08ba675" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[yskxjjqfgymvlqa.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="6a44a01e-7991-4337-908a-2a1b591d4ab2" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[yteovuurknkmalc.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a49ea35c-0129-4b83-85d4-c5ef80441a75" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[bpofnyxiuaaykrk.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1f61799d-0406-49cf-a1f4-d1d29147ff83" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vbmutkgsnavaikt.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f4bbef0e-486b-4848-871b-53660b77d892" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[kqhlhwxhmdiu.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1acdccd6-58d4-4c36-bb41-dea610e1ae9e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rcoxshllfoldxie.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="bfbb8235-cca5-4f20-9e51-cb71ff6c77ac" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tdewbwqldsdpcdj.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="fe8df5e3-5358-45d3-8e32-bd4249588549" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[raklloblmuppono.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f0780de7-dfea-4c70-a4a9-44a5be24f4da" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[jlouquqkddiepws.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="53f48e75-a829-45e8-aa7c-8b7e7f2ca07b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[umtpflycmfryspb.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0edafcda-8197-4544-a215-af2c8b92f745" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[viogggljvxrdcya.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="aba9e9a5-2c40-4712-af04-4de5ea5844e8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[fopnxeounliooa.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="98d7cbef-f027-4b73-ab77-4551ba44ce69" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ctcgdgkvantsju.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e13685d8-6992-4a93-bb65-5867e018b25f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[cpdluvjoksrmoeq.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a01aa778-2447-48b3-9930-ea81084b8ef3" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[bucpakicgvejaba.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="644dac83-34c4-430b-8366-7115ea5a9533" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[oycuhaaltwnecjq.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="33b490fa-e83c-4e4f-bbbf-8b77b777e0d3" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[cbpjcndwdvqntxa.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="cf5a7e13-5a99-4aa8-b9ef-01b71bc4acca" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[obomepxvkxkmatr.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="171c38a3-a8a0-4804-a0d7-47ebd9b1ac35" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[eloqhkhkvybokmr.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="084cbec9-dada-4491-adfb-867144acc3df" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tqlptpiawhymldc.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="16d2da18-7cf7-4ba5-9949-872f11fe286d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[smdcbimhkgrgfie.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="9c358873-e12f-4672-b9e6-35bca579c52d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[jhyrxskaukpgeik.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="5dac9946-e521-47d0-ad77-2422734c03c8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[oqunyssjpwsvcds.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="6bfed0c5-bc78-4513-bbaa-9fc9f21695d8" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[nxhslfjbiecvmux.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="6e89fb8d-c8ab-42fe-b46a-a042ac308b1d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[uigpqqgtjieyaqw.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="98d4d18b-d807-426d-8ece-042dbc8de469" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[lqshtrcywfbeenm.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="ba8b5ec8-2dcd-4b44-943d-8b16769ca023" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[bcxvtdofvgrqfhj.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f0ad5aa3-9d3f-41fd-b15d-5f937cc870a5" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[mdyhruwyemasipo.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4a908a3b-1373-4b8d-a62b-323f7f5972e1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vmvglwcyeyoyhws.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b005b5ed-0a6e-4ac6-9447-b54faad74504" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[kdsdsapurvgf.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="53b8d369-5e72-480b-beac-891a212b29fe" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vgyqlfdgboutqgw.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a0d9a2af-8760-4ea5-a436-e35244a50722" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rrtojkqfwvonbfh.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="26182857-590c-41b7-960d-d032e96ee4f1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[gqmqqmuoivdgpoo.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1e5ae7a8-31e0-4126-aa81-f1d8631efa9c" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ofihltoqeeasxbr.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="3a415d73-6300-4dc3-9057-be1770fc4e3b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[rlvpylyhmgiw.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="823d8cee-0987-4736-9615-662786f0b0db" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[fxyvdmuhhmvjobw.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="464a6c2a-6c85-49da-842b-c6ad27de513e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[dlgryphyumqolfx.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e1ada76c-1a6d-4eed-9bcd-2fdb1b3b4e8f" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ubevljnxpxlctxd.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a7818b50-f88e-4418-ab8f-e0c5952f8ebf" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tnefbcfonvccers.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="cabe6c5b-a751-4c3e-96b4-387474a6f510" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[sjgdaskwqnvbngk.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="96754322-9d54-4218-9351-94e87bb597f1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[nhhukcsrkgnwoar.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="645c604d-9151-428c-89be-9548bfe1358b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[iolwksmytfsmhvl.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="7ce4c654-1d7c-4687-9f7c-a7ca2c066039" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[pjgjmjcoxedkoao.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e85d36d4-1579-4954-b50f-b9c1d5f83c2c" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wfqetptscbgfecb.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="31935516-2207-4f49-886b-05e1e0792fa1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[qynsxpwwfygsjes.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e72a012e-a1af-4294-83af-51e51046e544" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[agwegahoyvkcvgr.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="e2552126-0012-40ed-bf00-6ca42a779c8c" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[lhdqmaketnpqiqu.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="f17ef25a-df4c-4523-9c9d-e6df8514bac1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[qxtvrikjwykahby.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="8774e8f2-7de1-4562-960e-d71d466df3ba" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ygofxfhdxjaclyx.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="701fa9f9-967a-4791-821c-f3860715ae17" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[pqdmhgaabcgbiwi.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="6a2cb03f-dbe6-4576-80fe-8db738214492" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vhprsuhwlxlrenx.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a1ca1d6a-5236-4549-b3ce-7b9ab85e2d9b" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vnjcnfovugvyxut.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1c10d720-fdaa-4e1e-ba54-813304ad14c6" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ohfibryemcqnasd.com]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="c3dec828-f305-4804-ab5d-0e4b11e1110e" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[fcvjokflnvughtt.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b002efd5-f9da-459b-b288-7d1929a474b3" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[vsgyorchdbbvjf.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4bc5c3ca-ebfc-40a9-a0a7-c89b2a18f41d" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[alqdmpdqxrtxtuk.net]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="1d622e20-6bc3-494c-a16f-7bae937e31a1" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tsrpnaepseikbjn.info]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="6dd71023-7ebf-4a78-9dd0-4948b4a9faa2" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[tbhuayklxsoxiki.ru]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="bbe7e515-5ba8-41c5-a132-4a704609dae7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[igfylwrfqffjii.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="484adb55-6485-4ec6-894a-77f43911e470" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[bthcoqyaercuqo.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="4722e7ae-9b12-465c-80ad-e66c3d646736" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[alwmcblyxadvqk.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="09f1aa91-0565-4484-bac6-2fbbfc3bd526" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[ecnkgdqhyekkbgo.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="d6661877-5c46-47cc-ad7c-e82c421feab0" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[unbdfxargolddos.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="17ef836a-2dc4-41cb-80c2-136d2b3bdbc7" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[wrtnbketypjtfew.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="8ef3a9a7-1b30-4765-8bb5-4a1497328dea" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[cljihkijxwiebju.co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="42e0b119-b243-4c67-a24e-f63914c82774" condition="is">
+          <Context document="Network" search="Network/DNS" type="network"></Context>
+          <Content type="string"><![CDATA[usewihhnxbgcym.com]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="AND" id="774db184-e2ac-44d0-871b-ddd29322bdf2">
+        <IndicatorItem id="b13fd359-2789-44ef-b581-4148c226f0ec" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[&t.tt]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="85d607a8-4e11-41ad-aed1-2e1d810962d0" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[co.uk]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a57b688d-9ffc-46b6-855f-f32d21ea3ed0" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[CryptoLocker]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="afd36a14-cd2d-4f06-b047-1bf13900295c" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[http://%hs/1002.exe]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="a0dedaf9-0a8d-49ff-a6a9-dd463b803a67" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[ll collect your cash and load it onto the MoneyPak.\par\par\cf3\b{\field{\*\fldinst{HYPERLINK "https://www.moneypak.com/"}}{\fldrslt{\ul Home Page}}}\ulnone\f0\fs20\par{\field{\*\fldinst{HYPERLINK "https://www.moneypak.com/StoreLocator.aspx"}}{\fldrslt{\ul MoneyPak Store Locator}}}\cf1\kerning0\ulnone\b0\f0\fs20\par\par}]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="3d87fd53-2a26-48db-8907-f951ac9feb5c" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[rcoxshllfoldxie.org]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="3704626d-a2ad-401b-99a9-964fd63190f1" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[rvgf.biz]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="b5120fc8-48ad-45ab-90e3-630e5ed6214a" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deftab708{\fonttbl{\f0\fnil\fcharset0 Tahoma;}}{\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green176\blue80;}\viewkind4\uc1\pard\nowidctlpar\cf1\lang9\f0\fs20 Bitcoin is a cryptocurrency where the creation and transfer of bitcoins is based on an open-source cryptographic protocol that is independent of any central authority. Bitcoins can be transferred through a computer or smartphone without an intermediate financial institution.\par\parYou have to send \b %AMOUNT_BTC% BTC\b0  to Bitcoin address \b{\field{\*\fldinst{HYPERLINK "bitcoin:%BITCOIN_ADDRESS%?amount=%AMOUNT_BTC%"}}{\fldrslt{%BITCOIN_ADDRESS%}}}\b0\f0\fs20  and specify the Transaction ID on the next page, which will be verified and confirmed.\par\par\pard\cf3\b{\field{\*\fldinst{HYPERLINK "http://bitcoin.org/en/"}}{\fldrslt{\ul Home Page}}}\ulnone\f0\fs20\par{\field{\*\fldinst{HYPERLINK "http://bitcoin.org/en/getting-started"}}{\fldrslt{\ul Getting started with Bitcoin}}}\cf1\ulnone\b0\f0\fs2]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="0e972d2d-0e1e-4ad4-92f4-24a50f6cae9e" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deftab708{\fonttbl{\f0\fnil\fcharset0 Tahoma;}}{\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red0\green176\blue80;}\viewkind4\uc1\pard\nowidctlpar\cf1\lang9\kerning1\f0\fs20 MoneyPak is an easy and convenient way to send money to where you need it. The MoneyPak works as a \lquote cash top-up card\rquote . \par\parYou have to purchase MoneyPak card, load it with \b $%AMOUNT_USD%\b0  and enter the MoneyPak number on the next page.\par\b\parWhere can I purchase a MoneyPak?\b0\parMoneyPak can be purchased at thousands of stores nationwide, including major retailers such as Walmart, Walgreens, CVS/pharmacy, Rite Aid, Kmart and Kroger. Click {\field{\*\fldinst{HYPERLINK "https://www.moneypak.com/StoreLocator.aspx" }}{\fldrslt{\cf3\ul\b here}}}\cf1\ulnone\b0\f0\fs20  to find a store near you.\par\par\b How do I buy a MoneyPak at the store?\b0\parPick up a MoneyPak from the Prepaid Product Section or Green Dot display and take it to the register. The cashier w]]></Content>
+        </IndicatorItem>
+        <IndicatorItem id="eda9e114-91f5-450d-b235-413f64f2c189" condition="contains">
+          <Context document="ProcessItem" search="ProcessItem/StringList/string" type="vxs"></Context>
+          <Content type="string"><![CDATA[{\rtf1\ansi\ansicpg1252\deff0\deftab708{\fonttbl{\f0\fnil\fcharset0 Tahoma;}}{\colortbl ;\red0\green0\blue0;\red0\green176\blue80;\red0\green0\blue255;\red240\green0\blue0;}\viewkind4\uc1\pard\nowidctlpar\cf1\lang9\f0\fs20 Your important files \b encryption\b0  produced on this computer: photos, videos, documents, etc. \cf2\ul\b{\field{\*\fldinst{HYPERLINK "viewfiles"}}{\fldrslt{Here}}}\cf1\ulnone\b0\f0\fs20  is a complete list of encrypted files, and you can personally verify this.\par\parEncryption was produced using a \b unique\b0  public key \cf2\ul\b{\field{\*\fldinst{HYPERLINK "http://en.wikipedia.org/wiki/RSA_%28algorithm%29"}}{\fldrslt{RSA-2048}}}\cf1\ulnone\b0\f0\fs20  generated for this computer. To decrypt files you need to obtain the \b private key.\par\b0\parThe \b single copy \b0 of the private key, which will allow you to decrypt the files, located on a secret server on the Internet; the server will \b destroy\b0  the key after a time specified in this window. After that, \b nobody]]></Content>
+        </IndicatorItem>
+      </Indicator>
+      <Indicator operator="OR" id="c102f2c2-fb1b-4e43-aa3c-18b035d719b1">
+        <Indicator operator="AND" id="077d0ac0-7feb-44d1-a5c0-f0a6df5f4dd9">
+          <IndicatorItem id="1e290b2e-42e9-4608-8397-ad515064f2a6" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[Kcbzfqoyibwbvvrdt.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2e88827f-cf5a-454c-8875-a1dc1c794c26" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%APPDATA%\Kcbzfqoyibwbvvrdt.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="06064ff3-8f1f-48f3-9127-f7eabaa21c7a" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA["/rC:\bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11.exe"]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="94f308a8-0d2a-47b6-aa0f-f374e54220a5" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\Rigpssczawhnxzdb]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2a71237d-f86f-4531-bc7d-a2105c2bc803" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\Gikvjykeqdchlfl]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="2aa1a1af-9052-4dfa-a968-6f44e87f00ab" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetStartupMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="eaea63de-f5e4-4042-80d5-ed237d5fa7d7" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetConnectionMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d7b86c5c-84a5-429e-8bc0-060e51422118" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\WininetProxyRegistryMutex]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="21dfae80-6973-414f-b187-8a7c01562edf" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\RasPbFile]]></Content>
+          </IndicatorItem>
+        </Indicator>
+        <Indicator operator="AND" id="e6ca10fa-15cd-424d-b85c-dbc37fd826b5">
+          <IndicatorItem id="c2dabec2-8286-4053-abf0-c06d28ae0e17" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/name" type="vxs"></Context>
+            <Content type="string"><![CDATA[Kcbzfqoyibwbvvrdt.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="cbd6eefb-6b33-4151-8bcb-1a38135eed71" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/path" type="vxs"></Context>
+            <Content type="string"><![CDATA[%APPDATA%\Kcbzfqoyibwbvvrdt.exe]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="d156183a-2fbb-4829-8e5d-59a76ad28d53" condition="is">
+            <Context document="ProcessItem" search="ProcessItem/arguments" type="vxs"></Context>
+            <Content type="string"><![CDATA[/w000000A8]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="4944479a-152e-4456-b787-88fa2949df78" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Global\Rigpssczawhnxzdb]]></Content>
+          </IndicatorItem>
+          <IndicatorItem id="27987258-ed00-481b-b676-8bd0a7514daa" condition="contains">
+            <Context document="ProcessItem" search="ProcessItem/HandleList/Handle/Name" type="vxs"></Context>
+            <Content type="string"><![CDATA[\Sessions\1\BaseNamedObjects\Local\Gikvjykeqdchlfl]]></Content>
+          </IndicatorItem>
+        </Indicator>
+      </Indicator>
+    </Indicator>
+  </criteria>
+  <parameters>
+    <param id="da05c826-f530-4f91-96cf-0d822454dd8c" ref-id="66c26829-135d-402d-910f-026451c035db" name="converted_value">
+      <value type="string"><![CDATA[%windir%\tracing]]></value>
+    </param>
+    <param id="8bfcdb6c-4267-4da9-90e1-dd074010d909" ref-id="c102f2c2-fb1b-4e43-aa3c-18b035d719b1" name="targetuid">
+      <value type="string"><![CDATA[00026879-00003404]]></value>
+    </param>
+    <param id="9cdda408-5af8-498d-b478-9400d99090e2" ref-id="c102f2c2-fb1b-4e43-aa3c-18b035d719b1" name="targetuid">
+      <value type="string"><![CDATA[00027614-00002956]]></value>
+    </param>
+    <param id="fc6b7d0c-cca1-4b2a-b13b-97be9749725f" ref-id="c3e10d7b-69fa-4717-bfd6-6bc240ebae86" name="filetype">
+      <value type="string"><![CDATA[PE32 executable (GUI) Intel 80386, for MS Windows]]></value>
+    </param>
+    <param id="969848fd-a55c-455d-9744-4d9e4c273a82" ref-id="c3e10d7b-69fa-4717-bfd6-6bc240ebae86" name="md5">
+      <value type="string"><![CDATA[9cbb128e8211a7cd00729c159815cb1c]]></value>
+    </param>
+    <param id="073bc973-fc56-42e3-9986-30c1e9f24f87" ref-id="c3e10d7b-69fa-4717-bfd6-6bc240ebae86" name="sha256">
+      <value type="string"><![CDATA[bb12757c6a14207d8a9cd4d42ff93747795f8a09186752b1c94b5b373abbaf11]]></value>
+    </param>
+    <param id="48859d69-26cf-4a70-bcf7-b66a95cd44f2" ref-id="daf453ca-7817-4518-9454-bdfc30701449" name="converted_value">
+      <value type="string"><![CDATA[C:\Users\PSPUBWS\AppData\Roaming\Kcbzfqoyibwbvvrdt.exe]]></value>
+    </param>
+    <param id="52e9dd3b-61e7-4552-85c4-b4d7daa86773" ref-id="e945149b-bf72-474f-85e6-59e87d4aa5b1" name="converted_value">
+      <value type="string"><![CDATA[%windir%\tracing]]></value>
+    </param>
+  </parameters>
+</OpenIOC>
