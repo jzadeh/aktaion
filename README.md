@@ -21,13 +21,13 @@ To build Atkaion use the assembly command via:
 
 ## Dependencies
 
-To run the jar from the command line the following dependciences are requried for scoring a PCAP:
+To run the jar from the command line the following dependencies are required for scoring a PCAP:
 
 	BRO
 	Java 1.8
 
 
-For OS X the simple homewrew mehtod has been tested:
+For OS X the simple homebrew method has been tested:
 
 Install Homebrew
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install )"
@@ -38,10 +38,10 @@ Install Homebrew
 	cd Atkaion
 	sbt assembly
 
-Python depencies 2.70
+Python dependencies 2.70
 	Pip install paramiko
 
-Python 2.70 depencies 
+Python 2.70 dependencies 
 	Pip install paramiko
 	https://github.com/unixist/cryptostalker )
 
