@@ -43,7 +43,22 @@ Python depencies 2.70
 
 Python 2.70 depencies 
 	Pip install paramiko
-	https://github.com/unixist/cryptostalker )
+	https://github.com/unixist/cryptostalker 
+
+
+
+Some caveats about the Active Defense Script
+
+- It can be run from Security Onion https://securityonion.net/
+- You will need to create a GPO prior to executing the script and reference it in the name (I.E  ' -Name antimal ')
+- Script will only work if you have SSH in your Server (You can use FreeSSH or OpenSSH)
+- You will have to create an ssh account linked to AD with the proper permissions to execute powershell scripts
+   - https://blogs.technet.microsoft.com/heyscriptingguy/2010/11/16/enable-powershell-remoting-to-enable-running-commands/
+   - https://technet.microsoft.com/en-us/library/hh849694.aspx
+- If this is going to be implemented in production, it is recommended to do it with Service Account. Below the Microsoft recommended steps. 
+https://technet.microsoft.com/en-us/library/dd548356(v=ws.10).aspx
+
+
 
 
 
