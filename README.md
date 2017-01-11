@@ -1,6 +1,6 @@
 # Aktaion: Open Source Tool For "Micro Behavior Based" Exploit Detection and Automated GPO Policy Generation
 
-Aktaion is a lightweight JVM based project for detecting exploits (and more generally attack behaviors).  The project is meant to be a learning/teaching tool on how to blend multiple sectuirty singals and behaviors into an expressive framework for intrusion detection.  The cool about the project is it provides an expressive mechanism to add high level IOCs (micro beahviors) such as timing behavior of a certain malware family.  
+Aktaion is a lightweight JVM based project for detecting exploits (and more generally attack behaviors).  The project is meant to be a learning/teaching tool on how to blend multiple security signals and behaviors into an expressive framework for intrusion detection.  The cool thing about the project is it provides an expressive mechanism to add high level IOCs (micro beahviors) such as timing behavior of a certain malware family.  
 
 <http://www.github.com/jzadeh/Atkaion>
 
