@@ -26,6 +26,30 @@ To run the jar from the command line the following dependencies are required for
 	BRO
 	Java 1.8
 
+Rough Notes for building on IntelliJ (Mac/Windows):
+
+Step 1:  Download the Java JDK for java 1.8 : java 1.8.0_102-b14
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+ 
+Step 2:  Install scala
+https://www.scala-lang.org/download/2.11.8.html
+ 
+Step 3:  SBT 0.13.12  
+http://www.scala-sbt.org/download.html
+ 
+Step 4: Clone the software repo: https://github.com/jzadeh/Aktaion.git or just copy the indivual build.sbt file at the root of the project and the assembly plugin in the project/ subfolder.  
+ 
+Step 5: Run the command sbt at the root of the directory. 
+ 
+Step 6. Type compile at the sbt prompt if step 5 did not fail(there are no scripts at this point) make sure you don’t hit any erros here either.
+ 
+Step 7: IntelliJ Community Edition (Free)
+https://www.jetbrains.com/idea/
+ 
+Step 8:  Install the Scala plugin for IntelliJ
+https://confluence.jetbrains.com/display/SCA/Scala+Plugin+for+IntelliJ+IDEA
+ 
+Step 9: Optional install sbt plugin for IntelliJ
 
 For OS X the simple homebrew method has been tested:
 
@@ -44,8 +68,6 @@ Python dependencies 2.70
 Python 2.70 dependencies 
 	Pip install paramiko
 	https://github.com/unixist/cryptostalker 
-
-
 
 Some caveats about the Active Defense Script
 
