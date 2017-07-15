@@ -1,11 +1,12 @@
 import bro_log_reader
 
+
 #take a Bro log file, formatted as follows:
 #fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	user_agent	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	filename	tags	username	password	proxied	orig_fuids	orig_mime_types	resp_fuids	resp_mime_types
 #return a dictionary with all the info, including legacy variable names from the scala version.
 
 
-def BroHttpParser(inFile):
+def bro_http_parser(inFile):
     #reader = bro_log_reader.BroLogReader('/Users/Gary/PycharmProjects/Aktaion/data/broData/ExploitExample/http.log')
     reader = bro_log_reader.BroLogReader(inFile)
     for row in reader.readrows():
