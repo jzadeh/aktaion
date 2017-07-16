@@ -7,14 +7,15 @@ import inspect
 #this is to deal with the log file length exceeding the TestCase allowable length
 unittest.TestCase.maxDiff = None
 
-#make
+#make example log data file path relative to the project
 directory = os.path.dirname(os.path.abspath(inspect.stack()[0][1]))
 filename = os.path.join(directory, '../../data/broData/ExploitExample/http.log')
+exceptionFile = os.path.join(directory, '../../testdata/badBroLog.log')
 
 #Contract
 #1.Returns a dictionary given a bro-log
-
 #2.Throws invalidFormatError if given a non-brolog format
+#3.Throws emptyFile error if given a log with no info.
 
 class BroHttpPyParser(unittest.TestCase):
     knownValues = ( (filename
@@ -28,6 +29,10 @@ class BroHttpPyParser(unittest.TestCase):
         for file, dictionary in self.knownValues:
             result = bro_http_parser(file)
             self.assertEqual(type(result), type(dictionary), 'invlaid return type')
+
+#2
+    def test_format(self):
+            self.assertRaises(bro_http_parser(exceptionFile))
 
 if __name__ == '__main__':
         unittest.main()
