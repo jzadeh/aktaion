@@ -16,6 +16,7 @@ exceptionFile = os.path.join(directory, '../../testdata/badBroLog.log')
 #1.Returns a dictionary given a bro-log
 #2.Throws invalidFormatError if given a non-brolog format
 #3.Throws emptyFile error if given a log with no info.
+#4.Throws invalidPath error if unable to locate a logfile.
 
 class BroHttpPyParser(unittest.TestCase):
     knownValues = ( (filename

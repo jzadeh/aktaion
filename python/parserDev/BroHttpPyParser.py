@@ -9,9 +9,12 @@ import bro_log_reader
 #return a dictionary with all the info, including legacy variable names from the scala version.
 
 #TODO create invalidFormattError exception handle
-#TODO ceate emptyFile exception hand
+#TODO ceate emptyFile exception handle
+#TODO create invalidPath exception handle
 ##^^ check how brothon handles these first, possible duplication of exceptions
-
+    ##broLogReader throws no errors when given an invalid file path
+    ##broLogReader throws 'Conversion Issue for key' message, but returns whatever data can be processed
+    ##broLogReader throws 'Conversion Issue for key' message, returns nothing
 
 def bro_http_parser(inFile):
     #reader = bro_log_reader.BroLogReader('/Users/Gary/PycharmProjects/Aktaion/data/broData/ExploitExample/http.log')
