@@ -39,4 +39,4 @@ class BroParserTests(unittest.TestCase):
 
     def test_basicBroNormalizedParser(self):
 
-        normData = ParsingNormalizationPyLogic
+        normData = ParsingNormalizationPyLogic()
