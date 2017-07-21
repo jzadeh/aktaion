@@ -1,4 +1,4 @@
-from BroHttpPyParser import bro_http_parser
+import BroHttpPyParser
 import ParsingNormalizationPyLogic
 import unittest
 import os

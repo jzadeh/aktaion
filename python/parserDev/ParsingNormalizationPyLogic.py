@@ -31,6 +31,7 @@ class GenericProxyLogEvent:
     def compare(self, that):
         return (self.tsJavaTime > that.tsJavaTime) - (self.tsJavaTime < that.tsJavaTime)
 
+
 #create the BroHttpLogEvent class
 class BroHttpLogEvent:
     def __init__(self, tsDouble, uid, id_orig_host, id_orig_port, id_resp_host, id_resp_port,
@@ -71,6 +72,7 @@ class BroHttpLogEvent:
     def compare(self, that):
         return (self.tsJavaTime > that.tsJavaTime) - (self.tsJavaTime < that.tsJavaTime)
 
+
 #create the NormalizedLogEvent class
 class NormalizedLogEvent :
     def __init__(self,  tsJavaTime, timeString, sourceIp, destinationIp, uri, httpVersion,
@@ -91,24 +93,27 @@ class NormalizedLogEvent :
     def compare(self, that):
         return (self.tsJavaTime > that.tsJavaTime) - (self.tsJavaTime < that.tsJavaTime)
 
-#static method normalizeProxyLog
-@staticmethod
-def normalizeProxyLog(inputDataLog: GenericProxyLogEvent):
-    if inputDataLog == None:
-        return None
-    else:
-        normData = NormalizedLogEvent(inputDataLog.tsJavaTime, inputDataLog.timeString, inputDataLog.sourceIP,inputDataLog.destinationIP,
-                                      inputDataLog.uri, inputDataLog.httpVersion, inputDataLog.mimeType, inputDataLog.userAgent,
-                                      inputDataLog.statusCode, inputDataLog.webReferrer, inputDataLog.urlMetaData)
-        return normData
 
-#static method normalizeBroLog
-@staticmethod
-def normalizeBroLog(inputDataLog: BroHttpLogEvent):
-    if inputDataLog == None:
-        return None
-    else:
-        normData = BroHttpLogEvent(inputDataLog.tsJavaTime, inputDataLog.tsDouble.toString, inputDataLog.id_orig_host, inputDataLog.id_resp_host,
-                                   inputDataLog.uri, inputDataLog.orig_mime_types, inputDataLog.user_agent, inputDataLog.status_code,
-                                   inputDataLog.referrer, inputDataLog.urlMetaData)
-        return normData
+
+class ParsingNormalizationLogic(object):
+    #static method normalizeProxyLog
+    @staticmethod
+    def normalizeProxyLog(inputDataLog: GenericProxyLogEvent):
+        if inputDataLog == None:
+            return None
+        else:
+            normData = NormalizedLogEvent(inputDataLog.tsJavaTime, inputDataLog.timeString, inputDataLog.sourceIP, inputDataLog.destinationIP,
+                                          inputDataLog.urlRequested, inputDataLog.httpVersion, inputDataLog.mimeType, inputDataLog.userAgent,
+                                          inputDataLog.statusCode, inputDataLog.webReferrer, inputDataLog.urlMetaData)
+            return normData
+
+    #static method normalizeBroLog
+    @staticmethod
+    def normalizeBroLog(inputDataLog: BroHttpLogEvent):
+        if inputDataLog == None:
+            return None
+        else:
+            normData = BroHttpLogEvent(inputDataLog.tsJavaTime, inputDataLog.tsDouble.toString, inputDataLog.id_orig_host, inputDataLog.id_resp_host,
+                                       inputDataLog.uri, inputDataLog.orig_mime_types, inputDataLog.user_agent, inputDataLog.status_code,
+                                       inputDataLog.referrer, inputDataLog.urlMetaData)
+            return normData
