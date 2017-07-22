@@ -15,15 +15,6 @@ class RiskyExtention:
         else:
             return False
     
-x=RiskyExtention()
-print x
-    
-import unittest
-class RiskyTest(unittest.TestCase):
-    def test_Risky(self):
-        self.assertEqual()
-        self.assertEqual()
-        self.assertEqual()
-#def palindrome(x):
-#    return x == x[::-1]
-#print palindrome('look')
+x=RiskyExtention
+print (x)
+

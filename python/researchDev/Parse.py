@@ -11,11 +11,6 @@ class Parse:
                     return False
                     
 x=Parse()
-print x
+print (x)
 
-import unittest
-class ParseTest(unittest.TestCase):
-    def test_Parse(self):
-        self.assertEqual( Parse())
-        self.assertEqual( Parse())
-        self.assertEqual( Parse())
+
