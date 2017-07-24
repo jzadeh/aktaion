@@ -7,3 +7,6 @@ class TestTriangle(TestCase):
         self.assertEqual(Triangle(6, 2), 6)
         self.assertEqual(Triangle(2, 4), 4)
         self.fail()
+
+if __name__ == '__main__':
+    unittest.main()
