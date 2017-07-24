@@ -8,14 +8,14 @@ def Triangle(base, height):
     return area
 
 
-base = raw_input("Enter triangle base length: ")
-height = raw_input("Enter triangle height: ")
+base = input("Enter triangle base length: ")
+height = input("Enter triangle height: ")
 
 base = float(base)
 height = float(height)
 
-print 'Area of triangle is', Triangle(base, height)
+print('Area of triangle is', Triangle(base, height))
 
 area = Triangle(base, height)
-print 'The area of the triangle is', area
+print('The area of the triangle is', area)
 
