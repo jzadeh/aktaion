@@ -1,18 +1,16 @@
-#This is part of the Kitware module Brothon, more info can be found here:
-# https://github.com/Kitware/BroThon/tree/master/brothon
-
 """FileTailer Python Class"""
-
+from __future__ import print_function
 import os
 import time
 
 # Local imports
-import file_utils
+from brothon.utils import file_utils
 
 
 class FileTailer(object):
     """FileTailer: Will provide 'tail -f' functionality for a file. The readlines() method
                    returns a generator that yields lines as they are added to the file
+
         Args:
             filepath (str): The full path the file (/full/path/to/the/file.txt)
             sleep (int): The wait interval in milliseconds (default=50)

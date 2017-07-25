@@ -1,6 +1,3 @@
-# This is part of the Kitware module Brothon, more info can be found here:
-# https://github.com/Kitware/BroThon/tree/master/brothon
-
 """BroLogReader: This class reads in various Bro IDS logs. The class inherits from
                  the FileTailer class so it supports the following use cases:
                    - Read contents of a Bro log file        (tail=False)
@@ -13,10 +10,10 @@
 from __future__ import print_function
 import os
 import time
-#import datetime
+import datetime
 
 # Local Imports
-import file_tailer, file_utils
+from brothon.utils import file_tailer, file_utils
 
 
 class BroLogReader(file_tailer.FileTailer):
@@ -43,7 +40,7 @@ class BroLogReader(file_tailer.FileTailer):
                             'count': int,
                             'int': int,
                             'double': float,
-                            'time': lambda x: float(x),
+                            'time': lambda x: datetime.datetime.fromtimestamp(float(x)),
                             'interval': lambda x: datetime.timedelta(seconds=float(x)),
                             'string': lambda x: x,
                             'port': int,
@@ -104,6 +101,7 @@ class BroLogReader(file_tailer.FileTailer):
 
     def _parse_bro_header(self, bro_log):
         """Parse the Bro log header section.
+
             Format example:
                 #separator \x09
                 #set_separator	,
