@@ -1,7 +1,8 @@
 # coding: utf-8
 def userinterface():
 ## Show menu ##
-    print((77 * '-'))
+    print
+print((80 * '-'))
 print ('  █████╗ ██╗  ██╗████████╗ █████╗ ██╗ ██████╗ ███╗   ██╗ ')
 print (' ██╔══██╗██║ ██╔╝╚══██╔══╝██╔══██╗██║██╔═══██╗████╗  ██║ ')
 print (' ███████║█████╔╝    ██║   ███████║██║██║   ██║██╔██╗ ██║ ')
@@ -14,11 +15,11 @@ print (' ██║   ██║█████╗  ██████╔╝██
 print (' ╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║██║██║   ██║██║╚██╗██║    ██╔═══╝    ████╔╝██║ ')
 print ('  ╚████╔╝ ███████╗██║  ██║███████║██║╚██████╔╝██║ ╚████║    ███████╗██╗╚██████╔╝ ')
 print ('   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚══════╝╚═╝ ╚═════╝ ')
-print((77 * '-'))
+print((80 * '-'))
 print ("1: Analyze Bro HTTP Sample Using Default Model")
 print ("2: Analyze PCAP Sample (Bro must be installed) Using Default Model")
 print ("3: Demo (Unix/OS X System)")
-print((77 * '-'))
+print((80 * '-'))
 
 ## Get input ###
 choice = eval(input('Enter your choice [1-3] : '))
