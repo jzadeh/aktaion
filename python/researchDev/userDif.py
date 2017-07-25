@@ -1,0 +1,61 @@
+def userinterface():
+#    print (31 * '-')
+#print (31 * '*')
+#print (31 * '*')
+#print ("***** Aktaion Version 2.0 *****")
+#print (31 * '*')
+#print (31 * '*')
+#print (31 * '-')
+#print ("1: Analyze Bro HTTP Sample Using Default Model")
+#print ("2: Analyze PCAP Sample (Bro must be installed) Using Default Model")
+#print ("3: Demo (Unix/OS X System)")
+#print (31 * '-')
+    print(70 * '_')
+print (' ________  ___  __    _________   ________  ___  ________  ________ ')
+print ('|\   __  \|\  \|\  \ |\__     __\ \   __  \|\  \|\   __  \|\   ___  \ ')
+print ('\ \  \|\  \ \  \/  /|\ |___ \  \_\ \  \|\  \ \  \ \  \|\  \ \  \ \ \ \ ')
+print (' \ \   __  \ \   ___   \   \ \  \ \ \   __  \ \  \ \  \ \  \ \  \ \ \ \ \ ')
+print ('  \ \  \ \  \ \  \ \ \  \   \ \  \ \ \  \ \  \ \  \ \  \ \  \ \  \ \ \ \ \ ')
+print ('   \ \__\ \__\ \__\ \ \__\   \ \__\ \ \__\ \__\ \__\ \_______\ \__\ \ \___\ ')
+print ('    \|__|\|__|\|__|  \|__|    \|__|  \|__|\|__|\|__|\|_______|\|__|  \|___| ')
+print ('      Version 2.0')
+print (77 * '-')
+print ("1: Analyze Bro HTTP Sample Using Default Model")
+print ("2: Analyze PCAP Sample (Bro must be installed) Using Default Model")
+print ("3: Demo (Unix/OS X System)")
+print (77 * '-')
+#    print()
+#print((77 * '-'))
+#print ('  █████╗ ██╗  ██╗████████╗ █████╗ ██╗ ██████╗ ███╗   ██╗ ')
+#print (' ██╔══██╗██║ ██╔╝╚══██╔══╝██╔══██╗██║██╔═══██╗████╗  ██║ ')
+#print (' ███████║█████╔╝    ██║   ███████║██║██║   ██║██╔██╗ ██║ ')
+#print (' ██╔══██║██╔═██╗    ██║   ██╔══██║██║██║   ██║██║╚██╗██║ ')
+#print (' ██║  ██║██║  ██╗   ██║   ██║  ██║██║╚██████╔╝██║ ╚████║ ')
+#print (' ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ')
+#print (' ██╗   ██╗███████╗██████╗ ███████╗██╗ ██████╗ ███╗   ██╗    ██████╗     ██████╗ ')
+#print (' ██║   ██║██╔════╝██╔══██╗██╔════╝██║██╔═══██╗████╗  ██║    ╚════██╗   ██╔═████╗ ')
+#print (' ██║   ██║█████╗  ██████╔╝███████╗██║██║   ██║██╔██╗ ██║     █████╔╝   ██║██╔██║ ')
+#print (' ╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║██║██║   ██║██║╚██╗██║    ██╔═══╝    ████╔╝██║ ')
+#print ('  ╚████╔╝ ███████╗██║  ██║███████║██║╚██████╔╝██║ ╚████║    ███████╗██╗╚██████╔╝ ')
+#print ('   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚══════╝╚═╝ ╚═════╝ ')
+#print((77 * '-'))
+#print ("1: Analyze Bro HTTP Sample Using Default Model")
+#print ("2: Analyze PCAP Sample (Bro must be installed) Using Default Model")
+#print ("3: Demo (Unix/OS X System)")
+#print((77 * '-'))
+
+choice = eval(input('Enter your choice [1-3] : '))
+
+
+choice = int(choice)
+
+
+if choice == 1:
+    print ("Analyze Bro Http")
+elif choice == 2:
+    print ("Analyze PCAP Sample")
+elif choice == 3:
+    print ("Demo")
+else:    ## default ##
+    print ("Invalid number. Try again...")
+
