@@ -1,12 +1,11 @@
-#This is part of the Kitware module Brothon, more info can be found here:
-# https://github.com/Kitware/BroThon/tree/master/brothon
-
 """File utilities that might be useful"""
+from __future__ import print_function
 import os
 
 
 def all_files_in_directory(path):
     """Recursively list all files under a directory
+
         Args:
             path: the path of the directory to traverse
         Returns:
@@ -23,6 +22,7 @@ def all_files_in_directory(path):
 
 def file_dir(file_path):
     """Root directory for a file_path
+
         Args:
             file_path: a fully qualified file path
         Returns:
@@ -33,6 +33,7 @@ def file_dir(file_path):
 
 def relative_dir(file_path, rel_dir):
     """Relative directory to the file_path
+
         Args:
             file_path: a fully qualified file path
         Returns:
