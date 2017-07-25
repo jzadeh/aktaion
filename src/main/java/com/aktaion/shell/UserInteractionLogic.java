@@ -21,7 +21,7 @@ public class UserInteractionLogic {
         Scanner scanner = new Scanner(System.in);
 
         // determines where the path to the Jar is (does not work on windows)
-        String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
+        String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(5);
 
         System.out.println("*************************");
         System.out.println("*************************");
@@ -74,6 +74,8 @@ public class UserInteractionLogic {
 
 
         } else if (userChoice == 3) {
+
+            System.out.println("My path" + dataPath);
 
             /**
              * Step 1a:  Train on Malicious Exploit Traffic
