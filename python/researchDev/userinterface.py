@@ -1,5 +1,7 @@
 # coding: utf-8
-print((77 * '-'))
+def userinterface():
+## Show menu ##
+    print((77 * '-'))
 print ('  █████╗ ██╗  ██╗████████╗ █████╗ ██╗ ██████╗ ███╗   ██╗ ')
 print (' ██╔══██╗██║ ██╔╝╚══██╔══╝██╔══██╗██║██╔═══██╗████╗  ██║ ')
 print (' ███████║█████╔╝    ██║   ███████║██║██║   ██║██╔██╗ ██║ ')
@@ -18,13 +20,13 @@ print ("2: Analyze PCAP Sample (Bro must be installed) Using Default Model")
 print ("3: Demo (Unix/OS X System)")
 print((77 * '-'))
 
-
+## Get input ###
 choice = eval(input('Enter your choice [1-3] : '))
 
-
+### Convert string to int type ##
 choice = int(choice)
 
-
+### Take action as per selected menu-option ###
 if choice == 1:
     print ("Analyze Bro Http")
 elif choice == 2:
