@@ -1,0 +1,21 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2017-07-25-19-13-12
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+65.543418	C4slow3Js1CXIgIDI1	10.0.2.105	49158	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	24	1893	200	OK	-	-	(empty)	-	-	-	FaknZQ1GYXLosrwsa8	-	-	FNxogN2G4B7BOm8Zf7	-	-
+66.335540	C4slow3Js1CXIgIDI1	10.0.2.105	49158	201.175.17.35	8080	2	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	24	4264	200	OK	-	-	(empty)	-	-	-	FDxgAX1ZtyXADa8Pj2	-	-	Fh5DWi4FyDptNS5hyk	-	-
+103.335473	C8BYqBTzv2tnc2mm1	10.0.2.105	49169	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	4684	200	OK	-	-	(empty)	-	-	-	FIECWx3Xh1U6g7WJYc	-	-	F9xPXn3MZDa43PlOXd	-	-
+140.376346	Cbr5XUt7eJU5GwPDi	10.0.2.105	49180	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	3372	200	OK	-	-	(empty)	-	-	-	FSlkCkH9YpRneCSGl	-	-	FtFsid1l5Vgq654n13	-	-
+183.903205	C5YApB8XewHb8lYoh	10.0.2.105	49192	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	4652	200	OK	-	-	(empty)	-	-	-	FEMX6D3ynCZCm4tcC1	-	-	FePXYD3vAxOORE6xHi	-	-
+226.090366	C5FM7H3dbIV8MDz6Fd	10.0.2.105	49204	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	3784	200	OK	-	-	(empty)	-	-	-	FxIWGD2WxbclTaBv3l	-	-	FuwAwv2ZdKkTeAmnAf	-	-
+271.059085	CCQWz61RBVWjBX81Hh	10.0.2.105	49215	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	3355	200	OK	-	-	(empty)	-	-	-	FMCXva5DScOracqv5	-	-	FVi2jF3PJINACooXGf	-	-
+315.918067	CI2ZMrzG7WPDrruUl	10.0.2.105	49226	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	4686	200	OK	-	-	(empty)	-	-	-	FQwjZG37THsZPpMUY1	-	-	FQZwHQ2ukY5nPugv3i	-	-
+532.777324	CAeVQRdq2XsKZaXqj	10.0.2.105	49239	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	4308	200	OK	-	-	(empty)	-	-	-	Fm2qPT2ihWkMKC0caa	-	-	FbY1rf1TQ3zQzelBcj	-	-
+564.743636	CqCOYu3JY34jQPnqE9	10.0.2.105	49251	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	4309	200	OK	-	-	(empty)	-	-	-	FjsACu30pQ3sQdocob	-	-	Fc0D0EAi6pESi9xLk	-	-
+595.024004	CCe07d3odDR9nzG0si	10.0.2.105	49262	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	4606	200	OK	-	-	(empty)	-	-	-	FC63bM2PxKm0BOxbQ9	-	-	FnZV1G36SWcon1da6	-	-
+625.852416	CZFvUa4cZ1bu75On14	10.0.2.105	49273	201.175.17.35	8080	1	POST	201.175.17.35	/spoMmsue93kSmh/naSjieU83llsv2Q/	-	1.1	Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)	64	3301	200	OK	-	-	(empty)	-	-	-	FP7FA4I2Uw4rg8GE7	-	-	FCElbkhzs9FOxafE7	-	-
+#close	2017-07-25-19-13-13

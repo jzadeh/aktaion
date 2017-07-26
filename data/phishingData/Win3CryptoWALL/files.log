@@ -1,0 +1,36 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2017-07-25-19-16-18
+#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+479.257548	FWbeFvF8iNbWXC96b	188.165.164.184	10.0.2.103	CLH1J84KEKMObG67Ze	HTTP	0	(empty)	text/plain	-	0.000000	-	F	13	-	0	0	F	-	-	-	-	-	-	-
+479.677283	Fdh6BY2iIkMy1LWzGi	10.0.2.103	182.50.134.1	CFayKB3PiIJrn9AW86	HTTP	0	(empty)	text/plain	-	0.000107	-	T	130	130	0	0	F	-	-	-	-	-	-	-
+482.577838	FGM3ds59W1RQUFOmg	182.50.134.1	10.0.2.103	CFayKB3PiIJrn9AW86	HTTP	0	(empty)	text/plain	-	0.000000	-	F	14	-	0	0	F	-	-	-	-	-	-	-
+482.959460	FhfPha1B5xsjzk7wd1	10.0.2.103	182.50.134.1	CPxwgI1MDA5tmyYzl9	HTTP	0	(empty)	text/plain	-	0.000000	-	T	94	94	0	0	F	-	-	-	-	-	-	-
+488.587726	FX9Vkm1odU2AZhdLb1	182.50.134.1	10.0.2.103	CPxwgI1MDA5tmyYzl9	HTTP	0	(empty)	text/plain	-	0.000000	-	F	996	-	0	0	F	-	-	-	-	-	-	-
+488.909604	FDU05S2cAcu0oMssb	10.0.2.103	182.50.134.1	CdTkVAGxyKj0bxBI9	HTTP	0	(empty)	text/plain	-	0.000190	-	T	160	160	0	0	F	-	-	-	-	-	-	-
+496.973307	FuftA62OmtglqqF1O3	182.50.134.1	10.0.2.103	CdTkVAGxyKj0bxBI9	HTTP	0	(empty)	image/png	-	1.827796	-	F	46163	-	0	0	F	-	-	-	-	-	-	-
+670.877872	F9ivl84ZYq3WNzY9d7	10.0.2.103	182.50.134.1	C2npEi3wpYbD8frH88	HTTP	0	(empty)	text/plain	-	0.000000	-	T	94	94	0	0	F	-	-	-	-	-	-	-
+674.550785	FY12hQ2ghnnpUXosm	182.50.134.1	10.0.2.103	C2npEi3wpYbD8frH88	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+866.879103	FA1lYi1tcHHp1a5jgf	10.0.2.103	182.50.134.1	CRMeNY3tmAFkuKdPi9	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+869.340761	FUdWVe1J5g9GbiEDoj	182.50.134.1	10.0.2.103	CRMeNY3tmAFkuKdPi9	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+1049.629774	FESkcX1vktD2hhIhb7	10.0.2.103	182.50.134.1	Cn1l4h38vdSzn638w9	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+1052.364062	FvmIZFukXVnBt3WWj	182.50.134.1	10.0.2.103	Cn1l4h38vdSzn638w9	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+1312.677729	FuyMPiFunEttxtU8	10.0.2.103	182.50.134.1	CLghji2dnSFvOde6Uj	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+1315.367331	F64bgP3g4HH2sRpHY4	182.50.134.1	10.0.2.103	CLghji2dnSFvOde6Uj	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+1471.660557	F0XanR2V1M3nETcN5j	10.0.2.103	182.50.134.1	Cebnps2bWR9sk6f3o5	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+1474.511621	FjI9bC4czy1Maehw9g	182.50.134.1	10.0.2.103	Cebnps2bWR9sk6f3o5	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+1706.812102	FgUVEQ1OQZDKsJ3Bac	10.0.2.103	182.50.134.1	Cn4P9B1ApuREpgoCoj	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+1709.347464	FUBeWF47rROmdvx6Y4	182.50.134.1	10.0.2.103	Cn4P9B1ApuREpgoCoj	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+2022.030960	FdWbKc1F8RJif32Vle	10.0.2.103	182.50.134.1	CyCmc40IYnvab6Bf2	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+2024.521052	FbGVl63brfMtz8FZI7	182.50.134.1	10.0.2.103	CyCmc40IYnvab6Bf2	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+2244.953696	FXHTKi2BgtnD8vtcI5	10.0.2.103	182.50.134.1	Csc3T3KR1BLYplrW5	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+2247.557367	FK13Wy49SY5kcyX38d	182.50.134.1	10.0.2.103	Csc3T3KR1BLYplrW5	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+2562.858408	FAuQrk4VoPh91KQGGj	10.0.2.103	182.50.134.1	Ce9oak1xRm3dRNTLDl	HTTP	0	(empty)	text/plain	-	0.000000	-	T	90	90	0	0	F	-	-	-	-	-	-	-
+2566.342559	FLMveQ3bPp0rGTMek1	182.50.134.1	10.0.2.103	Ce9oak1xRm3dRNTLDl	HTTP	0	(empty)	text/plain	-	0.000000	-	F	10	-	0	0	F	-	-	-	-	-	-	-
+2627.079870	FSfvVANKX0p7CP8p3	10.0.2.103	182.50.134.1	CfDDVv34HE6LbYONC	HTTP	0	(empty)	text/plain	-	0.000000	-	T	112	112	0	0	F	-	-	-	-	-	-	-
+2632.280793	FSSQPO31x2uwJJKtK	182.50.134.1	10.0.2.103	CfDDVv34HE6LbYONC	HTTP	0	(empty)	text/plain	-	0.000000	-	F	14	-	0	0	F	-	-	-	-	-	-	-
+#close	2017-07-25-19-16-18
