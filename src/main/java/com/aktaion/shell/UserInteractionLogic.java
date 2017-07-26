@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class UserInteractionLogic {
 
     private static void pressAnyKeyToContinue() {
-        System.out.println("Press any key to continue...");
+        System.out.println("Press enter key to continue...");
         try {
             System.in.read();
         } catch (Exception e) {
@@ -22,6 +22,13 @@ public class UserInteractionLogic {
 
         // determines where the path to the Jar is (does not work on windows)
         String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(5);
+
+        CommandLineUtils.printSplashScreen();
+
+        pressAnyKeyToContinue();
+
+        System.out.print("\u001b[2J");
+        System.out.flush();
 
 
         System.out.println("  █████╗ ██╗  ██╗████████╗ █████╗ ██╗ ██████╗ ███╗   ██╗ ");
@@ -36,6 +43,7 @@ public class UserInteractionLogic {
         System.out.println(" ╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║██║██║   ██║██║╚██╗██║    ██╔═══╝    ████╔╝██║ ");
         System.out.println("  ╚████╔╝ ███████╗██║  ██║███████║██║╚██████╔╝██║ ╚████║    ███████╗██╗╚██████╔╝ ");
         System.out.println("   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚══════╝╚═╝ ╚═════╝ ");
+
 
         System.out.println("1: Analyze Bro HTTP Sample Using Default Model");
         System.out.println("2: Analyze PCAP Sample (Bro must be installed) Using Default Model");
@@ -83,12 +91,10 @@ public class UserInteractionLogic {
             RandomForestLogic.writeIocsToDisk(output, fileOutputPath);
 
 
-        }  else if (userChoice == 3) {
+        } else if (userChoice == 3) {
 
 
-        }
-
-        else if (userChoice == 4) {
+        } else if (userChoice == 4) {
 
             System.out.println("My path" + dataPath);
 
