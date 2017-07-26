@@ -1,0 +1,24 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dns
+#open	2017-07-25-19-16-18
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	trans_id	rtt	query	qclass	qclass_name	qtype	qtype_name	rcode	rcode_name	AA	TC	RD	RA	Z	answers	TTLs	rejected
+#types	time	string	addr	port	addr	port	enum	count	interval	string	count	string	count	string	count	string	bool	bool	bool	bool	count	vector[string]	vector[interval]	bool
+8.522360	CIcc2Q3qzjrV3G3dD2	10.0.2.103	61726	8.8.8.8	53	udp	61443	4.005232	dns.msftncsi.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	131.107.255.255	12.000000	F
+12.528268	CmmjB41Nb3xT5FBB95	10.0.2.103	63320	8.8.8.8	53	udp	26249	0.001102	dns.msftncsi.com	1	C_INTERNET	28	AAAA	0	NOERROR	F	F	T	T	0	fd3e:4f5a:5b81::1	2195.000000	F
+9.522350	CaOCk540DHon7LMI9a	10.0.2.103	61726	4.4.4.4	53	udp	61443	-	dns.msftncsi.com	1	C_INTERNET	1	A	-	-	F	F	T	F	0	-	-	F
+10.523706	CaOCk540DHon7LMI9a	10.0.2.103	61726	4.4.4.4	53	udp	61443	-	dns.msftncsi.com	1	C_INTERNET	1	A	-	-	F	F	T	F	0	-	-	F
+12.526854	CaOCk540DHon7LMI9a	10.0.2.103	61726	4.4.4.4	53	udp	61443	-	dns.msftncsi.com	1	C_INTERNET	1	A	-	-	F	F	T	F	0	-	-	F
+12.526594	CIcc2Q3qzjrV3G3dD2	10.0.2.103	61726	8.8.8.8	53	udp	61443	-	dns.msftncsi.com	1	C_INTERNET	1	A	-	-	F	F	T	F	0	-	-	F
+479.116407	CnzLnvKzWa5oLujJ7	10.0.2.103	50366	8.8.8.8	53	udp	27949	0.017292	ip-addr.es	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	188.165.164.184	19434.000000	F
+479.347799	Cz9vWh2bRrvZ6paU2	10.0.2.103	50198	8.8.8.8	53	udp	17576	0.019324	dulichmuadong.com	1	C_INTERNET	1	A	0	NOERROR	F	F	T	T	0	182.50.134.1	1782.000000	F
+479.500639	CoZlZs2TjIAAob36Jg	fe80::50be:8acf:be49:8c14	53685	ff02::1:3	5355	udp	32241	-	wpad	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
+479.597758	CoZlZs2TjIAAob36Jg	fe80::50be:8acf:be49:8c14	53685	ff02::1:3	5355	udp	32241	-	wpad	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
+479.500920	CCnDKh19oxdZ9zmMt9	10.0.2.103	58547	224.0.0.252	5355	udp	32241	-	wpad	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
+479.597871	CCnDKh19oxdZ9zmMt9	10.0.2.103	58547	224.0.0.252	5355	udp	32241	-	wpad	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
+479.798923	CGzwRpuaXwBJN7HSg	10.0.2.103	137	10.0.2.255	137	udp	40178	-	WPAD	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
+480.548851	CGzwRpuaXwBJN7HSg	10.0.2.103	137	10.0.2.255	137	udp	40178	-	WPAD	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
+481.300144	CGzwRpuaXwBJN7HSg	10.0.2.103	137	10.0.2.255	137	udp	40178	-	WPAD	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
+#close	2017-07-25-19-16-18

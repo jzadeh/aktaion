@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	http
+#open	2017-07-25-19-16-36
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	trans_depth	method	host	uri	referrer	version	user_agent	request_body_len	response_body_len	status_code	status_msg	info_code	info_msg	tags	username	password	proxied	orig_fuids	orig_filenames	orig_mime_types	resp_fuids	resp_filenames	resp_mime_types
+#types	time	string	addr	port	addr	port	count	string	string	string	string	string	string	count	count	count	string	count	string	set[enum]	string	string	set[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]	vector[string]
+1680.718164	CJHlzS2ssE4ggYcgUj	10.0.2.107	49159	27.126.188.76	2011	1	GET	www.wk1888.com	/1.exe	-	1.1	Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)	0	411648	200	OK	-	-	(empty)	-	-	-	-	-	-	FSMwJF2dE0n39ITZXg	-	application/x-dosexec
+1690.110946	CLXvqi1zLkXAaxP6kh	10.0.2.107	49160	27.126.188.76	2012	1	GET	27.126.188.76	/qq.txt	http://27.126.188.76:2012/qq.txt	1.1	Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)	0	1068	200	OK	-	-	(empty)	-	-	-	-	-	-	FK10YE2EQBEtfXQsu4	-	text/ini
+1704.541693	CfUS2t2FC3gAAKKGyi	10.0.2.107	49162	95.211.172.143	2011	1	GET	www.fz0575.com	/1.exe	-	1.1	Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)	0	345	404	Not Found	-	-	(empty)	-	-	-	-	-	-	FfaICj1XLoJXMe4dXe	-	text/html
+#close	2017-07-25-19-16-37

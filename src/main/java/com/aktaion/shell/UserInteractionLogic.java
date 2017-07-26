@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class UserInteractionLogic {
 
     private static void pressAnyKeyToContinue() {
-        System.out.println("Press any key to continue...");
+        System.out.println("Press enter key to continue...");
         try {
             System.in.read();
         } catch (Exception e) {
@@ -21,17 +21,35 @@ public class UserInteractionLogic {
         Scanner scanner = new Scanner(System.in);
 
         // determines where the path to the Jar is (does not work on windows)
-        String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(4);
+        String dataPath = CommandLineUtils.tryToFindPathToDataInSourceCode(5);
 
-        System.out.println("*************************");
-        System.out.println("*************************");
-        System.out.println("** Aktaion Version 0.1 **");
-        System.out.println("*************************");
-        System.out.println("*************************");
+        CommandLineUtils.printSplashScreen();
+
+        pressAnyKeyToContinue();
+
+        System.out.print("\u001b[2J");
+        System.out.flush();
+
+
+        System.out.println("  █████╗ ██╗  ██╗████████╗ █████╗ ██╗ ██████╗ ███╗   ██╗ ");
+        System.out.println(" ██╔══██╗██║ ██╔╝╚══██╔══╝██╔══██╗██║██╔═══██╗████╗  ██║ ");
+        System.out.println(" ███████║█████╔╝    ██║   ███████║██║██║   ██║██╔██╗ ██║ ");
+        System.out.println(" ██╔══██║██╔═██╗    ██║   ██╔══██║██║██║   ██║██║╚██╗██║ ");
+        System.out.println(" ██║  ██║██║  ██╗   ██║   ██║  ██║██║╚██████╔╝██║ ╚████║ ");
+        System.out.println(" ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ");
+        System.out.println(" ██╗   ██╗███████╗██████╗ ███████╗██╗ ██████╗ ███╗   ██╗    ██████╗     ██████╗ ");
+        System.out.println(" ██║   ██║██╔════╝██╔══██╗██╔════╝██║██╔═══██╗████╗  ██║    ╚════██╗   ██╔═████╗ ");
+        System.out.println(" ██║   ██║█████╗  ██████╔╝███████╗██║██║   ██║██╔██╗ ██║     █████╔╝   ██║██╔██║ ");
+        System.out.println(" ╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║██║██║   ██║██║╚██╗██║    ██╔═══╝    ████╔╝██║ ");
+        System.out.println("  ╚████╔╝ ███████╗██║  ██║███████║██║╚██████╔╝██║ ╚████║    ███████╗██╗╚██████╔╝ ");
+        System.out.println("   ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚══════╝╚═╝ ╚═════╝ ");
+
+
         System.out.println("1: Analyze Bro HTTP Sample Using Default Model");
         System.out.println("2: Analyze PCAP Sample (Bro must be installed) Using Default Model");
-        System.out.println("3: Demo (Unix/OS X System)");
-        System.out.print("Enter Execution Choice [1-3]: ");
+        System.out.println("3: Analyze Bro HTTP Sample Using Phishing Model");
+        System.out.println("4: Demo");
+        System.out.print("Enter Execution Choice [1-4]: ");
 
         int userChoice = scanner.nextInt();
 
@@ -74,6 +92,11 @@ public class UserInteractionLogic {
 
 
         } else if (userChoice == 3) {
+
+
+        } else if (userChoice == 4) {
+
+            System.out.println("My path" + dataPath);
 
             /**
              * Step 1a:  Train on Malicious Exploit Traffic
@@ -155,7 +178,7 @@ public class UserInteractionLogic {
              *  automated Group Policy Object generation in Active Directory
              *  (see https://technet.microsoft.com/en-us/library/hh147307(v=ws.10).aspx for an intro)
              */
-            PythonCommandLineLogic.passIocsToActiveDefenseScript(output, 4);
+            PythonCommandLineLogic.passIocsToActiveDefenseScript(output, 5);
         }
     }
 

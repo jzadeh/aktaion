@@ -1,10 +1,10 @@
-name := "Aktaion"
+name := "aktaion"
 
-version := "0.1"
+version := "2.0"
 
 javaOptions ++= Seq("-Xmx4g", "-XX:MaxPermSize=2056M")
 
-scalaVersion in ThisBuild := "2.11.8"
+scalaVersion in ThisBuild := "2.12.2"
 
 ivyScala := ivyScala.value map {
   _.copy(overrideScalaVersion = true)
@@ -13,7 +13,7 @@ ivyScala := ivyScala.value map {
 lazy val commonSettings = Seq(
   version := "0.1-SNAPSHOT",
   organization := "com.Aktaion",
-  scalaVersion := "2.11.8",
+  scalaVersion := "2.12.2",
   test in assembly := {}
 )
 
@@ -22,8 +22,8 @@ mainClass in assembly := Some("com.aktaion.shell.UserInteractionLogic")
 resolvers += "AkkaRepository" at "http://repo.akka.io/releases/"
 
 libraryDependencies ++= Seq(
-  "org.scala-lang" % "scala-compiler" % "2.11.8",
-  "org.scala-lang" % "scala-reflect" % "2.11.8"
+  "org.scala-lang" % "scala-compiler" % "2.12.2",
+  "org.scala-lang" % "scala-reflect" % "2.12.2"
 )
 
 libraryDependencies ++= Seq("org.slf4j" % "slf4j-api" % "1.7.10",
@@ -32,14 +32,14 @@ libraryDependencies ++= Seq("org.slf4j" % "slf4j-api" % "1.7.10",
 
 libraryDependencies ++= Seq(
   // ("org.apache.spark" %% "spark-mllib"  % "1.6.2").exclude("javax.xml", "bind").exclude("stax-api", "stax"),
-  "jline" % "jline" % "0.9.94",
-  "com.rockymadden.stringmetric" %% "stringmetric-core" % "0.27.4",
-  "org.apache.spark" %% "spark-core" % "1.6.2" % "provided",
+ // "jline" % "jline" % "0.9.94",
+  "com.rockymadden.stringmetric" % "stringmetric-core_2.11" % "0.27.4",
+ // "org.apache.spark" %% "spark-core" % "1.6.2" % "provided",
   "org.apache.commons" % "commons-math3" % "3.6.1",
-  "org.scalactic" %% "scalactic" % "2.2.6",
-  "org.scalatest" %% "scalatest" % "2.2.6" % "test",
+  "org.scalactic" %% "scalactic" % "3.0.1",
+  "org.scalatest" %% "scalatest" % "3.0.1" % "test",
   "nz.ac.waikato.cms.weka" % "weka-stable" % "3.6.6",
-  "net.liftweb" %% "lift-json" % "3.0-RC3"
+  "net.liftweb" % "lift-json_2.12" % "3.2.0-M1"
 
 
 ).map(_.exclude("org.slf4j", "slf4j-simple")).map(_.exclude("org.slf4j", "sl4j-log4j12"))

@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	weird
+#open	2017-07-25-19-13-12
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
+#types	time	string	addr	port	addr	port	string	string	bool	string
+0.000000	-	-	-	-	-	truncated_link_header	-	F	bro
+38.062707	CMWLqBWneSm54rCKa	10.0.2.105	54576	8.8.8.8	53	dns_unmatched_msg	-	F	bro
+62.693645	C1YpWP1QOW7bd4Erj8	10.0.2.2	11	10.0.2.105	0	bad_ICMP_checksum	-	F	bro
+75.892132	CgBE4WPFsa9Dg8dr1	fe80::d5e6:502a:54ce:e387	61337	ff02::1:3	5355	dns_unmatched_msg	-	F	bro
+75.892132	CnMMQE1I8dlePQCQXf	10.0.2.105	55632	224.0.0.252	5355	dns_unmatched_msg	-	F	bro
+75.892132	CpZShk3PYdBfRtRyta	10.0.2.105	137	10.0.2.255	137	dns_unmatched_msg	-	F	bro
+#close	2017-07-25-19-13-13

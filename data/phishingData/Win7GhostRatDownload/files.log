@@ -1,0 +1,12 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	files
+#open	2017-07-25-19-16-36
+#fields	ts	fuid	tx_hosts	rx_hosts	conn_uids	source	depth	analyzers	mime_type	filename	duration	local_orig	is_orig	seen_bytes	total_bytes	missing_bytes	overflow_bytes	timedout	parent_fuid	md5	sha1	sha256	extracted	extracted_cutoff	extracted_size
+#types	time	string	set[addr]	set[addr]	set[string]	string	count	set[string]	string	string	interval	bool	bool	count	count	count	count	bool	string	string	string	string	string	bool	count
+1680.718164	FSMwJF2dE0n39ITZXg	27.126.188.76	10.0.2.107	CJHlzS2ssE4ggYcgUj	HTTP	0	PE	application/x-dosexec	-	3.364086	-	F	411648	411648	0	0	F	-	-	-	-	-	-	-
+1690.110946	FK10YE2EQBEtfXQsu4	27.126.188.76	10.0.2.107	CLXvqi1zLkXAaxP6kh	HTTP	0	(empty)	text/ini	-	0.000000	-	F	1068	1068	0	0	F	-	-	-	-	-	-	-
+1704.541693	FfaICj1XLoJXMe4dXe	95.211.172.143	10.0.2.107	CfUS2t2FC3gAAKKGyi	HTTP	0	(empty)	text/html	-	0.000000	-	F	345	345	0	0	F	-	-	-	-	-	-	-
+#close	2017-07-25-19-16-37

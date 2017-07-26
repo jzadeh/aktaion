@@ -135,14 +135,44 @@ object RandomForestLogic extends DebugLoggingLogic {
 
     for ((x, index) <- predictedOutput.zipWithIndex) {
       if (x == 1.0) {
-        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        println("!!!!!!!!!!!! The Presence of Evil is Near !!!!!!!!!!!!!")
-        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+        println("      ▓█████ ▒██   ██▒ ██▓███   ██▓     ▒█████   ██▓▄▄▄█████▓ ")
+        println("      ▓█   ▀ ▒▒ █ █ ▒░▓██░  ██▒▓██▒    ▒██▒  ██▒▓██▒▓  ██▒ ▓▒ ")
+        println("      ▒███   ░░  █   ░▓██░ ██▓▒▒██░    ▒██░  ██▒▒██▒▒ ▓██░ ▒░ ")
+        println("      ▒▓█  ▄  ░ █ █ ▒ ▒██▄█▓▒ ▒▒██░    ▒██   ██░░██░░ ▓██▓ ░ ")
+        println("      ░▒████▒▒██▒ ▒██▒▒██▒ ░  ░░██████▒░ ████▓▒░░██░  ▒██▒ ░ ")
+        println("      ░░ ▒░ ░▒▒ ░ ░▓ ░▒▓▒░ ░  ░░ ▒░▓  ░░ ▒░▒░▒░ ░▓    ▒ ░░ ")
+        println("      ░ ░  ░░░   ░▒ ░░▒ ░     ░ ░ ▒  ░  ░ ▒ ▒░  ▒ ░    ░ ")
+        println("      ░    ░    ░  ░░         ░ ░   ░ ░ ░ ▒   ▒ ░  ░ ")
+        println("      ░  ░ ░    ░               ░  ░    ░ ░   ░ ")
+        println("   ▓█████▄ ▓█████▄▄▄█████▓▓█████  ▄████▄  ▄▄▄█████▓▓█████ ▓█████▄ ")
+        println("   ▒██▀ ██▌▓█   ▀▓  ██▒ ▓▒▓█   ▀ ▒██▀ ▀█  ▓  ██▒ ▓▒▓█   ▀ ▒██▀ ██▌ ")
+        println("   ░██   █▌▒███  ▒ ▓██░ ▒░▒███   ▒▓█    ▄ ▒ ▓██░ ▒░▒███   ░██   █▌ ")
+        println("   ░▓█▄   ▌▒▓█  ▄░ ▓██▓ ░ ▒▓█  ▄ ▒▓▓▄ ▄██▒░ ▓██▓ ░ ▒▓█  ▄ ░▓█▄   ▌ ")
+        println("   ░▒████▓ ░▒████▒ ▒██▒ ░ ░▒████▒▒ ▓███▀ ░  ▒██▒ ░ ░▒████▒░▒████▓ ")
+        println("   ▒▒▓  ▒ ░░ ▒░ ░ ▒ ░░   ░░ ▒░ ░░ ░▒ ▒  ░  ▒ ░░   ░░ ▒░ ░ ▒▒▓  ▒ ")
+        println("   ░ ▒  ▒  ░ ░  ░   ░     ░ ░  ░  ░  ▒       ░     ░ ░  ░ ░ ▒  ▒ ")
+        println("   ░ ░  ░    ░    ░         ░   ░          ░         ░    ░ ░  ░ ")
+        println("   ░       ░  ░           ░  ░░ ░                  ░  ░   ░ ")
+        println("   ░                            ░                         ░ ")
+        println("    ░░█ █████████          ░░░███               ░█        ░░░░░█████░ ")
+        println("   ░██████████ █████    ░░█████        ░█  ░░███    ░░░░███████████░░ ")
+        println("  ░████████████████░███ ░███████░    ░████░███████░░█████████████░░░ ")
+        println(" ░░███▀█████████████ ░████████████░  ░░░██████████░██████████████░░ ")
+        println("  ░░███████░░░░░███████▌██████████░░░█████████████████  ░░██████░ ")
+        println("  ░░▀█████        ░░░░████████████████████████████         ░░░███░░ ")
+        println("  ░█████░░             ░░░████████████████████           ░░░░░░██░░")
+        println(" ░░████████▀              ░░░███████████████           ░░░░░▀███████▀░ ")
+        println("░░░████████████████    ▌██████████████████████▌   ░░░██████████████░░ ")
+        println("░░░█████████████████░████████████████████░░░███████████████████████░ ")
+        println("░░██████░      ░░█████████████░░█         ░██████████████████░   ░███░░ ")
+        println(" ░░███░░         ░░░███████████████      ░████████████████░░      ░███░ ")
+        println("  ░▀░          ░░░░░███████████████░██░░░███████████░░████▀       █░   ")
+
         println("!!!!! Exploit Behavior Detected In Window Number " + index + "!!!!!!!!!!")
         println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        println("!!!!!!!!!! Evil Is Confirmed JSON For the IOCs Below!!!!!!!!!!!!!!!!")
+        println("!!!!!!!!!! Evil Is Confirmed JSON For the IOC's Below!!!!!!!!!!!!!!!!")
         println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         val iocs: IocsExtracted = extractBroIocsFromMaliciousWindow(fileNameToScore, index, windowSize)
         val jsonOutput: String = convertIocsToJson(iocs)
@@ -166,7 +196,7 @@ object RandomForestLogic extends DebugLoggingLogic {
     }
 
     if (domains.size > 0 || ips.size > 0 || files.size > 0) {
-      val fullIocData = IocsExtracted(ips,domains,files)
+      val fullIocData = IocsExtracted(ips, domains, files)
       return Some(fullIocData)
     } else {
       return None
@@ -203,7 +233,7 @@ object RandomForestLogic extends DebugLoggingLogic {
     val files: Set[String] = iocsInWindow.map(x => x.urlMetaData.file).toSet
 
     //todo some hackey logic here to filter out lon files
-    val filterFiles: Set[String] = files.filter{x=> (x.contains('.') && Try(x.split('?').tail.head.length).getOrElse(0) < 20)  }
+    val filterFiles: Set[String] = files.filter { x => (x.contains(".") && Try(x.split("?").tail.head.length).getOrElse(0) < 20) }
 
     val data = IocsExtracted(ips, domains, filterFiles)
     return IocsExtracted(ips, domains, filterFiles)
