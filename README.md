@@ -1,8 +1,8 @@
 # Aktaion: Open Source Tool For "Micro Behavior Based" Exploit Detection and Automated GPO Policy Generation
 
-Aktaion is a lightweight JVM based project for detecting exploits (and more generally attack behaviors).  The project is meant to be a learning/teaching tool on how to blend multiple security signals and behaviors into an expressive framework for intrusion detection.  The cool thing about the project is it provides an expressive mechanism to add high level IOCs (micro beahviors) such as timing behavior of a certain malware family.  
+Aktaion is a lightweight JVM based project for detecting exploits (and more generally attack behaviors).  The project is meant to be a learning/teaching tool on how to blend multiple security signals and behaviors into an expressive framework for intrusion detection.  The key abstraction we wanted to protoype is the idea of a microbehavior.  This concept helps to provide an expressive mechanism to add high level IOCs such as timing behavior of a certain malware family in parrallel to simple statsitcs, rules or anything relevant to building a programmitic descpriotn of a sequential evolving set of advesary behaviors.  
 
-<http://www.github.com/jzadeh/Atkaion>
+<http://www.github.com/jzadeh/aktaion>
 
 
 ## Online Documentation
@@ -18,6 +18,11 @@ To build Atkaion use the assembly command via:
 
     sbt assembly
 
+## Running the test logic/demo
+
+After assembly completes the jar is landed to the target/scala-2.11 subfolder.  The scala version is specific to what is running native so the jar may be landed in target/scala-2.12 depending on the version of the language used in the compilation step.  To run the jar type in the appropriate subfolder:
+
+    java -jar aktaion-assembly-2.0.jar
 
 ## Dependencies
 
@@ -25,6 +30,7 @@ To run the jar from the command line the following dependencies are required for
 
 	BRO
 	Java 1.8
+	Scala 2.11 (2.12 should work as well)
 
 Rough Notes for building on IntelliJ (Mac/Windows):
 
@@ -79,8 +85,3 @@ Some caveats about the Active Defense Script
    - https://technet.microsoft.com/en-us/library/hh849694.aspx
 - If this is going to be implemented in production, it is recommended to do it with Service Account. Below the Microsoft recommended steps. 
 https://technet.microsoft.com/en-us/library/dd548356(v=ws.10).aspx
-
-
-
-
-
