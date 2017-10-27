@@ -20,7 +20,7 @@ To build Atkaion use the assembly command via:
 
 ## Running the test logic/demo
 
-After assembly completes the jar is landed to the target/scala-2.11 subfolder.  The scala version is specific to what is running native so the jar may be landed in target/scala-2.12 depending on the version of the language used in the compilation step.  To run the jar type in the appropriate subfolder:
+After assembly completes the jar is landed to the target/scala-2.12 subfolder.  The scala version is specific to what is running native so the jar may be landed in target/scala-2.12 depending on the version of the language used in the compilation step.  To run the jar type in the appropriate subfolder:
 
     java -jar aktaion-assembly-2.0.jar
 
@@ -30,7 +30,7 @@ To run the jar from the command line the following dependencies are required for
 
 	BRO
 	Java 1.8
-	Scala 2.11 (2.12 should work as well)
+	Scala 2.12 (2.11 should work as well)
 
 Rough Notes for building on IntelliJ (Mac/Windows):
 
@@ -38,7 +38,7 @@ Step 1:  Download the Java JDK for java 1.8 : java 1.8.0_102-b14
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
  
 Step 2:  Install scala
-https://www.scala-lang.org/download/2.11.8.html
+https://www.scala-lang.org/download/2.12.*
  
 Step 3:  SBT 0.13.12  
 http://www.scala-sbt.org/download.html
